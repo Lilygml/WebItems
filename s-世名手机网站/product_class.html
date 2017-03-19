@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>首页</title>
+		<link type="text/css" rel="stylesheet" href="css/css.css" />	
+		<link type="text/css" rel="stylesheet" href="css/default.css" />
+		<script src="http://s.amazeui.org/assets/2.x/js/jquery.min.js" type="text/javascript" ></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			/* 滑动/展开 */
+			$("ul.expmenu li > div.header_l").click(function(){
+														   
+				var arrow = $(this).find("span.arrow");
+			
+				if(arrow.hasClass("up")){
+					arrow.removeClass("up");
+					arrow.addClass("down");
+				}else if(arrow.hasClass("down")){
+					arrow.removeClass("down");
+					arrow.addClass("up");
+				}
+			
+				$(this).parent().find("ul.menu_l").slideToggle();
+				
+			});
+			
+		});
+		</script>
+	</head>
+	<body style="background: #f7f8fb;">
+        <header>
+			<div class="header_top cata">
+				<div class="header_box ">
+					<div class="cata_header"><a href="index.html" class="search_logo"><img src="img/login.png" ></a>产品中心<a href="catalogue.html" class="search_menu"><img src="img/menu.png"></a></div>
+					
+				</div>
+			</div>
+			
+		</header>
+		<div style="height:0.2em;background: #335EB1;margin-top: -5px;"></div>
+		<section>
+			<div class="class_content">
+				<ul class="expmenu">
+					<li>
+						<div class="header_l">
+							<span class="label">涂料行业</span>
+							<span class="arrow up"></span>
+						</div>
+						<ul class="menu_l" style="display:block;">
+							<li><a href="product.html">建筑涂料</a><span></span></li>
+							<li><a href="product.html">工业涂料</a><span></span></li>
+							<li><a href="product.html">木器涂料</a><span></span></li>
+						</ul>
+					</li>
+		            <li>
+						<div class="header_l">
+							<span class="label">合成革行业</span>
+							<span class="arrow down"></span>
+						</div>
+						<ul class="menu_l">
+							<li><a href="product.html">建筑涂料</a><span></span></li>
+						</ul>
+					</li>
+					<li>
+						<div class="header_l">
+							<span class="label">纤维行业</span>
+							<span class="arrow down"></span>
+						</div>
+						<ul class="menu_l">
+							<li><a href="product.html">建筑涂料</a><span></span></li>
+						</ul>
+					</li>
+		            <li>
+						<div class="header_l">
+							<span class="label">乳胶行业</span>
+							<span class="arrow down"></span>
+						</div>
+						<ul class="menu_l">
+							<li><a href="product.html">建筑涂料</a><span></span></li>
+						</ul>
+					</li>
+					<li>
+						<div class="header_l">
+							<span class="label">造纸行业</span>
+							<span class="arrow down"></span>
+						</div>
+						<ul class="menu_l">
+							<li><a href="product.html">建筑涂料</a><span></span></li>
+						</ul>
+					</li>					
+			    </ul>
+			</div>
+        </section>
+        <footer>
+        	<div class="footer">
+        		<div class="footer_box">
+	        		<div class="footer_top">服务热线：0512-57665888</div>
+	        		<div class="footer_top">版权所有©2015-2025  世名科技有限公司</div> 
+		        	<div class="footer_top">苏A1-20160817号</div> 
+        		</div>
+
+        	</div>
+        </footer>
+    </body>
+</html>

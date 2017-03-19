@@ -1,0 +1,21 @@
+/** reset **/
+
+*{
+	color: #333;
+	margin: 0;
+	font: 14px/1.5 'Microsoft Yahei';
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, img{border:medium none;margin: 0;padding: 0;}
+body,button, input, select, textarea{font: 14px/1.5 'Microsoft Yahei';outline: medium;}
+table { border-collapse:collapse; border-spacing:0; }
+h1, h2, h3, h4, h5, h6{font-size: 100%; font-weight: normal;}
+b,i,em{font-style:normal; font-weight: normal;}
+ul, ol,li{list-style: none;}
+a{text-decoration: none;color:#333;}
+a:hover{text-decoration: none; color: #CA242B;}
+img{border:0px;  outline-width:0px;  vertical-align:top;}
+.clearfix:after{clear:both;content:"\200B";display:block;height:0;}
+.clearfix{*zoom:1; clear:both ;}
+.w1200 { width:1200px; margin:0 auto;}
+.hide { display:none;}
+.overflow{overflow: hidden;}

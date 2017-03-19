@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible"content="IE=9; IE=8; IE=7; IE=EDGE">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> 内容检索（学校机构专栏）</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="js/all.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+</head>
+
+<body>
+<div class="top_bg">
+<div class="top">
+	<div class="logo"> <img src="img/logo.png" /></div>
+    <div class="top_city"> <p>南京</p> <span><a href="#">切换地区</a></span></div>
+<!----------------------------->      
+    <div class="top_index">
+    
+    	<div class="top_index_1">
+        	<ul>
+            <li id="bt_1" class="on" onclick="changeDiv(1,3)">老师</li>
+                <li id="bt_2" onclick="changeDiv(2,3)">学校</li>
+                <li id="bt_3" onclick="changeDiv(3,3)">培训</li>
+           </ul>
+        
+        </div><!--top_index_1-->
+<!----------------------------->   
+<div class="top_form">   
+    	<form action="#" method="post" name="top_index">
+        	<input  type="search" name="key"  id="top_search" value="" placeholder="请输入您要搜索的关键字"/>
+        	<input  type="submit" name="top_bt" id="top_bt"  value="搜 索"/>
+        </form>
+        
+        </div>
+<!----------------------------->          
+    <div class="top_index_2">
+    	<ul>
+            	<li><a href="#">书画</a></li>
+                <li><a href="#">国学</a></li>
+                <li><a href="#">音乐</a></li>
+                <li><a href="#">舞蹈</a></li>
+                <li><a href="#">戏剧</a></li>
+                <li><a href="#">国际</a></li>
+                <li><a href="#">运动</a></li>
+                <li><a href="#">科技</a></li>
+                
+           </ul>
+    
+    
+    
+    </div><!--top_index_2-->
+    
+    
+    </div><!--top_index--> 
+<!----------------------------->  
+    <div class="top_login">
+    	<p>Hi,欢迎来到童声台！</p>
+        <a href="#">登录</a> <span><a href="#">注册</a> </span> 
+    </div>
+    
+
+</div><!--top-->
+
+<!--------------------------------------------------------------->
+
+<div class="nav">
+		<ul>
+            	<li><a href="../" class="nav_a1">童声台学院</a></li>
+                <li><a href="首页.html">首页</a></li>
+                <li><a href="新闻资讯.html">新闻资讯</a></li>
+                <li><a href="人才中心.html">人才中心</a></li>
+                <li><a href="活动视窗.html">活动视窗</a></li>
+                <li><a href="互动社区.html">互动社区</a></li>
+                
+           </ul>
+			<!--nav_line-->
+</div><!--nav--><hr id="nav_line" />
+</div><!--top_bg-->
+<!--------------------------------------------------------------->
+<form method=post action="">
+ 
+
+<div class="g-area-bd">
+	<div class="g-bd">
+		<div class="g-area-main">
+			<div class="m-area-search">
+				  <label for="select">按照省份选择</label>
+				  <select name="select" class="select areachoose" id="select">
+				    <option>请选择</option>
+		          </select>
+				  <select name="select" class="select areachoose" id="select">
+				    <option>请选择</option>
+		          </select>
+				  <input type="button" class="btn areaok" value="确定" />
+			      <label for="textfield">直接输入城市</label>
+			      <input type="text" class="input areainput" name="textfield" id="textfield" />
+			</div>
+			<div class="m-area-hotcity">
+				热门城市： <a href="#">北京</a><a href="#">上海</a><a href="#">成都</a><a href="#">武汉</a><a href="#">合肥</a><a href="#">南京</a><a href="#">大连</a><a href="#">烟台</a><a href="#">苏州</a>
+			</div>
+			<div class="m-area-letterchoose">
+				按拼音字母选择：
+				<a href="#">A</a>
+				<a href="#">B</a>
+				<a href="#">C</a>
+				<a href="#">D</a>
+				<a href="#">E</a>
+				<a href="#">F</a>
+				<a href="#">G</a>
+				<a href="#">H</a>
+				<a href="#">I</a>
+				<a href="#">J</a>
+				<a href="#">K</a>
+				<a href="#">L</a>
+				<a href="#">M</a>
+				<a href="#">N</a>
+				<a href="#">O</a>
+				<a href="#">P</a>
+				<a href="#">Q</a>
+				<a href="#">R</a>
+				<a href="#">S</a>
+				<a href="#">T</a>
+				<a href="#">U</a>
+				<a href="#">V</a>
+				<a href="#">W</a>
+				<a href="#">X</a>
+				<a href="#">Y</a>
+				<a href="#">Z</a>
+			</div>
+			<div class="m-area-citylist">
+				<dl>
+					<dt><i>A</i></dt>
+					<dd>
+						<a href="#">安庆</a><a href="#">安顺</a><a href="#">安阳</a><a href="#">阿拉善盟</a><a href="#">安康</a><a href="#">阿坝</a><a href="#">阿克苏</a><a href="#">阿拉尔</a><a href="#">澳门</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>B</i></dt>
+					<dd>
+						<a href="#"><em>北京</em></a><a href="#"><em>保定</em></a><a href="#"><em>包头</em></a><a href="#">蚌埠</a><a href="#">毫州</a><a href="#">白银</a><a href="#">百色</a><a href="#">北海</a><a href="#">毕节</a><a href="#">白沙</a><a href="#">本溪</a><a href="#">巴彦淖尔盟</a><a href="#">滨州</a><a href="#">宝鸡</a><a href="#">巴中</a><a href="#">巴音郭楞</a><a href="#">博尔塔拉</a><a href="#">保山</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>D</i></dt>
+					<dd>
+						<a href="#"><em>成都</em></a><a href="#"><em>长春</em></a><a href="#"><em>东营</em></a><a href="#">丹东</a><a href="#">东莞</a><a href="#">定西</a><a href="#">定安县</a><a href="#">东方</a><a href="#"></a><a href="#">大庆</a><a href="#">大兴安岭</a><a href="#">达州</a><a href="#">德阳</a><a href="#">大理</a><a href="#">德宏</a><a href="#">迪庆</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>E</i></dt>
+					<dd>
+						<a href="#"><em>鄂州</em></a><a href="#"><em>恩施</em></a><a href="#"><em>鄂尔多斯</em></a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>F</i></dt>
+					<dd>
+						<a href="#"><em>福州</em></a><a href="#"><em>阜阳</em></a><a href="#"><em>佛山</em></a><a href="#">防城港</a><a href="#">抚州</a><a href="#">阜新</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>G</i></dt>
+					<dd>
+						<a href="#"><em>贵阳</em></a><a href="#"><em>广州</em></a><a href="#"><em>甘南</em></a><a href="#">桂林</a><a href="#">贵港</a><a href="#">赣州</a><a href="#">固原</a><a href="#">果洛</a><a href="#">甘孜</a><a href="#">广安</a><a href="#">广元</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>H</i></dt>
+					<dd>
+						<a href="#"><em>合肥</em></a><a href="#"><em>杭州</em></a><a href="#"><em>海口</em></a><a href="#">哈尔滨</a><a href="#">淮北</a><a href="#">淮南</a><a href="#">黄山</a><a href="#">河源</a><a href="#">惠州</a><a href="#">河池</a><a href="#">贺州</a><a href="#">邯郸</a><a href="#">衡水</a><a href="#">鹤壁</a><a href="#">鹤岗</a><a href="#">黑河</a><a href="#">黄冈</a><a href="#">黄石</a><a href="#">衡阳</a><a href="#">怀化</a><a href="#">淮安</a><a href="#">葫芦岛</a><a href="#">呼和浩特</a><a href="#">呼伦贝尔</a><a href="#">海北</a><a href="#">海东</a><a href="#">海南</a><a href="#">海西</a><a href="#">黄南</a><a href="#">菏泽</a><a href="#">汉中</a><a href="#">哈密</a><a href="#">和田</a><a href="#">红河</a><a href="#">湖州</a><a href="#"></a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>J</i></dt>
+					<dd>
+						<a href="#"><em>济南</em></a><a href="#"><em>济宁</em></a><a href="#"><em>嘉峪关</em></a><a href="#">金昌</a><a href="#">酒泉</a><a href="#">江门</a><a href="#">揭阳</a><a href="#">济源</a><a href="#">焦作</a><a href="#">鸡西</a><a href="#">佳木斯</a><a href="#">荆门</a><a href="#">荆州</a><a href="#">吉林</a><a href="#">吉安</a><a href="#">景德镇</a><a href="#">九江</a><a href="#">锦州</a><a href="#">晋城</a><a href="#">晋中</a><a href="#">嘉兴</a><a href="#">金华</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>K</i></dt>
+					<dd>
+						<a href="#"><em>昆明</em></a><a href="#"><em>开封</em></a><a href="#"><em>喀什</em></a><a href="#">克拉玛依</a><a href="#">克孜勒苏</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>L</i></dt>
+					<dd>
+						<a href="#"><em>兰州</em></a><a href="#"><em>洛阳</em></a><a href="#"><em>临沂</em></a><a href="#">六安</a><a href="#">龙岩</a><a href="#">临夏</a><a href="#">陇南</a><a href="#">来宾</a><a href="#">柳州</a><a href="#">六盘水</a><a href="#">乐东</a><a href="#">临高县</a><a href="#">陵水</a><a href="#">廊坊</a><a href="#">漯河</a><a href="#">娄底</a><a href="#">辽源</a><a href="#">连云港</a><a href="#">辽阳</a><a href="#">莱芜</a><a href="#">聊城</a><a href="#">临汾</a><a href="#">吕梁</a><a href="#">乐山</a><a href="#">凉山</a><a href="#">泸州</a><a href="#">拉萨</a><a href="#">林芝</a><a href="#">丽江</a><a href="#">临沧</a><a href="#">丽水</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>M</i></dt>
+					<dd>
+						<a href="#"><em>马鞍山</em></a><a href="#"><em>绵阳</em></a><a href="#"><em>茂名</em></a><a href="#">梅州</a><a href="#">牡丹江</a><a href="#">眉山</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>N</i></dt>
+					<dd>
+						<a href="#"><em>南京</em></a><a href="#"><em>南宁</em></a><a href="#"><em>南昌</em></a><a href="#">宁波</a><a href="#">南平</a><a href="#">宁德</a><a href="#">南阳</a><a href="#">南通</a><a href="#">南充</a><a href="#">内江</a><a href="#">那曲</a><a href="#">怒江</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>P</i></dt>
+					<dd>
+						<a href="#"><em>莆田</em></a><a href="#"><em>平凉</em></a><a href="#"><em>平顶山</em></a><a href="#">濮阳</a><a href="#">萍乡</a><a href="#">盘锦</a><a href="#">攀枝花</a><a href="#">普洱</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>Q</i></dt>
+					<dd>
+						<a href="#"><em>青岛</em></a><a href="#"><em>泉州</em></a><a href="#"><em>庆阳</em></a><a href="#">清远</a><a href="#">钦州</a><a href="#">黔东南</a><a href="#">琼海</a><a href="#">琼中</a><a href="#">秦皇岛</a><a href="#">七台河</a><a href="#">齐齐哈尔</a><a href="#">潜江</a><a href="#">曲靖</a><a href="#">衢州</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>R</i></dt>
+					<dd>
+						<a href="#"><em>日照</em></a><a href="#"><em>日喀则</em></a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>S</i></dt>
+					<dd>
+						<a href="#"><em>苏州</em></a><a href="#"><em>上海</em></a><a href="#">石家庄</a><a href="#">深圳</a><a href="#">沈阳</a><a href="#">商丘</a><a href="#">宿州</a><a href="#">三明</a><a href="#">汕头</a><a href="#">汕尾</a><a href="#">韶关</a><a href="#">三亚</a><a href="#">三门峡</a><a href="#">双鸭山</a><a href="#">绥化</a><a href="#">神农架林区</a><a href="#">十堰</a><a href="#">随州</a><a href="#">邵阳</a><a href="#">四平</a><a href="#">松原</a><a href="#">宿迁</a><a href="#">上饶</a><a href="#">石嘴山</a><a href="#">朔州</a><a href="#">遂宁</a><a href="#">山南</a><a href="#">石河子</a><a href="#">绍兴</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>T</i></dt>
+					<dd>
+						<a href="#"><em>太原</em></a><a href="#"><em>天津</em></a><a href="#">唐山</a><a href="#">通辽</a><a href="#">铜陵</a><a href="#">天水</a><a href="#">铜仁</a><a href="#">屯昌县</a><a href="#">天门</a><a href="#">通化</a><a href="#">泰州</a><a href="#">铁岭</a><a href="#">泰安</a><a href="#">铜川</a><a href="#">图木舒克</a><a href="#">吐鲁番</a><a href="#">台州</a><a href="#">台湾</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>W</i></dt>
+					<dd>
+						<a href="#"><em>武汉</em></a><a href="#"><em>芜湖</em></a><a href="#">无锡</a><a href="#">潍坊</a><a href="#">乌鲁木齐</a><a href="#">武威</a><a href="#">梧州</a><a href="#">万宁</a><a href="#">文昌</a><a href="#">五指山</a><a href="#">乌海</a><a href="#">乌兰察布市</a><a href="#">吴忠</a><a href="#">威海</a><a href="#">渭南</a><a href="#">五家渠</a><a href="#">文山</a><a href="#">温州</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>X</i></dt>
+					<dd>
+						<a href="#"><em>西安</em></a><a href="#"><em>厦门</em></a><a href="#">咸阳</a><a href="#">宣称</a><a href="#">邢台</a><a href="#">新乡</a><a href="#">信阳</a><a href="#">许昌</a><a href="#">仙桃</a><a href="#">咸宁</a><a href="#">襄樊</a><a href="#">孝感</a><a href="#">湘潭</a><a href="#">湘西</a><a href="#">徐州</a><a href="#">新余</a><a href="#">锡林郭勒盟</a><a href="#">兴安盟</a><a href="#">西宁</a><a href="#">忻州</a><a href="#">西双板难</a><a href="#">香港</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>Y</i></dt>
+					<dd>
+						<a href="#"><em>烟台</em></a><a href="#"><em>玉林</em></a><a href="#">盐城</a><a href="#">扬州</a><a href="#">银川</a><a href="#">阳江</a><a href="#">云浮</a><a href="#">伊春</a><a href="#">宜昌</a><a href="#">永州</a><a href="#">岳阳</a><a href="#">延边</a><a href="#">鹰潭</a><a href="#">营口</a><a href="#">玉树</a><a href="#">阳泉</a><a href="#">运城</a><a href="#">延安</a><a href="#">榆林</a><a href="#">雅安</a><a href="#">宜宾</a><a href="#">伊犁</a><a href="#">玉溪</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><i>Z</i></dt>
+					<dd>
+						<a href="#"><em>郑州</em></a><a href="#"><em>漳州</em></a><a href="#">张掖</a><a href="#">湛江</a><a href="#">肇庆</a><a href="#">中山</a><a href="#">珠海</a><a href="#">遵义</a><a href="#">张家口</a><a href="#">周口</a><a href="#">驻马店</a><a href="#">张家界</a><a href="#">株洲</a><a href="#">镇江</a><a href="#">中卫</a><a href="#">枣庄</a><a href="#">资阳</a><a href="#">自贡</a><a href="#">邵通</a><a href="#">舟山</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</div>
+</form>
+<div class="footer">
+
+	<div class="footer_con">
+<!------------------------------------------ -->       
+    	<div class="_con_1">
+                <span> 关于我们</span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        
+        
+        </div><!--_con_1 -->
+<!------------------------------------------ -->           
+        <div class="_con_2">
+                <span> 帮助中心</span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        
+        
+        </div><!--_con_2 -->
+<!------------------------------------------ -->          
+        <div class="_con_3">
+        		 <span> 服务支持</span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        
+        </div><!--_con_3 -->
+<!------------------------------------------ -->           
+        <div class="_con_4">
+        		 <span> 友情链接 </span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        </div><!--_con_4 -->
+        
+<!------------------------------------------ -->        
+        
+        <div class="_con_5">
+        		<img src="img/tel_ico.png" />
+                <span>4008—123—123</span >
+                <p>周一至周日 8:00-23:00</p>
+        </div><!--_con_5 -->
+<!-- ------------------------------------------------------------------------ -->  
+
+<div class="clear"></div>
+     
+<hr  class="footer_con_line"/>
+<!-- ------------------------------------------------------------------------ -->            
+           <div class="_con_6"> Copyright © 2014 - 2015  童声台版权所有</div> 
+<!-- ------------------------------------------------------------------------ -->  
+  </div><!--footer_con -->
+</div><!--footer -->
+
+</body>
+</html>

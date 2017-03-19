@@ -1,0 +1,2565 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>活动视窗</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script language="javascript" src="js/all.js"></script>
+
+<style type="text/css">
+
+		/* 本例子css */
+		.slideHome{ width:670px; height:367px; overflow:hidden; position:relative; float: left;}
+		.slideHome .bd{ position:relative; height:100%; z-index: 1;}
+		.slideHome .bd li{ zoom:1; vertical-align:middle;}
+		.slideHome .bd img{ width:670px; height:367px; display:block;}
+		.slideHome .hd{width: 100%; height:60px; overflow:hidden; position:absolute; left:0; bottom:0; z-index:5;}
+		.slideHome .hd ul{overflow:hidden; zoom:1;background:rgba(0,0,0,0.6); padding-right: 10px;}
+		.slideHome .hd ul li i{float:right; margin:24px 5px; vertical-align: middle; width:12px; height:12px; display: inline-block; background:#868686; cursor:pointer;border-radius:50%;}
+		.slideHome .hd li .guntup-desc{width: 80%;position: absolute; left: 15px;top: 8px; display: none;}
+		.slideHome .hd li .guntup-title{width:100%;float: left; color: #fff;font-size: 16px; overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+		.slideHome .hd li .guntup-text{width:100%;float: left; color: #d1d1d1; font-size: 12px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+		.slideHome .hd ul li.on i{ background:#ffdf44;}
+		.slideHome .hd ul li.on .guntup-desc{display: block;}
+</style>
+
+<style type="text/css">
+		
+		.slideTxtBox{ width:296px; border:1px solid #ddd; text-align:left;float:right;height:365px; background-color: #FFF;}
+		.slideTxtBox .hd{ height:40px; line-height:40px; background:#f4f4f4;border-bottom:1px solid #ddd;  position:relative; }
+		.slideTxtBox .hd ul{ float:left; position:absolute; height:40px;left:2px;}
+		.slideTxtBox .hd ul li{ height:40px; float:left;width:97px; cursor:pointer; background:#f5f5f5;text-align:center;border-right:1px solid #ddd;}
+		.slideTxtBox .hd ul li.on{ height:40px; background:#fff;}
+		.slideTxtBox .bd ul{ zoom:1;background:#FFF;padding-top: 8px;}
+		.slideTxtBox .bd li{width: 100%; float: left;overflow:hidden;}
+		.slideTxtBox .bd li a{padding:3px 10px;display: block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+		.slideTxtBox .bd li a.mores{float: right;color: #999;}
+		.slideTxtBox .bd li a:hover{color: #FF636E;}
+		.slideTxtBox .bd li a.HomeNews-title{float: left;padding-right: 0;}
+		.slideTxtBox .bd li a.HomeNews-title img {width: 116px;height: 116px;max-width: 116px;max-height: 116px;}		
+		/* 下面是前/后按钮代码，如果不需要删除即可 */
+		.slideTxtBox .arrow{  position:absolute; right:10px; top:0; }
+		.slideTxtBox .arrow a{ display:block;  width:5px; height:9px; float:right; margin-right:5px; margin-top:10px;  overflow:hidden;
+			 cursor:pointer; background:url("../images/arrow.png") 0 0 no-repeat; }
+		.slideTxtBox .arrow .next{ background-position:0 -50px;  }
+		.slideTxtBox .arrow .prevStop{ background-position:-60px 0; }
+		.slideTxtBox .arrow .nextStop{ background-position:-60px -50px; }
+		.new-boreders{border-bottom:1px dashed #e5e5e5;padding:5px 0;}
+		</style>
+
+</head>
+
+
+
+
+
+
+<body class="body_bg" style="background: #fff;">
+<div class="top_bg">
+<div class="top">
+	<div class="logo"> <img src="img/logo.png" /></div>
+    <div class="top_city"> <p>南京</p> <span><a href="#">切换地区</a></span></div>
+<!----------------------------->      
+    <div class="top_index">
+    
+    	<div class="top_index_1">
+        	<ul>
+            	<li id="bt_1" class="on" onclick="changeDiv(1,3)">老师</li>
+                <li id="bt_2" onclick="changeDiv(2,3)">学校</li>
+                <li id="bt_3" onclick="changeDiv(3,3)">培训</li>
+           </ul>
+        
+        </div><!--top_index_1-->
+<!----------------------------->   
+<div class="top_form">   
+    	<form action="#" method="post" name="top_index">
+        	<input  type="search" name="key"  id="top_search" value="" placeholder="请输入您要搜索的关键字"/>
+        	<input  type="submit" name="top_bt" id="top_bt"  value="搜 索"/>
+        </form>
+        
+      </div>
+<!----------------------------->          
+    <div class="top_index_2">
+    	<ul>
+            	<li><a href="#">书画</a></li>
+                <li><a href="#">国学</a></li>
+                <li><a href="#">音乐</a></li>
+                <li><a href="#">舞蹈</a></li>
+                <li><a href="#">戏剧</a></li>
+                <li><a href="#">国际</a></li>
+                <li><a href="#">运动</a></li>
+                <li><a href="#">科技</a></li>
+                
+        </ul>
+    
+    
+    
+    </div><!--top_index_2-->
+    
+    
+    </div><!--top_index--> 
+<!----------------------------->  
+    <div class="top_login">
+    	<p>Hi,欢迎来到童声台！</p>
+        <a href="登录页.html">登录</a> <span><a href="用户注册.html">注册</a> </span> 
+    </div>
+    
+
+</div><!--top-->
+
+<!--------------------------------------------------------------->
+
+<div class="window_layout_boxs">
+	<div class="classnav-list-left">
+		<h2>童声台学院</h2>
+		<ul>
+			<li>
+				<a href="#">童声台书画院 </a>
+				<div class="classnav-nlit">
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+				</div>
+			</li>
+			<li><a href="#">童声台国学院 </a>
+				<div class="classnav-nlit">
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+				</div>
+			</li>
+			<li><a href="#">童声台音乐学院 </a>
+				<div class="classnav-nlit">
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+				</div>
+			</li>
+			<li><a href="#">童声台舞蹈学院 </a>
+				<div class="classnav-nlit">
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+				</div>
+			</li>
+			<li><a href="#">童声台戏剧学院 </a>
+				<div class="classnav-nlit">
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+				</div>
+			</li>
+			<li><a href="#">童声台国际学院  </a>
+				<div class="classnav-nlit">
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+				</div>
+			</li>
+			<li><a href="#">童声台运动学院 </a>
+				<div class="classnav-nlit">
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+				</div>
+			</li>
+			<li><a href="#">童声台科技学院 </a>
+				<div class="classnav-nlit">
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+				</div>
+			</li>
+			<li><a href="#">童声台国防学院 </a>
+				<div class="classnav-nlit">
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><a href="#">童声台书画院</a></dt>
+						<dd>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+							<a href="#">童声台国学院 </a>
+						</dd>
+					</dl>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="classnav-list-right">
+		<div class="nav">
+			<ul>
+                <li><a href="首页.html">首页</a></li>
+                <li><a href="新闻资讯.html">新闻资讯</a></li>
+                <li><a href="人才中心.html">人才中心</a></li>
+                <li><a href="活动视窗.html">活动视窗</a></li>
+                <li><a href="互动社区.html">互动社区</a></li>
+	    	</ul>
+			<hr id="nav_line" /><!--nav_line-->
+		</div><!--nav-->
+		
+		<div id="slideBox" class="slideHome">
+			<div class="hd">
+			<ul>
+				<li>
+					<div class="guntup-desc">
+						<span class="guntup-title">美国大学生选校及专业指导1</span>
+						<span class="guntup-text">美国哈佛西点领导力游学项目也是国内唯一被建设银行选为私人银行重点合作的项目美国哈佛西点领导力游学项目也是国内唯一被建设银行选为私人银行重点合作的项目</span>
+					</div>
+					<i></i>
+				</li>
+				<li>
+					<div class="guntup-desc">
+						<span class="guntup-title">美国大学生选校及专业指导2</span>
+						<span class="guntup-text">美国哈佛西点领导力游学项目也是国内唯一被建设银行选为私人银行重点合作的项目美国哈佛西点领导力游学项目也是国内唯一被建设银行选为私人银行重点合作的项目</span>
+					</div>
+					<i></i>
+				</li>
+				<li>
+					<div class="guntup-desc">
+						<span class="guntup-title">美国大学生选校及专业指导3</span>
+						<span class="guntup-text">美国哈佛西点领导力游学项目也是国内唯一被建设银行选为私人银行重点合作的项目美国哈佛西点领导力游学项目也是国内唯一被建设银行选为私人银行重点合作的项目</span>
+					</div>
+					<i></i>
+				</li>
+			</ul>
+			</div>
+			<div class="bd">
+			<ul>
+			<li>
+				<a href="#" target="_blank">
+					<img src="img/gundtup.jpg" />
+					
+				</a>
+			</li>
+			<li>
+				<a href="#" target="_blank">
+					<img src="img/gundtup.jpg" />
+				</a>
+			</li>
+			<li>
+				<a href="#" target="_blank">
+					<img src="img/gundtup.jpg" />
+				</a>
+			</li>
+			</ul>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+		jQuery(".slideHome").slide({mainCell:".bd ul",autoPlay:true});
+		</script>
+<!----------------------------------->   
+    <div class="slideTxtBox">
+			<div class="hd">
+				<ul><li>新闻</li><li>公告</li><li>通知</li></ul>
+			</div>
+				<div class="bd">
+				<ul>
+					<li class="new-boreders">
+						<a href="#" class="HomeNews-title"><img src="img/active_w_55_06.jpg" /></a>
+		            	<a href="#">超级老师视频风采大赛期中考试变身别人...</a>
+		            	<a href="#">超级老师视频风采大赛期中考试变身别人...</a>
+		            	<a href="#">超级老师视频风采大赛期中考试变身别人...</a>
+		            	<a href="#">超级老师视频风采大赛期中考试变身别人...</a>
+					</li>
+					<li><a href="#">超级老师视频风采大赛期中考试变身别人超级老师视频风采大赛期中考试变身别人...</a></li>
+					<li><a href="#">超级老师视频风采大赛期中考试变身别人...</a></li>
+					<li><a href="#">超级老师视频风采大赛期中考试变身别人...</a></li>
+					<li><a href="#">超级老师视频风采大赛期中考试变身别人...</a></li>
+					<li><a href="#">超级老师视频风采大赛期中考试变身别人...</a></li>
+					<li><a href="#" class="mores">查看更多></a></li>
+				</ul>
+				<ul>
+					<li class="new-boreders">
+						<a href="#" class="HomeNews-title"><img src="img/active_w_55_06.jpg" /></a>
+		            	<a href="#">超级老师视频风采大赛期中考试变身别人...</a>
+		            	<a href="#">超级老师视频风采大赛期中考试变身别人...</a>
+		            	<a href="#">超级老师视频风采大赛期中考试变身别人...</a>
+		            	<a href="#">超级老师视频风采大赛期中考试变身别人...</a>
+					</li>
+					<li><a href="#">超级老师视频风采大赛期中考试变身别人超级老师视频风采大赛期中考试变身别人...</a></li>
+					<li><a href="#">超级老师视频风采大赛期中考试变身别人...</a></li>
+					<li><a href="#">超级老师视频风采大赛期中考试变身别人...</a></li>
+					<li><a href="#">超级老师视频风采大赛期中考试变身别人...</a></li>
+					<li><a href="#">超级老师视频风采大赛期中考试变身别人...</a></li>
+					<li><a href="#" class="mores">查看更多></a></li>
+				</ul>
+				<ul>
+					<li class="new-boreders">
+						<a href="#" class="HomeNews-title"><img src="img/active_w_55_06.jpg" /></a>
+		            	<a href="#">超级老师视频风采大赛期中考试变身别人...</a>
+		            	<a href="#">超级老师视频风采大赛期中考试变身别人...</a>
+		            	<a href="#">超级老师视频风采大赛期中考试变身别人...</a>
+		            	<a href="#">超级老师视频风采大赛期中考试变身别人...</a>
+					</li>
+					<li><a href="#">超级老师视频风采大赛期中考试变身别人超级老师视频风采大赛期中考试变身别人...</a></li>
+					<li><a href="#">超级老师视频风采大赛期中考试变身别人...</a></li>
+					<li><a href="#">超级老师视频风采大赛期中考试变身别人...</a></li>
+					<li><a href="#">超级老师视频风采大赛期中考试变身别人...</a></li>
+					<li><a href="#">超级老师视频风采大赛期中考试变身别人...</a></li>
+					<li><a href="#" class="mores">查看更多></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<script id="jsID" type="text/javascript">
+		 var ary = location.href.split("&");
+		jQuery(".slideTxtBox").slide({effect:"left",autoPlay:true,easing:"easeInBack",delayTime:700});
+		</script><!--_window_layout11_1_r -->
+<!----------------------------------->   
+	</div>
+	<div class="clear"></div>
+</div>
+
+</div><!--top_bg-->
+<!--------------------------------------------------------------->
+
+
+<!--window_layout_boxs -->
+<!--------------------------------------------------------------->
+<div class="window_layout_boxs bs1">
+	<div class="wboxs-title">
+		<img src="img/shuy-ico.png">童声台书画院
+	</div>
+	<div class="wboxs-conet">
+		<div class="wboxs-conet-left">
+			<div class="wboxs-biaos">
+				<img src="img/shuh-img.jpg">
+				<span>书法是东方审美的一种独特方式，<br />练中国书法，承传统文化</span>
+			</div>
+			<div class="wboxs-classcpt">
+				<dl>
+					<dt><a href="#">素描</a></dt>
+					<dd>
+						<a href="#">基础素描</a>
+						<a href="#">中级素描</a>
+						<a href="#">高级素描</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">绘画</a></dt>
+					<dd>
+						<a href="#">水粉</a>
+						<a href="#">水彩</a>
+						<a href="#">油画</a>
+						<a href="#">国画</a>
+						<a href="#">水墨画</a>
+						<a href="#">创意画</a>
+						<a href="#">速写</a>
+						<a href="#">插画</a>
+						<a href="#">卡通漫画</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">书法</a></dt>
+					<dd>
+						<a href="#">软笔书法</a>
+						<a href="#">硬笔书法</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-cont">
+			<ul  class="wboxs-kecheg">
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			</ul>
+			<div class="wboxs-newsbox">
+				<dl>
+					<dt><a>新闻</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a>相关文章</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="wboxs-newsbox" style="border: 0;">
+				<dl class="newsboxdl-one">
+					<dt><a>培训</a></dt>
+					<dd>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+					</dd>
+				</dl>
+				<dl class="newsboxdl-two">
+					<dt><a>作品展示</a></dt>
+					<dd>
+						<a href="#" class="HomeNews-title"><img src="img/img02.jpg"></a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-right">
+			<div class="wboxs-mings-title">名师专家 <a href="#">更多></a></div>
+			<ul class="wboxs-mings">
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+			</ul>
+        </div>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学校/机构推荐</div>
+		<ul class="wshool-cet">
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学生反馈</div>
+		<ul class="wshool-fankut">
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="window_layout_boxs bs2">
+	<div class="wboxs-title">
+		<img src="img/guox-ico.png">童声台国学院
+	</div>
+	<div class="wboxs-conet">
+		<div class="wboxs-conet-left">
+			<div class="wboxs-biaos">
+				<img src="img/guox-img.jpg">
+				<span>纳百川之流成大海 ，<br>学千古之典显文采</span>
+			</div>
+			<div class="wboxs-classcpt">
+				<dl>
+					<dt><a href="#">素描</a></dt>
+					<dd>
+						<a href="#">基础素描</a>
+						<a href="#">中级素描</a>
+						<a href="#">高级素描</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">绘画</a></dt>
+					<dd>
+						<a href="#">水粉</a>
+						<a href="#">水彩</a>
+						<a href="#">油画</a>
+						<a href="#">国画</a>
+						<a href="#">水墨画</a>
+						<a href="#">创意画</a>
+						<a href="#">速写</a>
+						<a href="#">插画</a>
+						<a href="#">卡通漫画</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">书法</a></dt>
+					<dd>
+						<a href="#">软笔书法</a>
+						<a href="#">硬笔书法</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-cont">
+			<ul  class="wboxs-kecheg">
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			</ul>
+			<div class="wboxs-newsbox">
+				<dl>
+					<dt><a>新闻</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a>相关文章</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="wboxs-newsbox" style="border: 0;">
+				<dl class="newsboxdl-one">
+					<dt><a>培训</a></dt>
+					<dd>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+					</dd>
+				</dl>
+				<dl class="newsboxdl-two">
+					<dt><a>作品展示</a></dt>
+					<dd>
+						<a href="#" class="HomeNews-title"><img src="img/img02.jpg"></a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-right">
+			<div class="wboxs-mings-title">名师专家 <a href="#">更多></a></div>
+			<ul class="wboxs-mings">
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+			</ul>
+        </div>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学校/机构推荐</div>
+		<ul class="wshool-cet">
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学生反馈</div>
+		<ul class="wshool-fankut">
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="window_layout_boxs bs3">
+	<div class="wboxs-title">
+		<img src="img/yiny-ico.png">童声台音乐学院
+	</div>
+	<div class="wboxs-conet">
+		<div class="wboxs-conet-left">
+			<div class="wboxs-biaos">
+				<img src="img/yiny-ico.jpg">
+				<span>用美妙的音符，<br>编出灿烂的人生乐章</span>
+			</div>
+			<div class="wboxs-classcpt">
+				<dl>
+					<dt><a href="#">素描</a></dt>
+					<dd>
+						<a href="#">基础素描</a>
+						<a href="#">中级素描</a>
+						<a href="#">高级素描</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">绘画</a></dt>
+					<dd>
+						<a href="#">水粉</a>
+						<a href="#">水彩</a>
+						<a href="#">油画</a>
+						<a href="#">国画</a>
+						<a href="#">水墨画</a>
+						<a href="#">创意画</a>
+						<a href="#">速写</a>
+						<a href="#">插画</a>
+						<a href="#">卡通漫画</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">书法</a></dt>
+					<dd>
+						<a href="#">软笔书法</a>
+						<a href="#">硬笔书法</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-cont">
+			<ul  class="wboxs-kecheg">
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			</ul>
+			<div class="wboxs-newsbox">
+				<dl>
+					<dt><a>新闻</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a>相关文章</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="wboxs-newsbox" style="border: 0;">
+				<dl class="newsboxdl-one">
+					<dt><a>培训</a></dt>
+					<dd>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+					</dd>
+				</dl>
+				<dl class="newsboxdl-two">
+					<dt><a>作品展示</a></dt>
+					<dd>
+						<a href="#" class="HomeNews-title"><img src="img/img02.jpg"></a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-right">
+			<div class="wboxs-mings-title">名师专家 <a href="#">更多></a></div>
+			<ul class="wboxs-mings">
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+			</ul>
+        </div>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学校/机构推荐</div>
+		<ul class="wshool-cet">
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学生反馈</div>
+		<ul class="wshool-fankut">
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="window_layout_boxs bs4">
+	<div class="wboxs-title">
+		<img src="img/wud-ico.png">童声台舞蹈学院
+	</div>
+	<div class="wboxs-conet">
+		<div class="wboxs-conet-left">
+			<div class="wboxs-biaos">
+				<img src="img/wud-img.jpg">
+				<span>放飞你的青春，<br>奔洒你的热情</span>
+			</div>
+			<div class="wboxs-classcpt">
+				<dl>
+					<dt><a href="#">素描</a></dt>
+					<dd>
+						<a href="#">基础素描</a>
+						<a href="#">中级素描</a>
+						<a href="#">高级素描</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">绘画</a></dt>
+					<dd>
+						<a href="#">水粉</a>
+						<a href="#">水彩</a>
+						<a href="#">油画</a>
+						<a href="#">国画</a>
+						<a href="#">水墨画</a>
+						<a href="#">创意画</a>
+						<a href="#">速写</a>
+						<a href="#">插画</a>
+						<a href="#">卡通漫画</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">书法</a></dt>
+					<dd>
+						<a href="#">软笔书法</a>
+						<a href="#">硬笔书法</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-cont">
+			<ul  class="wboxs-kecheg">
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			</ul>
+			<div class="wboxs-newsbox">
+				<dl>
+					<dt><a>新闻</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a>相关文章</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="wboxs-newsbox" style="border: 0;">
+				<dl class="newsboxdl-one">
+					<dt><a>培训</a></dt>
+					<dd>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+					</dd>
+				</dl>
+				<dl class="newsboxdl-two">
+					<dt><a>作品展示</a></dt>
+					<dd>
+						<a href="#" class="HomeNews-title"><img src="img/img02.jpg"></a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-right">
+			<div class="wboxs-mings-title">名师专家 <a href="#">更多></a></div>
+			<ul class="wboxs-mings">
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+			</ul>
+        </div>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学校/机构推荐</div>
+		<ul class="wshool-cet">
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学生反馈</div>
+		<ul class="wshool-fankut">
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="window_layout_boxs bs5">
+	<div class="wboxs-title">
+		<img src="img/xiq-ico.png">童声台戏剧学院
+	</div>
+	<div class="wboxs-conet">
+		<div class="wboxs-conet-left">
+			<div class="wboxs-biaos">
+				<img src="img/xiq-img.jpg">
+				<span>用五味谱写人生的春秋，<br>用戏剧展示人生的风采</span>
+			</div>
+			<div class="wboxs-classcpt">
+				<dl>
+					<dt><a href="#">素描</a></dt>
+					<dd>
+						<a href="#">基础素描</a>
+						<a href="#">中级素描</a>
+						<a href="#">高级素描</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">绘画</a></dt>
+					<dd>
+						<a href="#">水粉</a>
+						<a href="#">水彩</a>
+						<a href="#">油画</a>
+						<a href="#">国画</a>
+						<a href="#">水墨画</a>
+						<a href="#">创意画</a>
+						<a href="#">速写</a>
+						<a href="#">插画</a>
+						<a href="#">卡通漫画</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">书法</a></dt>
+					<dd>
+						<a href="#">软笔书法</a>
+						<a href="#">硬笔书法</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-cont">
+			<ul  class="wboxs-kecheg">
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			</ul>
+			<div class="wboxs-newsbox">
+				<dl>
+					<dt><a>新闻</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a>相关文章</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="wboxs-newsbox" style="border: 0;">
+				<dl class="newsboxdl-one">
+					<dt><a>培训</a></dt>
+					<dd>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+					</dd>
+				</dl>
+				<dl class="newsboxdl-two">
+					<dt><a>作品展示</a></dt>
+					<dd>
+						<a href="#" class="HomeNews-title"><img src="img/img02.jpg"></a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-right">
+			<div class="wboxs-mings-title">名师专家 <a href="#">更多></a></div>
+			<ul class="wboxs-mings">
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+			</ul>
+        </div>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学校/机构推荐</div>
+		<ul class="wshool-cet">
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学生反馈</div>
+		<ul class="wshool-fankut">
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="window_layout_boxs bs6">
+	<div class="wboxs-title">
+		<img src="img/guoj-ico.png">童声台国际学院
+	</div>
+	<div class="wboxs-conet">
+		<div class="wboxs-conet-left">
+			<div class="wboxs-biaos">
+				<img src="img/guoj-img.jpg" >
+				<span>给你最好的“舞台”，<br>让你轻松迈向国际</span>
+			</div>
+			<div class="wboxs-classcpt">
+				<dl>
+					<dt><a href="#">素描</a></dt>
+					<dd>
+						<a href="#">基础素描</a>
+						<a href="#">中级素描</a>
+						<a href="#">高级素描</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">绘画</a></dt>
+					<dd>
+						<a href="#">水粉</a>
+						<a href="#">水彩</a>
+						<a href="#">油画</a>
+						<a href="#">国画</a>
+						<a href="#">水墨画</a>
+						<a href="#">创意画</a>
+						<a href="#">速写</a>
+						<a href="#">插画</a>
+						<a href="#">卡通漫画</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">书法</a></dt>
+					<dd>
+						<a href="#">软笔书法</a>
+						<a href="#">硬笔书法</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-cont">
+			<ul  class="wboxs-kecheg">
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			</ul>
+			<div class="wboxs-newsbox">
+				<dl>
+					<dt><a>新闻</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a>相关文章</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="wboxs-newsbox" style="border: 0;">
+				<dl class="newsboxdl-one">
+					<dt><a>培训</a></dt>
+					<dd>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+					</dd>
+				</dl>
+				<dl class="newsboxdl-two">
+					<dt><a>作品展示</a></dt>
+					<dd>
+						<a href="#" class="HomeNews-title"><img src="img/img02.jpg"></a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-right">
+			<div class="wboxs-mings-title">名师专家 <a href="#">更多></a></div>
+			<ul class="wboxs-mings">
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+			</ul>
+        </div>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学校/机构推荐</div>
+		<ul class="wshool-cet">
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学生反馈</div>
+		<ul class="wshool-fankut">
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="window_layout_boxs bs7">
+	<div class="wboxs-title">
+		<img src="img/yund-ico.png">童声台运动学院
+	</div>
+	<div class="wboxs-conet">
+		<div class="wboxs-conet-left">
+			<div class="wboxs-biaos">
+				<img src="img/yund-img.jpg">
+				<span>运动是快乐的源泉， <br />快乐是生命的财富</span>
+			</div>
+			<div class="wboxs-classcpt">
+				<dl>
+					<dt><a href="#">素描</a></dt>
+					<dd>
+						<a href="#">基础素描</a>
+						<a href="#">中级素描</a>
+						<a href="#">高级素描</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">绘画</a></dt>
+					<dd>
+						<a href="#">水粉</a>
+						<a href="#">水彩</a>
+						<a href="#">油画</a>
+						<a href="#">国画</a>
+						<a href="#">水墨画</a>
+						<a href="#">创意画</a>
+						<a href="#">速写</a>
+						<a href="#">插画</a>
+						<a href="#">卡通漫画</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">书法</a></dt>
+					<dd>
+						<a href="#">软笔书法</a>
+						<a href="#">硬笔书法</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-cont">
+			<ul  class="wboxs-kecheg">
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			</ul>
+			<div class="wboxs-newsbox">
+				<dl>
+					<dt><a>新闻</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a>相关文章</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="wboxs-newsbox" style="border: 0;">
+				<dl class="newsboxdl-one">
+					<dt><a>培训</a></dt>
+					<dd>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+					</dd>
+				</dl>
+				<dl class="newsboxdl-two">
+					<dt><a>作品展示</a></dt>
+					<dd>
+						<a href="#" class="HomeNews-title"><img src="img/img02.jpg"></a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-right">
+			<div class="wboxs-mings-title">名师专家 <a href="#">更多></a></div>
+			<ul class="wboxs-mings">
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+			</ul>
+        </div>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学校/机构推荐</div>
+		<ul class="wshool-cet">
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学生反馈</div>
+		<ul class="wshool-fankut">
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="window_layout_boxs bs8">
+	<div class="wboxs-title">
+		<img src="img/kej-ico.png">童声台科技学院
+	</div>
+	<div class="wboxs-conet">
+		<div class="wboxs-conet-left">
+			<div class="wboxs-biaos">
+				<img src="img/kej-img.jpg">
+				<span>用知识武装我们的头脑， <br />用科学实现我们的梦想</span>
+			</div>
+			<div class="wboxs-classcpt">
+				<dl>
+					<dt><a href="#">素描</a></dt>
+					<dd>
+						<a href="#">基础素描</a>
+						<a href="#">中级素描</a>
+						<a href="#">高级素描</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">绘画</a></dt>
+					<dd>
+						<a href="#">水粉</a>
+						<a href="#">水彩</a>
+						<a href="#">油画</a>
+						<a href="#">国画</a>
+						<a href="#">水墨画</a>
+						<a href="#">创意画</a>
+						<a href="#">速写</a>
+						<a href="#">插画</a>
+						<a href="#">卡通漫画</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">书法</a></dt>
+					<dd>
+						<a href="#">软笔书法</a>
+						<a href="#">硬笔书法</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-cont">
+			<ul  class="wboxs-kecheg">
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			</ul>
+			<div class="wboxs-newsbox">
+				<dl>
+					<dt><a>新闻</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a>相关文章</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="wboxs-newsbox" style="border: 0;">
+				<dl class="newsboxdl-one">
+					<dt><a>培训</a></dt>
+					<dd>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+					</dd>
+				</dl>
+				<dl class="newsboxdl-two">
+					<dt><a>作品展示</a></dt>
+					<dd>
+						<a href="#" class="HomeNews-title"><img src="img/img02.jpg"></a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-right">
+			<div class="wboxs-mings-title">名师专家 <a href="#">更多></a></div>
+			<ul class="wboxs-mings">
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+			</ul>
+        </div>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学校/机构推荐</div>
+		<ul class="wshool-cet">
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学生反馈</div>
+		<ul class="wshool-fankut">
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="window_layout_boxs bs9">
+	<div class="wboxs-title">
+		<img src="img/guof-ico.png">童声台国防学院
+	</div>
+	<div class="wboxs-conet">
+		<div class="wboxs-conet-left">
+			<div class="wboxs-biaos">
+				<img src="img/guof-img.jpg">
+				<span>与时俱进振兴中华，<br />科技强军固我长城</span>
+			</div>
+			<div class="wboxs-classcpt">
+				<dl>
+					<dt><a href="#">素描</a></dt>
+					<dd>
+						<a href="#">基础素描</a>
+						<a href="#">中级素描</a>
+						<a href="#">高级素描</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">绘画</a></dt>
+					<dd>
+						<a href="#">水粉</a>
+						<a href="#">水彩</a>
+						<a href="#">油画</a>
+						<a href="#">国画</a>
+						<a href="#">水墨画</a>
+						<a href="#">创意画</a>
+						<a href="#">速写</a>
+						<a href="#">插画</a>
+						<a href="#">卡通漫画</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a href="#">书法</a></dt>
+					<dd>
+						<a href="#">软笔书法</a>
+						<a href="#">硬笔书法</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-cont">
+			<ul  class="wboxs-kecheg">
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			  <li>
+			    <a href="#" class="kecheg-img"><img src="img/img01.jpg" alt=""></a>
+			    <div class="kecheg-decst">
+			        <p><a href="#">磊展教育精品系列课程磊展教育精品系列课程—留学生</a></p>
+			        11-26 丨<a href="#">南京玄武区</a>
+		      	</div>
+			  </li>
+			</ul>
+			<div class="wboxs-newsbox">
+				<dl>
+					<dt><a>新闻</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><a>相关文章</a></dt>
+					<dd>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#"><i>•</i>背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="wboxs-newsbox" style="border: 0;">
+				<dl class="newsboxdl-one">
+					<dt><a>培训</a></dt>
+					<dd>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">楷书基础课程</a>
+						<a href="#">草书基础课程</a>
+						<a href="#">钢笔字基础课程</a>
+						<a href="#">素描快速入门</a>
+						<a href="#">水彩中级课程</a>
+						<a href="#">素描快速入门</a>
+					</dd>
+				</dl>
+				<dl class="newsboxdl-two">
+					<dt><a>作品展示</a></dt>
+					<dd>
+						<a href="#" class="HomeNews-title"><img src="img/img02.jpg"></a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+						<a href="#">背诵5个高难度句子，相当于记300个四级词汇</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="wboxs-conet-right">
+			<div class="wboxs-mings-title">名师专家 <a href="#">更多></a></div>
+			<ul class="wboxs-mings">
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="img/xinw-img.jpg"></a>
+					<div class="wboxs-mings-deicl">
+						<a href="#">刘老师</a>
+						<span><a href="#">绘画</a></span>
+						<p>囧人囧事囧照，人在囧途，越囧越萌</p>
+					</div>
+				</li>
+			</ul>
+        </div>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学校/机构推荐</div>
+		<ul class="wshool-cet">
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<li><a href="#"><img src="img/xinw-img.jpg"></a></li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="wboxs-shool">
+		<div class="wshool-title">学生反馈</div>
+		<ul class="wshool-fankut">
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/xinw-img.jpg"><br />
+					刘老师
+				</a>
+				<div class="wshool-teibue">
+					 <span>臧老师是赵曼琴老师学生，讲的非常详细，授课内容和方式都和常见的不太一样，真正上课后才知道赵曼琴老师... </span>
+				</div>
+			</li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="footer">
+
+	<div class="footer_con">
+<!------------------------------------------ -->       
+    	<div class="_con_1">
+                <span> 关于我们</span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        
+        
+        </div><!--_con_1 -->
+<!------------------------------------------ -->           
+        <div class="_con_2">
+                <span> 帮助中心</span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        
+        
+        </div><!--_con_2 -->
+<!------------------------------------------ -->          
+        <div class="_con_3">
+        		 <span> 服务支持</span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        
+        </div><!--_con_3 -->
+<!------------------------------------------ -->           
+        <div class="_con_4">
+        		 <span> 友情链接 </span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        </div><!--_con_4 -->
+        
+<!------------------------------------------ -->        
+        
+        <div class="_con_5">
+        		<img src="img/tel_ico.png" />
+                <span>4008—123—123</span >
+                <p>周一至周日 8:00-23:00</p>
+        </div><!--_con_5 -->
+<!-- ------------------------------------------------------------------------ -->  
+
+<div class="clear"></div>
+     
+<hr  class="footer_con_line"/>
+<!-- ------------------------------------------------------------------------ -->            
+           <div class="_con_6"> Copyright © 2014 - 2015  童声台版权所有</div> 
+<!-- ------------------------------------------------------------------------ -->  
+            </div><!--footer_con -->
+</div><!--footer -->
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> 作品详情</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="js/jquery-1.7.2.min.js"></script>
+<script language="javascript" src="js/all.js"></script>
+</head>
+
+<body class="body_bg">
+<div class="top_bg">
+<div class="top">
+	<div class="logo"> <img src="img/logo.png" /></div>
+    <div class="top_city"> <p>南京</p> <span><a href="#">切换地区</a></span></div>
+<!----------------------------->      
+    <div class="top_index">
+    
+    	<div class="top_index_1">
+        	<ul>
+            	<li id="bt_1" class="on" onclick="changeDiv(1,3)">老师</li>
+                <li id="bt_2" onclick="changeDiv(2,3)">学校</li>
+                <li id="bt_3" onclick="changeDiv(3,3)">培训</li>
+           </ul>
+        
+        </div><!--top_index_1-->
+<!----------------------------->   
+<div class="top_form">   
+    	<form action="#" method="post" name="top_index">
+        	<input  type="search" name="key"  id="top_search" value="" placeholder="请输入您要搜索的关键字"/>
+        	<input  type="submit" name="top_bt" id="top_bt"  value="搜 索"/>
+        </form>
+        
+      </div>
+<!----------------------------->          
+    <div class="top_index_2">
+    	<ul>
+            	<li><a href="#">书画</a></li>
+                <li><a href="#">国学</a></li>
+                <li><a href="#">音乐</a></li>
+                <li><a href="#">舞蹈</a></li>
+                <li><a href="#">戏剧</a></li>
+                <li><a href="#">国际</a></li>
+                <li><a href="#">运动</a></li>
+                <li><a href="#">科技</a></li>
+                
+        </ul>
+    
+    
+    
+    </div><!--top_index_2-->
+    
+    
+    </div><!--top_index--> 
+<!----------------------------->  
+    <div class="top_login">
+    	<p>Hi,欢迎来到童声台！</p>
+        <a href="#">登录</a> <span><a href="#">注册</a> </span> 
+    </div>
+    
+
+</div><!--top-->
+
+<!--------------------------------------------------------------->
+
+<div class="nav">
+		<ul>
+            	<li><a href="../" class="nav_a1">童声台学院</a></li>
+                <li><a href="首页.html">首页</a></li>
+                <li><a href="新闻资讯.html">新闻资讯</a></li>
+                <li><a href="人才中心.html">人才中心</a></li>
+                <li><a href="活动视窗.html">活动视窗</a></li>
+                <li><a href="互动社区.html">互动社区</a></li>
+                
+    </ul>
+			<hr id="nav_line" /><!--nav_line-->
+</div><!--nav-->
+</div><!--top_bg-->
+
+
+<!--------------------------------------------------------------->
+<div class="news_layout_1">
+
+	<div class="news_works_layout_1_l"> 
+<!-------------------------------------------> 
+
+		<div class="_1_l_1">
+        
+        
+	<h5>《芈月传》：后宫娘娘们教给孩子狼性的生存之道</h5>
+    <div class="news_show_fbt"> <span>作者：李老师</span>   <span> 发布时间：2015-11-12</span></div>
+
+<p>
+    
+				　暖杨杨饶有兴致的看了《芈月传》第3、4集：向妃为保住自己的3个孩子，担心自己在宫外被玷污之事早晚东窗事发，决定孤注一掷扳倒威验的严峻性。而孩子未来的性格发展又能认同我暖杨杨今天的胡言乱语么......
+            
+    
+         <center>
+         <br />
+         <img src="img/works01_03.jpg" />
+        </center> <br />
+
+		<center>
+          <img src="img/works01_06.jpg" /> 
+          </center> 
+      
+      
+      </p>
+
+<form action="" method="post" name="vote">
+	<input class="vote_div" name="vote_bt_1" type="button" value="投TA一票" />
+
+
+</form>
+
+<div class="vote_con"> 
+	<span> 已有2000票</span>| <span>人气10000票</span> |<span>分享</span>
+</div><!--vote_con -->
+</div><!--_1_l_1 -->
+
+
+
+<!------------------------------------------->  
+ <div class="works_layout_l_2">
+<form method=post action="">
+	<div class="works_layout_l_2_top">
+    		<div class="_l_2_top">
+            	<textarea name="Memo" id="Memo" wrap=PHYSICAL onKeyDown="gbcount(this.form.Memo,this.form.total,this.form.used,this.form.remain);" onKeyUp="gbcount(this.form.Memo,this.form.total,this.form.used,this.form.remain);" cols="106" rows="6"></textarea>
+                
+         
+            </div><!--_l_2_top -->
+            
+            
+      <div class="_l_2_b"> 
+<input disabled="disabled" maxLength="4" name="total" size="3" value="200" class="inputtext" style="display:none;">
+
+<input disabled maxLength="4" name="used" size="3" value="0" class="inputtext" style="display:none;">
+还可以输入
+<input disabled maxLength="4" name="remain" size="3" value="200" class="inputtext">个字</div><!--_l_2_b -->
+            
+            
+            		<form action="" method="post">
+                    	<input name="comment" class="comment" type="button" value="评论" />
+                    
+                    
+                    </form>
+            
+           
+            
+            
+			
+    </div><!--works_layout_l_2_top -->
+		</form>
+
+	<div class="works_layout_l_2_b">
+    
+    	<!----------------------------------------------------------------------------------------- -->
+<div class="index_teacher_evaluation_con">
+	
+                        <h6> 全部评价（236）</h6>
+                        <!--------------------------->            
+						<div class="_2_l_con3_con">
+                                <div class="_2_l_con3_mask">
+                                    <img src="img/tuxing_65.jpg" width="85" height="85" />
+                                    <div class="mask_65"></div>
+                                
+                                </div>
+                                
+                                <div class="_2_l_con3_mask_r">
+                                	<h5>李冬冬同学</h5>
+                                    <p>张老师能在很短的时间里看到孩子的不足之处并有针对的训练， 讲课也很认真</p>
+                                	<span> 2015-12-30</span>
+                                
+                                </div>
+                        
+                        </div><!--_2_l_con3_con -->
+                        <!--------------------------->
+                        
+                         <!--------------------------->            
+						<div class="_2_l_con3_con">
+                                <div class="_2_l_con3_mask">
+                                    <img src="img/tuxing_65.jpg" width="85" height="85" />
+                                    <div class="mask_65"></div>
+                                
+                                </div>
+                                
+                                <div class="_2_l_con3_mask_r">
+                                	<h5>李冬冬同学</h5>
+                                    <p>张老师能在很短的时间里看到孩子的不足之处并有针对的训练， 讲课也很认真</p>
+                                	<span> 2015-12-30</span>
+                                
+                                </div>
+                        
+                        </div><!--_2_l_con3_con -->
+                        <!--------------------------->
+                        
+                        
+                         <!--------------------------->            
+						<div class="_2_l_con3_con">
+                                <div class="_2_l_con3_mask">
+                                    <img src="img/tuxing_65.jpg" width="85" height="85" />
+                                    <div class="mask_65"></div>
+                                
+                                </div>
+                                
+                                <div class="_2_l_con3_mask_r">
+                                	<h5>李冬冬同学</h5>
+                                    <p>张老师能在很短的时间里看到孩子的不足之处并有针对的训练， 讲课也很认真</p>
+                                	<span> 2015-12-30</span>
+                                
+                                </div>
+                        
+                        </div><!--_2_l_con3_con -->
+                        <!--------------------------->
+                        
+                        
+                        
+                         <!--------------------------->            
+						<div class="_2_l_con3_con">
+                                <div class="_2_l_con3_mask">
+                                    <img src="img/tuxing_65.jpg" width="85" height="85" />
+                                    <div class="mask_65"></div>
+                                
+                                </div>
+                                
+                                <div class="_2_l_con3_mask_r">
+                                	<h5>李冬冬同学</h5>
+                                    <p>张老师能在很短的时间里看到孩子的不足之处并有针对的训练， 讲课也很认真</p>
+                                	<span> 2015-12-30</span>
+                                
+                                </div>
+                        
+                        </div><!--_2_l_con3_con -->
+                        <!--------------------------->
+                        
+                        
+                        
+                        
+                         <!--------------------------->            
+						<div class="_2_l_con3_con">
+                                <div class="_2_l_con3_mask">
+                                    <img src="img/tuxing_65.jpg" width="85" height="85" />
+                                    <div class="mask_65"></div>
+                                
+                                </div>
+                                
+                                <div class="_2_l_con3_mask_r">
+                                	<h5>李冬冬同学</h5>
+                                    <p>张老师能在很短的时间里看到孩子的不足之处并有针对的训练， 讲课也很认真</p>
+                                	<span> 2015-12-30</span>
+                                
+                                </div>
+                        
+                        </div><!--_2_l_con3_con -->
+                        <!--------------------------->
+                        
+                        
+                        
+                         <!--------------------------->            
+						<div class="_2_l_con3_con">
+                                <div class="_2_l_con3_mask">
+                                    <img src="img/tuxing_65.jpg" width="85" height="85" />
+                                    <div class="mask_65"></div>
+                                
+                                </div>
+                                
+                                <div class="_2_l_con3_mask_r">
+                                	<h5>李冬冬同学</h5>
+                                    <p>张老师能在很短的时间里看到孩子的不足之处并有针对的训练， 讲课也很认真</p>
+                                	<span> 2015-12-30</span>
+                                
+                                </div>
+                        
+                        </div><!--_2_l_con3_con -->
+                        <!--------------------------->
+                        
+                        
+                        
+                        
+                         <!--------------------------->            
+						<div class="_2_l_con3_con">
+                                <div class="_2_l_con3_mask">
+                                    <img src="img/tuxing_65.jpg" width="85" height="85" />
+                                    <div class="mask_65"></div>
+                                
+                                </div>
+                                
+                                <div class="_2_l_con3_mask_r">
+                                	<h5>李冬冬同学</h5>
+                                    <p>张老师能在很短的时间里看到孩子的不足之处并有针对的训练， 讲课也很认真</p>
+                                	<span> 2015-12-30</span>
+                                
+                                </div>
+                        
+                        </div><!--_2_l_con3_con -->
+                        <!--------------------------->
+                        
+                        
+                        
+                         <!--------------------------->            
+						<div class="_2_l_con3_con">
+                                <div class="_2_l_con3_mask">
+                                    <img src="img/tuxing_65.jpg" width="85" height="85" />
+                                    <div class="mask_65"></div>
+                                
+                                </div>
+                                
+                                <div class="_2_l_con3_mask_r">
+                                	<h5>李冬冬同学</h5>
+                                    <p>张老师能在很短的时间里看到孩子的不足之处并有针对的训练， 讲课也很认真</p>
+                                	<span> 2015-12-30</span>
+                                
+                                </div>
+                        
+                        </div><!--_2_l_con3_con -->
+                        <!--------------------------->
+                        
+                        
+                        
+                         <!--------------------------->            
+						<div class="_2_l_con3_con">
+                                <div class="_2_l_con3_mask">
+                                    <img src="img/tuxing_65.jpg" width="85" height="85" />
+                                    <div class="mask_65"></div>
+                                
+                                </div>
+                                
+                                <div class="_2_l_con3_mask_r">
+                                	<h5>李冬冬同学</h5>
+                                    <p>张老师能在很短的时间里看到孩子的不足之处并有针对的训练， 讲课也很认真</p>
+                                	<span> 2015-12-30</span>
+                                
+                                </div>
+                        
+                        </div><!--_2_l_con3_con -->
+                        <!--------------------------->
+                        
+                        
+                        
+                         <!--------------------------->            
+						<div class="_2_l_con3_con">
+                                <div class="_2_l_con3_mask">
+                                    <img src="img/tuxing_65.jpg" width="85" height="85" />
+                                    <div class="mask_65"></div>
+                                
+                                </div>
+                                
+                                <div class="_2_l_con3_mask_r">
+                                	<h5>李冬冬同学</h5>
+                                    <p>张老师能在很短的时间里看到孩子的不足之处并有针对的训练， 讲课也很认真</p>
+                                	<span> 2015-12-30</span>
+                                
+                                </div>
+                        
+                        </div><!--_2_l_con3_con -->
+                        <!--------------------------->
+                        
+                        
+                        
+                         <!--------------------------->            
+						<div class="_2_l_con3_con">
+                                <div class="_2_l_con3_mask">
+                                    <img src="img/tuxing_65.jpg" width="85" height="85" />
+                                    <div class="mask_65"></div>
+                                
+                                </div>
+                                
+                                <div class="_2_l_con3_mask_r">
+                                	<h5>李冬冬同学</h5>
+                                    <p>张老师能在很短的时间里看到孩子的不足之处并有针对的训练， 讲课也很认真</p>
+                                	<span> 2015-12-30</span>
+                                
+                                </div>
+                        
+                        </div><!--_2_l_con3_con -->
+                        <!--------------------------->
+                        
+                        </div><!--index_teacher_evaluation_con -->
+                        
+<!------------------------------------------------------------------------ -->  
+    
+    
+		
+    </div><!--works_layout_l_2_b -->
+    
+    
+    <div id="up_down_2">
+	<span class="up"><a href="#"> <&nbsp;上一页</a></span>
+    <ul>
+    	<li><a href="#"> 1</a></li>
+        <li><a href="#"> 2</a></li>
+        <li><a href="#"> 3</a></li>
+        <li><a href="#"> 4</a></li>
+        <li><a href="#"> 5</a></li>
+        <li><a href="#"> 6</a></li>
+        <li><a href="#"> 7</a></li>
+        <li><a href="#"> 8</a></li>
+        <li><a href="#"> 9</a></li>
+        <li><a href="#"> ...</a></li>
+        <li><a href="#">22</a></li>
+    
+    </ul>
+    
+    <span class="down"><a href="#">下一页&nbsp;> </a></span>
+
+</div><!--up_down_2 --> 
+
+<!------------------------------------------->   
+
+
+
+</div><!--works_layout_l_2 -->
+
+
+
+
+
+<!------------------------------------------->
+  </div> <!--news_content_layout_1_l -->
+<!------------------------------------------->
+
+
+	<div class="news_content_layout_1_r"> 
+<!-------------------------------------------> 
+		<h4>其它文章</h4>    
+		<ul>
+        	<li><a href="#">如何引导孩子不分场合的“实话实说</a></li>
+            <li><a href="#">呼吸道疾病的治疗有“窍门”</a></li>
+            <li><a href="#">如何引导孩子不分场合的“实话实说</a></li>
+            <li><a href="#">如何引导孩子不分场合的“实话实说</a></li>
+            <li><a href="#">如如何带孩子逃离雾霾？别再...</a></li>
+            <li><a href="#">如何引导孩子不分场合的“实的“实的“实话实说...</a></li>
+        
+        </ul>
+
+
+<!------------------------------------------->  
+ 
+  </div> <!--news_content_layout_1_r -->
+<!------------------------------------------->
+
+
+<!--------------------------------------------------------------->
+
+
+</div><!--news_layout_1 -->
+
+      
+
+     
+<!-----------------------------> 
+    </div><!--layout_2_l-->
+<!--------------------------------------------------------------------------->  
+   
+   
+
+<div class="footer">
+
+	<div class="footer_con">
+<!------------------------------------------ -->       
+    	<div class="_con_1">
+                <span> 关于我们</span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        
+        
+        </div><!--_con_1 -->
+<!------------------------------------------ -->           
+        <div class="_con_2">
+                <span> 帮助中心</span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        
+        
+        </div><!--_con_2 -->
+<!------------------------------------------ -->          
+        <div class="_con_3">
+        		 <span> 服务支持</span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        
+        </div><!--_con_3 -->
+<!------------------------------------------ -->           
+        <div class="_con_4">
+        		 <span> 友情链接 </span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        </div><!--_con_4 -->
+        
+<!------------------------------------------ -->        
+        
+        <div class="_con_5">
+        		<img src="img/tel_ico.png" />
+                <span>4008—123—123</span >
+                <p>周一至周日 8:00-23:00</p>
+        </div><!--_con_5 -->
+<!-- ------------------------------------------------------------------------ -->  
+
+<div class="clear"></div>
+     
+<hr  class="footer_con_line"/>
+<!-- ------------------------------------------------------------------------ -->            
+           <div class="_con_6"> Copyright © 2014 - 2015  童声台版权所有</div> 
+<!-- ------------------------------------------------------------------------ -->  
+  </div><!--footer_con -->
+</div><!--footer -->
+
+</body>
+</html>

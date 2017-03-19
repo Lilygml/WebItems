@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>商业楼</title>
+<link href="css/default.css" rel="stylesheet" type="text/css"/><!--公共样式-->
+<link href="css/style.css" rel="stylesheet" type="text/css" /><!--主题样式-->
+<link rel="stylesheet" href="css/validationEngine.jquery.css"><!--表单验证css-->
+<link rel="stylesheet" href="css/dbootstrap.css"><!--房源详情弹出模态框样式-->
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.validationEngine.js"></script><!--表单验证-->
+<script src="js/jquery.validationEngine-zh-CN.js"></script><!--表单验证cn-->
+<script type="text/javascript" src="js/lrtk.js"></script><!--主题js-->
+<script src="js/bootstrap.min.js"></script><!--房源详情弹出模态框js-->
+<script type="text/javascript" src="js/jquery.raty.min.js"></script><!--房源详情星级评分-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3"></script><!--房源详情百度地图-->
+<script type="text/javascript" src="laydate/laydate.js"></script><!--房源详情日历插件-->
+</head>
+<body style="background: #fff;">
+<header>
+	<div class="header clearfix">
+		<div class="w1200">
+			<img src="img/logo_01.png" />
+			<span>
+				<em>苏州</em><i></i>
+				<div class="drop_d">
+					<div class="drop"><b>苏州</b><div class="drop_01"><a href="">园区</a><a href="">姑苏</a><a href="">吴中</a><a href="">新区</a><a href="">相城</a><a href="">吴江</a><a href="">湖东</a><a href="">狮山</a><a href="">木渎</a><a href="">陆慕</a><a href="">斜塘</a><a href="">昆山</a></div></div>
+				</div>
+			</span>
+			<ul>
+				<li><a href="百家好首页.html" class="curr">首页</a></li>
+				<li><a href="新房.html">新房</a></li>
+				<li><a href="办公楼.html">办公楼</a></li>
+				<li><a href="商业楼.html">商业楼</a></li>
+				<li><a href="工业厂房.html">工业厂房</a></li>
+				<li><a href="二手房.html">二手房</a></li>
+			</ul>
+			<div class="login_l"><a href="登录.html">登录</a><b>|</b><a href="注册.html">注册</a></div>
+		</div>
+	</div>	
+</header>
+<section>
+    <div class="content clearfix">
+  	    <div class="w1200">
+			<div class="two_office detail_top"><a href="">昆山首页</a>><a href="">昆山二手房</a>><a href="">房源名称</a></div>
+			<div class="detail">
+				<div class="esf-pics">
+            <div class="p-big" id="bigPic"></div>
+            <div class="p-list">
+                <ul id="bigPiclist">
+	                <li data-src="img/depict.jpg" style="background-image:url(img/depict.jpg)" class="cur"></li>
+	                <li data-src="img/depict_01.jpg" style="background-image:url(img/depict_01.jpg)"></li>
+	                <li data-src="img/depict_02.jpg" style="background-image:url(img/depict_02.jpg)"></li>
+	                <li data-src="img/detail_01.jpg" style="background-image:url(img/detail_01.jpg)"></li>
+	            </ul>
+            </div>
+        </div>
+				<div class="detail_right">
+					<div class="detail_header"><a href="">靠近商业商业中心,交通便利,超低总价.房东急售</a></div>
+					<div class="detail_xue"><a href="" class="a1">学区房</a><a href="" class="a2">豪华装修 </a><a href="" class="a3">超低价格</a><span>发布时间：2015-6-28</span></div>
+					<ul class="detail_table">
+						<span>房屋总价：<font color="ff6600" size="5">84</font>万（8937/m<sup>2</sup>）</span>
+						<li>面   &nbsp; &nbsp; &nbsp;积：94m2</li>
+						<li>户   &nbsp; &nbsp; &nbsp;型：2室2厅1卫</li>
+						<li>楼    &nbsp; &nbsp; &nbsp;层：低层</li>
+						<li>装   &nbsp; &nbsp; &nbsp;修：精简装修</li>
+						<li>小区名称：锦龙苑</li>
+						<li>朝   &nbsp; &nbsp; &nbsp;向：南</li>
+						<li>建筑类型：普通住宅</li>
+						<li>建造年代：2002年</li>
+						<li>停车位数：1位</li>
+						<li>规划户数：2户</li>
+						<li>开 发 商 ：万达物业</li>
+						<li>物业公司：万达物业</li>
+						<li>容 积 率 ：80%</li>
+						<li>绿 化 率 ：80%</li>
+					</ul>
+					<div class="detail_see">
+						<a href="" data-action="edit" class="subm">预约看房</a><span>联系电话：15954256512</span>
+					</div>
+					<div class="modal fade bs-example-modal-lg" id="gallery-image-modal" data-backdrop="static" style="top:50%; margin-top:-240px;">
+                        <div class="modal-dialog modal-lg" role="document" >
+                          <div class="modal-content">
+                          	<button type="button" class="modal-gallery-top-controls" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                            <div class="service_list">
+                                <form action="" id="formID">
+                                    <div class="detail_l">我们会在您要求的时间内联系您：</div>
+                                    <div class="detail_input detail_input_01">
+                                    	<label>预约时间：</label>
+                                    	<input type="text" placeholder="请输入年/月/日"/ class="validate[required,custom[date]]" id="datatime">
+                                    </div>
+                                    <div class="detail_input">
+                                    	<label>&nbsp;</label>
+                                    	<select class="validate[required]" >
+                                    		<option>1时</option>
+                                    		<option>2时</option>
+                                    		<option>3时</option>
+                                    		<option>4时</option>
+                                    		<option>5时</option>
+                                    		<option>6时</option>
+                                    		<option>7时</option>
+                                    		<option>8时</option>
+                                    		<option>9时</option>
+                                    		<option>10时</option>
+                                    		<option>11时</option>
+                                    		<option>12时</option>
+                                    	</select>
+                                    	&nbsp;&nbsp;至&nbsp;&nbsp;
+                                    	<select class="validate[required]" >
+                                    		<option>1时</option>
+                                    		<option>2时</option>
+                                    		<option>3时</option>
+                                    		<option>4时</option>
+                                    		<option>5时</option>
+                                    		<option>6时</option>
+                                    		<option>7时</option>
+                                    		<option>8时</option>
+                                    		<option>9时</option>
+                                    		<option>10时</option>
+                                    		<option>11时</option>
+                                    		<option>12时</option>
+                                    	</select>
+                                    </div>
+                                    <div class="detail_input">
+                                    	<label>联系人：</label>
+                                    	<input type="text" placeholder="请输入联系人" class="validate[required]"/>
+                                    </div>
+                                    <div class="detail_input">
+                                    	<label>您的联系方式：</label>
+                                    	<input type="text" placeholder="请输入联系电话" class="validate[required,custom[phone]]" />
+                                    </div>
+                                    <div class="detail_input detail_input_02">
+                                    	<label>&nbsp;</label>
+                                    	<input type="submit" value="确认提交"/>
+                                    </div>  
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+					<div class="detail_collect">
+						<a href="" class="a1">收藏 </a><a href="" class="a2">留言</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="resources">
+				<div class="detail_depict clearfix">
+					<ul>
+						<li><a href="javascript:;">房源描述</a></li>
+						<li><a href="javascript:;">房源图片</a></li>
+						<li><a href="javascript:;">周边配套</a></li>
+						<li><a href="javascript:;">地理位置</a></li>
+					</ul>
+					<div class="depict_all">
+						<div class="depict_01">
+							通海二小区 2室2厅1卫1阳台 南 普装
+						</div>
+						<div class="depict_01">
+							<img src="img/depict.jpg"><img src="img/depict_01.jpg"><img src="img/depict_02.jpg">
+						</div>
+						<div class="depict_01">
+							<img src="img/depict.jpg"><img src="img/depict_01.jpg"><img src="img/depict_02.jpg">
+						</div>
+						<div class="depict_01">
+							<div id="map"></div>
+						</div>
+					</div>
+					<div class="evaluate">
+						<div class="evaluate_top">房源评价</div>
+						<div class="evaluate_middle">
+							<span>好评率：<font>100%</font></span>
+							<span>真实度：<font>5.0</font></span>
+							<span>满意度：<font>5.0</font></span>
+							<span>专业度：<font>5.0</font></span>
+						</div>
+						<div class="evaluate_bottom">
+							<form action="" id="formID2">
+								<div class="form_evaluate">
+									<div class="form_left">
+										<div class="evaluate_b">
+											<b>评价：</b>
+											<span radio-value="1">好评</span>
+											<span radio-value="2">中评</span>
+											<span radio-value="3">差评</span>
+											<input type="hidden" />
+										</div>
+										<div class="evaluate_a"><span>房屋信息真实度：</span><div class="function-demo" ></div></div>
+										<div class="evaluate_a"><span>服务态度满意度：</span><div class="function-demo" ></div></div>
+										<div class="evaluate_a"><span>业务水平专业度：</span><div class="function-demo" ></div></div>
+									</div>
+									<div class="form_right">
+										<textarea row="6" class="validate[required,minSize[10]]"></textarea>
+									</div>
+								</div>
+								<div class="evaluate_input"><input type="submit" value="提交评价"/></div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="resources_right">
+					<div class="souce_top">
+						<div class="souce_you">
+							<div class="souce_you_word">优质房源推荐</div>
+							<div class="souce_img">
+								<a href="房源详情.html" class="souce_a"><img src="img/d_img_02.jpg"></a>
+								<div class="souce_b">
+									<h2><a href="房源详情.html">大华锦绣东郊</a></h2>
+									<b>[<a href="">昆山 城东</a>]</b>
+									<em><font size="4">7800</font>元/平米</em>									
+								</div>
+                            </div>
+							<div class="souce_img">
+								<a href="房源详情.html" class="souce_a"><img src="img/d_img_02.jpg"></a>
+								<div class="souce_b">
+									<h2><a href="房源详情.html">大华锦绣东郊</a></h2>
+									<b>[<a href="">昆山 城东</a>]</b>
+									<em><font size="4">7800</font>元/平米</em>									
+								</div>
+                            </div>
+                            <div class="souce_img">
+								<a href="房源详情.html" class="souce_a"><img src="img/d_img_02.jpg"></a>
+								<div class="souce_b">
+									<h2><a href="房源详情.html">大华锦绣东郊</a></h2>
+									<b>[<a href="">昆山 城东</a>]</b>
+									<em><font size="4">7800</font>元/平米</em>									
+								</div>
+                            </div>
+                            <div class="souce_img">
+								<a href="房源详情.html" class="souce_a"><img src="img/d_img_02.jpg"></a>
+								<div class="souce_b">
+									<h2><a href="房源详情.html">大华锦绣东郊</a></h2>
+									<b>[<a href="">昆山 城东</a>]</b>
+									<em><font size="4">7800</font>元/平米</em>									
+								</div>
+                            </div>
+                            <div class="souce_img">
+								<a href="房源详情.html" class="souce_a"><img src="img/d_img_02.jpg"></a>
+								<div class="souce_b">
+									<h2><a href="房源详情.html">大华锦绣东郊</a></h2>
+									<b>[<a href="">昆山 城东</a>]</b>
+									<em><font size="4">7800</font>元/平米</em>									
+								</div>
+                            </div>
+                            <div class="souce_img">
+								<a href="房源详情.html" class="souce_a"><img src="img/d_img_02.jpg"></a>
+								<div class="souce_b">
+									<h2><a href="房源详情.html">大华锦绣东郊</a></h2>
+									<b>[<a href="">昆山 城东</a>]</b>
+									<em><font size="4">7800</font>元/平米</em>									
+								</div>
+                            </div>
+						</div>
+					</div>
+					<div class="big_img"><img src="img/big_img.jpg"></div>
+					<div class="souce_top souce_bottom">
+						<div class="souce_you">
+							<div class="souce_you_word">房源推荐</div>
+							<ul class="souce_span">
+								<li>
+									<a href="#" class="citys">[开发区]</a>
+									<a href="房源详情.html" class="fcname">大华锦绣东郊</a>
+									<span>7000元/平米</span>
+								</li>
+								<li>
+									<a href="#" class="citys">[开发区]</a>
+									<a href="房源详情.html" class="fcname">大华锦绣东郊</a>
+									<span>7000元/平米</span>
+								</li>
+								<li>
+									<a href="#" class="citys">[开发区]</a>
+									<a href="房源详情.html" class="fcname">大华锦绣东郊</a>
+									<span>7000元/平米</span>
+								</li>
+								<li>
+									<a href="#" class="citys">[开发区]</a>
+									<a href="房源详情.html" class="fcname">大华锦绣东郊</a>
+									<span>7000元/平米</span>
+								</li>
+								<li>
+									<a href="#" class="citys">[开发区]</a>
+									<a href="房源详情.html" class="fcname">大华锦绣东郊</a>
+									<span>7000元/平米</span>
+								</li>
+								<li>
+									<a href="#" class="citys">[开发区]</a>
+									<a href="房源详情.html" class="fcname">大华锦绣东郊</a>
+									<span>7000元/平米</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="two_office_recomend">
+				<div class="two_recomend">
+					<div class="two_top">房源推荐</div>
+					<ul>
+						<li>
+							<a href="房源详情.html" class="a_re"><img src="img/d_img_03.jpg"></a>
+							<div class="two_middle"><a href="" class="citys">昆山</a><a href="房源详情.html" class="fcname">首开班芙春天</div>
+							<div class="two_bottom"><span>4室2厅</span><b>150万</b></div>
+						</li>
+						<li>
+							<a href="房源详情.html" class="a_re"><img src="img/d_img_03.jpg"></a>
+							<div class="two_middle"><a href="" class="citys">昆山</a><a href="房源详情.html" class="fcname">首开班芙春天</div>
+							<div class="two_bottom"><span>4室2厅</span><b>150万</b></div>
+						</li>
+						<li>
+							<a href="房源详情.html" class="a_re"><img src="img/d_img_03.jpg"></a>
+							<div class="two_middle"><a href="" class="citys">昆山</a><a href="房源详情.html" class="fcname">首开班芙春天</div>
+							<div class="two_bottom"><span>4室2厅</span><b>150万</b></div>
+						</li>
+						<li>
+							<a href="房源详情.html" class="a_re"><img src="img/d_img_03.jpg"></a>
+							<div class="two_middle"><a href="" class="citys">昆山</a><a href="房源详情.html" class="fcname">首开班芙春天</div>
+							<div class="two_bottom"><span>4室2厅</span><b>150万</b></div>
+						</li>
+						<li>
+							<a href="房源详情.html" class="a_re"><img src="img/d_img_03.jpg"></a>
+							<div class="two_middle"><a href="" class="citys">昆山</a><a href="房源详情.html" class="fcname">首开班芙春天</div>
+							<div class="two_bottom"><span>4室2厅</span><b>150万</b></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+    </div>  	
+    </div>  
+</section>
+
+<footer>
+	<div class="footer">
+		<div class="w1200">
+			<ul class="clearfix">
+				<li class="li_l">
+					<img src="img/logo.png">
+					<div class="footer_l">百家好房产信息网介绍，品牌简介。百家好房产信息网介绍，品牌简介。百家好房产信息网介绍，品牌简介。百家好房产信息网介绍，品牌简介。百家好房产信息网介绍，品牌简介。百家好房产信息网介绍，品牌简介。百家好房产信息网介绍，品牌简介。</div>
+				</li>
+				<li class="li_m">
+					<div class=" footer_m">
+						<img src="img/phone.png">
+						<div class="footer_mw">
+					    	<span>客服热线</span>
+					    	<b>4000-441-554</b>
+						</div>
+					</div>
+					<div class="footer_m1">
+						<img src="img/location.png">
+						<div class="footer_mw1">
+							<span>联系方式</span>
+							<b>昆山市开发区前进东路757号楼1613室<br>传真：26545622<br>QQ:8354625482</b>
+						</div>
+					</div>
+				</li>
+				<li class="li_r">
+					<div class="footer_r"><i></i>关注微信</div>
+					<img src="img/erweim.png">
+					<div class="footer_r1"><i></i>关注微博</div>
+				</li>
+			</ul>
+			<div class="footer_nav">
+				<a href="关于我们.html">关于我们</a><b>&nbsp;&nbsp;|&nbsp;&nbsp;</b><a href="关于我们.html">人才招聘</a><b>&nbsp;&nbsp;|&nbsp;&nbsp;</b><a href="联系我们.html">联系我们</a><b>&nbsp;&nbsp;|&nbsp;&nbsp;</b><a href="关于我们.html">用户协议</a><b>&nbsp;&nbsp;|&nbsp;&nbsp;</b><a href="使用帮助.html">使用帮助</a><b>&nbsp;&nbsp;|&nbsp;&nbsp;</b><a href="友情链接.html">友情链接</a>
+			</div>
+			<div class="copy">版权所有 © 百家好房地产（昆山）有限公司  Copyright © 2014 bjhhouse.com All Rights Reserved  沪ICP备 254125号</div>
+		</div>
+	</div>
+</footer>
+		
+<!-- 代码 开始 -->
+<div class="main-im main_right">
+	<div id="open_im" class="open-im">&nbsp;</div>  
+	<div class="im_main" id="im_main">
+		<div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div>
+		<a href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" target="_blank" class="im-qq qq-a" title="在线QQ客服">
+			<div class="qq-container"></div>
+			<div class="qq-hover-c"><img class="img-qq" src="img/qq.png"></div>
+			<span> QQ在线咨询</span>
+		</a>
+		<div class="im-tel">
+			<div>售前咨询热线</div>
+			<div class="tel-num">400-123-45678</div>
+			<div>售后咨询热线</div>
+			<div class="tel-num">010-12345678</div>
+		</div>
+		<div class="im-footer" style="position:relative">
+			<div class="weixing-container">
+				<div class="weixing-show">
+					<div class="weixing-txt">微信扫一扫<br>关注懒人图库</div>
+					<img class="weixing-ma" src="img/weixing-ma.jpg">
+					<div class="weixing-sanjiao"></div>
+					<div class="weixing-sanjiao-big"></div>
+				</div>
+			</div>
+			<div class="go-top"><a href="javascript:;" title="返回顶部"></a> </div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+</div>
+<!-- 代码 结束 -->	
+  <script type="text/javascript">
+  	//时间控件
+	laydate({
+	    elem: '#datatime',
+	    format: 'YYYY/MM/DD',
+	    min: '1900-01-01 00:00:00', //设定最小日期为当前日期
+	    max: '2099-06-16 23:59:59', //最大日期
+	    start: laydate.now(),    //开始日期
+	    istime: false,
+	    istoday: true
+	});
+	laydate.skin('yalan')
+    //创建和初始化地图函数：
+    function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){ 
+      map = new BMap.Map("map"); 
+      map.centerAndZoom(new BMap.Point(117.295249,31.238781),17);
+    }
+    function setMapEvent(){
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+      map.enableDragging();
+      map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+      target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+      });
+    }
+    function addMapOverlay(){
+      var markers = [
+        {content:"昆山市开发区前进东路757号楼1613室<br/>传真：26545622<br/>QQ:8354625482",title:'<h2 style=font-size:1.3em;line-height:2.1em;>百家好房地产（昆山）有限公司</h2>',imageOffset: {width:0,height:0},position:{lat:31.238924,lng:117.295164}}
+      ];
+      for(var index = 0; index < markers.length; index++ ){
+        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+        })});
+        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+        var opts = {
+          width: 280,
+          title: markers[index].title,
+          enableMessage: false
+        };
+        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+        marker.setLabel(label);
+        addClickHandler(marker,infoWindow);
+        map.addOverlay(marker);
+      };
+    }
+    //向地图添加控件
+    function addMapControl(){
+      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+      map.addControl(navControl);
+    }
+    var map;
+      initMap();
+  </script>
+</body>
+</html>

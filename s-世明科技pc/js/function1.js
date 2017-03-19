@@ -1,0 +1,23 @@
+// JavaScript Document
+$(document).ready(function(){
+	$("select#atlaset").click(function(){
+		$("#atla_color").css("background-color",$(this).find("option:selected").val());
+	})
+	$(".kn-oselect").click(function(){
+		if($(this).next("ul").css("display")!="none"){
+			$(this).find("div").removeClass("kn-droptop");
+			$(this).next("ul").css("display","none");
+		}else{
+			$(this).find("div").addClass("kn-droptop");
+			$(this).next("ul").css("display","block");
+		}
+		$(this).next("ul").children("li").click(function(){
+		  $(this).siblings().removeClass("Default");
+		  $(this).addClass("Default");
+		  $(this).parent().prev().find("span").text($(this).text());
+		  $("#atla_color").css("background-color",$(this).attr("title"));
+		  $(this).parent().prev().find("div").removeClass("kn-droptop");
+		  $(this).parent().hide();
+		 })
+	})
+});

@@ -1,0 +1,577 @@
+/************************************************************************************
+smaller than 1100
+*************************************************************************************/
+@media screen and (max-width: 1200px) {
+	/* pagewrap */
+	.pagewrap {
+	width: 100%;
+}
+	.nav li a{
+	padding:0 5px;
+}
+	.tab_imglt{
+	padding-top:6%;
+}
+	.Project-casetxt ul li{
+	width:23%;
+}
+	.Project-casetxt ul li.txl{
+	width:47%;
+}
+	.Brand-brtxt ul li{
+	width:14.4%;
+}
+	.zui-netxt ul li{
+	width:44.8%;
+}
+	.footer-class{
+	width:60%;
+}
+	.footer-class dl {
+	padding-right:3%;
+	margin-right:5%;
+}
+	.nav-class dd.ulass ul{
+	margin-left:100px;
+}
+	.newslist-rl{
+	width:78%;
+}
+	.newslist-contxt-img{
+	height:150px;
+	width:32%;
+}
+	.newslist-contxtnr{
+	padding-left:37%;
+}
+	.service-class ul li{
+	width:22.7%;
+	padding:0 5% 0 1%;	
+}
+	.Contact_usrl{
+	width:48%;
+}
+	.Contact_usrl dl dd.cu3{
+	width:64.6%;
+}
+	.case-list ul li{
+	width:31.2%;
+}
+	.case-fxiang .case-list ul li{
+	width:30.8%;
+}
+	.Related_Case .case-list ul li{
+	width:17.2%;
+	padding-right:2%;
+}
+	.Related_Case .case-list-img, .Related_Case .case-list-img a{
+	height:175px;
+}
+	.Solutions-left{
+	width:60%;
+}
+	.Diagram-Serlist ul li{
+	width:26%;
+	padding:0 2.5% 0 2%;
+}
+}
+
+/************************************************************************************
+smaller than 1024
+*************************************************************************************/
+@media screen and (max-width: 1024px) {
+	.nav{
+	width:100%;
+	padding-top:100px;
+}
+	.nav li a{
+	padding:0 46px;
+}
+	.Brand-brtxt ul li{
+	width:17.6%;
+}
+	.zui-netxt ul li{
+	width:44%;
+}
+	.footer-class{
+	width:100%;
+	text-align:center;
+}
+	.footer-class dl {
+	padding-right:6%;
+	margin-right:10%;
+}
+	.footer-right{
+	float:left;
+	padding-left:4%;
+}
+	.newslist-rl{
+	width:76%;
+}
+	.newslist-contxt-img{
+	height:140px;
+}	
+	.newslist-contxt-name .txtle{
+	width:100%;
+}
+	.service-class ul li{
+	padding:0 5% 0 1%;	
+}
+	.Contact_usrl{
+	width:42%;
+}
+	.Contact_usrl dl dd.cu1{
+	width:95%;
+}
+	.Contact_usrl dl dd.cu3{
+	width:61.6%;
+}
+	.case-list-img,.case-list-img a,.case-fxiang .case-list-img, .case-fxiang .case-list-img a{
+	height:300px;
+}
+	.case-page{
+	text-align:center;
+}
+	.Related_Case .case-list ul li{
+	width:30%;
+}
+	.Related_Case .case-list-img, .Related_Case .case-list-img a{
+	height:290px;
+}
+	.Solutions-left{
+	width:55%;
+}
+}
+
+/************************************************************************************
+smaller than 960
+*************************************************************************************/
+@media screen and (max-width: 960px) {
+	.nav li a{
+	padding:0 42px;
+}
+	.Project-casetxt ul li{
+	width:30.6%;
+}
+	.Project-casetxt ul li.txl{
+	width:63.4%;
+}
+	.Brand-brtxt ul li{
+	width:22%;
+}
+	.zui-netxt ul li{
+	width:43.5%;
+}
+	.footer-class dl {
+	padding-right:6%;
+	margin-right:7%;
+}
+	.newslist-rl{
+	width:70.8%;
+}	
+	.newslist-contxt-img{
+	height:105px;
+}
+	.nw-blak{
+	width:100%;
+	padding:30px 0;
+	text-align:center;
+}
+	.service-class ul li{
+	padding:0 1.5% 0 2.8%;
+}
+	.Contact_usrl{
+	width:92.5%;
+}
+	.Contact_usrl dl dd.cu1{
+	width:97%;
+}
+	.Contact_usrl dl dd.cu3{
+	width:66%;
+}
+	.case-list ul li{
+	width:30.5%;
+}
+	.case-fxiang .case-list ul li{
+	width:30%;
+}
+	.case-list-img,.case-list-img a,.case-fxiang .case-list-img, .case-fxiang .case-list-img a{
+	height:230px;
+}
+	.Related_Case .case-list-img, .Related_Case .case-list-img a{
+	height:230px;
+}
+	.Solutions-left{
+	width:58%;
+}
+	.Solutions-right{
+	width:38%;
+}
+}
+
+/************************************************************************************
+smaller than 768
+*************************************************************************************/
+@media screen and (max-width: 768px) {
+	.nav li a{
+	padding:0 28px;
+}
+	.Project-casetxt ul li{
+	width:29.9%;
+}
+	.Project-casetxt ul li.txl{
+	width:63%;
+}
+	.Brand-brtxt ul li{
+	width:21.2%;
+}
+	.zui-netxt ul li{
+	width:42.5%;
+}
+	.footer-class dl {
+	padding-right:4%;
+	margin-right:4%;
+}
+	.newslist-lr{
+	width:32%;
+}
+	.newslist-rl{
+	width:67.8%;
+}	
+	.newslist-contxt-img{
+	height:75px;
+}
+	.service-class ul li{
+	padding:0 9.2%;
+}
+	.Contact_usrl{
+	width:90%;
+}
+	.Contact_usrl dl dd.cu3{
+	width:65%;
+}
+	.case-list ul li{
+	width:46.5%;
+}
+	.case-fxiang .case-list ul li{
+	width:29%;
+}
+	.case-list-img,.case-list-img a{
+	height:280px;
+}
+	.case-fxiang .case-list-img, .case-fxiang .case-list-img a{
+	height:180px;
+}
+	.pw56{
+	padding:0 !important;
+}
+	.Related_Case .case-list-img, .Related_Case .case-list-img a{
+	height:175px;
+}
+}
+
+/************************************************************************************
+smaller than 600
+*************************************************************************************/
+@media screen and (max-width: 600px) {
+	.nav li a{
+	padding:0 15px;
+}
+	.tab_img{
+	padding:60px 0;
+}
+	.tab_imgrl{
+	width:98%;
+}
+	.tab_imglt{
+	width:96%;
+	text-align:center;
+}
+	.Project-casetxt ul li{
+	width:46.2%;
+}
+	.Project-casetxt ul li.txl{
+	width:96%;
+}
+	.Brand-brtxt ul li{
+	width:20.8%;
+}
+	.zui-netxt ul li{
+	width:91%;
+}
+	.footer-class dl {
+	padding-right:2%;
+	margin-right:2%;
+}
+	.nav-class dd.ulass{
+	width:97%;
+}
+	.newslist-lr{
+	width:32%;
+}
+	.newslist-rl{
+	width:67.8%;
+}	
+	.newslist-contxt-img{
+	height:75px;
+}
+	.case-list ul li{
+	width:46%;
+}
+	.Contact_usrl dl dd.cu1{
+	width:96%;
+}
+	.Contact_usrl dl dd.cu3{
+	width:63.2%;
+}
+	.case-list-img,.case-list-img a{
+	height:240px;
+}
+	.case-fxiang .case-list ul li{
+	width:28%;
+}
+	.case-fxiang .case-list-img, .case-fxiang .case-list-img a{
+	height:120px;
+}
+	.Related_Case .case-list-img, .Related_Case .case-list-img a{
+	height:155px;
+}
+	.Diagram-Serlist ul li{
+	width:41%;
+}
+}
+
+/************************************************************************************
+smaller than 540
+*************************************************************************************/
+@media screen and (max-width: 540px) {
+	.logo{
+	left:50%;
+	margin-left:-127px;
+}
+	.phone{
+	top:96px;
+	right:auto;
+}
+	#menu_moblie_icon{
+	display:block;
+}
+	.header2 #menu_moblie_icon{
+	border-top: 3px solid #A0A0A0;
+	border-bottom:9px double #A0A0A0;
+}
+	.nav{
+	padding-top:130px;
+}
+	.nav ul{
+	padding-top:10px;
+	display:none;
+}
+  	.nav li{
+	display:block;
+	text-align:left;
+}
+  	.nav li a{
+	line-height:45px;
+	border-bottom: 1px solid #013a99;
+}
+	.nav li a:hover,#home .nav li a.home{
+	border:#012561 solid 1px;
+	border-bottom:#0470cb solid 1px;
+}
+	.header2 .nav li a{
+	border-bottom:#ccc solid 1px;
+}
+	.header2 .nav li a:hover,#about .nav li a.about,#Website .nav li a.Website,#hone .nav li a.hone,#Case .nav li a.Case,#Contact .nav li a.Contact{
+	border:#fff solid 1px;
+	border-bottom:#777 solid 1px;
+}
+	.Project-casetxt ul li{
+	width:45.5%;
+}
+	.Brand-brtxt ul li{
+	width:28.5%;
+}
+	.zui-netxt ul li{
+	width:90%;
+}
+	.footer-class{
+	text-align:left;
+}
+	.footer-class dl {
+	width:33%;
+	padding:8% !important;
+	margin:0 0 30px 0 !important;
+	border-right:1px solid #4e6791 !important;
+}
+	.newslist,.newslist-lr,.newslist-rl,.newslist-list{
+	width:100%;
+	border:0;
+}
+	.newslist-title span{
+	text-indent:1em;
+}
+	.newslist-contxt-img{
+	height:90px;
+}
+	.service-class ul li{
+	width:45%;
+	padding:0 19%;
+}	
+	.Contact_usrl{
+	width:88%;
+}
+	.case-list ul li{
+	width:45.5%;
+}
+	.Contact_usrl dl dd.cu3{
+	width:62.2%;
+}
+	.case-list-img,.case-list-img a{
+	height:210px;
+}
+	.Related_Case .case-list ul li{
+	width:46%;
+}
+	.Related_Case .case-list-img, .Related_Case .case-list-img a{
+	height:212px;
+}
+	.Diagram-Serlist ul li{
+	width:41%;
+}
+
+}
+
+/************************************************************************************
+smaller than 480
+*************************************************************************************/
+@media screen and (max-width: 480px) {
+	.Project-casetxt ul li{
+	width:95%;
+}
+	.Project-casetxt ul li.txl{
+	width:95%;
+}
+	.Brand-brtxt ul li{
+	width:26.8%;
+}
+	.zui-netxt ul li{
+	width:88%;
+}
+	.footer-class dl {
+	padding:7% !important;
+}
+	.newslist-contxt-img{
+	height:80px;
+}
+	.service-class ul li{
+	padding:0 18%;
+}
+	.Contact_usrl{
+	width:83%;
+}
+	.case-list ul li{
+	width:44%;
+}
+	.Contact_usrl dl dd.cu1,.Contact_usrl dl dd.cu2,.Contact_usrl dl dd.cu3{
+	width:94%;
+	margin:5px 0;
+}
+	.case-list-img,.case-list-img a{
+	height:150px;
+}
+	.case-fxiang .case-list ul li{
+	width:27%;
+}
+	.case-fxiang .case-list-img, .case-fxiang .case-list-img a{
+	height:120px;
+}
+	.Related_Case .case-list-img, .Related_Case .case-list-img a{
+	height:155px;
+}
+	.Solutions-left,.Solutions-right{
+	width:100%;
+}
+	.Diagram-Serlist ul li{
+	width:88%;
+}
+	.Diagram-title{
+	padding:32px 0;
+}
+}
+/************************************************************************************
+smaller than 360
+*************************************************************************************/
+@media screen and (max-width: 360px) {
+	.Brand-brtxt ul li{
+	width:42.5%;
+}
+	.footer-class dl {
+	width:41%;
+	padding:3% !important;
+}
+	.newslist-contxt-img{
+	height:70px;
+}
+	.service-class ul li{
+	width:72%;
+	padding:0 5%;
+}
+	.Contact_usrl{
+	width:83%;
+}
+	.Contact_usrl{
+	width:80%;
+}
+	.case-list ul li{
+	width:93%;
+}
+	.Contact_usrl dl dd.cu1,.Contact_usrl dl dd.cu2,.Contact_usrl dl dd.cu3{
+	width:93%;
+}
+	.case-list-img,.case-list-img a{
+	height:300px;
+}
+	.case-fxiang .case-list ul li{
+	width:88%;
+}
+	.case-fxiang .case-list-img, .case-fxiang .case-list-img a{
+	height:280px;
+}
+	.newslist-title i{
+	float:none;
+}
+	.case-fxiang .case-list-img, .case-fxiang .case-list-img a{
+	height:120px;
+}
+	.Related_Case .case-list ul li{
+	width:92%;
+}
+	.Related_Case .case-list-img, .Related_Case .case-list-img a{
+	height:270px;
+}
+}
+/************************************************************************************
+smaller than 320
+*************************************************************************************/
+@media screen and (max-width: 320px) {
+	.phone b{
+	width:25px;
+	padding:3px 5px;
+}
+	#menu_moblie_icon{
+	right:10px;
+}
+	.nav-class dd.ulass{
+	width:93%;
+}
+	.foot-bqlr{
+	padding-left:5px;
+}
+	.newslist-contxt-img{
+	height:60px;
+}
+	.Related_Case .case-list-img, .Related_Case .case-list-img a{
+	height:260px;
+}
+}

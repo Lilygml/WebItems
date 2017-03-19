@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="utf-8" /> 
+  <title>无标题文档</title> 
+  <link href="style/css.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script> 
+  <script type="text/javascript" src="js/function.js"></script> 
+  <script type="text/javascript" src="js/jquery.glide.min.js"></script> 
+  <script type="text/javascript" src="js/script.js"></script> 
+  <script type="text/javascript">
+$(document).ready(function() { 
+$('.content-ico-05 .m5 .m3 .ms2').click(function(){
+		SwitchCard(".content-ico-05 .m5 .m3 .ms2", ".content-ico-05 .m5 .ml1 .ms3", "cxhover", $(this))
+});
+$('.content-ico-05 .m5 .m3 .ms2').eq(0).trigger("click");
+		function SwitchCard(tab,con,addClass,obj){
+		var $_self = obj;
+		var $_nav = $(tab);
+		$_nav.removeClass(addClass),
+		$_self.addClass(addClass);
+		var $_index = $_nav.index($_self);
+		var $_con = $(con);
+		$_con.hide(),
+		$_con.eq($_index).show();
+	}
+	
+	
+	
+}); 
+
+</script> 
+  <script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script> 
+ </head> 
+ <body> 
+  <!--top--> 
+  <header> 
+   <div class="top"> 
+    <div class="pagewrap"> 
+     <div class="map"> 
+      <img src="images/logo-03.png" /> 
+      <div class="map-01">
+       列表模式
+      </div> 
+      <form>
+       <input type="text" name="" placeholder="请输入房源特征、楼盘名或地点..." />
+       <button type="submit" name="" value="">找出售</button>
+      </form> 
+     </div> 
+     <div class="map-ico"> 
+      <div class="map-ico-01"> 
+       <div class="mp"> 
+        <div class="mp1">
+         房源类型：
+        </div> 
+        <ul class="ulp"> 
+         <li class="lip"><a href="">店铺转让</a><a href="">写字楼出租</a><a href="">厂房地皮出售</a></li> 
+         <li class="lip"><a href="">店铺租售</a><a href="">写字楼出售</a></li> 
+        </ul> 
+       </div> 
+       <div class="mp"> 
+        <div class="mp1">
+         面积：
+        </div> 
+        <ul class="ulp"> 
+         <li class="lip"><a href="">不限</a><a href="">20-50平米</a><a href="">100-200平米</a><a href="">500-1000平米</a></li> 
+         <li class="lip"><a href="">不限</a><a href="">20-50平米</a><a href="">100-200平米</a><a href="">500-1000平米</a></li> 
+        </ul> 
+       </div> 
+       <div class="mp mp2"> 
+        <div class="mp1">
+         总价：
+        </div> 
+        <ul class="ulp"> 
+         <li class="lip"><a href="">不限</a><a href="">20-50平米</a><a href="">100-200平米</a><a href="">500-1000平米</a></li> 
+         <li class="lip"><a href="">不限</a><a href="">20-50平米</a><a href="">100-200平米</a><a href="">500-1000平米</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+      <div class="map-ico-02"> 
+       <div class="Contact_us wf"> 
+        <div id="dituContent"></div> 
+        <script type="text/javascript">
+                          var map = new BMap.Map("dituContent");          // 创建地图实例
+                          var point = new BMap.Point(121.006021,31.390785);  // 创建点坐标
+                          var point2 = new BMap.Point(121.006021,31.390785);  // 创建点坐标			
+                          map.addControl(new BMap.NavigationControl());  //控件
+                          map.addControl(new BMap.ScaleControl());  
+                          map.addControl(new BMap.OverviewMapControl());
+                          map.enableDragging();//启用地图拖拽事件，默认启用(可不写) 
+                          map.enableScrollWheelZoom();//启用地图滚轮放大缩小 
+                          map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写) 
+                          map.enableKeyboard();//启用键盘上下左右键移动地图 
+                          var marker = new BMap.Marker(point2);        // 创建标注  
+                          map.addOverlay(marker);                     // 将标注添加到地图中
+                          map.centerAndZoom(point, 17);                 // 初始化地图，设置中心点坐标和地图级别
+                          var opts = {  
+                          width : 250,     // 信息窗口宽度  
+                          height: 110,     // 信息窗口高度
+                          title : "<span style=\"line-height: 180%;font-size: 18px;\"><strong>吴中</strong></span>"  // 信息窗口标题  
+                          }  
+                          var infoWindow = new BMap.InfoWindow("<span style=\"line-height: 180%;font-size: 14px;\">电话：0512-57861599 400-072-5598<br />73332套</span>", opts);  // 创建信息窗口对象  
+                          map.openInfoWindow(infoWindow, map.getCenter());      // 打开信息窗口
+                          marker.addEventListener("click", function(){  
+                          map.openInfoWindow(infoWindow, map.getCenter());
+                          });  
+                        </script> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </header> 
+  <!--footer--> 
+  <div class="footer"> 
+   <div class="pagewrap"> 
+    <dl> 
+     <dd> 
+      <h1>关于我们</h1> 
+      <a href="">公司简介</a> 
+      <a href="">发展历程</a> 
+      <a href="">平台公告</a> 
+      <a href="">联系方式</a> 
+     </dd> 
+     <dd> 
+      <h1>服务项目</h1> 
+      <a href="">生意转让</a> 
+      <a href="">租赁招商</a> 
+      <a href="">找店选址</a> 
+      <a href="">服务协议</a> 
+     </dd> 
+     <dd> 
+      <h1>官方微博</h1> 
+      <a href=""><img src="images/erwei.jpg" /></a> 
+     </dd> 
+     <dd> 
+      <h1>官方微信</h1> 
+      <a href=""><img src="images/erwei.jpg" /></a> 
+     </dd> 
+     <dd> 
+      <h1>关注我们</h1> 
+      <a href="">新浪官方微博</a> 
+      <a href="">腾讯官方微博</a> 
+      <a href="">一句话点评</a> 
+      <a href="">分享给好友</a> 
+     </dd> 
+     <dd> 
+      <h1>关于我们</h1> 
+      <a href=""><span>400-8888-888</span>&nbsp;&nbsp;&nbsp;免长途费</a> 
+      <a href="">您还可以拨打：0512-88888888</a> 
+      <a href=""><img src="images/icon-13.png" /></a> 
+      <a href="">地址：苏州市昆山市前进东路1008号</a> 
+     </dd> 
+    </dl> 
+    <div class="clear"></div> 
+    <div class="footerl">
+     <a href="">首页</a>
+     <a href="">关于我们</a>
+     <a href="">新闻中心</a>
+     <a href="">支付方式</a>
+     <a href="">联系方式</a>
+     <a href="">客服中心</a>
+     <a href="">网站地图</a>
+     <a href="" class="as">公司资质</a>
+    </div> 
+    <div class="copyright">
+     CopyRight &copy; 2015-2025 www.kingexpand.com 财铺网有限公司版权所有 备案：苏ICP备12000000号&nbsp; 站长统计
+    </div> 
+   </div> 
+  </div>   
+ </body>
+</html>

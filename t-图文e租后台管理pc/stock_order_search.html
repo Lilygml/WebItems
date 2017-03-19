@@ -1,0 +1,413 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/jquery-1.7.js"></script>
+<script language=JavaScript src="js/Function.js"></script>
+<link href="images/skin.css" rel="stylesheet" type="text/css" />
+<link href="style/kei.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/listtable.js"></script>
+<body>
+
+<script src="js/colResizable-1.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){	
+		var onSampleResized = function(e){
+			
+			var columns = $(e.currentTarget).find("th");
+
+			var msg = "columns widths: ";
+
+			columns.each(function(){ msg += $(this).width() + "px; "; })
+			
+		};	
+		$("#sample3").colResizable({
+
+			liveDrag:true, 
+
+			gripInnerHtml:"<div class='grip'></div>", 
+
+			draggingClass:"dragging", 
+
+			onResize:onSampleResized
+			
+		});
+
+	});	
+</script>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="7" height="71" valign="middle"></td>
+    <td valign="top">
+      <table width="100%" height="138" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="13" valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">        
+            <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td style="font-size:14px; color:#999 ; position:relative;">当前位置：<a href="">服务商订货管理 </a>><a href=""> 进货订单 </a>><a href=""> 搜索商品 </a><div class="amend_r"><a href="">快速下单</a><a href="cart.html"><i></i>购物车（<b>7</b>）</a><a href="">主控制面板</a><a href="">网站首页</a></div></td>
+              </tr>
+              <tr>
+                <td height="20">
+                   <table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+                      <tr>
+                         <td></td>
+                      </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr class=" add_data">
+              	<td>
+                	<ul>
+                    	<li><a href="homepage.html">主页</a></li>
+                        <li><a href="order.html">销售</a></li>
+                        <li class="cxhover"><a href="stock_order.html">进货</a></li>
+                        <li><a href="payments_collect.html">收付款</a></li>
+                        <li><a href="balance_list.html">报表</a></li>
+                    </ul>
+                </td>
+              </tr>
+              <tr class=" add_data">
+              	<td height="1">
+                   <table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#ededed">
+                      <tr>
+                         <td></td>
+                      </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr class=" add_data_con">
+                <td>
+                   <div class="amend_form">
+                       <form method="post" action="" name="listForm" onsubmit="return confirmSubmit(this)">
+                       <table width="100%" height="40" border="0" cellpadding="0" cellspacing="0" class="nowtable">
+                          <tr>
+                            <td class="left_bt2" style="padding:7px 10px;">
+                            
+                            <form method="get" action="" name="Form1" style="float:right">
+                                <label>品牌</label>
+                                <select name="cat_id" class="order_r">
+                                      <option value="0">所有品牌</option>
+                                </select>
+                                <label>分类</label>
+                                <select name="cat_id" class="order_r">
+                                      <option value="0">所有分类</option>
+                                </select>
+                                <label>类型</label>
+                                <select name="cat_id" class="order_r">
+                                      <option value="0">所有类型</option>
+                                </select>
+                                <label>型号</label>
+                                <input name="keywrod" type="text" id="keywrod" value="" class="order_r">
+                                <input type="submit" value=" 搜索 " class="button" >
+                            </form>
+                            </td>
+                            </tr>
+                          </table>
+                        <table id="sample3" class="order_ta" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#E1E5EE" style="font-size:14px; font-weight:bold; border-top:none;">
+                          <thead>
+                              <tr>
+                                <td bgcolor="#f0f0f0"><input type="checkbox" id="select_all" class="xuanz"/>商品编号</td>
+                                <td bgcolor="#f0f0f0">商品分类</td>
+                                <td bgcolor="#f0f0f0">商品类型</td>
+                                <td bgcolor="#f0f0f0">商品内部型号</td>
+                                <td bgcolor="#f0f0f0" width="20%">商品内部描述</td>          
+                                <td bgcolor="#f0f0f0" class="right_align">数量</td>
+                                <td bgcolor="#f0f0f0">单价（元）</td>
+                              </tr>
+                          </thead>
+                          <tbody class="tbody_td">
+                              <tr bgcolor="#FFFFFF">
+                                <td><input type="checkbox" class="xuanz"/>OR255112555</td>
+                                <td></td>
+                                <td>整机</td>
+                                <td>惠普/惠普M477fdw</td>
+                                <td>惠普/惠普M477fdw惠普/惠普M477fdw惠普/惠普M477fdw惠普/惠普M477fdw</td>
+                                <td class="right_align"> 
+                                    <div class="jiajian">
+                                        <a class="jian" onClick="setAmount.reduce('#qty_item_1')" href="javascript:void(0)" >-</a>
+                                        <a class="jia" onClick="setAmount.add('#qty_item_1')" href="javascript:void(0)">+</a>
+                                        <input type="text" value="1" id="qty_item_1" name="qty_item_1"/>
+                                    </div>
+                                </td>
+                                <td>99</td>
+                              </tr>
+                          </tbody>
+                          <tbody class="tbody_td">
+                              <tr bgcolor="#e2efff">
+                                <td><input type="checkbox" class="xuanz"/>OR255112555</td>
+                                <td></td>
+                                <td>整机</td>
+                                <td>惠普/惠普M477fdw</td>
+                                <td>惠普/惠普M477fdw惠普/惠普M477fdw惠普/惠普M477fdw惠普/惠普M477fdw</td>
+                                <td class="right_align"> 
+                                    <div class="jiajian">
+                                        <a class="jian" onClick="setAmount.reduce('#qty_item_2')" href="javascript:void(0)" >-</a>
+                                        <a class="jia" onClick="setAmount.add('#qty_item_2')" href="javascript:void(0)">+</a>
+                                        <input type="text" value="1" id="qty_item_2" name="qty_item_2"/>
+                                    </div>
+                                </td>
+                                <td>99</td>
+                              </tr>
+                          </tbody>
+                          <tbody class="tbody_td">
+                              <tr bgcolor="#FFFFFF">
+                                <td><input type="checkbox"class="xuanz" />OR255112555</td>
+                                <td></td>
+                                <td>整机</td>
+                                <td>惠普/惠普M477fdw</td>
+                                <td>惠普/惠普M477fdw惠普/惠普M477fdw惠普/惠普M477fdw惠普/惠普M477fdw</td>
+                                <td class="right_align"> 
+                                    <div class="jiajian">
+                                        <a class="jian" onClick="setAmount.reduce('#qty_item_3')" href="javascript:void(0)" >-</a>
+                                        <a class="jia" onClick="setAmount.add('#qty_item_3')" href="javascript:void(0)">+</a>
+                                        <input type="text" value="1" id="qty_item_3" name="qty_item_3"/>
+                                    </div>
+                                </td>
+                                <td>99</td>
+                              </tr>
+                          </tbody>
+                        </table>
+                        <div class="amend_last cart_l">
+                            <input type="submit" value="加入购物车" class="carl carl_r"/>
+                            <div class="cart_right stock_sea">
+                                <div class="cart_in">
+                                    	<a href="javascript:void(0);" class="ase">生成销售订单</a>
+                                    	<div class="cart_tan cart_tan1" id="sendInfo">
+                                            <div class="calm">
+                                                <img src="images/bot.png" >
+                                                <span style="font-family:'Applied Font Regular', 'Applied Font';" class="close">×</span>
+                                                <div class="cart_se">查找服务商</div>
+                                                <div class="cart_m"><label>区域：</label><select><option>全部</option></select><select><option>全部</option></select><select><option>全部</option></select><select><option>全部</option></select></div>
+                                                <div class="cart_m"><label>登录名/公司简称/公司全称：</label><input type="text" class="input_jian"/></div>
+                                                <div class="cart_m"><label>联络人：</label><input type="text" class="input_jian1"/><label>手机：</label><input type="text" class="input_jian1"/></div>
+                                                <div class="cart_m"><a href="javascript:;" class="btndas"/>搜索</a></div>
+                                            </div>
+                                            <div class="calm1 ">
+                                                <img src="images/bot.png" >
+                                                <span style="font-family:'Applied Font Regular', 'Applied Font';" class="close">×</span>
+                                                <div class="cart_se">选择服务商</div>
+												<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_tan">
+                                                  <tbody>
+                                                    <tr>
+                                                      <th scope="col">登录名</th>
+                                                      <th scope="col">简称</th>
+                                                      <th scope="col">全称</th>
+                                                      <th scope="col">操作</th>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>iFile</td>
+                                                      <td>旌展信息科技</td>
+                                                      <td>昆山旌展信息科技有限公司</td>
+                                                      <td><a href="">选择</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>iFile</td>
+                                                      <td>旌展信息科技</td>
+                                                      <td>昆山旌展信息科技有限公司</td>
+                                                      <td><a href="">选择</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>iFile</td>
+                                                      <td>旌展信息科技</td>
+                                                      <td>昆山旌展信息科技有限公司</td>
+                                                      <td><a href="">选择</a></td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+
+                                                <div class="cart_m"><a href="javascript:;" class="btndas1">重新搜索</a><a href="" class="shang">上一页</a><a href="" class="shang">下一页</a></div>
+                                            </div>                                           
+                                        </div>
+                                    </div>
+                                <div class="cart_out">
+                                        <a  href="javascript:void(0);" class="ase1">生成进货订单</a>
+                                        <div class="cart_tan cart_tan1" id="ComplaintBox">
+                                            <div class="clol">
+                                                <img src="images/bot.png" >
+                                                <span style="font-family:'Applied Font Regular', 'Applied Font';" class="close">×</span>
+                                                <div class="cart_se">查找服务商</div>
+                                                <div class="cart_m"><label>区域：</label><select><option>全部</option></select><select><option>全部</option></select><select><option>全部</option></select><select><option>全部</option></select></div>
+                                                <div class="cart_m"><label>登录名/公司简称/公司全称：</label><input type="text" class="input_jian"/></div>
+                                                <div class="cart_m"><label>联络人：</label><input type="text" class="input_jian1"/><label>手机：</label><input type="text" class="input_jian1"/></div>
+                                                <div class="cart_m"><a href="javascript:;" class="btndas"/>搜索</a></div> 
+                                            </div>
+                                            <div class="clol1">
+                                                <img src="images/bot.png" >
+                                                <span style="font-family:'Applied Font Regular', 'Applied Font';" class="close">×</span>
+                                                <div class="cart_se">选择服务商</div>
+												<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_tan">
+                                                  <tbody>
+                                                    <tr>
+                                                      <th scope="col">登录名</th>
+                                                      <th scope="col">简称</th>
+                                                      <th scope="col">全称</th>
+                                                      <th scope="col">操作</th>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>iFile</td>
+                                                      <td>旌展信息科技</td>
+                                                      <td>昆山旌展信息科技有限公司</td>
+                                                      <td><a href="">选择</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>iFile</td>
+                                                      <td>旌展信息科技</td>
+                                                      <td>昆山旌展信息科技有限公司</td>
+                                                      <td><a href="">选择</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>iFile</td>
+                                                      <td>旌展信息科技</td>
+                                                      <td>昆山旌展信息科技有限公司</td>
+                                                      <td><a href="">选择</a></td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+
+                                                <div class="cart_m"><a href="javascript:;" class="btndas1">重新搜索</a><a href="" class="shang">上一页</a><a href="" class="shang">下一页</a></div>
+                
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                </td>
+              </tr>
+             </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    <td width="16">&nbsp;</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	// Sample Javascript code for this page
+	jQuery(document).ready(function($)
+	{
+		// Sample Select all images
+		$("#select_all").on('change', function(ev)
+		{
+			var is_checked = $(this).is(':checked');
+			
+			$("input[type='checkbox']").prop('checked', is_checked).trigger('change');
+		});            
+	});
+
+</script>
+<script>
+/* reduce_add商品加减 */
+var setAmount = {
+    min:1,
+    max:999,
+    reg:function(x) {
+        return new RegExp("^[1-9]\\d*$").test(x);
+    },
+    amount:function(obj, mode) {
+        var x = $(obj).val();
+        if (this.reg(x)) {
+            if (mode) {
+                x++;
+            } else {
+                x--;
+            }
+        } else {
+            alert("请输入正确的数量！");
+            $(obj).val(1);
+            $(obj).focus();
+        }
+        return x;
+    },
+    reduce:function(obj) {
+        var x = this.amount(obj, false);
+        if (x >= this.min) {
+            $(obj).val(x);
+            recalc();
+        } else {
+            alert("商品数量最少为" + this.min);
+            $(obj).val(1);
+            $(obj).focus();
+        }
+    },
+    add:function(obj) {
+        var x = this.amount(obj, true);
+        if (x <= this.max) {
+            $(obj).val(x);
+            recalc();
+        } else {
+            alert("商品数量最多为" + this.max);
+            $(obj).val(999);
+            $(obj).focus();
+        }
+    },
+    modify:function(obj) {
+        var x = $(obj).val();
+        if (x < this.min || x > this.max || !this.reg(x)) {
+            alert("请输入正确的数量！");
+            $(obj).val(1);
+            $(obj).focus();
+        }
+    }
+}
+
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+		$("#sendInfo").hide();
+	  	$(".ase").click(function(){
+		$("#sendInfo").show();
+		$("#ComplaintBox").hide();
+		});
+		$(".btndas").click(function(){
+			$(".calm").hide();
+			$(".calm1").show();	
+		})
+		
+		$(".btndas1").click(function(){
+			$(".calm1").hide();
+			$(".calm").show();	
+		})	
+			
+	  	$("#sendInfo .close").click(function(){
+		$("#sendInfo").hide();
+		});
+	
+		$("#ComplaintBox").hide();
+	  	$(".ase1").click(function(){
+		$("#ComplaintBox").show();
+		$("#sendInfo").hide();
+		});
+		
+		$(".btndas").click(function(){
+			$(".clol").hide();
+			$(".clol1").show();	
+		})
+		
+		$(".btndas1").click(function(){
+			$(".clol1").hide();
+			$(".clol").show();	
+		})		
+		
+		
+	  	$("#ComplaintBox .close").click(function(){
+		$("#ComplaintBox").hide();
+		});
+});
+</script>  
+
+
+
+
+
+
+
+
+

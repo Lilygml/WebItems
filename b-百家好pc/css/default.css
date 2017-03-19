@@ -1,0 +1,23 @@
+*{list-style-type:none;}
+body{margin:0; padding:0;font:14px/1.5 'Microsoft Yahei';color:#333333;}
+table { border-collapse:collapse; border-spacing:0; }
+fieldset, a, img { border:none; }
+caption, th { font-weight:normal; }
+ul, li, ol, dd,h2 { list-style:none outside; margin:0; padding:0;}/* outsideIE6,7 */
+q:before, q:after { content: ''; }
+h1, h2, h3, h4, h5, h6 { font-size:100%; font-weight:normal; }
+select, input, button, textarea { font-size:100%; border:0;  font-family: "微软雅黑"; outline: medium;}/* ʹ���Ԫܼ̳и�?*/
+input, textarea {text-indent: 1em;}
+b,em,i{font-style:normal;font-weight:normal;}
+textarea{overflow-y:auto;}/* ȥIEtextarea */
+/* ޸IE6ӢĲеҳ沼�?*/
+body { _word-break:break-all; }
+img { -ms-interpolation-mode:bicubic; }
+/* m18Ĭʽ */
+html{ color:#333; background:#FFF; height:100%;}
+a { color:#3a3a3a; text-decoration:none; cursor:pointer; }
+a:hover {text-decoration:underline; text-decoration:none;  }
+/*--=clearfix--*/
+.clearfix:after { content: "\0020"; display: block; visibility:hidden; height: 0; clear: both; }
+.clearfix { zoom: 1; }
+.w1200{width:1200px;margin:0 auto;}

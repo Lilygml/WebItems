@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>帮助中心 详情页</title>
+<link rel="stylesheet" href="css/default.css" />
+<link rel="stylesheet" href="css/style_in.css" />
+<script type="text/javascript" src="js_in/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js_in/xsw_index.js"></script>	
+<script type="text/javascript" src="js_in/superslide.2.1.js"></script>
+<script src="js_in/jquery.jslides.js" type="text/javascript"></script>
+<script type="text/javascript" src="js_in/morecity.js" ></script>
+<!--进度条-->
+<script type="text/javascript" src="js_in/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js_in/jquery.tips.js"></script>
+
+
+
+<!--竖直导航-->
+<script type="text/javascript">
+$(document).ready(function(){
+	/* 滑动/展开 */
+	$("ul.expmenu li > div.header").click(function(){
+												   
+		var arrow = $(this).find("span.arrow");
+	
+		if(arrow.hasClass("up")){
+			arrow.removeClass("up");
+			arrow.addClass("down");
+		}else if(arrow.hasClass("down")){
+			arrow.removeClass("down");
+			arrow.addClass("up");
+		}
+	
+		$(this).parent().find("ul.menu").slideToggle();
+		
+	});
+	
+});
+</script>		
+	
+</head>
+<body>
+<!--top-S-->
+<div class="public-top-layout">
+	<div class="topbar wrapper">
+		<div class="user-entry">北京<a href="changeCity.html">[ 切换城市 ]</a></div>
+		<div class="quick-menu">
+           <dl class="dli">
+	           <dt>您好，欢迎来到寻摄网</dt>
+	       </dl>
+		   <dl style="width: 50px;">
+	           <dt><a href="login.html" class="">登录</a></dt>
+	       </dl>
+	       <dl class="xian"></dl>
+		   <dl style="width: 50px;"> 
+	           <dt class="zn"><a href="register.html">注册</a></dt>
+	       </dl>
+	       <dl class="xian"></dl>
+	       <dl class="">
+		        <dt><a href="Personal.html">我的寻摄</a><i></i></dt>
+		        <dd>
+		          <ul>
+		            <li><a href="#">待付款订单</a></li>
+		            <li><a href="#">待确认收货</a></li>
+		            <li><a href="#">待评价交易</a></li>
+		          </ul>
+		        </dd>
+	       </dl>
+	       <dl class="xian"></dl>
+	      <dl>
+	        <dt><a href="people.html">个人中心</a><i></i></dt>
+	        <dd>
+	          <ul>
+	            <li><a href="#">商品收藏</a></li>
+	            <li><a href="#">店铺收藏</a></li>
+	          </ul>
+	        </dd>
+	      </dl>
+	      <dl class="xian"></dl>
+	      <dl>
+	        <dt><a href="#">商家中心</a><i></i></dt>
+	        <dd>
+	          <ul>
+
+	          </ul>
+	        </dd>
+	      </dl>          
+	      <dl class="xian"></dl>
+	      <dl>
+	        <dt><a href="#">客户服务</a><i></i></dt>
+	        <dd>
+	          <ul>
+	            <li><a href="help.html">帮助中心</a></li>
+	            <li><a href="#">售后服务</a></li>
+	            <li><a href="custom_servicel.html">客服中心</a></li>
+	          </ul>
+	        </dd>
+	      </dl>
+	      <dl class="xian"></dl>
+	      <dl>
+	        <dt><a href="#">网站导航</a><i></i></dt>
+	        <dd>
+	          <ul>
+	            <li><a href="website.html">网站地图</a></li>
+	          </ul>
+	        </dd>
+	      </dl>
+	    </div>
+	</div>
+</div>
+
+<script type="text/javascript">
+//动画显示边条内容区域
+$(function() {
+	$(".quick-menu dl").hover(function() {
+		$(this).addClass("hover");
+	},
+	function() {
+		$(this).removeClass("hover");
+	});
+
+    });
+</script>
+<!--top-E-->
+<!--logo-S-->
+<div class="header-wrap">
+    <div class="public-head-layout wrapper">
+    <h1 class="site-logo"><a href="#"><img src="img/logo.png" class="pngFix"></a></h1>
+        <div id="search" class="head-search-bar">
+	<!--搜索-->
+      <form class="search-form" method="get" action="search.html">
+         <select class="input-select">
+         	<option value="option1">选项一...</option>
+         	<option value="option2">选项二.....</option>
+         	<option value="option3">选项三........</option>
+         </select>
+         <input placeholder="输入风格或场景进行搜索" name="keyword" id="keyword" type="text" class="input-text" value="" maxlength="60" x-webkit-speech="" lang="zh-CN" onwebkitspeechchange="foo()" x-webkit-grammar="builtin:search">
+         <input type="submit" value="搜 索" class="input-submit"/>
+      </form>
+    </div>
+     <!--购物车-->  
+    <div class="head-user-menu">
+      <dl class="my-mall">
+        <dt><img src="temp/pic1.png" />Top photography team gathered</dt>
+      </dl>
+      <dl class="my-cart">
+          <dt><span class="ico"></span>购物车结算<i class="arrow"></i></dt>
+	      <dd>
+	          <div class="sub-title">
+	             <h4>最近加入的宝贝：</h4>
+	          </div>
+	          <div class="incart-goods-box">
+         		<span><a href="#"><img src="temp/sear_pic2.jpg"/></a></span>
+         		<span><a href="#">Rose Garden 玫瑰花园</a></span>
+         		<span class="shangchu">
+         			¥<b>2999</b><br />
+         			<a href="#">删除</a>
+         		</span>
+	          </div>
+	          <div class="checkout"> 
+	          	<div class="total-price">购物车里还有2件宝贝</div>
+	          	<a href="#" class="btn-cart">查看我的购物车</a> 
+	          </div>
+	      </dd>
+      </dl>
+    </div>
+  
+  </div>
+</div>
+<!--logo-E-->
+<script type="text/javascript">
+$(function(){
+    //购物车
+	$(".head-user-menu dl").hover(function() {
+		$(this).addClass("hover");
+	},
+	function() {
+		$(this).removeClass("hover");
+	});
+	$('.head-user-menu .my-cart').mouseover(function(){// 运行加载购物车
+		$(this).unbind('mouseover');
+	});
+    });
+</script>
+<!--nav-->
+<div class="navBox">
+	<div class="navWrap clearfix">
+		<div class="nav wrapper">
+			<ul>
+				<li class="nav-item nav-item1" ><a href="" >联系客户</a></li>
+			</ul>
+			<!--移动的滑动-->
+            <div class="move-bg"></div>
+            <!--移动的滑动 end-->
+		</div>
+	</div>
+</div>
+
+
+<div class="middle">
+	<!--竖直导航-->
+<div class="sidebar">
+    <ul class=" left_m" style="display:block;">
+        <li><a>关于天猫</a></li>
+        <li class="current"><a href="help.html">帮助中心</a></li>
+        <li><a href="#">诚聘英才</a></li>
+        <li><a href="contact.html">联系我们</a></li>
+        <li><a href="website_cooperate.html">网站合作</a></li>
+        <li><a href="#">法律声明</a></li>
+        <li><a href="report.html">廉正举报</a></li>
+    </ul>
+</div>
+<!--商家中心-认证-->
+<div class="sureWrap sureWrap_h clearfix">
+	<div class="help_de">
+        <div class="help_detail">9月1日至5日北京全市悬挂国旗迎阅兵</div>
+        <div class="help_detail_l"><span class="span_l">发布者：admin</span><span class="span_r">发布时间：2015-12-05 4:11:01</span></div>
+        <div class="help_detail_r">9月1日至9月5日，全市各街道、社区、单位等悬挂国旗，天安门广场周边高大建筑物插挂彩旗。9月2日至5日将开启景观照明，其中2日和3日北京全市景观照明设施将按重大节日级别开启，时间为19时到24时。</br>
+</br>
+昨日，市政市容管理委员会介绍其针对70周年纪念活动进行的环境保障工作，据了解，此次纪念活动将安排近3000个厕所。阅兵当天，天安门地区和阅兵沿线平均24人一个厕位。同时，还提供配有升降机的无障碍汽车厕所，方便老兵使用。阅兵当天，将保证天安门前石板路受阅官兵踢正步不起灰尘。</br>
+</br>
+
+1 设置汽车厕所
+厕所配升降机 方便老兵
+此次纪念活动共安排移动和固定公厕164座，2734个厕位，配备531名保洁员，重点保障天安门地区、阅兵沿线和阅兵村的如厕需求。阅兵当天，天安门地区和阅兵沿线厕所共129座2390个厕位，平均24人一个厕位，厕所服务保障能力与国庆60周年相比提升近4倍。天安门地区设置公厕58座，临时厕所45座，主要服务于长安街南北固定和临时观礼台。
+</br>
+           </div>
+		<div class="help_detail_b">新京报见习记者 信娜</div>
+    </div>
+</div>
+<!--中间的右边-->
+<div class="middleTR middleTR1 cleafix">
+	<h3>公告</h3>
+	<div class="middleTRM">
+		<ul>
+			<li><a href="#">交易规则</a></li>
+			<li><a href="#">维权全程攻略</a></li>
+			<li><a href="#">关于商家服务过程中违规投诉详解</a></li>
+			<li><a href="#">维权全程攻略</a></li>
+			<li><a href="#">关于商家服务过程中违规投诉详解</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
+</div>
+
+<!--footer-->
+<div class="footer cleafix">
+	<div class="foot w1200 cleafix">
+		<div class="foot_ul">
+			<ul>
+				<li>
+					<div class="foot_t">
+						<div class="foot_tfl fl">
+							<img src="img/ico4.png" />
+						</div>
+						<div class="foot_tfr fl">
+							<h2>消费保障</h2>
+							<h3>消费护航，拍摄无忧</h3>
+						</div>
+					</div>
+					<div class="foot_b">
+						<p>保障范围    退货退款流程    服务中心    <br />
+							更多特色服务</p>
+					</div>
+				</li>
+				<li>
+					<div class="foot_t">
+						<div class="foot_tfl fl">
+							<img src="img/ico5.png" />
+						</div>
+						<div class="foot_tfr fl">
+							<h2>付款方式</h2>
+							<h3>轻松快捷，安全稳定</h3>
+						</div>
+					</div>
+					<div class="foot_b">
+						<p>支付宝快捷支付    支付宝卡（现金）付款    <br />
+							支付宝余额付款    货到付款 </p>
+					</div>
+				</li>
+				<li>
+					<div class="foot_t">
+						<div class="foot_tfl fl">
+							<img src="img/ico6.png" />
+						</div>
+						<div class="foot_tfr fl">
+							<h2>新手上路</h2>
+							<h3>您的快捷购物指南</h3>
+						</div>
+					</div>
+					<div class="foot_b">
+						<p>新手专区    消费警示    交易安全    免费开店<br />
+							24小时在线帮助</p>
+					</div>
+				</li>
+				<li style="border-right: none ;">
+					<div class="foot_t">
+						<div class="foot_tfl fl">
+							<img src="img/ico7.png" />
+						</div>
+						<div class="foot_tfr fl">
+							<h2>特色服务</h2>
+							<h3>为您呈现不一样的服务</h3>
+						</div>
+					</div>
+					<div class="foot_b">
+						<p>团购预约    限时特惠    寻摄劵</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="foot_about">  
+			<a href="#">关于天猫</a><b>|</b>
+			<a href="#">帮助中心</a><b>|</b>
+			<a href="#">诚聘英才</a><b>|</b>
+			<a href="#">联系我们</a><b>|</b>
+			<a href="#">网站合作</a><b>|</b>
+			<a href="#">法律声明</a>
+		</div>
+		<div class="foot_add">
+			<div class="foot_top">
+				<p>Copyright © 2005-2020 xunshe.com.cn，All Rights Reserved 浙ICP备11111111号 许可证：浙A1-20150510  使用本网站即表示接受 寻摄网用户协议。<br /> 
+					版权所有 浙江寻摄信息科技有限公司</p>
+			</div>
+			
+		</div>
+	</div>
+</div>
+</body>

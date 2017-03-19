@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<title>职由你</title>
+<link href="style/css.css" rel="stylesheet" type="text/css" />
+<link href="style/media-queries.css" rel="stylesheet" type="text/css" />
+<link href="style/validationEngine.jquery.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<SCRIPT type="text/javascript" src="js/script.js"></SCRIPT>
+<script type="text/javascript">
+$(document).ready(function() { 
+$(".record .sets ul li").click(function(){
+		SwitchCard(".record .sets ul li", ".record .sets .sap", "cxhover", $(this))
+});
+$(".record .sets ul li").eq(0).trigger("click");
+		function SwitchCard(tab,con,addClass,obj){
+		var $_self = obj;
+		var $_nav = $(tab);
+		$_nav.removeClass(addClass),
+		$_self.addClass(addClass);
+		var $_index = $_nav.index($_self);
+		var $_con = $(con);
+		$_con.hide(),
+		$_con.eq($_index).show();
+	}
+}); 
+</script>
+    <link type="text/css" href="css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+     <link type="text/css" href="css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+     
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-zh-CN.js"></script>
+    <script type="text/javascript">
+    $(function () {
+        $(".ui_timepicker").datepicker()
+    })
+    </script>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!---底浮开始--->
+<div class="difu">
+<div class="difu2">
+<span class="df1"><img src="images/003.png"></span>
+<span class="df2">3245</span>
+<span class="df3">公司</span>
+<span class="df2">41369</span>
+<span class="df3">职位</span>
+<span class="df3">已生成返还费</span>
+<span class="df2">1234567</span>
+<span class="df3">元</span>
+<span class="df4"><a href="login.html">登录</a></span>
+<span class="df5"><a href="register.html">快速注册</a></span>
+</div>
+</div>
+<!---底浮结束--->
+
+
+
+<!---右浮开始--->
+<div class="yf">
+<div class="yf1"><img src="images/019.jpg"></div>
+<div class="yf2">
+<h2>工友求职</h2>
+<p><a href="#">工友求职</a></p>
+<p><a href="#">工友求职</a></p>
+<h2>企业招聘</h2>
+<p><a href="#">企业招聘</a></p>
+<p><a href="#">企业招聘</a></p>
+</div>
+<ul class="qrcode">
+<li>
+<img src="images/021.jpg">
+<span>手机端</span>
+</li>
+<li>
+<img src="images/021.jpg">
+<span>加入微信</span>
+</li>
+</ul>
+<div class="houjian"><a href="#"><img src="images/018.png"></a></div>
+</div>
+
+<!---右浮结束--->
+
+<!--头部开始！-->
+<div class="header">
+<div class="header_left"><img src="images/logo.jpg" /></div>
+<div id="search-2014">
+		<div class="form">
+		  <input type="text" onkeydown="javascript:if(event.keyCode==13) search('key');" autocomplete="off" id="key" accesskey="s" class="text" style="color: rgb(153, 153, 153);">
+			<button onclick="search('key');return false;" class="button cw-icon"><i></i>搜索</button>
+		</div>
+            <div id="hotwords-2014">
+            <a href="#" class="style-red">大家都在找:</a>
+            <a href="#">3D巨幕</a>
+            <a href="#">家电5折</a>
+            <a href="#">200减100</a>
+            <a href="#">奢品扫货</a>
+            <a href="#">大牌秒杀</a>
+            <a href="#">精品团</a>
+            <a href="#">苹果399+</a>
+            <a href="#">机票20元</a>
+            </div>
+    </div>
+
+
+
+<!--语言分类开始！-->
+<div class="other">
+<a href="canvass_join.html">招商加盟</a><a href="help.html">帮助中心</a>
+
+</div> 
+<!--语言分类结束！-->
+</div>
+<!--头部结束！-->
+<div class="clear"></div>
+
+
+
+<!--导航开始！-->
+<div class="nav">	         	         	         	         	         	         
+<ul class="menu" id="menu">                                                            
+    <li><a href="index.html">首页</a></li>
+    <li><a href="list.html">所有岗位</a></li>
+    <li><a href="release.html">发布职位</a></li>
+    <li><a href="finance_first.html">我的财务</a></li>
+    <li><a href="about.html">关于我们</a>
+        <ul>
+            <li><a href="about.html">公司介绍</a></li>
+            <li><a href="about.html">企业文化</a></li>
+            <li><a href="about.html">联系方式</a></li>
+        </ul>
+    </li>
+    <li class="login">
+    <span><a href="login.html">登录</a></span>
+    <span>|</span>
+    <span><a href="register.html">注册</a></span>
+    </li>
+ </ul>
+</div>
+<!--导航结束！-->
+<div class="more-01">
+<div class="width1020">
+	<div class="more-ico left-b">
+    	<div class="she">
+            <div class="boder"><h1>会员设置</h1></div>
+            <ul>
+                <li><a href="member_first.html" ><i></i>会员首页</a></li>
+                <li><a href="member_revise.html"><i></i>修改资料</a></li>
+                <li><a href="member_account.html"><i></i>账户管理</a></li>
+                <li><a href="member_identification.html"><i></i>资料认证</a></li>
+            </ul> 
+        </div> 
+    	<div class="she">
+            <div class="boder"><h1>工友管理</h1></div>
+            <ul>
+                <li><a href="worker_enregister.html"><i></i>工友登记</a></li>
+                <li><a href="worker_friend.html"><i></i>我的工友</a></li>
+                <li><a href="worker_enroll.html"><i></i>报名管理</a></li>
+            </ul> 
+        </div>  
+    	<div class="she she1">
+            <div class="boder"><h1>财务管理</h1></div>
+            <ul>
+                <li class="currents"><a href="finance_first.html"><i></i>管理首页</a></li>
+                <li><a href="finance_detail.html"><i></i>交易明细</a></li>
+                <li><a href="finance_set.html"><i></i>财务设置</a></li>
+            </ul> 
+        </div>   
+	</div>
+	<div class="record">
+    	<div class="stp">
+        	<div class="stp_01"><img src="images/tou.png" /><div class="stpa"><p>姓名：<span>殷超</span></p><p>手机：<span>15485542211</span></p></div></div>
+            <div class="clear"></div>
+            <ul>
+            	<li><p>可用余额</p><h2><span>0</span>.00元</h2><a href="" data-toggle="modal" data-target="#myModal">提现</a></li>
+                <li><p>可用余额</p><h2><span>0</span>.00元</h2><a href="">明细</a></li>
+                <li class="lia"><p>可用余额</p><h2><span>0</span>.00元</h2><a href="">充值</a></li>
+            </ul>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-01">
+                        <form>
+                           <div class="modal-a"><img src="images/zhifu.png" /><span>提现申请</span></div>
+                           <div class="modal-b"><label>可用余额：</label><span>1000</span>.<i>00</i>元</div>
+                           <div class="modal-b"><label>提现金额：</label><input type="text" name="" placeholder=""/></div>
+                           <div class="modal-b"><label>手机号：</label><input type="text" name="" placeholder=""/></div>
+                           <div class="modal-b"><label>身份证：</label><input type="text" name="" placeholder=""/></div>
+                           <div class="modal-b"><label>银行卡号：</label><input type="text" name="" placeholder=""/></div>
+                           <div class="modal-b"><label>支付宝账号：</label><input type="text" name="" placeholder=""/></div>
+                           <div class="modal-b"><label></label><button type="submit" name="">提交</button></div>
+                        </form>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+   	    <div class="seta"><p>资产动态</p></div>
+		<div class="sets">
+        	<ul>
+            	<li><a href="javascript:;">最近一个月</a></li>
+                <li><a href="javascript:;">最近三个月</a></li>
+                <li class="lise"><a href="javascript:;">最近一年</a></li>
+                <div class="seas"><label>&nbsp;开始日期&nbsp;</label><input  type="text" name="" placeholder="2015-06-12" class="ui_timepicker" /><label>结束日期&nbsp;</label><input  type="text" name="" placeholder="2015-06-12" class="ui_timepicker" /><button type="submit">查询</button></div>
+            </ul>
+            <div class="sap">
+            	<div class="sads">
+                	<div class="st"><img src="images/ico_01.png" /><span>&nbsp;收入</span></div>
+                    <p><a href="finance_statistics.html">0</a>元</p>
+                    <h2>共0笔交易</h2>
+                </div>
+            	<div class="sads">
+                	<div class="st"><img src="images/ico_01.png" /><span>&nbsp;推荐人数</span></div>
+                    <p><a href="finance_statistics.html">50</a>元</p>
+                    <h2>共0笔交易</h2>
+                </div>
+            </div>
+             <div class="sap">
+            	<div class="sads">
+                	<div class="st"><img src="images/ico_01.png" /><span>&nbsp;收入</span></div>
+                    <p><a href="finance_statistics.html">0</a>元</p>
+                    <h2>共0笔交易</h2>
+                </div>
+            	<div class="sads">
+                	<div class="st"><img src="images/ico_01.png" /><span>&nbsp;推荐人数</span></div>
+                    <p><a href="finance_statistics.html">50</a>元</p>
+                    <h2>共0笔交易</h2>
+                </div>
+            </div>
+            <div class="sap">
+            	<div class="sads">
+                	<div class="st"><img src="images/ico_01.png" /><span>&nbsp;收入</span></div>
+                    <p><a href="finance_statistics.html">0</a>元</p>
+                    <h2>共0笔交易</h2>
+                </div>
+            	<div class="sads">
+                	<div class="st"><img src="images/ico_01.png" /><span>&nbsp;推荐人数</span></div>
+                    <p><a href="finance_statistics.html">50</a>元</p>
+                    <h2>共0笔交易</h2>
+                </div>
+            </div>
+        </div>
+        <div class="seta"><p>近期交易记录</p></div>
+         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
+          <tbody>
+            <tr>
+              <th scope="col" width="10%" class="ds">时间</th>
+              <th scope="col" width="20%">类型|流水号</th>
+              <th scope="col" width="15" class="ds">发起方</th>
+              <th scope="col" width="10">金额</th>
+              <th scope="col" width="10">操作人</th>
+              <th scope="col" width="10">状态</th>
+              <th scope="col" width="30%" class="ds">备注</th>
+            </tr>
+            <tr class="trsw">
+              <td class="ds"><p>204.10.21</p><h2>11:11:11</h2></td>
+              <td><p>冻结</p><h2>254588541256652525</h2></td>
+              <td class="ds">--</td>
+              <td><span>+100.00</span></td>
+              <td><span>殷超</span></td>
+              <td>失败</td>
+              <td class="ds">&nbsp;</td>
+            </tr>
+            <tr class="trs">
+              <td colspan="7">您最近<span>&nbsp;0&nbsp;</span>笔交易<a href="">&nbsp;&nbsp;&nbsp;查看所有交易记录</a></td>
+        
+            </tr>
+          </tbody>
+        </table>
+     </div>
+  </div>      	
+</div>
+
+
+
+
+<!--底部开始！-->
+<div id="foot">
+<div class="foot">
+<div class="foot_left">
+上海职由你公司 服务热线: 400-0000-000
+</div>
+<div class="foot_right">
+<p>上海ICP备:0000000000000</p>
+<p>Copyright© 2015-2016 zhiyouni.com All Rights Reserved.</p>
+</div>
+</div>
+<div style="clear:both"></div>
+</div>
+<!--底部结束！-->
+
+
+
+</body>
+</html>

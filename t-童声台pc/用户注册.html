@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册页面</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+function checkform(form){
+
+ if(form.tel.value=='') {
+   alert("请输入手机号!");
+   form.userId.focus();
+   return false;
+  }
+  
+  if(form.code.value=='') {
+   alert("请输入验证码!");
+   form.userId.focus();
+   return false;
+  }
+  
+if(form.password.value=='') {
+   alert("请输入密码!");
+   form.userId.focus();
+   return false;
+  }	  
+   
+if(form.password2.value=='') {
+   alert("请再次输入密码!");
+   form.userId.focus();
+   return false;
+  }	   		   
+
+	return true;
+	
+	}
+
+</script>
+
+</head>
+
+<body>
+<div class="login_page_top_bg"> 
+
+        <div class="login_page_top"> 
+            
+            <img src="img/logo_s.png" />
+            <p>已有账号？ <a href="#" class="login_red"> 马上登录</a> | <a href="#"> 返回首页</a></p>
+        </div> 
+    
+</div>
+
+
+<div class="register_middle">
+
+		<div class="register_box">
+        		<div class="register_text"> 注册</div>
+                <div class="password_find_input">
+                        <form action="#" method="post" id="reg" name="reg" onsubmit="return checkform(this)" >
+                           <div class="input_1"> <span class="">手机号：</span><input  name="tel" type="text" value="" /></div>
+                
+                           <div id="input_2"> <span class="">验证码：</span> <a href="#"> 发送验证码</a> <input name="code" type="text" value="" /> </div>
+                           <div class="input_4"> <span class="">新密码：</span><input name="password" type="password" value="" /></div>
+                           <div class="input_5"> <span class="">确认密码：</span><input name="password2" type="password" value="" /></div>
+                  <div id="input_5"><span class="">我已阅读并遵守 "童声台"服务</span><input name="zhuce" type="checkbox" value="" checked="checked" />  
+                  
+                  
+                  
+                  
+                  
+                   </div>                                  
+   <div id="password_find_submit"><input name="Submit"  type="Submit" value="注册" /></div>
+                            
+                       
+                        </form>
+                </div>
+                
+
+                
+          
+        
+        </div><!--login_box -->
+
+</div><!--login_page_middle_bg -->
+
+<!--------------------------------------------------------------->
+
+<div class="footer">
+
+	<div class="footer_con">
+<!------------------------------------------ -->       
+    	<div class="_con_1">
+                <span> 关于我们</span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        
+        
+        </div><!--_con_1 -->
+<!------------------------------------------ -->           
+        <div class="_con_2">
+                <span> 帮助中心</span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        
+        
+        </div><!--_con_2 -->
+<!------------------------------------------ -->          
+        <div class="_con_3">
+        		 <span> 服务支持</span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        
+        </div><!--_con_3 -->
+<!------------------------------------------ -->           
+        <div class="_con_4">
+        		 <span> 友情链接 </span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        </div><!--_con_4 -->
+        
+<!------------------------------------------ -->        
+        
+        <div class="_con_5">
+        		<img src="img/tel_ico.png" />
+                <span>4008—123—123</span >
+                <p>周一至周日 8:00-23:00</p>
+        </div><!--_con_5 -->
+<!-- ------------------------------------------------------------------------ -->  
+
+<div class="clear"></div>
+     
+<hr  class="footer_con_line"/>
+<!-- ------------------------------------------------------------------------ -->            
+           <div class="_con_6"> Copyright © 2014 - 2015  童声台版权所有</div> 
+<!-- ------------------------------------------------------------------------ -->  
+            </div><!--footer_con -->
+</div><!--footer -->
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link href="style/style.css" rel="stylesheet" type="text/css">
+<link href="style/media-queries.css" rel="stylesheet" type="text/css">
+<link href="style/validationEngine.jquery.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/function.js"></script>
+<script src="js/api" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="js/jquery.validationEngine-en.js"></script>
+<title>昆山旌展信息科技有限公司</title>
+<!--[if lt IE 9]>
+<script src="js/css3-mediaqueries.js"></script>
+<script src="js/html5.js"></script>
+<![endif]-->
+</head>
+<body id="Contact">
+ <header class="header2">
+  <div class="pagewrap">
+   <div class="logo"><img src="images/logo2.png"  alt=""/></div>
+   <nav class="nav">
+   <div id="menu_moblie_icon"></div>
+    <ul>
+     <li><a href="index.html" class="home">首页</a></li>
+     <li><a href="about.html" class="about">关于我们</a></li>
+     <li><a href="Website.html" class="Website">网站建设</a></li>
+     <li><a href="#" class="hone">手机网站建设</a></li>
+     <li><a href="Case.html" class="Case">案例展示</a></li>
+     <li><a href="Contact_us.html" class="Contact">联系我们</a></li>
+    </ul>
+   </nav>
+   <div class="phone"><b><img src="images/phone.png"  alt=""/></b><img src="images/phone_txt2.png"  alt=""/></div>
+  </div>
+  <div class="nav-class">
+    <dl class="pagewrap">
+     <dt>关 于 我 们</dt>
+      <dd class="ulass">
+        <ul class="nchover">
+         <li><a href="about.html">公司简介</a></li>                                                
+         <li><a href="Careers.html" >招贤纳士</a></li>
+         <li><a href="news.html">最新动态</a></li>
+         <li><a href="Service_brand.html">服务品牌</a></li>
+         <li><a href="Contact_us.html" class="uhover">联系我们</a></li>
+        </ul>
+      </dd>
+    </dl>
+  </div>
+ </header>
+ <section>
+   <div class="pagewrap">
+      <div class="pw10">
+       <div class="newslist-title wf serveb"><span>联系我们</span><i>首页 > 关于我们 > 联系我们</i></div>
+       <div class="Contact_us wf">
+        <div class="Contact_uslr">
+           联系电话：400-072-5598 0512-57861599 13773182365<br>
+           公司传真：0512-57861599<br>
+           官方网址：http://www.kingexpand.com<br>
+           服务邮箱：service@kingexpand.com<br>
+           公司地址：江苏省昆山市前进东路1008号（黎明清境会所3楼）<br>
+           公交路线：106,123,127,25,9路至黎明清境
+        </div>
+        <div class="Contact_usrl">
+         <h1>合作意向表</h1>
+         <form action="?action=edit" method=post name=form1 id="form1"> 
+          <dl>
+            <dd class="cu1"la><input name="cname" type="text" size="30" maxlength="30" placeholder="公司名称" css="validate[required]"></dd>
+            <dt><font color="#FF0000">*</font></dt>
+          </dl>
+          <dl>
+            <dd class="cu2"><input name="uname" type="text" size="30" maxlength="30" placeholder="姓名" class="validate[required]"></dd>
+            <dt><font color="#FF0000">*</font></dt>
+            <dd class="cu3"><input name="uphone" type="text" size="30" maxlength="30" placeholder="联系方式(固话或手机)" class="validate[required]"></dd>
+            <dt><font color="#FF0000">*</font></dt>
+          </dl>
+          <dl>
+           <dt><strong>你需要的服务</strong></dt>
+           <dd>
+            <input name="Service" type="checkbox" value="1" class="sudget">现有网站改版
+            <input name="Service" type="checkbox" value="2" class="sudget">要找长期合作公司
+            <input name="Service" type="checkbox" value="3" class="sudget">建设全新的企业网站 
+            <input name="Service" type="checkbox" value="4" class="sudget">现有网站进行营销推广
+            </dd>
+          </dl>
+          <dl>
+           <dt><strong>你最关注的地方</strong></dt>
+           <dd>
+            <input name="Attention" type="checkbox" value="1" class="sudget">对功能要求比较高
+            <input name="Attention" type="checkbox" value="2" class="sudget">对设计创意要求比较高 
+            <input name="Attention" type="checkbox" value="3" class="sudget">需要可以购物支付 
+            <input name="Attention" type="checkbox" value="4" class="sudget">搜索引擎排名
+           </dd>
+          </dl>
+          <dl>
+          <dt><strong>预算</strong></dt>
+          <dd>
+             <input name="Budget" type="radio" value="1" class="sudget" />3万以内
+        	 <input name="Budget" type="radio" value="2" class="sudget" />3-5万
+        	 <input name="Budget" type="radio" value="3" class="sudget" />5-10万
+             <input name="Budget" type="radio" value="4" class="sudget" />10万以上需招投标
+          </dd>
+          <dt style="float:right;"><input type="submit" class="btn_sub" value="提交需求"></dt>
+          </dl>
+         </form>
+        </div>
+        <div id="dituContent"></div>
+		<script type="text/javascript">
+          var map = new BMap.Map("dituContent");          // 创建地图实例
+          var point = new BMap.Point(121.006021,31.390785);  // 创建点坐标
+          var point2 = new BMap.Point(121.006021,31.390785);  // 创建点坐标			
+          map.addControl(new BMap.NavigationControl());  //控件
+          map.addControl(new BMap.ScaleControl());  
+          map.addControl(new BMap.OverviewMapControl());
+          map.enableDragging();//启用地图拖拽事件，默认启用(可不写) 
+          map.enableScrollWheelZoom();//启用地图滚轮放大缩小 
+          map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写) 
+          map.enableKeyboard();//启用键盘上下左右键移动地图 
+          var marker = new BMap.Marker(point2);        // 创建标注  
+          map.addOverlay(marker);                     // 将标注添加到地图中
+          map.centerAndZoom(point, 17);                 // 初始化地图，设置中心点坐标和地图级别
+          var opts = {  
+          width : 250,     // 信息窗口宽度  
+          height: 110,     // 信息窗口高度
+          title : "<span style=\"line-height: 180%;font-size: 18px;\"><strong>昆山旌展信息科技有限公司</strong></span>"  // 信息窗口标题  
+          }  
+          var infoWindow = new BMap.InfoWindow("<span style=\"line-height: 180%;font-size: 14px;\">电话：0512-57861599 400-072-5598<br />地址：江苏省昆山市前进东路1008号（黎明清境会所3楼）</span>", opts);  // 创建信息窗口对象  
+          map.openInfoWindow(infoWindow, map.getCenter());      // 打开信息窗口
+          marker.addEventListener("click", function(){  
+          map.openInfoWindow(infoWindow, map.getCenter());
+          });  
+        </script>
+       </div>
+      </div>
+    <div class="clear"></div>
+  </div>
+ </section>
+ <footer class="header">
+   <div class="pw10">
+    <div class="pagewrap footer">
+    <div class="footer-class">
+      <dl>
+		<dt>关于我们</dt>
+        <dd><a href="#">公司简介</a></dd>
+        <dd><a href="#">招贤纳士</a></dd>
+        <dd><a href="#">最新动态</a></dd>
+        <dd><a href="#">服务品牌</a></dd>
+        <dd><a href="#">联系我们</a></dd>
+      </dl>
+      <dl>
+        <dt>网站建设</dt>
+        <dd><a href="#">教育培训网站建设</a></dd>
+		<dd><a href="#">高端奢侈品网站建设</a></dd>
+		<dd><a href="#">大型门户网站建设</a></dd>
+		<dd><a href="#">电子商务网站建设</a></dd>
+		<dd><a href="#">集团上市公司官网建设</a></dd>
+      </dl>
+      <dl>
+        <dt>手机网站建设</dt>
+        <dd><a href="#">微网站</a></dd>
+        <dd><a href="#">手机网站</a></dd>
+        <dd><a href="#">响应式网站</a></dd>
+      </dl>
+      <dl class="dl-case">
+        <dt>案例展示</dt>
+        <dd><a href="#">教育培训</a> <a href="#">高端奢侈品</a></dd>
+		<dd><a href="#">大型门户</a> <a href="#">电子商务</a></dd>
+		<dd><a href="#">装饰公司</a> <a href="#">集团上市公司</a></dd>
+		<dd><a href="#">金融行业</a> <a href="#">医药医疗</a></dd>
+		<dd><a href="#">节能环保</a> <a href="#">物流行业</a></dd>
+      </dl>
+    </div>
+     <ul class="footer-right">
+      <li><b><img src="images/phone.png"  alt=""/></b><span><font size="4">400-072-5598 0512-57861599</font></span></li>
+      <li><b><img src="images/emali.png"  alt=""/></b><span>service@kingexpand.com</span></li>
+      <li><b><img src="images/map.png"  alt=""/></b>昆山市前进东路1008号黎明清境会所三楼<br><font size="2">途经公交路线：106路,123路,127路,25路,9路,夜2线</font></li>
+     </ul>
+   <div class="clear"></div>
+   </div>
+   </div>
+   <div class="foot-bq">
+    <div class="pagewrap">
+     <div class="foot-bqlr"><img src="images/wx.png"  alt=""/><a href="#">官方微信</a><img src="images/wb.png"  alt=""/><a href="#">官方微博</a><a href="#">微企源</a><a href="#">上海网站建设</a></div>
+     <div class="foot-bqrl">版权所有:<a href="#">昆山旌展信息科技有限公司</a> 2002-2014 苏ICP备10203825号-1</div>
+    </div>
+    <div class="clear"></div>
+   </div>
+ </footer>
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>商业楼</title>
+<link href="css/default.css" rel="stylesheet" type="text/css"/><!--公共样式-->
+<link href="css/style.css" rel="stylesheet" type="text/css" /><!--主题样式-->
+<link rel="stylesheet" href="css/validationEngine.jquery.css"><!--表单验证css-->
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.validationEngine.js"></script><!--表单验证-->
+<script src="js/jquery.validationEngine-zh-CN.js"></script><!--表单验证cn-->
+<script type="text/javascript" src="js/lrtk.js"></script><!--主题js-->
+</head>
+<body style="background: #f7f7f7;">
+<header>
+	<div class="header clearfix">
+		<div class="w1200">
+			<img src="img/logo_01.png" />
+			<span>
+				<em>苏州</em><i></i>
+				<div class="drop_d">
+					<div class="drop"><b>苏州</b><div class="drop_01"><a href="">园区</a><a href="">姑苏</a><a href="">吴中</a><a href="">新区</a><a href="">相城</a><a href="">吴江</a><a href="">湖东</a><a href="">狮山</a><a href="">木渎</a><a href="">陆慕</a><a href="">斜塘</a><a href="">昆山</a></div></div>
+				</div>
+			</span>
+			<ul>
+				<li><a href="百家好首页.html">首页</a></li>
+				<li><a href="新房.html">新房</a></li>
+				<li><a href="办公楼.html">办公楼</a></li>
+				<li><a href="商业楼.html" class="curr">商业楼</a></li>
+				<li><a href="工业厂房.html">工业厂房</a></li>
+				<li><a href="二手房.html">二手房</a></li>
+			</ul>
+			<div class="login_l"><a href="登录.html">登录</a><b>|</b><a href="注册.html">注册</a></div>
+		</div>
+	</div>	
+</header>
+<section>
+    <div class="content clearfix">
+  	    <div class="w1200">
+			<div class="two_office"><a href="">昆山首页</a>><a href="">昆山商业楼</a></div>
+			<div class="two_office_search clearfix">
+				<div class="two_office_input">
+					<form action="" id="formID">
+						<input type="text" placeholder="请输入楼盘名称" class="validate[required]" />
+						<input type="submit" class="btn-sous" value="搜索" />
+					</form>
+				</div>
+				<div class="two_office_release"><a href="住宅.html">免费发布出租</a></div>
+			</div>
+			<div class="shaixuan">
+				<ul class="select">
+					<li class="select-list List_more"> 
+						<dl id="select6">
+							<dt>区域：</dt>
+							<dd class="selected select-all"><a href="javascript:;">全部</a></dd>
+							<dd><a href="javascript:;">玉山</a></dd>
+							<dd><a href="javascript:;">花桥</a></dd>
+							<dd><a href="javascript:;">巴山</a></dd>
+							<dd><a href="javascript:;">千灯</a></dd>
+							<dd><a href="javascript:;">张浦</a></dd>
+							<dd><a href="javascript:;">玉山</a></dd>
+							<dd><a href="javascript:;">花桥</a></dd>
+							<dd><a href="javascript:;">巴山</a></dd>
+							<dd><a href="javascript:;">千灯</a></dd>
+							<dd><a href="javascript:;">张浦</a></dd>
+                        </dl>
+					</li>
+					<li class="select-list">
+						<dl id="select6">
+							<dt>总价：</dt>
+							<dd class="selected select-all"><a href="javascript:;">全部</a></dd>
+							<dd><a href="javascript:;">50万以下</a></dd>
+							<dd><a href="javascript:;">50万-100万</a></dd>
+							<dd><a href="javascript:;">100万-150万</a></dd>
+							<dd><a href="javascript:;">150万-200万</a></dd>
+							<dd><a href="javascript:;">200万-250万</a></dd>
+						</dl>
+					</li>
+					<li class="select-list">
+						<dl id="select6">
+							<dt>面积：</dt>
+							<dd class="selected select-all"><a href="javascript:;">全部</a></dd>
+							<dd><a href="javascript:;">50平以下</a></dd>
+							<dd><a href="javascript:;">50平-100平</a></dd>
+							<dd><a href="javascript:;">50平-100平</a></dd>
+							<dd><a href="javascript:;">50平-100平</a></dd>
+							<dd><a href="javascript:;">50平-100平</a></dd>
+						</dl>
+					</li>
+					<li class="select-list">
+						<dl id="select6">
+							<dt>房型：</dt>
+							<dd class="selected select-all"><a href="javascript:;">全部</a></dd>
+							<dd><a href="javascript:;">住宅底商</a></dd>
+							<dd><a href="javascript:;">写字楼配套底商</a></dd>
+							<dd><a href="javascript:;">购物中心/百货</a></dd>
+							<dd><a href="javascript:;">商业街商铺</a></dd>
+							<dd><a href="javascript:;">临街门面</a></dd>
+							<dd><a href="javascript:;">其他</a></dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>筛选：</dt>
+							<dd><select><option value="">建造年代</option></select></dd>
+							<dd><select><option value="">房屋类型</option></select></dd>
+							<dd><select><option value="">楼层</option></select></dd>
+						</dl>
+					</li>
+					<div class="second">
+						<span>当前找房条件：</span><a href="">公寓</a><a href="">1-6层</a><b>清空已选条件</b>
+					</div>
+				</ul>
+			</div>
+			<div class="resources">
+				<div class="resources_left clearfix">
+					<div class="resource_top">
+						<span>全部房源</span>
+						<div class="resource_sort">
+							<a href="#" class="sort-cur">默认排序</a>
+							<a href="#" class="sort-cur cur-tasrt">价格<i class="iconfont"></i></a>
+							<a href="#" class="sort-cur">交房时间<i class="iconfont"></i></a>
+						</div>
+					</div>
+					<div class="resource_bottom">
+						<table border="0" width="100%" cellpadding="0" cellspacing="0"  class="clearfix">
+							<tbody>
+								<tr>
+									<td width="70%" class="td_s">
+										<a href="房源详情.html" class="a_image"><img src="img/d_img_01.jpg"></a>
+										<div class="resource_img">
+											<h2><a href="房源详情.html">水上乐园旁 世纪花园 稀缺精装2房 户型正气户型正气透户型正气透户型正气透透</a> </h2>
+											<p>3室2厅   |  6/6层   |  南北向   |  普通住宅</p>
+											<p><a href="#">鑫苑国际城市花园 </a>   <span>[<a href="#">上海周边</a>-<a href="#">昆山</a>] 花桥镇绿地大道198号</span></p>
+											<p>发布人    <span>1个小时前</span></p>
+											<div class="xue"><a class="a1">学区房</a><a class="a2">豪华装修 </a><a class="a3">超低价格</a></div>
+										</div>
+									</td>
+									<td width="15%" class="td_s1">面积<br>110m<sup>2</sup></td>
+									<td width="15%" class="td_s2"><p><font size="5">12000</font>元/月</p><em>45.5元/平米</em></td>
+								</tr>
+								<tr>
+									<td width="70%" class="td_s">
+										<a href="房源详情.html" class="a_image"><img src="img/d_img_01.jpg"></a>
+										<div class="resource_img">
+											<h2><a href="房源详情.html">水上乐园旁 世纪花园 稀缺精装2房 户型正气户型正气透户型正气透户型正气透透</a> </h2>
+											<p>3室2厅   |  6/6层   |  南北向   |  普通住宅</p>
+											<p><a href="#">鑫苑国际城市花园 </a>   <span>[<a href="#">上海周边</a>-<a href="#">昆山</a>] 花桥镇绿地大道198号</span></p>
+											<p>发布人    <span>1个小时前</span></p>
+											<div class="xue"><a class="a1">学区房</a><a class="a2">豪华装修 </a><a class="a3">超低价格</a></div>
+										</div>
+									</td>
+									<td width="15%" class="td_s1">面积<br>110m<sup>2</sup></td>
+									<td width="15%" class="td_s2"><p><font size="5">12000</font>元/月</p><em>45.5元/平米</em></td>
+								</tr>
+								<tr>
+									<td width="70%" class="td_s">
+										<a href="房源详情.html" class="a_image"><img src="img/d_img_01.jpg"></a>
+										<div class="resource_img">
+											<h2><a href="房源详情.html">水上乐园旁 世纪花园 稀缺精装2房 户型正气户型正气透户型正气透户型正气透透</a> </h2>
+											<p>3室2厅   |  6/6层   |  南北向   |  普通住宅</p>
+											<p><a href="#">鑫苑国际城市花园 </a>   <span>[<a href="#">上海周边</a>-<a href="#">昆山</a>] 花桥镇绿地大道198号</span></p>
+											<p>发布人    <span>1个小时前</span></p>
+											<div class="xue"><a class="a1">学区房</a><a class="a2">豪华装修 </a><a class="a3">超低价格</a></div>
+										</div>
+									</td>
+									<td width="15%" class="td_s1">面积<br>110m<sup>2</sup></td>
+									<td width="15%" class="td_s2"><p><font size="5">12000</font>元/月</p><em>45.5元/平米</em></td>
+								</tr>
+								<tr>
+									<td width="70%" class="td_s">
+										<a href="房源详情.html" class="a_image"><img src="img/d_img_01.jpg"></a>
+										<div class="resource_img">
+											<h2><a href="房源详情.html">水上乐园旁 世纪花园 稀缺精装2房 户型正气户型正气透户型正气透户型正气透透</a> </h2>
+											<p>3室2厅   |  6/6层   |  南北向   |  普通住宅</p>
+											<p><a href="#">鑫苑国际城市花园 </a>   <span>[<a href="#">上海周边</a>-<a href="#">昆山</a>] 花桥镇绿地大道198号</span></p>
+											<p>发布人    <span>1个小时前</span></p>
+											<div class="xue"><a class="a1">学区房</a><a class="a2">豪华装修 </a><a class="a3">超低价格</a></div>
+										</div>
+									</td>
+									<td width="15%" class="td_s1">面积<br>110m<sup>2</sup></td>
+									<td width="15%" class="td_s2"><p><font size="5">12000</font>元/月</p><em>45.5元/平米</em></td>
+								</tr>
+								<tr>
+									<td width="70%" class="td_s">
+										<a href="房源详情.html" class="a_image"><img src="img/d_img_01.jpg"></a>
+										<div class="resource_img">
+											<h2><a href="房源详情.html">水上乐园旁 世纪花园 稀缺精装2房 户型正气户型正气透户型正气透户型正气透透</a> </h2>
+											<p>3室2厅   |  6/6层   |  南北向   |  普通住宅</p>
+											<p><a href="#">鑫苑国际城市花园 </a>   <span>[<a href="#">上海周边</a>-<a href="#">昆山</a>] 花桥镇绿地大道198号</span></p>
+											<p>发布人    <span>1个小时前</span></p>
+											<div class="xue"><a class="a1">学区房</a><a class="a2">豪华装修 </a><a class="a3">超低价格</a></div>
+										</div>
+									</td>
+									<td width="15%" class="td_s1">面积<br>110m<sup>2</sup></td>
+									<td width="15%" class="td_s2"><p><font size="5">12000</font>元/月</p><em>45.5元/平米</em></td>
+								</tr>
+								<tr>
+									<td width="70%" class="td_s">
+										<a href="房源详情.html" class="a_image"><img src="img/d_img_01.jpg"></a>
+										<div class="resource_img">
+											<h2><a href="房源详情.html">水上乐园旁 世纪花园 稀缺精装2房 户型正气户型正气透户型正气透户型正气透透</a> </h2>
+											<p>3室2厅   |  6/6层   |  南北向   |  普通住宅</p>
+											<p><a href="#">鑫苑国际城市花园 </a>   <span>[<a href="#">上海周边</a>-<a href="#">昆山</a>] 花桥镇绿地大道198号</span></p>
+											<p>发布人    <span>1个小时前</span></p>
+											<div class="xue"><a class="a1">学区房</a><a class="a2">豪华装修 </a><a class="a3">超低价格</a></div>
+										</div>
+									</td>
+									<td width="15%" class="td_s1">面积<br>110m<sup>2</sup></td>
+									<td width="15%" class="td_s2"><p><font size="5">12000</font>元/月</p><em>45.5元/平米</em></td>
+								</tr>
+								<tr>
+									<td width="70%" class="td_s">
+										<a href="房源详情.html" class="a_image"><img src="img/d_img_01.jpg"></a>
+										<div class="resource_img">
+											<h2><a href="房源详情.html">水上乐园旁 世纪花园 稀缺精装2房 户型正气户型正气透户型正气透户型正气透透</a> </h2>
+											<p>3室2厅   |  6/6层   |  南北向   |  普通住宅</p>
+											<p><a href="#">鑫苑国际城市花园 </a>   <span>[<a href="#">上海周边</a>-<a href="#">昆山</a>] 花桥镇绿地大道198号</span></p>
+											<p>发布人    <span>1个小时前</span></p>
+											<div class="xue"><a class="a1">学区房</a><a class="a2">豪华装修 </a><a class="a3">超低价格</a></div>
+										</div>
+									</td>
+									<td width="15%" class="td_s1">面积<br>110m<sup>2</sup></td>
+									<td width="15%" class="td_s2"><p><font size="5">12000</font>元/月</p><em>45.5元/平米</em></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="page">
+							<a href="" class="page_curr">1</a>
+							<a href="">2</a>
+							<a href="">3</a>
+							<a href="">4</a>
+							<a href="">5</a>
+							<a href="">6</a>
+							<a href="">7</a>
+							<a href="">8</a>
+							<a href="">下一页</a>
+							<a href="">末页</a>
+							<span>共100页</span>
+						</div>
+					</div>
+				</div>
+				<div class="resources_right">
+					<div class="souce_top">
+						<div class="souce_you">
+							<div class="souce_you_word">优质房源推荐</div>
+							<div class="souce_img">
+								<a href="房源详情.html" class="souce_a"><img src="img/d_img_02.jpg"></a>
+								<div class="souce_b">
+									<h2><a href="房源详情.html">大华锦绣东郊</a></h2>
+									<b>[<a href="">昆山 城东</a>]</b>
+									<em><font size="4">7800</font>元/平米</em>									
+								</div>
+                            </div>
+							<div class="souce_img">
+								<a href="房源详情.html" class="souce_a"><img src="img/d_img_02.jpg"></a>
+								<div class="souce_b">
+									<h2><a href="房源详情.html">大华锦绣东郊</a></h2>
+									<b>[<a href="">昆山 城东</a>]</b>
+									<em><font size="4">7800</font>元/平米</em>									
+								</div>
+                            </div>
+                            <div class="souce_img">
+								<a href="房源详情.html" class="souce_a"><img src="img/d_img_02.jpg"></a>
+								<div class="souce_b">
+									<h2><a href="房源详情.html">大华锦绣东郊</a></h2>
+									<b>[<a href="">昆山 城东</a>]</b>
+									<em><font size="4">7800</font>元/平米</em>									
+								</div>
+                            </div>
+                            <div class="souce_img">
+								<a href="房源详情.html" class="souce_a"><img src="img/d_img_02.jpg"></a>
+								<div class="souce_b">
+									<h2><a href="房源详情.html">大华锦绣东郊</a></h2>
+									<b>[<a href="">昆山 城东</a>]</b>
+									<em><font size="4">7800</font>元/平米</em>									
+								</div>
+                            </div>
+                            <div class="souce_img">
+								<a href="房源详情.html" class="souce_a"><img src="img/d_img_02.jpg"></a>
+								<div class="souce_b">
+									<h2><a href="房源详情.html">大华锦绣东郊</a></h2>
+									<b>[<a href="">昆山 城东</a>]</b>
+									<em><font size="4">7800</font>元/平米</em>									
+								</div>
+                            </div>
+                            <div class="souce_img">
+								<a href="房源详情.html" class="souce_a"><img src="img/d_img_02.jpg"></a>
+								<div class="souce_b">
+									<h2><a href="房源详情.html">大华锦绣东郊</a></h2>
+									<b>[<a href="">昆山 城东</a>]</b>
+									<em><font size="4">7800</font>元/平米</em>									
+								</div>
+                            </div>
+						</div>
+					</div>
+					<div class="big_img"><img src="img/big_img.jpg"></div>
+					<div class="souce_top souce_bottom">
+						<div class="souce_you">
+							<div class="souce_you_word">房源推荐</div>
+							<ul class="souce_span">
+								<li>
+									<a href="#" class="citys">[开发区]</a>
+									<a href="房源详情.html" class="fcname">大华锦绣东郊</a>
+									<span>7000元/平米</span>
+								</li>
+								<li>
+									<a href="#" class="citys">[开发区]</a>
+									<a href="房源详情.html" class="fcname">大华锦绣东郊</a>
+									<span>7000元/平米</span>
+								</li>
+								<li>
+									<a href="#" class="citys">[开发区]</a>
+									<a href="房源详情.html" class="fcname">大华锦绣东郊</a>
+									<span>7000元/平米</span>
+								</li>
+								<li>
+									<a href="#" class="citys">[开发区]</a>
+									<a href="房源详情.html" class="fcname">大华锦绣东郊</a>
+									<span>7000元/平米</span>
+								</li>
+								<li>
+									<a href="#" class="citys">[开发区]</a>
+									<a href="房源详情.html" class="fcname">大华锦绣东郊</a>
+									<span>7000元/平米</span>
+								</li>
+								<li>
+									<a href="#" class="citys">[开发区]</a>
+									<a href="房源详情.html" class="fcname">大华锦绣东郊</a>
+									<span>7000元/平米</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="big_img"><img src="img/big_img.jpg"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="two_office_recomend">
+				<div class="two_recomend">
+					<div class="two_top">房源推荐</div>
+					<ul>
+						<li>
+							<a href="房源详情.html" class="a_re"><img src="img/d_img_03.jpg"></a>
+							<div class="two_middle"><a href="" class="citys">昆山</a><a href="房源详情.html" class="fcname">首开班芙春天</div>
+							<div class="two_bottom"><span>4室2厅</span><b>150万</b></div>
+						</li>
+						<li>
+							<a href="房源详情.html" class="a_re"><img src="img/d_img_03.jpg"></a>
+							<div class="two_middle"><a href="" class="citys">昆山</a><a href="房源详情.html" class="fcname">首开班芙春天</div>
+							<div class="two_bottom"><span>4室2厅</span><b>150万</b></div>
+						</li>
+						<li>
+							<a href="房源详情.html" class="a_re"><img src="img/d_img_03.jpg"></a>
+							<div class="two_middle"><a href="" class="citys">昆山</a><a href="房源详情.html" class="fcname">首开班芙春天</div>
+							<div class="two_bottom"><span>4室2厅</span><b>150万</b></div>
+						</li>
+						<li>
+							<a href="房源详情.html" class="a_re"><img src="img/d_img_03.jpg"></a>
+							<div class="two_middle"><a href="" class="citys">昆山</a><a href="房源详情.html" class="fcname">首开班芙春天</div>
+							<div class="two_bottom"><span>4室2厅</span><b>150万</b></div>
+						</li>
+						<li>
+							<a href="房源详情.html" class="a_re"><img src="img/d_img_03.jpg"></a>
+							<div class="two_middle"><a href="" class="citys">昆山</a><a href="房源详情.html" class="fcname">首开班芙春天</div>
+							<div class="two_bottom"><span>4室2厅</span><b>150万</b></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+        </div>  	
+    </div>  
+</section>
+
+<footer>
+	<div class="footer">
+		<div class="w1200">
+			<ul class="clearfix">
+				<li class="li_l">
+					<img src="img/logo.png">
+					<div class="footer_l">百家好房产信息网介绍，品牌简介。百家好房产信息网介绍，品牌简介。百家好房产信息网介绍，品牌简介。百家好房产信息网介绍，品牌简介。百家好房产信息网介绍，品牌简介。百家好房产信息网介绍，品牌简介。百家好房产信息网介绍，品牌简介。</div>
+				</li>
+				<li class="li_m">
+					<div class=" footer_m">
+						<img src="img/phone.png">
+						<div class="footer_mw">
+					    	<span>客服热线</span>
+					    	<b>4000-441-554</b>
+						</div>
+					</div>
+					<div class="footer_m1">
+						<img src="img/location.png">
+						<div class="footer_mw1">
+							<span>联系方式</span>
+							<b>昆山市开发区前进东路757号楼1613室<br>传真：26545622<br>QQ:8354625482</b>
+						</div>
+					</div>
+				</li>
+				<li class="li_r">
+					<div class="footer_r"><i></i>关注微信</div>
+					<img src="img/erweim.png">
+					<div class="footer_r1"><i></i>关注微博</div>
+				</li>
+			</ul>
+			<div class="footer_nav">
+				<a href="关于我们.html">关于我们</a><b>&nbsp;&nbsp;|&nbsp;&nbsp;</b><a href="关于我们.html">人才招聘</a><b>&nbsp;&nbsp;|&nbsp;&nbsp;</b><a href="联系我们.html">联系我们</a><b>&nbsp;&nbsp;|&nbsp;&nbsp;</b><a href="关于我们.html">用户协议</a><b>&nbsp;&nbsp;|&nbsp;&nbsp;</b><a href="使用帮助.html">使用帮助</a><b>&nbsp;&nbsp;|&nbsp;&nbsp;</b><a href="友情链接.html">友情链接</a>
+			</div>
+			<div class="copy">版权所有 © 百家好房地产（昆山）有限公司  Copyright © 2014 bjhhouse.com All Rights Reserved  沪ICP备 254125号</div>
+		</div>
+	</div>
+</footer>
+		
+<!-- 代码 开始 -->
+<div class="main-im main_right">
+	<div id="open_im" class="open-im">&nbsp;</div>  
+	<div class="im_main" id="im_main">
+		<div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div>
+		<a href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" target="_blank" class="im-qq qq-a" title="在线QQ客服">
+			<div class="qq-container"></div>
+			<div class="qq-hover-c"><img class="img-qq" src="img/qq.png"></div>
+			<span> QQ在线咨询</span>
+		</a>
+		<div class="im-tel">
+			<div>售前咨询热线</div>
+			<div class="tel-num">400-123-45678</div>
+			<div>售后咨询热线</div>
+			<div class="tel-num">010-12345678</div>
+		</div>
+		<div class="im-footer" style="position:relative">
+			<div class="weixing-container">
+				<div class="weixing-show">
+					<div class="weixing-txt">微信扫一扫<br>关注懒人图库</div>
+					<img class="weixing-ma" src="img/weixing-ma.jpg">
+					<div class="weixing-sanjiao"></div>
+					<div class="weixing-sanjiao-big"></div>
+				</div>
+			</div>
+			<div class="go-top"><a href="javascript:;" title="返回顶部"></a> </div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+</div>
+<!-- 代码 结束 -->
+</body>
+</html>

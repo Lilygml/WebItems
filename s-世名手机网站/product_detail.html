@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>首页</title>
+		<link type="text/css" rel="stylesheet" href="css/css.css" />	
+		<link type="text/css" rel="stylesheet" href="css/default.css" />
+		<script src="http://s.amazeui.org/assets/2.x/js/jquery.min.js" type="text/javascript" ></script>
+		<script type="text/javascript">
+		$(document).ready(function() { 	
+		$('.product_nav .product_nav_box a').click(function(){
+				SwitchCard(".product_nav .product_nav_box a", ".goods .goods_ul", "cxhover", $(this))
+		});
+		$('.product_nav .product_nav_box a').eq(0).trigger("click");
+				function SwitchCard(tab,con,addClass,obj){
+				var $_self = obj;
+				var $_nav = $(tab);
+				$_nav.removeClass(addClass),
+				$_self.addClass(addClass);
+				var $_index = $_nav.index($_self);
+				var $_con = $(con);
+				$_con.hide(),
+				$_con.eq($_index).show();
+			}
+		}); 
+		</script>
+	</head>
+	<body style="background: #f7f8fb;">
+        <header>
+			<div class="header_top cata">
+				<div class="header_box ">
+					<div class="cata_header"><a href="product.html" class="search_left"><img src="img/left.png"></a>产品中心<a href="catalogue.html" class="search_menu"><img src="img/menu.png"></a></div>
+				</div>
+			</div>
+			
+		</header>
+		<div style="height:1px;background: #e5e5e5;margin-top:-5px;"></div>		
+		<section>
+			<div class="product_detail"><img src="img/pr.jpg"></div>
+			<div class="result_content">
+				<div class="product_detail_top">无树脂溶剂型通用色浆</div>
+				<div class="product_detail_m">产品型号：SUP 80系列</div>
+				<div class="product_detail_m">产品简介：SUP 80系列无树脂溶剂型通用色浆是以丙二
+醇甲醚醋酸酯(PMA)、复合二元酸(DBE)与醋酸丁酯(BAC)
+等环保有机溶剂为介质，采用特殊结构的分散剂通过精细
+加工制备而成，该体系适用于环氧树脂、酚醛树脂、硝基
+树脂、丙烯酸树脂、氨基树脂、聚酯树脂等溶剂型体系。</div>
+			</div>
+			<div style="height:1px;background: #e5e5e5;"></div>
+			<div class="product_nav">
+				<div class="product_nav_box">
+					<a href="javascript:;" class="product_nav_a1">详情描述</a>
+					<a href="javascript:;">包装规格</a>
+					<a href="javascript:;">常见问题</a>
+					<a href="javascript:;" class="product_nav_a2">咨询回复</a>					
+				</div>
+            </div>
+			<div style="height:1px;background: #e5e5e5;"></div>		
+			<div class="goods">	
+
+
+				<div class="goods_ul">
+					<div class="depict">
+						<h2>产品特点</h2>
+						<div class="depict_con">
+						    <i></i>
+						    <div class="depict_i">
+						    	<div class="depict_one">无树脂，通用性广。</div>
+						    	<div class="depict_one">kskkdkdkdkk</div>
+						    </div>
+						    <div class="clearfix"></div>
+						</div>
+						<div class="depict_con">
+						    <i></i>
+						    <div class="depict_i">
+						    	<div class="depict_one">无树脂，通用性广。</div>
+						    	<div class="depict_one">kskkdkdkdkk</div>
+						    </div>
+						    <div class="clearfix"></div>
+						</div>
+						<div class="depict_con">
+						    <i></i>
+						    <div class="depict_i">
+						    	<div class="depict_one">无树脂，通用性广。</div>
+						    	<div class="depict_one">kskkdkdkdkk</div>
+						    </div>
+						    <div class="clearfix"></div>
+						</div>
+						<h2 style="margin-top: 1.5em;">基础参数</h2>
+						<div class="can"><img src="img/can.jpg"></div>
+					</div>					
+				</div>
+				<div class="goods_ul">
+					<div class="goods_l">
+						<ul>
+							<li><div class="goods_img" ><a href=""><img src="img/img.jpg"></a></div><h2>1KG包装</h2></li>
+							<li><div class="goods_img"><a href=""><img src="img/img.jpg"></a></div><h2>1KG包装</h2></li>
+							<li><div class="goods_img"><a href=""><img src="img/img_01.jpg"></a></div><h2>1KG包装</h2></li>
+	
+							<div class="clearfix"></div>
+						</ul>						
+					</div>
+
+				</div>				
+				<div class="goods_ul goods_line">
+					<div class="problem">
+						<h2>1.常见问题常见问题常见问题常见问题？</h2>
+						<div class="problem_anser">
+							问题回答问题回答问题回答问题回答问题回答问题回答问题回答
+问题回答问题回答问题回答问题回答问题回答问题回答问题回答
+问题回答问题回答问题回答问题回答问题回答问题回答问题回答
+问题回答问题回答问题回答。
+						</div>
+					</div>
+					<div style="height:1px;background: #e5e5e5;"></div>	
+					<div class="problem">
+						<h2>2.常见问题常见问题常见问题常见问题？</h2>
+						<div class="problem_anser">
+							问题回答问题回答问题回答问题回答问题回答问题回答问题回答
+问题回答问题回答问题回答问题回答问题回答问题回答问题回答
+问题回答问题回答问题回答问题回答问题回答问题回答问题回答
+问题回答问题回答问题回答。
+						</div>
+					</div>
+					<div style="height:1px;background: #e5e5e5;"></div>	
+					<div class="problem">
+						<h2>3.常见问题常见问题常见问题常见问题？</h2>
+						<div class="problem_anser">
+							问题回答问题回答问题回答问题回答问题回答问题回答问题回答
+问题回答问题回答问题回答问题回答问题回答问题回答问题回答
+问题回答问题回答问题回答问题回答问题回答问题回答问题回答
+问题回答问题回答问题回答。
+						</div>
+					</div>
+					<div style="height:1px;background: #e5e5e5;"></div>	
+					<div class="problem">
+						<h2>4.常见问题常见问题常见问题常见问题？</h2>
+						<div class="problem_anser">
+							问题回答问题回答问题回答问题回答问题回答问题回答问题回答
+问题回答问题回答问题回答问题回答问题回答问题回答问题回答
+问题回答问题回答问题回答问题回答问题回答问题回答问题回答
+问题回答问题回答问题回答。
+						</div>
+					</div>
+					<div style="height:1px;background: #e5e5e5;"></div>	
+					<div class="problem">
+						<h2>5.常见问题常见问题常见问题常见问题？</h2>
+						<div class="problem_anser">
+							问题回答问题回答问题回答问题回答问题回答问题回答问题回答
+问题回答问题回答问题回答问题回答问题回答问题回答问题回答
+问题回答问题回答问题回答问题回答问题回答问题回答问题回答
+问题回答问题回答问题回答。
+						</div>
+					</div>
+				</div>
+				<div class="goods_ul goods_line">
+					<div class="problem">
+						<h2>1.常见问题常见问题常见问题常见问题？</h2>
+						<div class="time">2015.9.1  游客0215</div>
+						<div class="problem_anser problem_replay">
+							回复：回复内容回复内容回复内容回复内容回复
+内容回复内容回复内容回复内容回复内容回复内
+容回回复内容回复内容回复内容回复内容。
+						</div>
+					</div>
+					<div style="height:1px;background: #e5e5e5;"></div>	
+					<div class="problem">
+						<h2>1.常见问题常见问题常见问题常见问题？</h2>
+						<div class="time">2015.9.1  游客0215</div>
+						<div class="problem_anser problem_replay">
+							回复：回复内容回复内容回复内容回复内容回复
+内容回复内容回复内容回复内容回复内容回复内
+容回回复内容回复内容回复内容回复内容。
+						</div>
+					</div>
+					<div style="height:1px;background: #e5e5e5;"></div>	
+					<div class="problem">
+						<h2>1.常见问题常见问题常见问题常见问题？</h2>
+						<div class="time">2015.9.1  游客0215</div>
+						<div class="problem_anser problem_replay">
+							回复：回复内容回复内容回复内容回复内容回复
+内容回复内容回复内容回复内容回复内容回复内
+容回回复内容回复内容回复内容回复内容。
+						</div>
+					</div>
+					<div style="height:1px;background: #e5e5e5;"></div>	
+					<div class="problem">
+						<h2>1.常见问题常见问题常见问题常见问题？</h2>
+						<div class="time">2015.9.1  游客0215</div>
+						<div class="problem_anser problem_replay">
+							回复：回复内容回复内容回复内容回复内容回复
+内容回复内容回复内容回复内容回复内容回复内
+容回回复内容回复内容回复内容回复内容。
+						</div>
+					</div>
+					<div style="height:1px;background: #e5e5e5;"></div>	
+					<div class="problem">
+						<h2>1.常见问题常见问题常见问题常见问题？</h2>
+						<div class="time">2015.9.1  游客0215</div>
+						<div class="problem_anser problem_replay">
+							回复：回复内容回复内容回复内容回复内容回复
+内容回复内容回复内容回复内容回复内容回复内
+容回回复内容回复内容回复内容回复内容。
+						</div>
+					</div>
+					<div style="height:1px;background: #e5e5e5;"></div>	
+					<div class="consult_con">
+						<form>
+							<div class="consult_top">咨询内容：</div>
+							<div class="consult_exe"><textarea rows="6"></textarea></div>
+							<div class="consult_inp"><label>姓名：</label><input type="text" name="" /><label>手机：</label><input type="text" name="" /></div>
+							<div class="consult_sub"><input type="submit" name="" value="提交"/></div>
+						</form>
+					</div>
+				</div>				
+			</div>
+        </section>
+        <footer>
+        	<div class="footer" >
+        		<div class="footer_box">
+	        		<div class="footer_top">服务热线：0512-57665888</div>
+	        		<div class="footer_top">版权所有©2015-2025  世名科技有限公司</div> 
+		        	<div class="footer_top">苏A1-20160817号</div> 
+        		</div>
+            </div>
+        </footer>
+    </body>
+</html>

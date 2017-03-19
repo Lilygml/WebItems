@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>职由你</title>
+<link href="style/css.css" rel="stylesheet" type="text/css" />
+<link href="style/media-queries.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  <link rel="stylesheet" href="Validform/images/style.css" type="text/css" media="all" /> 
+  <script type="text/javascript" src="Validform/images/jquery-1.9.1.min.js"></script> 
+  <script type="text/javascript" src="Validform/images/Validform_v5.3.2.js"></script> 
+  <script type="text/javascript" src="Validform/plugin/passwordStrength/passwordStrength-min.js"></script> 
+  <script type="text/javascript">
+$(function(){
+	/*省份证验证*/
+	$.extend($.Datatype,{
+		"card1-18" : /^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$/
+	});
+	$(".registerform").Validform({
+		tiptype:2,
+		datatype:{
+			/*请至少选择2项！*/
+			"min2":function(gets,obj,curform,regxp){
+				var need=2,
+					numselected=curform.find("input[name='"+obj.attr("name")+"']:checked").length;
+				return  numselected >= need ? true : "请至少选择"+need+"项！";
+			},
+			/*最多只能选择2项*/
+			"max2":function(gets,obj,curform,regxp){
+				var atmax=2,
+					numselected=curform.find("input[name='"+obj.attr("name")+"']:checked").length;
+					
+				if(numselected==0){
+					return false;
+				}else if(numselected>atmax){
+					return "最多只能选择"+atmax+"项！";
+				}
+				return  true;
+			},
+			/*手机与固话至少填写一项！*/
+			"phone":function(gets,obj,curform,regxp){
+				var reg1=regxp["m"],
+					reg2=/[\d]{7}/,
+					mobile=curform.find("#uphone");
+				if(reg1.test(mobile.val())){return true;}
+				if(reg2.test(gets)){return true;}
+				return false;
+			}
+		},
+		/*表单验证*/
+		tiptype:function(msg,o,cssctl){
+			if(!o.obj.is("form")){
+				var objtip=o.obj.parent().find(".Validform_checktip");
+				cssctl(objtip,o.type);
+				objtip.text(msg);
+				
+				var infoObj=o.obj.parent().find(".info");
+				if(o.type==2){
+					infoObj.fadeOut(200);
+				}else{
+					if(infoObj.is(":visible")){return;}
+					infoObj.css({
+						left:0,
+						top:-30
+					}).show().animate({
+						top:-27
+					},200);
+				}
+				
+			}	
+		},
+		/*密码验证*/
+		usePlugin:{
+			passwordstrength:{
+				minLen:6,
+				maxLen:18,
+				trigger:function(obj,error){
+					if(error){
+						obj.parent().find(".passwordStrength").hide();
+					}else{
+						obj.parent().find(".info").hide();
+						obj.parent().find(".passwordStrength").show();	
+					}
+				}
+			}
+		}	
+	});
+	/*短信验证接口*/
+	$("#phonecodesub").click(function(){
+		var CheckMyreg= /^(((13[0-9]{1})|159|(15[0-9]{1}))+\d{8})$/;	
+		var uphone=$("#uphone").val();
+	 	if(!CheckMyreg.test(uphone)){
+			$("#uphone").focus();
+	    	return false;
+	    }
+	$.post("codesub.html",{},function(result2){
+	   $.post("短信接口地址",{mobile:uphone,content:result2},function(result){});
+	});
+	datetime(this,1000);
+  	});
+   })
+/*短信验证倒计时*/
+var wait=5;
+function datetime(o,time) {
+	if (wait == 0) {
+		o.removeAttribute("disabled");
+		o.style.backgroundColor="#f5f5f5"
+		o.style.border="#d5d5d5 1px solid"
+		o.style.color="#333"
+		o.value="发送验证码到手机";
+		wait = 60;
+	} else {
+		o.setAttribute("disabled", true);
+		o.style.backgroundColor="#F00"
+		o.style.border="1px solid #F00"
+		o.style.color="#FFF"
+		o.value="重新发送(" + wait + ")";
+		wait--;
+		setTimeout(function() {
+			datetime(o,time)
+		},
+		time)
+	}
+}
+</script>
+
+</head>
+<body>
+<!---底浮开始--->
+<div class="difu">
+<div class="difu2">
+<span class="df1"><img src="images/003.png"></span>
+<span class="df2">3245</span>
+<span class="df3">公司</span>
+<span class="df2">41369</span>
+<span class="df3">职位</span>
+<span class="df3">已生成返还费</span>
+<span class="df2">1234567</span>
+<span class="df3">元</span>
+<span class="df4"><a href="login.html">登录</a></span>
+<span class="df5"><a href="register.html">快速注册</a></span>
+</div>
+</div>
+<!---底浮结束--->
+
+
+<!---右浮开始--->
+<div class="yf">
+<div class="yf1"><img src="images/019.jpg"></div>
+<div class="yf2">
+<h2>工友求职</h2>
+<p><a href="#">工友求职</a></p>
+<p><a href="#">工友求职</a></p>
+<h2>企业招聘</h2>
+<p><a href="#">企业招聘</a></p>
+<p><a href="#">企业招聘</a></p>
+</div>
+<ul class="qrcode">
+<li>
+<img src="images/021.jpg">
+<span>手机端</span>
+</li>
+<li>
+<img src="images/021.jpg">
+<span>加入微信</span>
+</li>
+</ul>
+<div class="houjian"><a href="#"><img src="images/018.png"></a></div>
+</div>
+
+<!---右浮结束--->
+
+<!--头部开始！-->
+<div class="header">
+<div class="header_left"><img src="images/logo.jpg" /></div>
+<div id="search-2014">
+		<div class="form">
+		  <input type="text" onkeydown="javascript:if(event.keyCode==13) search('key');" autocomplete="off" id="key" accesskey="s" class="text" style="color: rgb(153, 153, 153);">
+			<button onclick="search('key');return false;" class="button cw-icon"><i></i>搜索</button>
+		</div>
+            <div id="hotwords-2014">
+            <a href="#" class="style-red">大家都在找:</a>
+            <a href="#">3D巨幕</a>
+            <a href="#">家电5折</a>
+            <a href="#">200减100</a>
+            <a href="#">奢品扫货</a>
+            <a href="#">大牌秒杀</a>
+            <a href="#">精品团</a>
+            <a href="#">苹果399+</a>
+            <a href="#">机票20元</a>
+            </div>
+    </div>
+
+
+
+<!--语言分类开始！-->
+<div class="other">
+<a href="canvass_join.html">招商加盟</a><a href="help.html">帮助中心</a>
+
+</div> 
+<!--语言分类结束！-->
+</div>
+<!--头部结束！-->
+<div class="clear"></div>
+
+
+
+<!--导航开始！-->
+<div class="nav">	         	         	         	         	         	         
+<ul class="menu" id="menu">                                                            
+    <li><a href="index.html">首页</a></li>
+    <li><a href="list.html">所有岗位</a></li>
+    <li><a href="release.html">发布职位</a></li>
+    <li><a href="finance_first.html">我的财务</a></li>
+    <li><a href="about.html">关于我们</a>
+        <ul>
+            <li><a href="about.html">公司介绍</a></li>
+            <li><a href="about.html">企业文化</a></li>
+            <li><a href="about.html">联系方式</a></li>
+        </ul>
+    </li>
+    <li class="login">
+    <span><a href="login.html">登录</a></span>
+    <span>|</span>
+    <span><a href="rgister.html">注册</a></span>
+    </li>
+ </ul>
+</div>
+<!--导航结束！-->
+
+
+
+
+<div class="center">
+<div class="width1020">
+<div class="title">我要推荐</div>
+<div class="my">
+	<div class="my_01"> 
+    	<div class="my_02">
+        	<div class="enre enrea">
+            	<div class="enre_01"><p>我的工友库</p><div class="recom"><a href="">填写推荐人</a></div></div>
+                <div class="clear"></div>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table3">
+                  <tbody>
+                    <tr>
+                      <th scope="col" width="10%">姓名</th>
+                      <th scope="col" width="10%" class="ds">性别</th>
+                      <th scope="col" width="10%" class="ds">年龄</th>
+                      <th scope="col" width="10%">学历</th>
+                      <th scope="col" width="15%" class="ds">现居地</th>
+                      <th scope="col" width="15%">意向地</th>
+                      <th scope="col" width="10%">状态</th>
+                      <th scope="col" width="20%" class="ds">服务时间</th>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" placeholder=""/>&nbsp;&nbsp;意向成</td>
+                      <td class="ds"><p>男</p></td>
+                      <td class="ds"><p>20岁</p></td>
+                      <td><P>高中</P></td>
+                      <td class="ds"><p>江苏苏州市</p></td>
+                      <td><p>江苏苏州市</p></td>
+                      <td><p>未入职</p></td>
+                      <td class="ds"><h2>2015-12-15  11:11:12</h2></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" placeholder=""/>&nbsp;&nbsp;意向成</td>
+                      <td class="ds"><p>男</p></td>
+                      <td class="ds"><p>20岁</p></td>
+                      <td><P>高中</P></td>
+                      <td class="ds"><p>江苏苏州市</p></td>
+                      <td><p>江苏苏州市</p></td>
+                      <td><p>未入职</p></td>
+                      <td class="ds"><h2>2015-12-15  11:11:12</h2></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" placeholder=""/>&nbsp;&nbsp;意向成</td>
+                      <td class="ds"><p>男</p></td>
+                      <td class="ds"><p>20岁</p></td>
+                      <td><P>高中</P></td>
+                      <td class="ds"><p>江苏苏州市</p></td>
+                      <td><p>江苏苏州市</p></td>
+                      <td><p>未入职</p></td>
+                      <td class="ds"><h2>2015-12-15  11:11:12</h2></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" placeholder=""/>&nbsp;&nbsp;意向成</td>
+                      <td class="ds"><p>男</p></td>
+                      <td class="ds"><p>20岁</p></td>
+                      <td><P>高中</P></td>
+                      <td class="ds"><p>江苏苏州市</p></td>
+                      <td><p>江苏苏州市</p></td>
+                      <td><p>未入职</p></td>
+                      <td class="ds"><h2>2015-12-15  11:11:12</h2></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" placeholder=""/>&nbsp;&nbsp;意向成</td>
+                      <td class="ds"><p>男</p></td>
+                      <td class="ds"><p>20岁</p></td>
+                      <td><P>高中</P></td>
+                      <td class="ds"><p>江苏苏州市</p></td>
+                      <td><p>江苏苏州市</p></td>
+                      <td><p>未入职</p></td>
+                      <td class="ds"><h2>2015-12-15  11:11:12</h2></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" placeholder=""/>&nbsp;&nbsp;意向成</td>
+                      <td class="ds"><p>男</p></td>
+                      <td class="ds"><p>20岁</p></td>
+                      <td><P>高中</P></td>
+                      <td class="ds"><p>江苏苏州市</p></td>
+                      <td><p>江苏苏州市</p></td>
+                      <td><p>未入职</p></td>
+                      <td class="ds"><h2>2015-12-15  11:11:12</h2></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" placeholder=""/>&nbsp;&nbsp;意向成</td>
+                      <td class="ds"><p>男</p></td>
+                      <td class="ds"><p>20岁</p></td>
+                      <td><P>高中</P></td>
+                      <td class="ds"><p>江苏苏州市</p></td>
+                      <td><p>江苏苏州市</p></td>
+                      <td><p>未入职</p></td>
+                      <td class="ds"><h2>2015-12-15  11:11:12</h2></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+               <div class="enre_01"><p>推荐人信息</p></div>
+               <div class="form-horizontal user-login form-horizontals"> 
+               
+                   <p vessel="ppw" container="cs cz">
+                        <label>推荐人姓名：</label>
+                        <input name="uname" type="text" id="teinx" value="" placeholder="*  姓名" datatype="*2-6" nullmsg="请输入姓名！" /> 
+                   </p> 
+                   <p vessel="ppw" container="cs cz">
+                        <label>推荐人电话：</label>
+                        <input name="uname" type="text" id="teinx" value="" placeholder="*  电话" datatype="*2-6" nullmsg="请输入电话！" /> 
+                   </p> 
+                 <div class="clear"></div>  
+                 <p><label style="color:#fff;">期望薪资：</label><input type="submit" class="btn_sub btn_sub_01 btn_sub_02" value="提交" /></p> 
+                 
+                   </div> 
+                 </form> 
+            </div>
+        </div>
+         
+    </div>
+</div>
+</div>
+<div style="clear:both"></div>
+</div>
+
+
+
+
+<!--底部开始！-->
+<div id="foot1">
+<div class="foot">
+<div class="foot_left">
+上海职由你公司 服务热线: 400-0000-000
+</div>
+<div class="foot_right">
+<p>上海ICP备:0000000000000</p>
+<p>Copyright© 2015-2016 zhiyouni.com All Rights Reserved.</p>
+</div>
+</div>
+<div style="clear:both"></div>
+</div>
+<!--底部结束！-->
+
+
+<script>
+
+function check(){
+		if(!$('.checkAll').attr("checked")){  
+		   $("input:checkbox").attr("checked","");
+		}
+}
+$(function(){
+	$('.checkAll').click(function () {    
+			if(!$(this).attr("checked")){         
+			   $("input[type=checkbox]").removeAttr("checked","");
+			}else{
+				$("input[type=checkbox]").attr("checked","");
+			}
+		});
+})
+	
+</script>
+
+</body>
+</html>

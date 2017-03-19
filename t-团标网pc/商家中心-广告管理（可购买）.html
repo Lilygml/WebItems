@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>商家中心-广告管理（可购买）</title>
+		<link rel="stylesheet" href="css/default.css" />
+		<link rel="stylesheet" href="css/style.css" /> 
+        <link rel="stylesheet" href="css/center.css" /> 
+        <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="js/app.js" ></script>
+		<script type="text/javascript" src="js/jquery.reveal.js"></script><!--弹出层-->
+</head>
+<body>
+		<header>
+			<div class="top">
+				<div class="w1200 overflow">
+					<div class="top_left"><span>Hi,欢迎来到团标网</span><a href="登录.html">请登录</a><a href="注册-个人用户.html">免费注册</a></div>
+					<div class="top_right"><a href="个人中心首页.html">我的团标网</a><b>|</b><a href="商品详情页-购物车.html">购物车</a><b>|</b><a href="帮助中心-服务中心.html">帮助中心</a></div>
+				</div>
+			</div>
+			<div class="w1200 overflow top_s">
+				<div class="logo"><img src="img/logo.png"></div>
+				<div class="search">
+					<form action="首页-搜索.html">
+						<input type="search" placeholder="请输入产品/公司进行搜索"/><button type="button">搜索</button>
+					</form>
+				</div>
+				<div class="recomend"><a href="javascript:void(0);" data-reveal-id="myModal">发布需求</a></div>
+				<!--弹出层start-->
+				<div id="myModal" class="reveal-modal xuqg-modal">
+					<h1>发布需求</h1>
+				    <form id="formID2" action="" method="post">
+					    <div class="input-group">
+	      					<label class="control-label">公司名称：</label>
+					        <input type="text" class="form-control">
+					    </div>
+					    <div class="input-group">
+	      					<label class="control-label">联系电话：</label>
+					        <input type="text" class="form-control">
+					    </div>
+					    <div class="input-group">
+	      					<label class="control-label">联系人：</label>
+					        <input type="text" class="form-control">
+					    </div>
+					    <div class="input-group">
+	      					<label class="control-label">需求选项：</label>
+				        	<select class="form-control" style="width: 62%;">
+								<option>原材料</option>
+							</select>
+					        	
+					    </div>
+					   <div class="input-group">
+	      					<label class="control-label">需求数量：</label>
+					        <input type="text" class="form-control">
+					    </div>
+					    <div class="input-group">
+	      					<label class="control-label">需求内容：</label>
+					        <textarea class="form-control" style="height: 78px;"></textarea>
+					    </div>
+					    <div class="input-group">
+					    	<label class="control-label">&nbsp;</label>
+					        <button type="submit" class="bnt-input">保存</button>
+					    </div>
+	      			</form>
+					<a class="close-reveal-modal">&#215;</a>
+				</div>
+				<!--弹出层end-->
+			</div>
+			<div class="nav clearfix">
+				<div class="nav_b w1200">
+					<div class="btnmenu" >
+						<h2><a href="javascript:;">所有商品分类</a></h2>
+						<div class="sidemenu">
+							<ul id="sidemenu">
+								<li id="mainCate-1" class="mainCate">
+									<h3><a href="javascript:;"><span>原材料<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>								
+										</ul>
+									</div>
+								</li>
+								<li id="mainCate-2" class="mainCate">
+									<h3><a href="javascript:;"><span>印刷设备<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>						
+			                             </ul>
+			                        </div>
+								</li>
+								<li id="mainCate-3" class="mainCate">
+									<h3><a href="javascript:;"><span>印刷耗材<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>						
+			                              </ul>
+			                          </div>
+								  </li>
+								  <li id="mainCate-3" class="mainCate">
+									<h3><a href="javascript:;"><span>辅助器材<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>						
+			                              </ul>
+			                          </div>
+								  </li>
+								  <li id="mainCate-3" class="mainCate">
+									<h3><a href="javascript:;"><span>其他<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>						
+			                              </ul>
+			                          </div>
+								  </li>
+							</ul>
+			            </div>
+					</div>
+					<ul class="nav_u">
+						<li><a href="首页.html">首页</a></li>
+						<li><a href="商城.html">商城</a></li>
+						<li><a href="帮助中心-服务中心.html">服务中心</a></li>
+						<li><a href="新闻资讯.html">新闻资讯</a></li>
+						<li><a href="知识库.html">知识库</a></li>
+						<li><a href="需求公告.html">需求公告</a></li>
+						<li><a href="白条支付.html">白条支付</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<section>
+            <div class="help clearfix">
+                <div class="w1200">
+					<div class="help_left">
+                    	<dl>
+                            <dd><a href="商家中心-首页.html">商家中心首页</a></dd>
+                            <dd><a href="商家中心-商品管理.html">商品管理</a></dd>
+                            <dd><a href="商家中心-店铺信息.html">店铺信息</a></dd>
+                            <dd><a href="商家中心-接单管理.html">接单管理</a></dd>
+                            <dd><a href="商家中心-广告管理（可购买）.html" class="current">广告管理</a></dd>
+                            <dd><a href="商家中心-财务管理.html">财务管理</a></dd>
+                            <dd><a href="商家中心-数据分析.html">数据分析</a></dd>
+                            <dd><a href="商家中心-评价管理.html">评价管理</a></dd>
+                        </dl>
+                    </div>
+                    <div class="help_right">
+                        <div class="help_in">
+							<div class="finance">广告管理</div> 
+							<div class="spclass">
+								<ul>
+									<li class="hover"><a href="商家中心-广告管理（可购买）.html">可购买</a></li>
+									<li><a href="商家中心-广告管理（已购买、将到期）.html">已购买</a></li>
+									<li><a href="商家中心-广告管理（已购买、将到期）.html">将到期</a></li>
+								</ul>
+							</div>
+							<form id="formID" action="" method="post">
+							    <div class="input-group">
+							    	<select class="form-control" style="padding: 5px 1%;">
+                            			<option>请选择您要购买的广告编号</option>
+                            		</select>
+							    </div>
+			      			</form>
+                    		<ul class="guangl-list">
+                    			<li>
+                            		<span><font>广告编号:</font>B12512451</span>
+                            		<span><font>广告期限:</font>2015年1月15日-2016年4月15日</span>
+                            		<span><font>广告描述:</font>
+                            			<div class="guangl-txt">
+                            				<img src="img/adv_01.png" width="202" height="130" />
+		                                    <div class="guangl-txt">这里是广告文字描述，这里是广告文字描述，这里是广告文字描述，这里是广告文字描述，
+这里是广告文字描述，这里是广告文字描述，这里是广告文字描述，这里是广告文字描述，
+这里是广告文字描述，这里是广告文字描述，这里是广告文字描述...</div>
+                                    	</div>
+                            		</span>
+                            		<div class="input-group">
+                            			<div class="control-txt">收费方式：三个月￥2000</div>
+								        <a class="bnt-input">购买</a>
+							    	</div>
+								</li>
+                            </ul>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<footer>
+			<div class=" footer clearfix footer_l">
+				<div class="w1200">
+					<div class="footer_top">
+						<ul>
+							<li class="li_f1"><img src="img/logo.png"><h2>团标网公司介绍，在这里显示。团标团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，</h2></li>
+							<li class="li_f2">
+								<dl>
+									<dt>帮助中心</dt>
+									<dd><a href="">功能说明</a></dd>
+									<dd><a href="">疑问解答</a></dd>
+									<dd><a href="">在线咨询</a></dd>
+								</dl>
+							</li>
+							<li class="li_f3">
+								<div class="cheng"><i></i>诚信保障</div>
+								<div class="qi"><i></i>企业认证</div>
+								<div class="an"><i></i>安全交易</div>
+							</li>
+							<li class="li_f4">
+								<img src="img/wei.png">
+								<h2>微信公众号</h2>
+							</li>
+							<li class="li_f5">
+								<img src="img/phone.png">
+								<h2>4008-200-100</h2>
+								<span>周一至周日 8:00-23:00</span>
+							</li>
+						</ul>
+					</div>
+					<div class="footer_copy"> Copyright © 2004-2015  团标网 tuanlabel.com 版权所有</div>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="utf-8" /> 
+  <title>无标题文档</title> 
+  <link href="style/css.css" rel="stylesheet" type="text/css" /> 
+  <link href="style/common.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script> 
+  <script type="text/javascript" src="js/function.js"></script> 
+  <script type="text/javascript" src="js/jquery.glide.min.js"></script> 
+  <script type="text/javascript" src="js/script.js"></script> 
+  <script type="text/javascript">
+$(document).ready(function() { 
+$('.content-ico-05 .m5 .m3 .ms2').click(function(){
+		SwitchCard(".content-ico-05 .m5 .m3 .ms2", ".content-ico-05 .m5 .ml1 .ms3", "cxhover", $(this))
+});
+$('.content-ico-05 .m5 .m3 .ms2').eq(0).trigger("click");
+		function SwitchCard(tab,con,addClass,obj){
+		var $_self = obj;
+		var $_nav = $(tab);
+		$_nav.removeClass(addClass),
+		$_self.addClass(addClass);
+		var $_index = $_nav.index($_self);
+		var $_con = $(con);
+		$_con.hide(),
+		$_con.eq($_index).show();
+	}
+	
+
+}); 
+
+</script> 
+  <script type="text/javascript" src="js/common.js"></script> 
+ </head> 
+ <body> 
+  <div class="rightfloating"> 
+   <ul> 
+    <li><a class="a1" id="tq_kefu_normal_container" onclick="TQKF.kefuimg.Distrabute()"></a> </li> 
+    <li><a href="javascript:void(0);" class="a4">APP/微信</a> 
+     <div id="erweima"> 
+      <ul> 
+       <li><img src="http://ui.pupuwang.com.cn/img/qr-code/ppw_wechat_100x100.jpg" />官网微信</li> 
+       <li><img src="http://ui.pupuwang.com.cn/img/qr-code/ppw_app_100x100.jpg" />铺铺旺APP</li> 
+      </ul> 
+     </div> </li> 
+    <li><a href="#" class="a3" target="_blank"></a></li> 
+    <li><a href="" class="a5" id="top"></a> </li> 
+   </ul> 
+  </div> 
+  <!--top--> 
+  <header> 
+   <div class="top"> 
+    <div class="pagewrap"> 
+     <div class="top-03 top-04"> 
+      <div class="top-nav">
+       <a href="搜索-商铺转让.html">商铺转让</a>
+       <a href="搜索-商铺出租.html">商铺租售</a>
+       <a href="搜索-写字楼.html">写字楼</a>
+       <a href="搜索-仓房厂房.html">厂房仓库</a>
+       <a href="搜索-求租求购.html">求租求购</a>
+      </div> 
+      <ul>
+       <li><img src="images/logo.png" /></li>
+       <li class="li1"><a href=""><span>苏州</span> &nbsp;[切换]</a></li>
+       <li class="li2">
+        <form>
+         <input type="text" name="" placeholder="" />
+         <button type="submit" name="" value="">搜索</button>
+        </form></li>
+       <li class="li3"> <p><a href=""><img src="images/icon-1.jpg" /></a></p><h2><a href="会员登录.html" class="a1">登录</a><a href="会员注册.html" class="a3">注册</a><a href="" class="a2">收藏</a></h2></li> 
+      </ul> 
+     </div> 
+     <div class="clear"></div> 
+     <div class="nav nav-01"> 
+      <div class="nav-left">
+       <a href="" class="nav-left-01">全部分类</a> 
+      </div> 
+      <div class="nav-right"> 
+       <div class="nav-right-top">
+        <a href="首页.html">首页</a> 
+        <a href="商铺出租.html">商铺出租</a> 
+        <a href="商铺转让.html">商铺转让</a> 
+        <a href="商铺出售.html">商铺出售</a> 
+        <a href="写字楼.html">写字楼</a> 
+        <a href="仓房厂房.html">厂房仓库</a> 
+        <a href="求租求购.html">求租求售</a> 
+        <a href="财富中国3.html">财富中国</a> 
+        <a href="问答中心.html" class="current">问答中心</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </header> 
+  <div class="clear"></div> 
+  <div class="content"> 
+   <div class="pagewrap"> 
+    <div class="interlocution"> 
+     <div class="inter-c1"> 
+      <div class="inter-01"> 
+       <div class="int1">
+        <form>
+         <input type="text" name="" placeholder="" value="" />
+         <button type="submit" name="" value="" class="button1">搜索问题</button>
+         <button type="submit" name="" value="" class="button2">快速提问</button>
+        </form>
+       </div> 
+       <div class="int2">
+        <div class="in1">
+         全部类型
+        </div>
+        <ul class="in2">
+         <li class="l1"><a href="">房产热点讨论</a><span>&nbsp;&nbsp;129549</span></li>
+         <li class="l1"><a href="">房屋贷款</a><span>&nbsp;&nbsp;129549</span></li>
+         <li class="l1"><a href="">房产法律</a><span>&nbsp;&nbsp;129549</span></li>
+         <li class="l1"><a href="">房屋风水</a><span>&nbsp;&nbsp;129549</span></li>
+         <li class="l1"><a href=""> 装修设计 </a><span>&nbsp;&nbsp;129549</span></li>
+         <li class="l1"><a href="">房产知识 </a><span>&nbsp;&nbsp;129549</span></li>
+         <li class="l1"><a href="">房屋买卖</a><span>&nbsp;&nbsp;129549</span></li>
+         <li class="l1"><a href="">法律法规 </a><span>&nbsp;&nbsp;129549</span></li>
+         <li class="l1"><a href="">银行贷款 </a><span>&nbsp;&nbsp;129549</span></li>
+         <li class="l1"><a href="">房产类型 </a><span>&nbsp;&nbsp;129549</span></li>
+         <li class="l1"><a href="">装修风水 </a><span>&nbsp;&nbsp;129549</span></li>
+         <li class="l1"><a href=""> 房企经纪 </a><span>&nbsp;&nbsp;129549</span></li>
+         <li class="l1"><a href=""> 其他问题 </a><span>&nbsp;&nbsp;129549</span></li>
+        </ul>
+       </div> 
+      </div> 
+      <div class="inter-02"> 
+       <div class="ins">
+        推荐问答
+       </div> 
+       <div class="ins1"> 
+        <a href=""><span>问</span>&nbsp;&nbsp;贷款买二手房，房本要还清银行贷款后才能拿到么？</a> 
+        <p>悬赏积分： 10分 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回答数： 10&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 状态：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;提问时间： 2015-5-29</p> 
+       </div> 
+       <div class="ins1"> 
+        <a href=""><span>问</span>&nbsp;&nbsp;贷款买二手房，房本要还清银行贷款后才能拿到么？</a> 
+        <p>悬赏积分： 10分 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回答数： 10&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 状态：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;提问时间： 2015-5-29</p> 
+       </div> 
+       <div class="ins1"> 
+        <a href=""><span>问</span>&nbsp;&nbsp;贷款买二手房，房本要还清银行贷款后才能拿到么？</a> 
+        <p>悬赏积分： 10分 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回答数： 10&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 状态：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;提问时间： 2015-5-29</p> 
+       </div> 
+       <div class="ins1"> 
+        <a href=""><span>问</span>&nbsp;&nbsp;贷款买二手房，房本要还清银行贷款后才能拿到么？</a> 
+        <p>悬赏积分： 10分 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回答数： 10&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 状态：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;提问时间： 2015-5-29</p> 
+       </div> 
+       <div class="ins1"> 
+        <a href=""><span>问</span>&nbsp;&nbsp;贷款买二手房，房本要还清银行贷款后才能拿到么？</a> 
+        <p>悬赏积分： 10分 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回答数： 10&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 状态：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;提问时间： 2015-5-29</p> 
+       </div> 
+       <div class="ins1"> 
+        <a href=""><span>问</span>&nbsp;&nbsp;贷款买二手房，房本要还清银行贷款后才能拿到么？</a> 
+        <p>悬赏积分： 10分 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回答数： 10&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 状态：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;提问时间： 2015-5-29</p> 
+       </div> 
+       <div class="ins1"> 
+        <a href=""><span>问</span>&nbsp;&nbsp;贷款买二手房，房本要还清银行贷款后才能拿到么？</a> 
+        <p>悬赏积分： 10分 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回答数： 10&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 状态：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;提问时间： 2015-5-29</p> 
+       </div> 
+       <div class="ins1"> 
+        <a href=""><span>问</span>&nbsp;&nbsp;贷款买二手房，房本要还清银行贷款后才能拿到么？</a> 
+        <p>悬赏积分： 10分 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回答数： 10&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 状态：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;提问时间： 2015-5-29</p> 
+       </div> 
+       <div class="ins1"> 
+        <a href=""><span>问</span>&nbsp;&nbsp;贷款买二手房，房本要还清银行贷款后才能拿到么？</a> 
+        <p>悬赏积分： 10分 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回答数： 10&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 状态：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;提问时间： 2015-5-29</p> 
+       </div> 
+       <div class="ins1"> 
+        <a href=""><span>问</span>&nbsp;&nbsp;贷款买二手房，房本要还清银行贷款后才能拿到么？</a> 
+        <p>悬赏积分： 10分 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回答数： 10&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 状态：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;提问时间： 2015-5-29</p> 
+       </div> 
+       <div class="ins1"> 
+        <a href=""><span>问</span>&nbsp;&nbsp;贷款买二手房，房本要还清银行贷款后才能拿到么？</a> 
+        <p>悬赏积分： 10分 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回答数： 10&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 状态：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;提问时间： 2015-5-29</p> 
+       </div> 
+       <div class="ins1"> 
+        <a href=""><span>问</span>&nbsp;&nbsp;贷款买二手房，房本要还清银行贷款后才能拿到么？</a> 
+        <p>悬赏积分： 10分 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回答数： 10&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 状态：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;提问时间： 2015-5-29</p> 
+       </div> 
+      </div> 
+      <div class="inter-03"> 
+       <div class="clear"></div> 
+       <a href="">查看更多&gt;</a> 
+      </div> 
+     </div> 
+     <div class="inter-c2"> 
+      <div class="inte">
+       <a href=""><img src="images/in1.jpg" /></a>
+      </div> 
+      <div class="inte1">
+       <a href=""><img src="images/in2.jpg" /></a>
+       <a href=""><img src="images/in2.jpg" /></a>
+       <a href=""><img src="images/in2.jpg" /></a>
+      </div> 
+      <div class="inte2">
+       <a href=""><img src="images/in3.jpg" /></a>
+       <a href=""><img src="images/in3.jpg" /></a>
+       <a href=""><img src="images/in3.jpg" /></a>
+      </div> 
+     </div> 
+     <div class="clear"></div> 
+     <div class="inter-c3">
+      <img src="images/in4.jpg" />
+     </div> 
+    </div> 
+    <div class="content-ico-05"> 
+     <div class="m5"> 
+      <ul class="m3"> 
+       <li class="ms2"><a href="javascript:;">友情链接</a></li> 
+       <li class="ms2"><a href="javascript:;">热门城市</a></li> 
+      </ul> 
+      <div class="clear"></div> 
+      <div class="ml1"> 
+       <div class="ms3">
+        <a href="">苏州铺铺旺a</a>
+        <a href="">苏州信息网</a>
+        <a href="">福州房产网</a>
+        <a href="">平阴房产网</a>
+        <a href="">惠州厂房出租</a>
+        <a href="">苏州装修网</a>
+        <a href="">太仓房产网</a>
+        <a href="">昆山房产网</a> 
+        <a href="">海口装修公司排名</a>
+        <a href="">濮阳房产网</a>
+        <a href="">邯郸二手房 </a>
+        <a href="">苏州大豆网 </a>
+        <a href="">珠海租房</a> 
+        <a href="">武汉厂房网</a>
+        <a href=""> 十堰房价</a>
+        <a href=""> 会泽信息港</a>
+        <a href=""> 巩义搜</a>
+        <a href=""> 岳阳在线</a>
+        <a href="">呼和浩特房产信息网</a> 
+        <a href=""> 苏州家具</a> 
+        <a href=""> 苏州商铺网</a>
+        <a href=""> 青岛二手房</a>
+        <a href=""> 昆明房产网</a>
+        <a href="">丰城房产网 </a> 
+        <a href="">大连分类信息网</a> 
+        <a href="">昆明二手房</a>
+        <a href="">重庆装修</a>
+        <a href=""> 吴江房产网 </a>
+        <a href=""> 创业加盟商机</a> 
+        <a href="">中国家具网</a> 
+        <a href="">上海租房</a>
+       </div> 
+       <div class="ms3">
+        <a href="">苏州铺铺旺</a>
+        <a href="">苏州信息网</a>
+        <a href="">福州房产网</a>
+        <a href="">平阴房产网</a>
+        <a href="">惠州厂房出租</a>
+        <a href="">苏州装修网</a>
+        <a href="">太仓房产网</a>
+        <a href="">昆山房产网</a> 
+        <a href="">海口装修公司排名</a>
+        <a href="">濮阳房产网</a>
+        <a href="">邯郸二手房 </a>
+        <a href="">苏州大豆网 </a>
+        <a href="">珠海租房</a> 
+        <a href="">武汉厂房网</a>
+        <a href=""> 十堰房价</a>
+        <a href=""> 会泽信息港</a>
+        <a href=""> 巩义搜</a>
+        <a href=""> 岳阳在线</a>
+        <a href="">呼和浩特房产信息网</a> 
+        <a href=""> 苏州家具</a> 
+        <a href=""> 苏州商铺网</a>
+        <a href=""> 青岛二手房</a>
+        <a href=""> 昆明房产网</a>
+        <a href="">丰城房产网 </a> 
+        <a href="">大连分类信息网</a> 
+        <a href="">昆明二手房</a>
+        <a href="">重庆装修</a>
+        <a href=""> 吴江房产网 </a>
+        <a href=""> 创业加盟商机</a> 
+        <a href="">中国家具网</a> 
+        <a href="">上海租房</a>
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!--footer--> 
+  <div class="footer"> 
+   <div class="pagewrap"> 
+    <dl> 
+     <dd> 
+      <h1>关于我们</h1> 
+      <a href="">公司简介</a> 
+      <a href="">发展历程</a> 
+      <a href="">平台公告</a> 
+      <a href="">联系方式</a> 
+     </dd> 
+     <dd> 
+      <h1>服务项目</h1> 
+      <a href="">生意转让</a> 
+      <a href="">租赁招商</a> 
+      <a href="">找店选址</a> 
+      <a href="">服务协议</a> 
+     </dd> 
+     <dd> 
+      <h1>官方微博</h1> 
+      <a href=""><img src="images/erwei.jpg" /></a> 
+     </dd> 
+     <dd> 
+      <h1>官方微信</h1> 
+      <a href=""><img src="images/erwei.jpg" /></a> 
+     </dd> 
+     <dd> 
+      <h1>关注我们</h1> 
+      <a href="">新浪官方微博</a> 
+      <a href="">腾讯官方微博</a> 
+      <a href="">一句话点评</a> 
+      <a href="">分享给好友</a> 
+     </dd> 
+     <dd> 
+      <h1>关于我们</h1> 
+      <a href=""><span>400-8888-888</span>&nbsp;&nbsp;&nbsp;免长途费</a> 
+      <a href="">您还可以拨打：0512-88888888</a> 
+      <a href=""><img src="images/icon-13.png" /></a> 
+      <a href="">地址：苏州市昆山市前进东路1008号</a> 
+     </dd> 
+    </dl> 
+    <div class="clear"></div> 
+    <div class="footerl">
+     <a href="">首页</a>
+     <a href="">关于我们</a>
+     <a href="">新闻中心</a>
+     <a href="">支付方式</a>
+     <a href="">联系方式</a>
+     <a href="">客服中心</a>
+     <a href="">网站地图</a>
+     <a href="" class="as">公司资质</a>
+    </div> 
+    <div class="copyright">
+     CopyRight &copy; 2015-2025 www.kingexpand.com 财铺网有限公司版权所有 备案：苏ICP备12000000号&nbsp; 站长统计
+    </div> 
+   </div> 
+  </div>   
+ </body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="utf-8" /> 
+  <title>无标题文档</title> 
+  <link href="style/css.css" rel="stylesheet" type="text/css" /> 
+  <link href="style/common.css" rel="stylesheet" type="text/css" /> 
+  <link href="style/uc-publish.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/component.js"></script> 
+  <script type="text/javascript" src="js/pupuwang_format.js"></script> 
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script> 
+  <script type="text/javascript" src="js/function.js"></script> 
+  <script type="text/javascript" src="js/jquery.glide.min.js"></script> 
+  <script type="text/javascript" src="js/script.js"></script> 
+  <script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
+  <link rel="stylesheet" href="Validform/images/style.css" type="text/css" media="all" /> 
+  <script type="text/javascript" src="Validform/images/jquery-1.9.1.min.js"></script> 
+  <script type="text/javascript" src="Validform/images/Validform_v5.3.2.js"></script> 
+  <script type="text/javascript" src="Validform/plugin/passwordStrength/passwordStrength-min.js"></script> 
+  <script type="text/javascript">
+$(function(){
+	/*省份证验证*/
+	$.extend($.Datatype,{
+		"card1-18" : /^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$/
+	});
+	$(".registerform").Validform({
+		tiptype:2,
+		datatype:{
+			/*请至少选择2项！*/
+			"min2":function(gets,obj,curform,regxp){
+				var need=2,
+					numselected=curform.find("input[name='"+obj.attr("name")+"']:checked").length;
+				return  numselected >= need ? true : "请至少选择"+need+"项！";
+			},
+			/*最多只能选择2项*/
+			"max2":function(gets,obj,curform,regxp){
+				var atmax=2,
+					numselected=curform.find("input[name='"+obj.attr("name")+"']:checked").length;
+					
+				if(numselected==0){
+					return false;
+				}else if(numselected>atmax){
+					return "最多只能选择"+atmax+"项！";
+				}
+				return  true;
+			},
+			/*手机与固话至少填写一项！*/
+			"phone":function(gets,obj,curform,regxp){
+				var reg1=regxp["m"],
+					reg2=/[\d]{7}/,
+					mobile=curform.find("#uphone");
+				if(reg1.test(mobile.val())){return true;}
+				if(reg2.test(gets)){return true;}
+				return false;
+			}
+		},
+		/*表单验证*/
+		tiptype:function(msg,o,cssctl){
+			if(!o.obj.is("form")){
+				var objtip=o.obj.parent().find(".Validform_checktip");
+				cssctl(objtip,o.type);
+				objtip.text(msg);
+				
+				var infoObj=o.obj.parent().find(".info");
+				if(o.type==2){
+					infoObj.fadeOut(200);
+				}else{
+					if(infoObj.is(":visible")){return;}
+					infoObj.css({
+						left:0,
+						top:-30
+					}).show().animate({
+						top:-27
+					},200);
+				}
+				
+			}	
+		},
+		/*密码验证*/
+		usePlugin:{
+			passwordstrength:{
+				minLen:6,
+				maxLen:18,
+				trigger:function(obj,error){
+					if(error){
+						obj.parent().find(".passwordStrength").hide();
+					}else{
+						obj.parent().find(".info").hide();
+						obj.parent().find(".passwordStrength").show();	
+					}
+				}
+			}
+		}	
+	});
+	/*短信验证接口*/
+	$("#phonecodesub").click(function(){
+		var CheckMyreg= /^(((13[0-9]{1})|159|(15[0-9]{1}))+\d{8})$/;	
+		var uphone=$("#uphone").val();
+	 	if(!CheckMyreg.test(uphone)){
+			$("#uphone").focus();
+	    	return false;
+	    }
+	$.post("codesub.html",{},function(result2){
+	   $.post("短信接口地址",{mobile:uphone,content:result2},function(result){});
+	});
+	datetime(this,1000);
+  	});
+   })
+/*短信验证倒计时*/
+var wait=5;
+function datetime(o,time) {
+	if (wait == 0) {
+		o.removeAttribute("disabled");
+		o.style.backgroundColor="#f5f5f5"
+		o.style.border="#d5d5d5 1px solid"
+		o.style.color="#333"
+		o.value="发送验证码到手机";
+		wait = 60;
+	} else {
+		o.setAttribute("disabled", true);
+		o.style.backgroundColor="#F00"
+		o.style.border="1px solid #F00"
+		o.style.color="#FFF"
+		o.value="重新发送(" + wait + ")";
+		wait--;
+		setTimeout(function() {
+			datetime(o,time)
+		},
+		time)
+	}
+}
+</script>
+ </head> 
+ <body> 
+  <!--top--> 
+  <header> 
+   <div class="top"> 
+    <div class="pagewrap"> 
+     <div class="top-03 top-04"> 
+      <div class="top-nav">
+       <a href="搜索-商铺转让.html">商铺转让</a>
+       <a href="搜索-商铺出租.html">商铺租售</a>
+       <a href="搜索-写字楼.html">写字楼</a>
+       <a href="搜索-仓房厂房.html">厂房仓库</a>
+       <a href="搜索-求租求购.html">求租求购</a>
+      </div> 
+      <ul>
+       <li><img src="images/logo.png" /></li>
+       <li class="li1"><a href=""><span>苏州</span> &nbsp;[切换]</a></li>
+       <li class="li2">
+        <form>
+         <input type="text" name="" placeholder="" />
+         <button type="submit" name="" value="">搜索</button>
+        </form></li>
+       <li class="li3"> <p><a href=""><img src="images/icon-1.jpg" /></a></p><h2><a href="会员登录.html" class="a1">登录</a><a href="会员注册.html" class="a3">注册</a><a href="" class="a2">收藏</a></h2></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </header> 
+  <div class="clear"></div> 
+  <div class="release"> 
+   <div class="pagewrap"> 
+    <div class="two two-d"> 
+     <div class="two-ico"> 
+      <div class="two-co">
+       <a href="" class="ar1">1.发布信息类型（<span>重选</span>）</a>
+       <a href="" class="ar2">2.厂房/地皮</a>
+       <a href="" class="ar3">3.发布成功</a>
+      </div>      
+       <div class="form-horizontal user-login"> 
+        <form action="?" method="post" name="form1" class="registerform"> 
+         	<p class="tctype">
+            	<label>供&nbsp;&nbsp;求：</label>
+         		<label style="width:auto; text-align:left" class="j-tab" value="cz"><input name="shoppingsite3" type="radio" style="width:14px;" class="inpu"/> 出租</label>
+                <label style="width:auto; text-align:left" class="j-tab" value="cs"><input name="shoppingsite3" type="radio" style="width:14px;" class="inpu" /> 出售</label>
+            </p> 
+            <p vessel="ppw" container="cs cz">
+            	<label>物业类型：</label>
+            	<select class="se" name="province"><option>厂房</option></select>
+             </p> 
+            <p vessel="ppw" container="cs cz">
+            	<label><font>* </font>标&nbsp;&nbsp;题：</label>
+                <input name="uname" type="text" id="teinx" value="" placeholder="*  标题" datatype="*2-6" nullmsg="请输入标题！" /> 
+            	<font class="defi defi-01"><span class="Validform_checktip"></span></font>
+           </p> 
+           <p vessel="ppw" container="cs cz">
+           	 <label><font>* </font>类&nbsp;&nbsp;型：</label>
+           	 <select name="province" datatype="*" nullmsg="请选择类型！" errormsg="请选择类型！" class="select-01">
+              <option value=" ">请选择城市</option>
+              <option value="1">瑞金市</option>
+            </select> 
+             <font class="defi defi-01"><span class="Validform_checktip"></span></font>
+           </p>
+           <p vessel="ppw" container="cs cz">
+             <label><font>* </font>面&nbsp;&nbsp;积：</label> 
+             <select class="se se1" name="province" datatype="*" nullmsg="请选择类型！" errormsg="请选择类型！">
+                <option value=" ">请选择类型</option>
+                <option value="1">可以拆分</option>
+             </select>
+             <input name="uname" type="text" id="teinx" datatype="*" nullmsg="开始平米！" class="inputs" />&nbsp;-
+             <input name="uname" type="text" id="teinx"  datatype="*" nullmsg="结束平米！"  class="inputs" />&nbsp;平米
+             <font class="defi defi-01"><span class="Validform_checktip"></span></font>
+           </p>
+           <p vessel="ppw" container="cz">
+              <label><font>* </font>租&nbsp;&nbsp;金：</label>
+              <input name="uname" type="text" id="teinx" value="" placeholder="" datatype="*" nullmsg="请输入租金！" />&nbsp;
+              <select class="se se1" name="province">
+              	<option>元/月</option>
+              </select>
+              <font class="defi defi-01"><span class="Validform_checktip"></span></font> 
+           </p>
+            <p vessel="ppw" container="cz">
+            	<label>付款方式：</label>
+            	<select class="se" name="province"><option>面议</option></select>
+             </p>         
+            <p vessel="ppw" container="cs">
+              <label><font>* </font>售&nbsp;&nbsp;价：</label>
+              <input name="uname" type="text" id="teinx" value="" placeholder="" datatype="*" nullmsg="请输入售价！" />&nbsp;
+              <select class="se se1" name="province">
+              	<option>元/平</option>
+              </select>
+              <font class="defi defi-01"><span class="Validform_checktip"></span></font> 
+           </p> 
+           <p vessel="ppw" container="cs cz">
+           	 <label>物业费：</label> 
+             <input name="uname" type="text" id="teinx" value="" />&nbsp;
+             <select class="se se1" name="province">
+             	<option>元/月</option>
+             </select>  
+           </p> 
+         <p vessel="ppw" container="cs cz"> 
+         	<label>地&nbsp;&nbsp;段：</label> 
+            <input type="hidden" id="zonecode" name="zonecode" value="3401" />
+            <select id="zonecode_select4" class="se" title="城市" onchange="selectCityChild(this.value,'zonecode',3,'','',3);">
+        		<option value="">选择</option>
+                <option value="11">北京</option>
+                <option value="12">天津</option>
+				<option value="13">河北</option>
+          	</select>
+            <select id="zonecode_select3" class="se" title="城市" onchange="selectCityChild(this.value,'zonecode',2,'','',2);">
+            	<option value="">选择</option>
+                <option value="3401" selected="selected">合肥</option>
+                <option value="3402">芜湖</option><option value="3408">安庆</option>
+                <option value="3403">蚌埠</option><option value="3412">阜阳</option>
+                <option value="3404">淮南</option><option value="3405">马鞍山</option>
+                <option value="3407">铜陵</option><option value="3410">黄山</option>
+                <option value="3411">滁州</option><option value="3414">巢湖</option>
+                <option value="3415">六安</option><option value="3416">亳州</option>
+                <option value="3417">池州</option><option value="3418">宣城</option>
+                <option value="3413">宿州</option>
+            </select>
+            <select id="zonecode_select2" class="se" title="城市" onchange="selectCityChild(this.value,'zonecode',1,'','',1);">
+            	<option value="">选择</option>
+                <option value="340102">瑶海区</option>
+                <option value="340103">庐阳区</option>
+                <option value="340104">蜀山区</option>
+                <option value="340111">包河区</option>
+                <option value="340121">长丰县</option>
+                <option value="340122">肥东县</option>
+                <option value="340123">肥西县</option>
+                <option value="340124">滨湖新区</option>
+                <option value="340125">经开区</option>
+                <option value="340126">新站区</option>
+                <option value="340127">政务区</option>
+                <option value="340128">高新区</option>
+                <option value="340129">其他</option>
+             </select>
+             <select id="zonecode_select1" class="se" title="城市" onchange="setZoneValue('zonecode',this.value,'0');">
+             	<option value="">选择</option><option value="340102">瑶海区</option>
+                <option value="340103">庐阳区</option><option value="340104">蜀山区</option>
+                <option value="340111">包河区</option><option value="340121">长丰县</option>
+                <option value="340122">肥东县</option><option value="340123">肥西县</option>
+                <option value="340124">滨湖新区</option><option value="340125">经开区</option>
+                <option value="340126">新站区</option><option value="340127">政务区</option>
+                <option value="340128">高新区</option><option value="340129">其他</option>
+             </select>
+            <input type="" id="in1" /> 
+         </p> 
+         <p vessel="ppw" container="cs cz">
+         	<label class="im"><font>*</font>补充说明：</label> 
+           	<textarea style=" width:530px; height:120px;"   datatype="*2-6" nullmsg="请输入说明！" ></textarea>
+         </p> 
+         <div class="tublit" vessel="ppw" container="cs cz">
+            <ul>
+            	<li class="ps"><a href="javacript:;">上传图片</a>&nbsp;&nbsp;&nbsp;您已经上传了1张图片，还可以再上传7张，每张不超过10MB</li>
+            	<li><a href="javascript:;"><img src="http://img.pupuwang.com.cn/upload/2015/0801/14383998704181.png"><div class="picedit">点击修改图片</div><div class="delete">X</div></a></li>
+                <li><a href="javascript:;"><img src="http://img.pupuwang.com.cn/upload/2015/0801/14383998704181.png"></a><span id="IMG_UPDATE_M_manage_delete" class="delete"></span></li>
+                <li><a href="javascript:;"><img src="http://img.pupuwang.com.cn/upload/2015/0801/14383998704181.png"></a><span id="IMG_UPDATE_M_manage_delete" class="delete"></span></li>
+            </ul>
+            <div style="clear:both"></div>
+         </div> 
+         <p vessel="ppw" container="cs cz">
+         	<label for="in1" class="im">地图标注：</label>
+            	<a href="javascript:;" id="setMapA" class="ps1">在地图上标注位置</a>
+                <input type="hidden" name="est[longitude]" value="" /> 
+                <input type="hidden" name="est[latitude]" value="" /> 
+              	<div class="modal hide" id="setMap" style="width:700px; height:500px; background-color: #fff; text-align: center;"> 
+                <div class="header id="setMapA" class="setMapLocation""><b class=" ico big-close"></b><h4 class="title">设置地图</h4></div>           
+                 <div id="pupuwangmap" style="width:100%; height:80%;display:yes"></div> 
+                 <a href="javascript:;" class="u-redshi ml10" onclick="$('.big-close').click();" style="padding: 5px 200px; margin: 15px;">确定</a> 
+              </div>
+         </p>        
+         <p vessel="ppw" container="cs cz">
+         	<label><font>* </font>联系人：</label>
+            <input name="uname" type="text" id="teinx" value="" placeholder="*  联系人" datatype="*2-6" nullmsg="请输入联系人！" /> 
+            <font class="defi defi-01"><span class="Validform_checktip"></span></font> 
+          </p> 
+         <p vessel="ppw" container="cs cz">
+         	<label><font>* </font>手机号：</label>
+            <input name="uphone" type="text" id="uphone" value="" placeholder="* 手机号码" maxlength="11"  datatype="m" errormsg="请输入正确的手机号码！" /> 
+            <font class="defi defi-01"><span class="Validform_checktip"></span></font> 
+         </p>  
+         <p vessel="ppw" container="cs cz">
+         	<label>手机验证码：</label>
+            <input name="uyzm" type="text" id="teinx" placeholder="*  验证码" value="" maxlength="6" datatype="n4-11" nullmsg="请输入验证码！" />
+            <input name="phonecodesub" type="button" id="phonecodesub" class="" value="点击获取短信验证码" /> 
+            <font class="defi defi-01"><span class="Validform_checktip ">请输入验证码</span></font>
+         </p> 
+         <div class="shouqi" vessel="ppw" container="cs cz">
+             <a href="javascript:;">展开/收起更多选项 <b class="ico"></b></a>
+         </div>
+         <div class="neir" style="display:none;">
+             <p vessel="ppw" container="cs cz"><label>建筑结构：</label><input name="uname" type="text" id="teinx" value="" placeholder=""/>&nbsp;（例：砖混结构）  </p>   
+             <p vessel="ppw" container="cs cz"><label>办公面积：</label><input name="uname" type="text" id="teinx" value="" placeholder="" />&nbsp;（平米）  </p> 
+             <p vessel="ppw" container="cs cz"><label>宿舍面积：</label><input name="uname" type="text" id="teinx" value="" placeholder=""/>&nbsp;（平米）  </p> 
+             <p vessel="ppw" container="cs cz"><label>柱网跨度：</label><input name="uname" type="text" id="teinx" value="" placeholder="" />&nbsp;（米）  </p> 
+             <p vessel="ppw" container="cs cz"><label>建筑楼层：</label><input name="uname" type="text" id="teinx" value="" placeholder="" />&nbsp;（例：3层）  </p> 
+             <p vessel="ppw" container="cs cz"><label>楼层高度：</label><input name="uname" type="text" id="teinx" value="" placeholder="" />&nbsp;（米）  </p> 
+             <p vessel="ppw" container="cs cz"><label>楼层承重：</label><input name="uname" type="text" id="teinx" value="" placeholder="" />&nbsp;（吨/平方米）  </p> 
+             <p vessel="ppw" container="cs cz"><label>现在配电容量：</label><input name="uname" type="text" id="teinx" value="" placeholder="" />&nbsp;（KVA）  </p> 
+             <p vessel="ppw" container="cs cz"><label>可以配电容量：</label><input name="uname" type="text" id="teinx" value="" placeholder="" />&nbsp;（KVA）  </p> 
+             <p vessel="ppw" container="cs cz"><label>水：</label><input name="uname" type="text" id="teinx" value="" placeholder="" /> </p> 
+             <p vessel="ppw" container="cs cz"><label>气：</label><input name="uname" type="text" id="teinx" value="" placeholder=""/> </p> 
+             <p vessel="ppw" container="cs cz">
+                 <label>产权归属：</label> 
+                 <label style="width:auto; text-align:left"><input name="shoppingsite3" type="radio"style="width:14px;" class="inpu"/> 有</label>
+                 <label style="width:auto; text-align:left"><input name="shoppingsite3" type="radio" style="width:14px;" class="inpu" /> 无</label>
+            </p> 
+         </div>
+         <div class="clear"></div>  
+         <p><input type="submit" class="btn_sub btn_sub_01 btn_sub_02" value="马上发布" /></p> 
+        </form> 
+         <script type="text/javascript">
+			function myScreen(string) {
+			  var container = "ciao " + string + " ";
+			  var val = $('P.tctype label[class="j-tab hover"]').attr('value');
+			  if (container.indexOf(val) > 0) {
+				return true;
+			  }
+			  return false;
+			}
+			$(document).ready(function(){
+				 $('P.tctype label[class="j-tab"]').click(function() {
+					$('P.tctype label[class="j-tab hover"]').removeClass("hover");
+					$(this).addClass("hover");
+					$('[vessel="ppw"]').hide();
+					$('[vessel="ppw"]').each(function() {
+					  if (myScreen($(this).attr('container'))) {
+						$(this).show();
+					  }
+					});
+				  });
+				$('P.tctype label[class="j-tab"]').eq(0).click();			
+				$(".shouqi a").click(function(){
+					if ($(".neir").css('display')=="block"){
+					  $(".neir").hide();
+					  $(this).html('展开/收起更多选项 <b class="ico" style="background-position-x: 0;"></b>');
+					}else{
+					  $(".neir").show();
+					  $(this).html('收起 <b class="ico" style="background-position-x: -10px;"></b>');
+					}
+				});
+			});
+		</script>
+         <script type="text/javascript" src="js/getscript"></script> 
+ 		 <script type="text/javascript" src="js/ppwmap.js"></script> 
+		<script type = "text/javascript" >
+        function getCt() {
+            ctVal = $('#zonecode_select3').val();
+            if (ctVal == '') return false;
+            _zonecode = ctVal.substring(0, 2);
+            ct = $('option[value="' + _zonecode + '"]').html();
+            ct = ct + $('#zonecode_select3 option[value="' + ctVal + '"]').html();
+            _zonecode = $('#zonecode').val();
+            if (_zonecode.length >= 6) {
+                _zonecode = _zonecode.substring(0, 6);
+                ct = ct + $('option[value="' + _zonecode + '"]').html();
+            }
+            _zonecode = $('#zonecode').val();
+            if (_zonecode.length == 8) {
+                ct = ct + $('option[value="' + _zonecode + '"]').html();
+            }
+            address = $('input[name="est[address]"]').val();
+            if (address) ct = ct + address;
+            return ct;
+        }
+        var ppw;
+        jQuery(document).ready(function($) {
+            $("#setMapA").click(function() {
+                latitude = $('input[name="est[latitude]"]').val();
+                longitude = $('input[name="est[longitude]"]').val();
+                if (latitude == '0' || longitude == '0' || latitude == '' || longitude == '') {
+                    ct = getCt();
+                    if (!ct) {
+                        alert("请先定位城市");
+                        return;
+                    }
+                    var pop = $('#setMap');
+                    $.pop({
+                        container: pop,
+                        closeButton: $('.big-close,.j-cancle', pop)
+                    });
+                    ppw = new ppwMap("");
+                    _zonecode = $('#zonecode').val();
+                    city = $('#zonecode_select3 option[value="' + ctVal + '"]').html();
+                    go = false;
+                    if (_zonecode.length == 6) {
+                        ppw.map.centerAndZoom(ct, 12);
+                        go = true;
+                    } else if (_zonecode.length == 8) {
+                        ppw.map.centerAndZoom(ct, 15);
+                        go = true;
+                    } else {
+                        ppw = new ppwMap(city);
+                        ppw.map.centerAndZoom(city, 12);
+                    }
+                    address = $('input[name="est[address]"]').val();
+                    if (address) {
+                        ppw.map.centerAndZoom(ct, 16);
+                        go = true;
+                    }
+                    if (go) ppw.mapto(ct);
+                } else {
+                    var pop = $('#setMap');
+                    $.pop({
+                        container: pop,
+                        closeButton: $('.big-close,.j-cancle', pop)
+                    });
+                    ppw = new ppwMap("");
+                    ppw.addpoint(longitude, latitude);
+                    point = new BMap.Point(longitude, latitude);
+                    ppw.map.centerAndZoom(point, 15);
+                }
+                ppw.map.enableScrollWheelZoom();
+                ppw.map.enableInertialDragging();
+                ppw.map.enableContinuousZoom();
+                ppw.map.addControl(new BMap.OverviewMapControl());
+                ppw.map.addControl(new BMap.NavigationControl());
+                ppw.map.addEventListener("click",
+                function(e) {
+                    if (ppw.marker) {
+                        ppw.map.removeOverlay(ppw.marker);
+                    }
+                    ppw.newpoint = ppw.createpoint(e);
+                    ppw.map.centerAndZoom(ppw.newpoint);
+                    ppw.marker = new BMap.Marker(ppw.newpoint);
+                    ppw.map.addOverlay(ppw.marker);
+                    $('input[name="est[latitude]"]').val(e.point.lat);
+                    $('input[name="est[longitude]"]').val(e.point.lng);
+                });
+            });
+        }); 
+        </script>
+       </div> 
+       </div>
+     </div> 
+    </div> 
+   </div> 
+  <div class="clear"></div> 
+  <!--footer--> 
+  <div class="footer"> 
+   <div class="pagewrap"> 
+    <dl> 
+     <dd> 
+      <h1>关于我们</h1> 
+      <a href="">公司简介</a> 
+      <a href="">发展历程</a> 
+      <a href="">平台公告</a> 
+      <a href="">联系方式</a> 
+     </dd> 
+     <dd> 
+      <h1>服务项目</h1> 
+      <a href="">生意转让</a> 
+      <a href="">租赁招商</a> 
+      <a href="">找店选址</a> 
+      <a href="">服务协议</a> 
+     </dd> 
+     <dd> 
+      <h1>官方微博</h1> 
+      <a href=""><img src="images/erwei.jpg" /></a> 
+     </dd> 
+     <dd> 
+      <h1>官方微信</h1> 
+      <a href=""><img src="images/erwei.jpg" /></a> 
+     </dd> 
+     <dd> 
+      <h1>关注我们</h1> 
+      <a href="">新浪官方微博</a> 
+      <a href="">腾讯官方微博</a> 
+      <a href="">一句话点评</a> 
+      <a href="">分享给好友</a> 
+     </dd> 
+     <dd> 
+      <h1>关于我们</h1> 
+      <a href=""><span>400-8888-888</span>&nbsp;&nbsp;&nbsp;免长途费</a> 
+      <a href="">您还可以拨打：0512-88888888</a> 
+      <a href=""><img src="images/icon-13.png" /></a> 
+      <a href="">地址：苏州市昆山市前进东路1008号</a> 
+     </dd> 
+    </dl> 
+    <div class="clear"></div> 
+    <div class="footerl">
+     <a href="">首页</a>
+     <a href="">关于我们</a>
+     <a href="">新闻中心</a>
+     <a href="">支付方式</a>
+     <a href="">联系方式</a>
+     <a href="">客服中心</a>
+     <a href="">网站地图</a>
+     <a href="" class="as">公司资质</a>
+    </div> 
+    <div class="copyright">
+     CopyRight &copy; 2015-2025 www.kingexpand.com 财铺网有限公司版权所有 备案：苏ICP备12000000号&nbsp; 站长统计
+    </div> 
+   </div> 
+  </div>   
+ </body>
+</html>

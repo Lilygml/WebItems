@@ -1,0 +1,520 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>职由你</title>
+<link href="style/css.css" rel="stylesheet" type="text/css" />
+<link href="style/media-queries.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  <link rel="stylesheet" href="Validform/images/style.css" type="text/css" media="all" /> 
+  <script type="text/javascript" src="Validform/images/jquery-1.9.1.min.js"></script> 
+  <script type="text/javascript" src="Validform/images/Validform_v5.3.2.js"></script> 
+  <script type="text/javascript" src="Validform/plugin/passwordStrength/passwordStrength-min.js"></script> 
+  <script type="text/javascript">
+$(function(){
+	/*省份证验证*/
+	$.extend($.Datatype,{
+		"card1-18" : /^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$/
+	});
+	$(".registerform").Validform({
+		tiptype:2,
+		datatype:{
+			/*请至少选择2项！*/
+			"min2":function(gets,obj,curform,regxp){
+				var need=2,
+					numselected=curform.find("input[name='"+obj.attr("name")+"']:checked").length;
+				return  numselected >= need ? true : "请至少选择"+need+"项！";
+			},
+			/*最多只能选择2项*/
+			"max2":function(gets,obj,curform,regxp){
+				var atmax=2,
+					numselected=curform.find("input[name='"+obj.attr("name")+"']:checked").length;
+					
+				if(numselected==0){
+					return false;
+				}else if(numselected>atmax){
+					return "最多只能选择"+atmax+"项！";
+				}
+				return  true;
+			},
+			/*手机与固话至少填写一项！*/
+			"phone":function(gets,obj,curform,regxp){
+				var reg1=regxp["m"],
+					reg2=/[\d]{7}/,
+					mobile=curform.find("#uphone");
+				if(reg1.test(mobile.val())){return true;}
+				if(reg2.test(gets)){return true;}
+				return false;
+			}
+		},
+		/*表单验证*/
+		tiptype:function(msg,o,cssctl){
+			if(!o.obj.is("form")){
+				var objtip=o.obj.parent().find(".Validform_checktip");
+				cssctl(objtip,o.type);
+				objtip.text(msg);
+				
+				var infoObj=o.obj.parent().find(".info");
+				if(o.type==2){
+					infoObj.fadeOut(200);
+				}else{
+					if(infoObj.is(":visible")){return;}
+					infoObj.css({
+						left:0,
+						top:-30
+					}).show().animate({
+						top:-27
+					},200);
+				}
+				
+			}	
+		},
+		/*密码验证*/
+		usePlugin:{
+			passwordstrength:{
+				minLen:6,
+				maxLen:18,
+				trigger:function(obj,error){
+					if(error){
+						obj.parent().find(".passwordStrength").hide();
+					}else{
+						obj.parent().find(".info").hide();
+						obj.parent().find(".passwordStrength").show();	
+					}
+				}
+			}
+		}	
+	});
+	/*短信验证接口*/
+	$("#phonecodesub").click(function(){
+		var CheckMyreg= /^(((13[0-9]{1})|159|(15[0-9]{1}))+\d{8})$/;	
+		var uphone=$("#uphone").val();
+	 	if(!CheckMyreg.test(uphone)){
+			$("#uphone").focus();
+	    	return false;
+	    }
+	$.post("codesub.html",{},function(result2){
+	   $.post("短信接口地址",{mobile:uphone,content:result2},function(result){});
+	});
+	datetime(this,1000);
+  	});
+   })
+/*短信验证倒计时*/
+var wait=5;
+function datetime(o,time) {
+	if (wait == 0) {
+		o.removeAttribute("disabled");
+		o.style.backgroundColor="#f5f5f5"
+		o.style.border="#d5d5d5 1px solid"
+		o.style.color="#333"
+		o.value="发送验证码到手机";
+		wait = 60;
+	} else {
+		o.setAttribute("disabled", true);
+		o.style.backgroundColor="#F00"
+		o.style.border="1px solid #F00"
+		o.style.color="#FFF"
+		o.value="重新发送(" + wait + ")";
+		wait--;
+		setTimeout(function() {
+			datetime(o,time)
+		},
+		time)
+	}
+}
+</script>
+
+</head>
+<body>
+<!---底浮开始--->
+<div class="difu">
+<div class="difu2">
+<span class="df1"><img src="images/003.png"></span>
+<span class="df2">3245</span>
+<span class="df3">公司</span>
+<span class="df2">41369</span>
+<span class="df3">职位</span>
+<span class="df3">已生成返还费</span>
+<span class="df2">1234567</span>
+<span class="df3">元</span>
+<span class="df4"><a href="login.html">登录</a></span>
+<span class="df5"><a href="register.html">快速注册</a></span>
+</div>
+</div>
+<!---底浮结束--->
+
+
+<!---右浮开始--->
+<div class="yf">
+<div class="yf1"><img src="images/019.jpg"></div>
+<div class="yf2">
+<h2>工友求职</h2>
+<p><a href="#">工友求职</a></p>
+<p><a href="#">工友求职</a></p>
+<h2>企业招聘</h2>
+<p><a href="#">企业招聘</a></p>
+<p><a href="#">企业招聘</a></p>
+</div>
+<ul class="qrcode">
+<li>
+<img src="images/021.jpg">
+<span>手机端</span>
+</li>
+<li>
+<img src="images/021.jpg">
+<span>加入微信</span>
+</li>
+</ul>
+<div class="houjian"><a href="#"><img src="images/018.png"></a></div>
+</div>
+
+<!---右浮结束--->
+
+<!--头部开始！-->
+<div class="header">
+<div class="header_left"><img src="images/logo.jpg" /></div>
+<div id="search-2014">
+		<div class="form">
+		  <input type="text" onkeydown="javascript:if(event.keyCode==13) search('key');" autocomplete="off" id="key" accesskey="s" class="text" style="color: rgb(153, 153, 153);">
+			<button onclick="search('key');return false;" class="button cw-icon"><i></i>搜索</button>
+		</div>
+            <div id="hotwords-2014">
+            <a href="#" class="style-red">大家都在找:</a>
+            <a href="#">3D巨幕</a>
+            <a href="#">家电5折</a>
+            <a href="#">200减100</a>
+            <a href="#">奢品扫货</a>
+            <a href="#">大牌秒杀</a>
+            <a href="#">精品团</a>
+            <a href="#">苹果399+</a>
+            <a href="#">机票20元</a>
+            </div>
+    </div>
+
+
+
+<!--语言分类开始！-->
+<div class="other">
+<a href="canvass_join.html">招商加盟</a><a href="help.html">帮助中心</a>
+
+</div> 
+<!--语言分类结束！-->
+</div>
+<!--头部结束！-->
+<div class="clear"></div>
+
+
+
+<!--导航开始！-->
+<div class="nav">	         	         	         	         	         	         
+<ul class="menu" id="menu">                                                            
+    <li><a href="index.html">首页</a></li>
+    <li><a href="list.html">所有岗位</a></li>
+    <li><a href="release.html">发布职位</a></li>
+    <li><a href="finance_first.html">我的财务</a></li>
+    <li><a href="about.html">关于我们</a>
+        <ul>
+            <li><a href="about.html">公司介绍</a></li>
+            <li><a href="about.html">企业文化</a></li>
+            <li><a href="about.html">联系方式</a></li>
+        </ul>
+    </li>
+    <li class="login">
+    <span><a href="login.html">登录</a></span>
+    <span>|</span>
+    <span><a href="register.html">注册</a></span>
+    </li>
+ </ul>
+</div>
+<!--导航结束！-->
+
+
+
+
+<div class="center">
+<div class="width1020">
+<div class="title">我要报名</div>
+<div class="my">
+	<div class="my_01"> 
+    	<div class="my_02">
+        	<div class="enre enrea">
+            	<div class="enre_01"><p>基本信息</p><h2>带<span> * </span>为必填项</h2></div>
+                <div class="form-horizontal user-login form-horizontals "> 
+                    <form action="?" method="post" name="form1" class="registerform"> 
+                       <p vessel="ppw" container="cs cz">
+                            <label><font>* </font>姓&nbsp;&nbsp;名：</label>
+                            <input name="uname" type="text" id="teinx" value="" placeholder="*  姓名" datatype="*2-6" nullmsg="请输入姓名！" /> 
+                            <font class="defi defi-01"><span class="Validform_checktip"></span></font>
+                       </p> 
+                        <p class="tctype">
+                            <label><font>* </font>性&nbsp;&nbsp;别：</label>
+                            <label style="width:auto; text-align:left" class="j-tab" value="cz"><input name="shoppingsite3" type="radio" style="width:14px;" class="inpu"/> 男</label>
+                            <label style="width:auto; text-align:left" class="j-tab" value="cs"><input name="shoppingsite3" type="radio" style="width:14px;" class="inpu" /> 女</label>
+                        </p> 
+                        <p vessel="ppw" container="cs cz">
+                            <label><font>* </font>年&nbsp;&nbsp;龄：</label>
+                            <input name="uname" type="text" id="teinx" value="" placeholder="*  年龄" datatype="*2-6" nullmsg="请输入年龄！" /> 
+                            <font class="defi defi-01"><span class="Validform_checktip"></span></font>
+                       </p> 
+                       <p vessel="ppw" container="cs cz">
+                            <label><font>* </font>电&nbsp;&nbsp;话：</label>
+                            <input name="uname" type="text" id="teinx" value="" placeholder="*  电话" datatype="*" nullmsg="请输入电话！" /> 
+                            <font class="defi defi-01"><span class="Validform_checktip"></span></font>
+                       </p> 
+                        <p vessel="ppw" container="cs cz">
+                            <label><font>* </font>学&nbsp;&nbsp;历：</label>
+                            <select class="se" name="province"><option>学历</option></select>
+                        </p> 
+                        <p vessel="ppw" container="cs cz">
+                         <label><font>* </font>所在地：</label> 
+                         <select class="se se1" name="province" datatype="*" nullmsg="请选择类型！" errormsg="请选择类型！">
+                            <option value=" ">上海</option>
+                            <option value="1">广州</option>
+                         </select>
+                         <select class="se se1 ser" name="province" datatype="*" nullmsg="请选择类型！" errormsg="请选择类型！">
+                            <option value=" ">上海</option>
+                            <option value="1">广州</option>
+                         </select>
+                         <input name="uname" type="text" id="teinx" datatype="*" nullmsg="详细地址" class="inputs sert" />
+                         <font class="defi defi-01"><span class="Validform_checktip"></span></font>
+                       </p>
+                       <p vessel="ppw" container="cs cz">
+                         <label><font>* </font>入职时间：</label>
+                         <select name="province" datatype="*" nullmsg="请选择类型！" errormsg="请选择类型！" class="select-01">
+                          <option value=" ">2015.12.02</option>
+                          <option value="1">2015.12.02</option>
+                        </select> 
+                         <font class="defi defi-01"><span class="Validform_checktip"></span></font>
+                       </p>
+                       
+                       <div class="lsa"><img src="images/touxiang.jpg" /><h2><a href="">上传</a>/<a href="">修改</a></h2></div>
+                     <div class="shouqi" vessel="ppw" container="cs cz">
+                         <a href="javascript:;">展开/收起更多选项 <b class="ico"></b></a>
+                     </div>
+                     <div class="neir" style="display:none;">
+                        <p vessel="ppw" container="cs cz">
+                         <label>籍&nbsp;&nbsp;贯：</label> 
+                         <select class="se se1 " name="province" datatype="*" nullmsg="请选择类型！" errormsg="请选择类型！">
+                            <option value=" ">请选择</option>
+                            <option value="1">上海</option>
+                         </select>
+                         <select class="se se1 ser" name="province" datatype="*" nullmsg="请选择类型！" errormsg="请选择类型！">
+                            <option value=" ">选择市</option>
+                            <option value="1">广州</option>
+                         </select>
+                       </p>
+                       <p vessel="ppw" container="cs cz"><label>民&nbsp;&nbsp;族：</label><input name="uname" type="text" id="teinx" value="" placeholder=""/></p> 
+                       <p vessel="ppw" container="cs cz">
+                        <label class="im">工作经验：</label> 
+                        <textarea style=" width:50%; height:120px;"   datatype="*2-6" nullmsg="请输入说明！" ></textarea>
+                       </p>    
+                     </div>
+                     <div class="clear"></div>  
+                   
+                     <script type="text/javascript">
+                        function myScreen(string) {
+                          var container = "ciao " + string + " ";
+                          var val = $('P.tctype label[class="j-tab hover"]').attr('value');
+                          if (container.indexOf(val) > 0) {
+                            return true;
+                          }
+                          return false;
+                        }
+                        $(document).ready(function(){
+                             $('P.tctype label[class="j-tab"]').click(function() {
+                                $('P.tctype label[class="j-tab hover"]').removeClass("hover");
+                                $(this).addClass("hover");
+                                $('[vessel="ppw"]').hide();
+                                $('[vessel="ppw"]').each(function() {
+                                  if (myScreen($(this).attr('container'))) {
+                                    $(this).show();
+                                  }
+                                });
+                              });
+                            $('P.tctype label[class="j-tab"]').eq(0).click();			
+                            $(".shouqi a").click(function(){
+                                if ($(".neir").css('display')=="block"){
+                                  $(".neir").hide();
+                                  $(this).html('展开/收起更多选项 <b class="ico" style="background-position-x: 0;"></b>');
+                                }else{
+                                  $(".neir").show();
+                                  $(this).html('收起 <b class="ico" style="background-position-x: -10px;"></b>');
+                                }
+                            });
+                        });
+                    </script>
+                    <script type="text/javascript" src="js/getscript"></script> 
+                    <script type="text/javascript" src="js/ppwmap.js"></script> 
+                    <script type = "text/javascript" >
+                    function getCt() {
+                        ctVal = $('#zonecode_select3').val();
+                        if (ctVal == '') return false;
+                        _zonecode = ctVal.substring(0, 2);
+                        ct = $('option[value="' + _zonecode + '"]').html();
+                        ct = ct + $('#zonecode_select3 option[value="' + ctVal + '"]').html();
+                        _zonecode = $('#zonecode').val();
+                        if (_zonecode.length >= 6) {
+                            _zonecode = _zonecode.substring(0, 6);
+                            ct = ct + $('option[value="' + _zonecode + '"]').html();
+                        }
+                        _zonecode = $('#zonecode').val();
+                        if (_zonecode.length == 8) {
+                            ct = ct + $('option[value="' + _zonecode + '"]').html();
+                        }
+                        address = $('input[name="est[address]"]').val();
+                        if (address) ct = ct + address;
+                        return ct;
+                    }
+                    var ppw;
+                    jQuery(document).ready(function($) {
+                        $("#setMapA").click(function() {
+                            latitude = $('input[name="est[latitude]"]').val();
+                            longitude = $('input[name="est[longitude]"]').val();
+                            if (latitude == '0' || longitude == '0' || latitude == '' || longitude == '') {
+                                ct = getCt();
+                                if (!ct) {
+                                    alert("请先定位城市");
+                                    return;
+                                }
+                                var pop = $('#setMap');
+                                $.pop({
+                                    container: pop,
+                                    closeButton: $('.big-close,.j-cancle', pop)
+                                });
+                                ppw = new ppwMap("");
+                                _zonecode = $('#zonecode').val();
+                                city = $('#zonecode_select3 option[value="' + ctVal + '"]').html();
+                                go = false;
+                                if (_zonecode.length == 6) {
+                                    ppw.map.centerAndZoom(ct, 12);
+                                    go = true;
+                                } else if (_zonecode.length == 8) {
+                                    ppw.map.centerAndZoom(ct, 15);
+                                    go = true;
+                                } else {
+                                    ppw = new ppwMap(city);
+                                    ppw.map.centerAndZoom(city, 12);
+                                }
+                                address = $('input[name="est[address]"]').val();
+                                if (address) {
+                                    ppw.map.centerAndZoom(ct, 16);
+                                    go = true;
+                                }
+                                if (go) ppw.mapto(ct);
+                            } else {
+                                var pop = $('#setMap');
+                                $.pop({
+                                    container: pop,
+                                    closeButton: $('.big-close,.j-cancle', pop)
+                                });
+                                ppw = new ppwMap("");
+                                ppw.addpoint(longitude, latitude);
+                                point = new BMap.Point(longitude, latitude);
+                                ppw.map.centerAndZoom(point, 15);
+                            }
+                            ppw.map.enableScrollWheelZoom();
+                            ppw.map.enableInertialDragging();
+                            ppw.map.enableContinuousZoom();
+                            ppw.map.addControl(new BMap.OverviewMapControl());
+                            ppw.map.addControl(new BMap.NavigationControl());
+                            ppw.map.addEventListener("click",
+                            function(e) {
+                                if (ppw.marker) {
+                                    ppw.map.removeOverlay(ppw.marker);
+                                }
+                                ppw.newpoint = ppw.createpoint(e);
+                                ppw.map.centerAndZoom(ppw.newpoint);
+                                ppw.marker = new BMap.Marker(ppw.newpoint);
+                                ppw.map.addOverlay(ppw.marker);
+                                $('input[name="est[latitude]"]').val(e.point.lat);
+                                $('input[name="est[longitude]"]').val(e.point.lng);
+                            });
+                        });
+                    }); 
+                    </script>
+                   </div> 
+                   <div class="clear"></div>
+                   <div class="enre_01"><p>求职意向</p></div>
+                <div class="form-horizontal user-login form-horizontals"> 
+                     
+                        <p vessel="ppw" container="cs cz">
+                         <label>期望地点：</label> 
+                         <select class="se se1" name="province" datatype="*" nullmsg="请选择类型！" errormsg="请选择类型！">
+                            <option value=" ">请选择</option>
+                            <option value="1">广州</option>
+                         </select>
+                         <select class="se se1 ser" name="province" datatype="*" nullmsg="请选择类型！" errormsg="请选择类型！">
+                            <option value=" ">请选择</option>
+                            <option value="1">广州</option>
+                         </select>
+                       </p>
+                       <p vessel="ppw" container="cs cz">
+                         <label>期望岗位：</label>
+                         <select name="province" datatype="*" nullmsg="请选择类型！" errormsg="请选择类型！" class="select-01">
+                          <option value=" ">请选择</option>
+                          <option value="1"></option>
+                        </select> 
+                       </p>
+                        <p vessel="ppw" container="cs cz">
+                         <label>期望薪资：</label> 
+                         <select class="se se1" name="province" datatype="*" nullmsg="请选择类型！" errormsg="请选择类型！">
+                            <option value=" ">请选择</option>
+                            <option value="1">广州</option>
+                         </select>
+                       </p>
+                     <div class="clear"></div>  
+                     <p><label style="color:#fff;">期望薪资：</label><input type="submit" class="btn_sub btn_sub_01 btn_sub_02" value="提交" /></p> 
+                     
+                   </div> 
+                   <div class="clear"></div>
+                   </form>
+            </div>
+        </div>
+         
+    </div>
+</div>
+</div>
+<div style="clear:both"></div>
+</div>
+
+
+
+
+<!--底部开始！-->
+<div id="foot1">
+<div class="foot">
+<div class="foot_left">
+上海职由你公司 服务热线: 400-0000-000
+</div>
+<div class="foot_right">
+<p>上海ICP备:0000000000000</p>
+<p>Copyright© 2015-2016 zhiyouni.com All Rights Reserved.</p>
+</div>
+</div>
+<div style="clear:both"></div>
+</div>
+<!--底部结束！-->
+
+
+<script>
+
+function check(){
+		if(!$('.checkAll').attr("checked")){  
+		   $("input:checkbox").attr("checked","");
+		}
+}
+$(function(){
+	$('.checkAll').click(function () {    
+			if(!$(this).attr("checked")){         
+			   $("input[type=checkbox]").removeAttr("checked","");
+			}else{
+				$("input[type=checkbox]").attr("checked","");
+			}
+		});
+})
+	
+</script>
+
+</body>
+</html>

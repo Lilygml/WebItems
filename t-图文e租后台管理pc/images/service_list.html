@@ -1,0 +1,161 @@
+﻿
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding:0;
+	border:0;
+}
+-->
+</style>
+<script type="text/javascript" src="<{$res.css}>js/jquery-1.7.js"></script>
+
+<link href="<{$res.css}>images/skin.css" rel="stylesheet" type="text/css" />
+<link href="<{$res.css}>style/kei.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="<{$res.css}>fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="<{$res.css}>fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="<{$res.css}>fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+<script language=JavaScript src="<{$res.css}>js/Function.js"></script>
+
+<link href="<{$res.css}>style/skin.css" rel="stylesheet" type="text/css" />
+
+<script type="<{$res.css}>text/javascript" src="js/listtable.js"></script>
+<body><div class="page-body">
+  
+  <{include file='top.html'}>
+  
+<div class="page-container">
+  
+  <{include file='left.html'}>
+  
+<div class="main-content">
+<script>
+$(function(){
+    $("#admin_system_table tr").mousemove(function(){
+      $(this).find("td").css("background-color","#c6e6ff");
+      $("#admin_system_table tr").mouseout(function(){
+        $(this).find("td").css("background-color","")
+      })
+    })
+  })
+
+</script>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="7" height="71" valign="middle"></td>
+    <td valign="top">
+      
+      
+      <table width="100%" height="138" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="13" valign="top">&nbsp;</td>
+          </tr>
+        <tr>
+          <td valign="top">        
+            
+            <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td style="font-size:14px; color:#999">当前位置：<{$here}></td>
+                </tr>
+              <tr>
+                <td height="20"><table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+                  <tr>
+                    <td></td>
+                    </tr>
+                  </table></td>
+                </tr>
+              <tr>
+                <td><table width="100%" height="40" border="0" cellpadding="0" cellspacing="0" class="nowtable">
+                  <tr>
+                    <td class="left_bt2"><span  style="float:left"><form action="" method="get">
+                       <input type="hidden" name="app" value="service">
+                    区域<{include file='region.html'}>登录名 <input name="uname" type="text" value="">手机<input name="mobile" type="text" value=""> 公司名称<input type="text" name="FullName" value=""> 邮箱<input name="email" type="text" value=""><input type='checkbox' name="IfAudit" value="0">待审核服务商 <input type="submit" value="搜索"></form></span><span class="add_admin"></span></td>
+                    </tr>
+                  </table></td>
+                </tr>
+              <tr></tr>
+                <tr></tr>
+              <tr>
+                <td><table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#E1E5EE" style="font-size:14px; font-weight:bold">
+                  <tr height="40" align="center" bgcolor="#21A3DD">
+                    
+                    <td width="" bgcolor="#EFF1F5">登陆名</td>
+                    <td width="" bgcolor="#EFF1F5">公司名</td>
+                    <td width="" bgcolor="#EFF1F5">区域</td>
+                    <td width="" bgcolor="#EFF1F5">绑定手机</td>
+                    <td width="" bgcolor="#EFF1F5">绑定邮箱</td>
+                    
+                    <td width="" bgcolor="#EFF1F5">网站联络人</td>
+                    
+                   
+                    <td width="" bgcolor="#EFF1F5">审核状态
+                    </td>
+                    <td width="" bgcolor="#EFF1F5">管理</td>
+                  </tr>
+                  <tfoot id="admin_system_table" style="font-weight:normal; color:#666">
+                  <form id="myform" name="myform" action="" method="get">
+                  <input type="hidden" name="app" value="service">
+                  <input type="hidden" name="act" value="del_server_arr">
+                  <{foreach from=$pagedata->res_array item=pd}>
+                  <tr align="center" bgcolor="#FFFFFF">
+                  
+                    <td align="left" style="padding-left:20px;"><b style="width:90px; display:inline-block;"><span><{GetNoCheck ID=$pd.aid}></span><i></i></b><font><input value="<{$pd.aid}>" type="checkbox" id='id' name="id[]"><{$pd.Name}></font></td>
+                    <td><{$pd.FullName}></td>
+                    <td><{getaddress region_id=$pd.AreaID type='detail'}><{getaddress region_id=$pd.Trade_id type='t'}></td>
+                    <td><{$pd.Mobile}></td>
+                    <td><{$pd.Email}></td>
+                    
+                    <td><{$pd.Contact}></td>
+                   
+                   
+                    <td><{if $pd.IfAudit==1}><font color="green">通过</font><{elseif $pd.IfAudit==0}><font color="red">未审核</font><{elseif $pd.IfAudit==2}>未通过<{/if}>&nbsp;&nbsp;<a href="?app=service&act=service_edit&ID=<{$pd.aid}>">审核资料</a></td>
+                    
+                    <td>
+
+                    <a class="edit_admin" href="?app=service&act=service_edit&ID=<{$pd.aid}>" ><i></i>修改</a>&nbsp;&nbsp;<a class="edit_admin_b" href="?app=service&act=server_order&ID=<{$pd.UserID}>" ><i></i>查看订单</a>&nbsp;&nbsp;<a class="edit_admin_c"  href='?app=service&act=server_order&ID=<{$pd.UserID}>'><i></i>账单明细</a>&nbsp;&nbsp;<a class="edit_admin_d"  href="javascript:;" onClick="del_data('?app=service&act=del_server',<{$pd.aid}>)"><i></i>删除</a>
+
+
+
+                    </span> </td>
+                  </tr>
+                  <{/foreach}></form>
+                  <tr height="40" align="left" bgcolor="#EFF1F5">
+                         <td  colspan="12" class="td_l"><input type="button"  id="allChecked" onClick="selectAllDels('allChecked','id[]')" value="全选">
+
+                    <input type="button" name="selectedInverse" onClick="Reverse(this,'id');" id="un_select_all" value="反选">   <input type="button" value="删除" onclick="submitform('myform','删除并删除些记录下所有吗')"></td>
+                   
+                    
+
+                    
+                   
+
+                     </tr>
+                  </tfoot>
+                </table><{include file='page.html'}></td>
+              </tr>
+              </table></td>
+          </tr>
+        </table>
+      
+      </td>
+    <td width="16">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="middle">&nbsp;</td>
+      <td height="17" valign="top">&nbsp;</td>
+    <td></td>
+  </tr>
+</table></div>
+
+</div>
+</div>
+
+</body>
+

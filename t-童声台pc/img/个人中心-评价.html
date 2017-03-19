@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible"content="IE=9; IE=8; IE=7; IE=EDGE">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> 内容检索（学校机构专栏）</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="js/all.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+</head>
+
+<body>
+<div class="top_bg">
+<div class="top">
+	<div class="logo"> <img src="img/logo.png" /></div>
+    <div class="top_city"> <p>南京</p> <span><a href="#">切换地区</a></span></div>
+<!----------------------------->      
+    <div class="top_index">
+    
+    	<div class="top_index_1">
+        	<ul>
+            <li id="bt_1" class="on" onclick="changeDiv(1,3)">老师</li>
+                <li id="bt_2" onclick="changeDiv(2,3)">学校</li>
+                <li id="bt_3" onclick="changeDiv(3,3)">培训</li>
+           </ul>
+        
+        </div><!--top_index_1-->
+<!----------------------------->   
+<div class="top_form">   
+    	<form action="#" method="post" name="top_index">
+        	<input  type="search" name="key"  id="top_search" value="" placeholder="请输入您要搜索的关键字"/>
+        	<input  type="submit" name="top_bt" id="top_bt"  value="搜 索"/>
+        </form>
+        
+        </div>
+<!----------------------------->          
+    <div class="top_index_2">
+    	<ul>
+            	<li><a href="#">书画</a></li>
+                <li><a href="#">国学</a></li>
+                <li><a href="#">音乐</a></li>
+                <li><a href="#">舞蹈</a></li>
+                <li><a href="#">戏剧</a></li>
+                <li><a href="#">国际</a></li>
+                <li><a href="#">运动</a></li>
+                <li><a href="#">科技</a></li>
+                
+           </ul>
+    
+    
+    
+    </div><!--top_index_2-->
+    
+    
+    </div><!--top_index--> 
+<!----------------------------->  
+    <div class="top_login">
+    	<p>Hi,欢迎来到童声台！</p>
+        <a href="#">登录</a> <span><a href="#">注册</a> </span> 
+    </div>
+    
+
+</div><!--top-->
+
+<!--------------------------------------------------------------->
+
+<div class="nav">
+		<ul>
+            	<li><a href="../" class="nav_a1">童声台学院</a></li>
+                <li><a href="首页.html">首页</a></li>
+                <li><a href="新闻资讯.html">新闻资讯</a></li>
+                <li><a href="人才中心.html">人才中心</a></li>
+                <li><a href="活动视窗.html">活动视窗</a></li>
+                <li><a href="互动社区.html">互动社区</a></li>
+                
+           </ul>
+			<!--nav_line-->
+</div><!--nav--><hr id="nav_line" />
+</div><!--top_bg-->
+<!--------------------------------------------------------------->
+<style type="text/css">
+
+</style>
+<div class="g-uc-bd">
+	<div class="g-bd">
+		<form method=post action="">	
+		<div class="m-comment-bd">
+			<div class="m-comment-course">
+				<h3>评价课程</h3>
+				<dl>
+					<dt><img src="img/index22_03.jpg" alt="" align="top" /></dt>
+					<dd>						
+						<h3>高二物理—前3次课免费试听（应天大街）</h3>
+						<p>课程安排：10月18日开始，每周日晚上6:00-8:00上…</p>
+						<p>上课地点：江苏南京建邺区应天大街837号弘瑞广场1…</p>
+					</dd>
+				</dl>
+			</div>
+			<div class="m-comment-text">
+				<span><input name="好评" type="radio" value="" /><label>好评</label></span>
+				<span><input name="好评" type="radio" value="" /><label>中评</label></span>
+				<span><input name="好评" type="radio" value="" /><label>差评</label></span>
+			</div>
+			<div class="m-comment-stars">
+				<div class="formItemDiff formItemDiffFirst"></div>
+				<div class="formItemDiff"></div>
+				<div class="formItemDiff"></div>
+				<div class="formItemDiff"></div>
+				<div class="formItemDiff"></div>
+				<div class="formItemDiff"></div>
+				<div class="formItemDiff"></div>
+				<div class="formItemDiff"></div>
+				<div class="formItemDiff"></div>
+				<div class="formItemDiff"></div>
+				<p id="pointP" style="float:left; margin-left:20px;"></p>
+				<script type="text/javascript">
+				$(document).ready(function(e) {
+				$(".formItemDiff").hover(function() {
+				$(this).css("background-position", "0px -20px");
+				$(this).prevAll().css("background-position", "0px -20px");
+				$(this).nextAll().css("background-position", "0px 0px");
+
+				$("#pointP").html($(this).prevAll().length+1+"分");
+				});
+				});
+				</script>
+			</div>
+			<div class="m-comment-textarea"><textarea name="Memo" id="Memo" wrap=PHYSICAL cols="75"  onKeyDown="gbcount(this.form.Memo,this.form.total,this.form.used,this.form.remain);" onKeyUp="gbcount(this.form.Memo,this.form.total,this.form.used,this.form.remain);">请填写评价</textarea><p>最多字数：
+<input disabled maxLength="4" name="total" size="3" value="200" class="inputtext">
+已用字数：
+<input disabled maxLength="4" name="used" size="3" value="0" class="inputtext">
+剩余字数：
+<input disabled maxLength="4" name="remain" size="3" value="200" class="inputtext"></td>
+</p>
+			</div>
+			<div class="m-comment-btn"><input type="button" class="btn ok" name="" value="提交评价" /></div>
+		</div>
+		</form>
+	</div>
+</div>
+
+<div class="footer">
+
+	<div class="footer_con">
+<!------------------------------------------ -->       
+    	<div class="_con_1">
+                <span> 关于我们</span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        
+        
+        </div><!--_con_1 -->
+<!------------------------------------------ -->           
+        <div class="_con_2">
+                <span> 帮助中心</span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        
+        
+        </div><!--_con_2 -->
+<!------------------------------------------ -->          
+        <div class="_con_3">
+        		 <span> 服务支持</span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        
+        </div><!--_con_3 -->
+<!------------------------------------------ -->           
+        <div class="_con_4">
+        		 <span> 友情链接 </span>
+                <hr  class="_con_line"/>
+                <ul>
+                    <li> <a href="#"> 童声台教育指导委员会</a></li>
+                    <li> <a href="#"> 童声台教育联盟</a></li>
+                    <li> <a href="#"> 关注微信</a></li>
+                    <li> <a href="#"> 我们的QQ</a></li>
+                    <li> <a href="#"> 关注微博</a></li>
+                </ul>
+        </div><!--_con_4 -->
+        
+<!------------------------------------------ -->        
+        
+        <div class="_con_5">
+        		<img src="img/tel_ico.png" />
+                <span>4008—123—123</span >
+                <p>周一至周日 8:00-23:00</p>
+        </div><!--_con_5 -->
+<!-- ------------------------------------------------------------------------ -->  
+
+<div class="clear"></div>
+     
+<hr  class="footer_con_line"/>
+<!-- ------------------------------------------------------------------------ -->            
+           <div class="_con_6"> Copyright © 2014 - 2015  童声台版权所有</div> 
+<!-- ------------------------------------------------------------------------ -->  
+  </div><!--footer_con -->
+</div><!--footer -->
+
+</body>
+</html>

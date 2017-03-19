@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>职由你</title>
+<link href="style/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script>
+$(function(){
+	$(".btn").click(function(){
+		if($("#comment_content").val()=="")
+		{
+			$("#error_msg_container").css("display","block");
+		}else{
+		$(".btn").submit(); //提交
+		parent.$.fancybox.close(); //关闭
+		}
+	})
+})
+</script>
+</head>
+<body>
+
+    <!--width:642px-->
+    <!--评价提交form-->
+    <div class="ui-box" data-key="box" style="width: 642px;"> 
+    <div class="ui-box-title" data-key="title-cls-ctrl">
+     <span data-key="title">企业评价</span>
+    </div> 
+    <div class="ui-box-body" data-key="body" style="height: 260px;"> 
+     <div data-key="content">
+      <div class="appraise-box fn-clear" id="form_container">
+        <form class="ui-appraise-form" name="" method="post" action="review.htm">
+          <div><textarea id="comment_content" name="comment" class="ui-textarea" rows="5" placeholder="分享一下您的消费体验吧"></textarea></div>
+            <p class="ui-form-error fn-hide" id="error_msg_container"><i class="i-warn-xs"></i>至少五个字哦</p>
+            <input type="button" class="btn" style="margin-top:20px" value="提   交">
+      </form>
+    </div>
+    <!--评价成功弹出层-->
+    <div id="success_container" class="pj-ok fn-hide">
+        <a class="i-ok-sm"></a>评价提交成功
+    </div>
+     </div> 
+     <div data-key="button" class="ui-box-btn ui-box-btn-sm"></div> 
+    </div>
+   </div>
+
+
+
+</body></html>
+

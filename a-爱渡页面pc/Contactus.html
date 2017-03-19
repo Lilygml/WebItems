@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>苏州爱渡有限公司</title>
+<link href="style/css.css" rel="stylesheet" type="text/css">
+<link href="style/kn.css" rel="stylesheet" type="text/css">
+<link href="style/validationEngine.jquery.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+</head>
+<body>
+<header>
+<div class="head">
+	<div class="head1">
+        <div class="pagewrap">
+             <div class="top"><a href="user_data.html">个人中心</a><a href="regist.html">注册</a><a href="login.html">登录</a><span>欢迎您</span></div></div>
+            <div class="clear"></div>
+         <div class="pagewrap">   
+            <div class="logo"><img src="images/logo.png"></div>
+            <div class="logo-ico">一切定制都是为了爱</div>
+            <div class="sous">
+             <form>
+             <input type="text" name="" value="" class="inputy">
+             <input type="submit" class="btny" value=" ">
+             </form>
+             </div>
+            </div>    
+        </div>    
+    <div class="nav">
+        <div class="pagewrap">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="Product.html">戒指</a></li>
+                <li><a href="Product.html">颈饰</a></li>
+                <li><a href="Product.html">耳饰</a></li>
+                <li><a href="Product.html">腕饰</a></li>
+                <li><a href="Suit.html">套饰</a></li>
+                <li><a href="Slae.html">特价</a></li>
+                <li><a href="Seller.html">买家秀</a></li>
+                <li><a href="Contactus.html">联系我们</a></li>
+                <li><a href="service.html">售后服务</a></li>
+            </ul>
+         </div>
+    </div> 
+  </div>
+  <div class="clear"></div>
+</div>
+</header>
+<div class="content">
+          <div class="kn-wzname">爱 渡</div>
+          <div class="kn-ctitle kn-xian">
+           <div class="kn-ctitle-name">联系我们</div>
+          </div>
+        <div class="pagewrap">
+          <ul class="kn-liuc kn-rtpwd kn-nclass">
+           <li><a href="">品牌</a></li>
+           <li><a href="">新手指南</a></li>
+           <li><a href="">支付与配送</a></li>
+           <li><a href="">售后服务</a></li>
+           <li class="kn-lhover"><a href="">网站信息</a></li>
+          </ul>
+          <div class="kn-rtpwd kn-Cfication">
+           <a href=" ">关于爱渡</a>
+           <a href=" ">版权声明</a>
+           <a href=" ">免责声明</a>
+           <a href=" ">隐私条款</a>
+           <a href=" ">加入爱渡</a>
+           <a href=" ">友情链接</a>
+           <a href=" " class="kn-Default">联系我们</a>
+		  </div>
+          <div class="kn-blocks">
+           <div class="kn-HelpCenter">
+            <div class="kn-Contactus">
+             <h1>联系地址</h1>
+             <p>
+             公司名称：某某爱渡某某路102号<br>
+客服电话：400-072-5598 0512-57861599 13773182365<br>
+公司邮箱：service@kingexpand.com
+             </p>
+            </div>
+            <div class="kn-Advisory">
+             <h1>业务咨询</h1>
+             <p>
+             <form id="form1" name="form1" method="post" action="">
+             <textarea cols="75" rows="8" class="validate[required,minSize[10],maxSize[100]]"></textarea>
+             <div align="right"><input type="submit" value="发 送" class="kn-sub"></div>
+             </form>
+             </p>
+            </div>
+          <div id="kn-contmap"></div>
+         <script type="text/javascript">
+          var map = new BMap.Map("kn-contmap");          // 创建地图实例
+          var point = new BMap.Point(121.006021,31.390785);  // 创建点坐标
+          var point2 = new BMap.Point(121.006021,31.390785);  // 创建点坐标
+          map.addControl(new BMap.NavigationControl());  //控件
+          map.addControl(new BMap.ScaleControl());
+          map.addControl(new BMap.OverviewMapControl());
+          map.enableDragging();//启用地图拖拽事件，默认启用(可不写) 
+          map.enableScrollWheelZoom();//启用地图滚轮放大缩小 
+          map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写) 
+          map.enableKeyboard();//启用键盘上下左右键移动地图 
+          var marker = new BMap.Marker(point2);        // 创建标注  
+          map.addOverlay(marker);   // 将标注添加到地图中
+          map.centerAndZoom(point, 17);                 // 初始化地图，设置中心点坐标和地图级别
+          var opts = {
+          width : 250,     // 信息窗口宽度
+          height: 110,     // 信息窗口高度
+          title : "<span style=\"line-height: 180%;font-size: 18px;\"><strong>苏州爱渡有限公司</strong></span>"  // 信息窗口标题
+          }
+          var infoWindow = new BMap.InfoWindow("<span style=\"line-height: 180%;font-size: 14px;\">电话：0512-57861599 400-072-5598<br />地址：江苏省昆山市前进东路1008号（黎明清境会所3楼）</span>", opts);  // 创建信息窗口对象
+          map.openInfoWindow(infoWindow, map.getCenter());      // 打开信息窗口
+          marker.addEventListener("click", function(){
+          map.openInfoWindow(infoWindow, map.getCenter());
+          });
+        </script>
+        </div>
+       <div class="clear"></div>
+      </div>
+     </div>
+   </div>
+<!--footer-->
+<div class="footer_box">
+  <div class="pagewrap">
+     <dl class="footer">
+        <dd><a href="">爱渡</a></dd>
+        <dd><a href="">戒指</a></dd>
+        <dd><a href="">颈饰</a></dd>
+        <dd><a href="">耳饰</a></dd>
+        <dd><a href="">腕饰</a></dd>
+        <dd><a href="">套饰</a></dd>
+        <dd><a href="">特价</a></dd>
+        <dd><a href="">买家秀</a></dd>
+        <dd><a href="">联系我们</a></dd>
+        <dd><a href="">售后服务</a></dd>
+     </dl>
+     <div class="clear"></div>
+     <div class="fot"><img src="images/logo1.png"><p>一切定制都是为了爱</p></div>
+  </div>
+  <div class="Copyright-Information">CopyRight © 2015-2025 苏州爱渡有限公司，技术支持：旌展信息科技有限公司Design by Wuxuefeng</div>
+</div>
+<script type="text/javascript" src="js/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="js/jquery.validationEngine-en.js"></script>
+<script type="text/javascript" src="js/function.js"></script>
+<script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
+</body>
+</html>

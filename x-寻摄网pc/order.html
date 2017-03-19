@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>下单页</title>
+	<link rel="stylesheet" href="css/default.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery-1.8.0.min.js" ></script>
+	<script type="text/javascript" src="js/xsw_index.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="js/superslide.2.1.js"></script>
+	<script type="text/javascript" src="js/morecity.js" mce_src="js/morecity.js"></script>
+	<script type="text/javascript" src="js/jquery.slimscroll.js" ></script>
+</head>
+<body>
+<!--top-S-->
+<div class="public-top-layout">
+	<div class="topbar wrapper">
+		<div class="user-entry">北京<a href="changeCity.html">[ 切换城市 ]</a></div>
+		<div class="quick-menu">
+           <dl class="dli">
+	           <dt>您好，欢迎来到寻摄网</dt>
+	       </dl>
+		   <dl style="width: 50px;">
+	           <dt><a href="login.html" class="">登录</a></dt>
+	       </dl>
+	       <dl class="xian"></dl>
+		   <dl style="width: 50px;"> 
+	           <dt class="zn"><a href="register.html">注册</a></dt>
+	       </dl>
+	       <dl class="xian"></dl>
+	       <dl class="">
+		        <dt><a href="Personal.html">我的寻摄</a><i></i></dt>
+		        <dd>
+		          <ul>
+		            <li><a href="#">待付款订单</a></li>
+		            <li><a href="#">待确认收货</a></li>
+		            <li><a href="#">待评价交易</a></li>
+		          </ul>
+		        </dd>
+	       </dl>
+	       <dl class="xian"></dl>
+	      <dl>
+	        <dt><a href="people.html">个人中心</a><i></i></dt>
+	        <dd>
+	          <ul>
+	            <li><a href="#">商品收藏</a></li>
+	            <li><a href="#">店铺收藏</a></li>
+	          </ul>
+	        </dd>
+	      </dl>
+	      <dl class="xian"></dl>
+	      <dl>
+	        <dt><a href="#">商家中心</a><i></i></dt>
+	        <dd>
+	          <ul>
+
+	          </ul>
+	        </dd>
+	      </dl>          
+	      <dl class="xian"></dl>
+	      <dl>
+	        <dt><a href="#">客户服务</a><i></i></dt>
+	        <dd>
+	          <ul>
+	            <li><a href="help.html">帮助中心</a></li>
+	            <li><a href="#">售后服务</a></li>
+	            <li><a href="custom_servicel.html">客服中心</a></li>
+	          </ul>
+	        </dd>
+	      </dl>
+	      <dl class="xian"></dl>
+	      <dl>
+	        <dt><a href="#">网站导航</a><i></i></dt>
+	        <dd>
+	          <ul>
+	            <li><a href="website.html">网站地图</a></li>
+	          </ul>
+	        </dd>
+	      </dl>
+	    </div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+//动画显示边条内容区域
+$(function() {
+	$(".quick-menu dl").hover(function() {
+		$(this).addClass("hover");
+	},
+	function() {
+		$(this).removeClass("hover");
+	});
+
+    });
+</script>
+<!--top-E-->
+<!--logo-S-->
+<div class="header-wrap">
+    <div class="public-head-layout wrapper">
+    <h1 class="site-logo"><a href="#"><img src="img/logo.png" class="pngFix"></a></h1>
+        <div id="search" class="head-search-bar">
+	<!--搜索-->
+      <form class="search-form" method="get" action="search.html">
+         <select class="input-select">
+         	<option value="option1">选项一...</option>
+         	<option value="option2">选项二.....</option>
+         	<option value="option3">选项三........</option>
+         </select>
+         <input placeholder="输入风格或场景进行搜索" name="keyword" id="keyword" type="text" class="input-text" value="" maxlength="60" x-webkit-speech="" lang="zh-CN" onwebkitspeechchange="foo()" x-webkit-grammar="builtin:search">
+         <input type="submit" value="搜 索" class="input-submit"/>
+      </form>
+    </div>
+     <!--购物车-->  
+    <div class="head-user-menu">
+      <dl class="my-mall">
+        <dt><img src="temp/pic1.png" />Top photography team gathered</dt>
+      </dl>
+      <dl class="my-cart">
+          <dt><span class="ico"></span>购物车结算<i class="arrow"></i></dt>
+	      <dd>
+	          <div class="sub-title">
+	             <h4>最近加入的宝贝：</h4>
+	          </div>
+	          <div class="incart-goods-box">
+         		<span><a href="#"><img src="temp/sear_pic2.jpg"/></a></span>
+         		<span><a href="#">Rose Garden 玫瑰花园</a></span>
+         		<span class="shangchu">
+         			¥<b>2999</b><br />
+         			<a href="#">删除</a>
+         		</span>
+	          </div>
+	          <div class="checkout"> 
+	          	<div class="total-price">购物车里还有2件宝贝</div>
+	          	<a href="#" class="btn-cart">查看我的购物车</a> 
+	          </div>
+	      </dd>
+      </dl>
+    </div>
+  
+  </div>
+</div>
+<!--logo-E-->
+<script type="text/javascript">
+$(function(){
+    //购物车
+	$(".head-user-menu dl").hover(function() {
+		$(this).addClass("hover");
+	},
+	function() {
+		$(this).removeClass("hover");
+	});
+	$('.head-user-menu .my-cart').mouseover(function(){// 运行加载购物车
+		$(this).unbind('mouseover');
+	});
+    });
+</script>
+
+<!--订单信息-->
+<div class="orders">
+	<div class="order w1200 cleafix">
+		<h2>订单信息</h2>
+		<div class="order_top">
+			<h3>雇主信息</h3>
+			<div class="xinxi">
+				<div class="xingm">
+					<span>姓名：</span>
+					<input />
+				</div>
+				<div class="xingm">
+					<span>手机：</span>
+					<input />
+				</div>
+				<div class="xingm">
+					<span>电话：</span>
+					<input />
+				</div>
+			</div>
+			<div class="dizhi">
+				<FORM class="city_title" onsubmit="manSub(this);return false;" name="spc">
+					<span>地址：</span> 
+					<select  name="ddlProvince" id="ddlProvince" onchange="selectMoreCity(this)"></select>
+					<select name="ddlCity" id="ddlCity">
+					  <option selected value="">城市</option>
+					</select>
+					<input />
+				</FORM>
+			</div>
+		</div>
+		<script type="text/javascript" language ="javascript">
+    //BindProvince();//只初始化省份
+         BindCity("北京");//初始化，并选中北京市和北京市所在的省
+		</script>
+		<div class="order_middle">
+			<ul>
+				<li>
+					<img src="temp/pic21.jpg" />
+				</li>
+				<li>Rose Garden 玫瑰花园</li>
+				<li>
+					<span>规格：</span>
+					<select>
+					   <option>规格1</option>
+					   <option>规格2</option>
+					   <option>规格3</option>
+					</select>
+				</li>
+				<li>
+					<span>数量：</span>
+					<input />
+				</li>
+				<li style="border-right: none;"><span>金额：</span><b>3999.00</b></li>
+			</ul>
+		</div>
+		<div class="order_foot">
+			<div class="zdry">
+				<h3><i class="ico"></i>指定人员</h3>
+				<div class="slideTxtBox slideTxtBox1">
+					<div class="hd">
+						<ul>
+							<li style="border-left: none;">摄影师</li>
+					        <li>化妆师</li>
+					        <li>服装师</li>
+					        <li style="border-right: none;">助理</li>
+						</ul>
+						<span class="yixuan">已选<b>1</b>/3</span>
+					</div>
+					
+					<div class="bd" id="testDiv">
+						<ul class="apicslt">
+							<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+                                <span class="sltico"></span>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+						</ul>
+						<ul>
+							<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+						</ul>
+						<ul class="apicslt">
+							<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+						</ul>
+						<ul class="apicslt">
+							<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+						</ul>
+						
+					</div>
+				</div>
+				<script type="text/javascript">jQuery(".slideTxtBox1").slide();</script>
+			</div>
+			
+			<div class="zdry">
+				<h3><i class="ico"></i>相册相框</h3>
+				<div class="slideTxtBox slideTxtBox2">
+					<div class="hd">
+						<ul>
+							<li style="border-left: none;">相册</li>
+					        <li>相框</li>
+					        <li style="border-right: none;">摆台</li>
+						</ul>
+						<span class="yixuan">已选<b>1</b>/3</span>
+					</div>
+					<div class="bd" id="testDiv1">
+						<ul class="apicslt">
+							<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+						</ul>
+						<ul class="apicslt">
+							<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+						</ul>
+						<ul class="apicslt">
+							<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+						</ul>
+						
+					</div>
+				</div>
+				<script type="text/javascript">jQuery(".slideTxtBox2").slide();</script>
+			</div>
+			<div class="zdry">
+				<h3><i class="ico"></i>服装配饰</h3>
+				<div class="slideTxtBox slideTxtBox3">
+					<div class="hd">
+						<ul>
+							<li style="border-left: none;">女士</li>
+					        <li style="border-right: none;">男士</li>
+						</ul>
+						<span class="yixuan">已选<b>1</b>/3</span>
+					</div>
+					<div class="bd" id="testDiv2">
+						<ul class="apicslt">
+							<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+						</ul>
+						<ul class="apicslt">
+							<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+						</ul>
+						
+					</div>
+				</div>
+				<script type="text/javascript">jQuery(".slideTxtBox3").slide();</script>
+			</div>
+            <div class="zdry">
+				<h3><i class="ico"></i>添加场景</h3>
+				<div class="slideTxtBox slideTxtBox4">
+					<div class="hd">
+						<ul>
+							<li style="border-left: none;">相册</li>
+					        <li>相框</li>
+					        <li style="border-right: none;">摆台</li>
+						</ul>
+						<span class="yixuan">已选<b>1</b>/3</span>
+					</div>
+					<div class="bd" id="testDiv3">
+						<ul class="apicslt">
+							<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+						</ul>
+						<ul class="apicslt">
+							<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+						</ul>
+						<ul class="apicslt">
+							<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+			    			<li>
+			    				<img src="temp/pic22.jpg" />
+			    				<div class="checkbox_li">
+			    					<span class="sltico"></span>
+			    				</div>
+			    				<div class="order_bg">许丹</div>
+			    			</li>
+						</ul>
+						
+					</div>
+				</div>
+				<script type="text/javascript">jQuery(".slideTxtBox4").slide();</script>
+			</div>
+			<div class="order_bottom">
+				<span>
+					<input type="checkbox" name="yy" class="checkbox_b">
+					<b>发票抬头：</b>
+					<input class="input_con" />
+				</span>
+				<span>
+					<input type="checkbox" name="yy" class="checkbox_b">
+					<b>优惠点卷：</b>
+					<input class="input_con" />
+				</span>
+				<span>
+					<b>留言：</b>
+					<input class="input_ly" />
+				</span>
+				<span>
+					<input type="submit" name="Submit" value="提交订单" class="submit_b"/> 
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!--订单信息-E-->
+
+
+	
+	
+<!--footer-->
+<div class="footer" style="*margin-top: -465px;">
+	<div class="foot w1200 cleafix">
+		<div class="foot_ul">
+			<ul>
+				<li>
+					<div class="foot_t">
+						<div class="foot_tfl fl">
+							<img src="img/ico4.png" />
+						</div>
+						<div class="foot_tfr fl">
+							<h2>消费保障</h2>
+							<h3>消费护航，拍摄无忧</h3>
+						</div>
+					</div>
+					<div class="foot_b">
+						<p>保障范围    退货退款流程    服务中心    <br />
+							更多特色服务</p>
+					</div>
+				</li>
+				<li>
+					<div class="foot_t">
+						<div class="foot_tfl fl">
+							<img src="img/ico5.png" />
+						</div>
+						<div class="foot_tfr fl">
+							<h2>付款方式</h2>
+							<h3>轻松快捷，安全稳定</h3>
+						</div>
+					</div>
+					<div class="foot_b">
+						<p>支付宝快捷支付    支付宝卡（现金）付款    <br />
+							支付宝余额付款    货到付款 </p>
+					</div>
+				</li>
+				<li>
+					<div class="foot_t">
+						<div class="foot_tfl fl">
+							<img src="img/ico6.png" />
+						</div>
+						<div class="foot_tfr fl">
+							<h2>新手上路</h2>
+							<h3>您的快捷购物指南</h3>
+						</div>
+					</div>
+					<div class="foot_b">
+						<p>新手专区    消费警示    交易安全    免费开店<br />
+							24小时在线帮助</p>
+					</div>
+				</li>
+				<li style="border-right: none ;">
+					<div class="foot_t">
+						<div class="foot_tfl fl">
+							<img src="img/ico7.png" />
+						</div>
+						<div class="foot_tfr fl">
+							<h2>特色服务</h2>
+							<h3>为您呈现不一样的服务</h3>
+						</div>
+					</div>
+					<div class="foot_b">
+						<p>团购预约    限时特惠    寻摄劵</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="foot_about">  
+			<a href="#">关于天猫</a><b>|</b>
+			<a href="#">帮助中心</a><b>|</b>
+			<a href="#">诚聘英才</a><b>|</b>
+			<a href="#">联系我们</a><b>|</b>
+			<a href="#">网站合作</a><b>|</b>
+			<a href="#">法律声明</a>
+		</div>
+		<div class="foot_add">
+			<div class="foot_top">
+				<p>Copyright © 2005-2020 xunshe.com.cn，All Rights Reserved 浙ICP备11111111号 许可证：浙A1-20150510  使用本网站即表示接受 寻摄网用户协议。<br /> 
+					版权所有 浙江寻摄信息科技有限公司</p>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+
+      $('#testDiv').slimScroll({
+          height: '130px'
+      });
+      
+      $('#testDiv1').slimScroll({
+          height: '130px'
+      });
+      
+      $('#testDiv2').slimScroll({
+          height: '130px'
+      });
+	  
+	  $('#testDiv3').slimScroll({
+          height: '130px'
+      });
+	  
+	  	$(".apicslt li").click(function(){
+			$(this).toggleClass('cur');
+		});
+    });
+</script>
+
+
+<script type="text/javascript">
+//prettyPrint();
+
+//  var _gaq = _gaq || [];
+//  _gaq.push(['_setAccount', 'UA-3112455-22']);
+//  _gaq.push(['_setDomainName', 'none']);
+//  _gaq.push(['_trackPageview']);
+//
+//  (function() {
+//    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+//    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+//    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+//  })();
+</script>
+
+
+</html>

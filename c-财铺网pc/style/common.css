@@ -1,0 +1,58 @@
+	@charset "utf-8";
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, big, cite, code, del, em, font, img, ins, small, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, input, label, legend{margin:0; padding:0;}
+.xingxing,.xingxing font,.cjicon,.weixin,.weixinpic,.scrollicon .leftbtn,.scrollicon .rightbtn,.zhuyeL-bottom b,.fabusuccess b,.cgpipeilist li .pipeidu,.cgpipeilist li .p5 b,.zhuandianpgleft,.rightfloating li > a,.subscroll-close,.banner_index .btnPre,.banner_index .btnNext,.indexBanner_num a,.fabulist li dd .checkyetai span,.fabulist li dd .mapbiaozhu span,.fabuarrow .zhankaimore b,.fabuarrow .pinggugoon,.popfloating dd .p1 b,.popfloating dd li span b,.haowenshare b,.hotpaihang li b,.zhanwuxinxi dt,.hotpaihang dt span,.gonglueRdl dt span,.zixunnewstabcont li dd .p3 .dianzan b,.zixunnewstabcont li dd .p3 .fenxiang b,.yijiejuewtlist li .p3 a b,.zixunnewstabcont li dt span,.zixunnewstabcont li dd .p1 b,.onemainL-right li i,.banner_syzricon span,.newsscroll i,.onemainL-rightsub .p1 b,.arrow-right-box, .arrow-left, .arrow-right, .arrow-left-b, .arrow-right-b, .icon-mobile, .icon-mobile-hl, .icons{background:url(../images/background.png) no-repeat; display:inline-block;}
+.rightfloating{position:fixed; top:299px; width:54px; z-index:999; left:50%; margin-left:605px; font-size:12px;}
+.rightfloating li{width:54px; height:54px; margin-top:4px; display:block; position:relative;}
+.rightfloating li > a{width:100%; height:100%; display:block; text-indent:-999em;}
+.rightfloating li .a1{background-position:-604px -248px;}
+.rightfloating li .a1:hover{background-position:-544px -248px;}
+.rightfloating li .a2{background-position:-604px -306px;}
+.rightfloating li .a2:hover{background-position:-544px -306px;}
+.rightfloating li .a3{background-position:-604px -364px;}
+.rightfloating li .a3:hover{background-position:-544px -364px;}
+.rightfloating li .a4{background-position:-604px -422px;}
+.rightfloating li .a4:hover,.rightfloating li.hover .a4{background-position:-544px -422px;}
+.rightfloating li .a5{background-position:-604px -480px;}
+.rightfloating li .a5:hover{background-position:-544px -480px;}
+.rightfloating li .a6{background-position:-604px -792px;}
+.rightfloating li .a6:hover{background-position:-544px -792px;}
+#erweima{position:absolute; background:url(../images/background.png) -224px -369px no-repeat; width:290px; height:156px; padding:4px 0px 0px 23px; top:-53px; left:-310px; display:none;}
+#erweima li{float:left; width:120px; margin-right:18px; text-align:center; font-size:14px; color:#c01920; display:inline-block;} 
+#erweima li img{width:100px; height:100px; padding:9px; border:1px #f1e3e3 solid; background-color:#fff; overflow:hidden; display:block; margin-bottom:5px;}
+.rightfloating li:hover .tipbox,
+.rightfloating li:hover #erweima,
+.rightfloating li:hover .serviceSelectBox{ display:block;}
+.serviceSelectBox{width:525px; height:160px; border:1px solid #ecbabc; background-color:#fdeeee; position:absolute; left:-537px; top:-50px; display:none;}
+.arrow-right-box{width:13px; height:30px; display:block; background-position:-523px -432px;}
+.serviceSelectBox .arrow-right-box{position:absolute; top:50%; margin-top:-15px; right:-13px;}
+.rightfloating .serviceSelectBox a.btn-sm{background-image: none; background-color: #fff;} /*FS@20150505 暂时修正共用旧common.css时的冲突 */
+.serviceSelectBox .ssb-item{width:17%; height:140px;  padding-top:20px; float:left; border-left:1px solid #ecbabc; margin-left:-1px; position:relative;  color:#c01920; text-align:center; overflow:hidden;  transition:all 0.2s; }
+.serviceSelectBox .openPanel{ width:255px; position:absolute; top:20px; left:0;}
+.serviceSelectBox .openPanel h4{font-weight:bold; }
+.serviceSelectBox .openPanel h4 span{ color:#fedc01; font-size:12px; font-weight:normal;}
+.serviceSelectBox .openPanel .txt-hl{ font-size:16px; padding-top:30px;}
+.serviceSelectBox .openPanel .description b{color:#fedc01; font-size:14px; font-weight:normal;}
+.serviceSelectBox .openPanel .description,
+.serviceSelectBox .openPanel h4{ padding-left:100px;}
+.serviceSelectBox .description-short span,
+.serviceSelectBox .description-short b{ display:block;}
+.serviceSelectBox .openPanel .description,
+.serviceSelectBox .openPanel .txt-hl,
+.serviceSelectBox .openPanel h4{display:none;}
+.arrow-hover{ background-position:-333px -887px;}
+.serviceSelectBox .ssb-item.active{width:49%; background-color:#cd5459; background-color:rgba(205,84,89,0.98); color:#fff; line-height:20px; transition:all 0.2s;}
+.serviceSelectBox .ssb-item.active .description,
+.serviceSelectBox .ssb-item.active .txt-hl,
+.serviceSelectBox .ssb-item.active h4{display:inline-block;}
+.serviceSelectBox .ssb-item.active .description-short{display:none;}
+.serviceSelectBox .ssb-item.active .icons{ float:left; margin-left:15px; margin-right:15px;}
+.serviceSelectBox .ssb-item.active .description,.serviceSelectBox .ssb-item.active h4{overflow:hidden; text-align:left; display:block; padding-right:5px; }
+.serviceSelectBox .ssb-item.active h4{font-size:14px;}
+.serviceSelectBox .icons{ width:70px; height:70px; }
+.icon-ref-sidebar{ background-position:0 -852px;}
+.icon-tel-sidebar{ background-position:-78px -852px;}
+.icon-shop-sidebar{ background-position:-156px -852px;}
+.icon-vip-sidebar{ background-position:-234px -852px;}
+.btn-sm{width:76px; height:28px; line-height:28px; text-align:center; display:inline-block; background-color:#fff; color:#cd5459; font-weight:bold; border-radius:3px;}
+
+

@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>新闻资讯-新闻详细页</title>
+		<link rel="stylesheet" href="css/default.css" />
+		<link rel="stylesheet" href="css/style.css" />
+        <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="js/app.js" ></script>
+		<script type="text/javascript" src="js/jquery.reveal.js"></script><!--弹出层-->
+
+</head>
+
+<body>
+		<header>
+			<div class="top">
+				<div class="w1200 overflow">
+					<div class="top_left"><span>Hi,欢迎来到团标网</span><a href="登录.html">请登录</a><a href="注册-个人用户.html">免费注册</a></div>
+					<div class="top_right"><a href="个人中心首页.html">我的团标网</a><b>|</b><a href="商品详情页-购物车.html">购物车</a><b>|</b><a href="帮助中心-服务中心.html">帮助中心</a></div>
+				</div>
+			</div>
+			<div class="w1200 overflow top_s">
+				<div class="logo"><img src="img/logo.png"></div>
+				<div class="search">
+					<form action="首页-搜索.html">
+						<input type="search" placeholder="请输入产品/公司进行搜索"/><button type="button">搜索</button>
+					</form>
+				</div>
+				<div class="recomend"><a href="javascript:void(0);" data-reveal-id="myModal">发布需求</a></div>
+				<!--弹出层start-->
+				<div id="myModal" class="reveal-modal xuqg-modal">
+					<h1>发布需求</h1>
+				    <form id="formID2" action="" method="post">
+					    <div class="input-group">
+	      					<label class="control-label">公司名称：</label>
+					        <input type="text" class="form-control">
+					    </div>
+					    <div class="input-group">
+	      					<label class="control-label">联系电话：</label>
+					        <input type="text" class="form-control">
+					    </div>
+					    <div class="input-group">
+	      					<label class="control-label">联系人：</label>
+					        <input type="text" class="form-control">
+					    </div>
+					    <div class="input-group">
+	      					<label class="control-label">需求选项：</label>
+				        	<select class="form-control" style="width: 62%;">
+								<option>原材料</option>
+							</select>
+					        	
+					    </div>
+					   <div class="input-group">
+	      					<label class="control-label">需求数量：</label>
+					        <input type="text" class="form-control">
+					    </div>
+					    <div class="input-group">
+	      					<label class="control-label">需求内容：</label>
+					        <textarea class="form-control" style="height: 78px;"></textarea>
+					    </div>
+					    <div class="input-group">
+					    	<label class="control-label">&nbsp;</label>
+					        <button type="submit" class="bnt-input">保存</button>
+					    </div>
+	      			</form>
+					<a class="close-reveal-modal">&#215;</a>
+				</div>
+				<!--弹出层end-->
+			</div>
+			<div class="nav clearfix">
+				<div class="nav_b w1200">
+					<div class="btnmenu" >
+						<h2><a href="javascript:;">所有商品分类</a></h2>
+						<div class="sidemenu">
+							<ul id="sidemenu">
+								<li id="mainCate-1" class="mainCate">
+									<h3><a href="javascript:;"><span>原材料<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>								
+										</ul>
+									</div>
+								</li>
+								<li id="mainCate-2" class="mainCate">
+									<h3><a href="javascript:;"><span>印刷设备<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>						
+			                             </ul>
+			                        </div>
+								</li>
+								<li id="mainCate-3" class="mainCate">
+									<h3><a href="javascript:;"><span>印刷耗材<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>						
+			                              </ul>
+			                          </div>
+								  </li>
+								  <li id="mainCate-3" class="mainCate">
+									<h3><a href="javascript:;"><span>辅助器材<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>						
+			                              </ul>
+			                          </div>
+								  </li>
+								  <li id="mainCate-3" class="mainCate">
+									<h3><a href="javascript:;"><span>其他<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+
+
+
+
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>						
+			                              </ul>
+			                          </div>
+								  </li>
+							</ul>
+			            </div>
+					</div>
+					<ul class="nav_u">
+						<li><a href="首页.html">首页</a></li>
+						<li><a href="商城.html">商城</a></li>
+						<li><a href="帮助中心-服务中心.html">服务中心</a></li>
+						<li><a href="新闻资讯.html">新闻资讯</a></li>
+						<li><a href="知识库.html">知识库</a></li>
+						<li><a href="需求公告.html">需求公告</a></li>
+						<li><a href="白条支付.html">白条支付</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		
+        <div class="wu_content">
+        	<div class="wu_w1200">
+					<div class="wu_newsdetail_left">
+                    		<h1 class="wu_ndl_h1">访昆山铭庭包装印刷有限公司副总经理李海先生</h1>
+                            <p class="wu_ndl_time">
+                            	<span class="wu_ndl_s1">发布时间：2015-11-16</span>
+                            	<span class="wu_ndl_s1">作者：团标网</span>
+                            	<span class="wu_ndl_s1">浏览量：1000</span>
+                            </p>
+                            <div class="wu_kleftc1p">
+                            		<p>从上海到昆山，从租厂房到购买地皮，建造现代化的自有厂房，年产值达3000多万，铭庭印刷走过了16个春秋。作为华东地区虽然不是规模最大，但却最专业化的标签印刷企业，铭庭印刷延续着自己的发展脚步。
+李海，铭庭印刷包装有限公司上海、昆山工厂现任副总经理，铭庭印刷1998年成立开始，他见证了铭庭印刷从无到有，从小到大的全过程，也见证了中国标签业这十六年来的波澜壮阔。
+在国际国内经济形势未见明显反弹、标签行业市场竞争日趋激烈、各项成本高居不下、客户招标压低价格的情况下，李海带领下的铭庭印刷又如何破局？让我们一起走进铭庭印刷，走进李海。</p>
+                                    <p>发展：风华十六载  至诚笃信
+
+古有依水而兴的说话，而铭庭印刷的昆山厂房就坐落在一条碧绿的小河边，没有高楼耸立，显得朴素大方，正如十六年来铭庭印刷给予客户最宝贵的承诺“至诚笃信”，以品质取胜，以诚信待人，这也是铭庭印刷的成功之道。
+李海在二楼办公室接待我们，虽然是第一次接触，却没有丝毫的生疏感，宛如老朋友的一次聚会。而我们的谈话也在茶水的茗香中展开。</p>
+                                    <p>李总告诉笔者，铭庭包装印刷有限公司于1998年在上海成立，是一家多年从事凸版印刷、柔版印刷、丝网印刷、VIP信息条码打印制作应用的生产厂商。2009年，由于发展需要，在昆山张浦镇滨江北路398号自购厂房，面积达5000平方米，并成立昆山铭庭包装印刷有限公司。同时，出于战略考虑，铭庭印刷经过市场调查，已在西南地区进行新的投资和布局。
+对于公司的业务，李总介绍说，铭庭印刷主要专业生产各类不干胶标签、各类铭牌以及各种背胶袋，拥有较为雄厚的技术基础和先进的生产设备及丰富的专业团队能力，能够提供较为完善的标签解决方案，为广大客户提供良好的服务。目前，铭庭印刷公司的国内外客户遍及行业：零售、工业、金融、电子、邮政、物流，如EPSON、HITACHI、PANASONIC、TOSHIBA、YAMAHA、YKK、比亚迪、科勒、徕卡等。</p>
+                                    <p>转型：业务结构多元化
+据不完全统计，昆山市约有标签印刷企业两三百家，其中90%的标签印刷企业都拥有电子标签业务，不少企业的电子标签业务更是占到公司业务一半以上。而随着近两年电子行业的行情转变和大环境整体“遇冷”，许多耐用型电器的销量大幅下降，这对较为依赖电子标签市场的昆山标签印刷企业造成了不少的冲击，电子标签业务占总量一半左右的昆山铭庭也不例外。</p>
+                                    <p>据李总介绍，以前，铭庭印刷专注电子类标签印刷，而受大环境的影响，电子标签业务急剧萎缩，为了应对这样的情况，公司一方面着重扩展市场需求量较大的手机标签量业务；另一方面，积极开拓日化标、医药标、农药标、酒标等新类别的标签业务，调整业务结构，让业务更加多元化，以扭转局面。但李总强调说，业务结构调整，不等于什么都做，我们有自己的坚持，根据我们公司的硬件设备情况，选择适合我们自己的业务。</p>
+                                    <p>李总表示，相比2012年，虽然2013年公司的外单数量有所增长，但由于生产成本的上涨及海外客户要求的提高，外单利润几乎没有增长，最多处于持平状态。终端市场对标签质量要求的日益提高和标签价格的不升反降，更加剧了标签印刷企业产品毛利润的下降。面对这种情况，昆山铭庭并没有慌乱，而是顺势而为，从开发国内新客户、公司内部节流着手，一方面适时转战内需市场，借助华东地区标签印刷企业在管理经验、技术应用、品质控制、经济实力等方面的优势，将目光投向了极具发展潜力的中西部市场；另一方面加强公司内部精细化管理，杜绝浪费。李总还带笔者参观了公司自主研发改造的生产设备，该设备完全实现了标签生产一体化，极大节省了人工，着实令人称妙。</p>
+                                    <p>李总告诉笔者，铭庭包装印刷有限公司于1998年在上海成立，是一家多年从事凸版印刷、柔版印刷、丝网印刷、VIP信息条码打印制作应用的生产厂商。2009年，由于发展需要，在昆山张浦镇滨江北路398号自购厂房，面积达5000平方米，并成立昆山铭庭包装印刷有限公司。同时，出于战略考虑，铭庭印刷经过市场调查，已在西南地区进行新的投资和布局。
+对于公司的业务，李总介绍说，铭庭印刷主要专业生产各类不干胶标签、各类铭牌以及各种背胶袋，拥有较为雄厚的技术基础和先进的生产设备及丰富的专业团队能力，能够提供较为完善的标签解决方案，为广大客户提供良好的服务。目前，铭庭印刷公司的国内外客户遍及行业：零售、工业、金融、电子、邮政、物流，如EPSON、HITACHI、PANASONIC、TOSHIBA、YAMAHA、YKK、比亚迪、科勒、徕卡等。</p>
+                                    
+                            </div>
+                    </div>
+                    
+					<div class="wu_news_right">
+                
+                	<div class="wu_news_recommend">
+                	<div class="wu_nrtop">今日热门</div>
+                    <div class="wu_recommend">
+                    	<h1 class="wu_recommendH2"><a href="新闻资讯-新闻详细页.html">日本兄弟工业将收购英国多米诺标识...</a></h1>
+                        <p class="wu_recommendP2">1个小时前</p>
+                    </div>
+                    <div class="wu_recommend">
+                    	<h1 class="wu_recommendH2"><a href="新闻资讯-新闻详细页.html">吴江求精惠购第二台炬业PRO300-6C</a></h1>
+                        <p class="wu_recommendP2">1个小时前</p>
+                    </div>
+                    <div class="wu_recommend">
+                    	<h1 class="wu_recommendH2"><a href="新闻资讯-新闻详细页.html">日本兄弟工业将收购英国多米诺标识...</a></h1>
+                        <p class="wu_recommendP2">1个小时前</p>
+                    </div>
+                    <div class="wu_recommend">
+                    	<h1 class="wu_recommendH2"><a href="新闻资讯-新闻详细页.html">吴江求精惠购第二台炬业PRO300-6C</a></h1>
+                        <p class="wu_recommendP2">1个小时前</p>
+                    </div>
+                    <div class="wu_recommend">
+                    	<h1 class="wu_recommendH2"><a href="#">日本兄弟工业将收购英国多米诺标识...</a></h1>
+                        <p class="wu_recommendP2">1个小时前</p>
+                    </div>
+                    <div class="wu_recommend">
+                    	<h1 class="wu_recommendH2"><a href="#">吴江求精惠购第二台炬业PRO300-6C</a></h1>
+                        <p class="wu_recommendP2">1个小时前</p>
+                    </div>
+                	</div>
+                    
+                	<div class="wu_news_recommend">
+                	<div class="wu_nrtop">最新推荐</div>
+                    <div class="wu_recommend">
+                    	<h1 class="wu_recommendH2"><a href="#">日本兄弟工业将收购英国多米诺标识...</a></h1>
+                        <p class="wu_recommendP2">1个小时前</p>
+                    </div>
+                    <div class="wu_recommend">
+                    	<h1 class="wu_recommendH2"><a href="#">吴江求精惠购第二台炬业PRO300-6C</a></h1>
+                        <p class="wu_recommendP2">1个小时前</p>
+                    </div>
+                    <div class="wu_recommend">
+                    	<h1 class="wu_recommendH2"><a href="#">日本兄弟工业将收购英国多米诺标识...</a></h1>
+                        <p class="wu_recommendP2">1个小时前</p>
+                    </div>
+                    <div class="wu_recommend">
+                    	<h1 class="wu_recommendH2"><a href="#">吴江求精惠购第二台炬业PRO300-6C</a></h1>
+                        <p class="wu_recommendP2">1个小时前</p>
+                    </div>
+                    <div class="wu_recommend">
+                    	<h1 class="wu_recommendH2"><a href="#">日本兄弟工业将收购英国多米诺标识...</a></h1>
+                        <p class="wu_recommendP2">1个小时前</p>
+                    </div>
+                    <div class="wu_recommend">
+                    	<h1 class="wu_recommendH2"><a href="#">吴江求精惠购第二台炬业PRO300-6C</a></h1>
+                        <p class="wu_recommendP2">1个小时前</p>
+                    </div>
+                	</div>
+                    
+                </div> 
+                    
+            </div>
+        </div>
+        
+		<footer>
+			<div class=" footer clearfix">
+				<div class="w1200">
+					<div class="footer_top">
+						<ul>
+							<li class="li_f1"><img src="img/logo.png"><h2>团标网公司介绍，在这里显示。团标团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，</h2></li>
+							<li class="li_f2">
+								<dl>
+									<dt>帮助中心</dt>
+									<dd><a href="">功能说明</a></dd>
+									<dd><a href="">疑问解答</a></dd>
+									<dd><a href="">在线咨询</a></dd>
+								</dl>
+							</li>
+							<li class="li_f3">
+								<div class="cheng"><i></i>诚信保障</div>
+								<div class="qi"><i></i>企业认证</div>
+								<div class="an"><i></i>安全交易</div>
+							</li>
+							<li class="li_f4">
+								<img src="img/wei.png">
+								<h2>微信公众号</h2>
+							</li>
+							<li class="li_f5">
+								<img src="img/phone.png">
+								<h2>4008-200-100</h2>
+								<span>周一至周日 8:00-23:00</span>
+							</li>
+						</ul>
+					</div>
+					<div class="footer_copy"> Copyright © 2004-2015  团标网 tuanlabel.com 版权所有</div>
+				</div>
+			</div>
+		</footer>
+        
+</body>
+</html>

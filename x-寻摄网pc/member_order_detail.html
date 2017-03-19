@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>会员中心 订单详情</title>
+<link rel="stylesheet" href="css/default.css" />
+<link rel="stylesheet" href="css/style_in.css" />
+<link rel="stylesheet" href="css/index_style.css" />
+<script type="text/javascript" src="js_in/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js_in/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js_in/page.js" ></script>
+<script type="text/javascript" src="js_in/L_slide.js" ></script>
+<script type="text/javascript" src="js_in/chosen.jquery.js" ></script>
+<!--竖直导航-->
+<script type="text/javascript">
+$(document).ready(function(){
+	/* 滑动/展开 */
+	$("ul.expmenu li > div.header").click(function(){
+												   
+		var arrow = $(this).find("span.arrow");
+	
+		if(arrow.hasClass("up")){
+			arrow.removeClass("up");
+			arrow.addClass("down");
+		}else if(arrow.hasClass("down")){
+			arrow.removeClass("down");
+			arrow.addClass("up");
+		}
+	
+		$(this).parent().find("ul.menu").slideToggle();
+		
+	});
+	
+});
+</script>	
+
+<script>
+    $(function(){
+		$(".select4").each(function(){
+			var s=$(this);
+			var z=parseInt(s.css("z-index"));
+			var dt=$(this).children("dt");
+			var dd=$(this).children("dd");
+			var _show=function(){dd.slideDown(200);dt.addClass("cur");s.css("z-index",z+1);};   //展开效果
+			var _hide=function(){dd.slideUp(200);dt.removeClass("cur");s.css("z-index",z);};    //关闭效果
+			dt.click(function(){dd.is(":hidden")?_show():_hide();});
+			dd.find("a").click(function(){dt.html($(this).html());_hide();});     //选择效果（如需要传值，可自定义参数，在此处返回对应的“value”值 ）
+			$("body").click(function(i){ !$(i.target).parents(".select4").first().is(s) ? _hide():"";});
+		})
+	})
+</script>
+
+<!--进度条-->
+<script type="text/javascript" src="js_in/jquery.tips.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+	var percent = $('.progress_bar').attr('title');
+	$(".progress_bar").animate({width:percent},1000);
+	$(".tip").tipsy({gravity:'s',fade:true});
+});
+</script>	
+	
+</head>
+<body>
+<!--top-S-->
+<div class="public-top-layout">
+	<div class="topbar wrapper">
+		<div class="user-entry">北京<a href="changeCity.html">[ 切换城市 ]</a></div>
+		<div class="quick-menu">
+           <dl class="dli">
+	           <dt>您好，欢迎来到寻摄网</dt>
+	       </dl>
+		   <dl style="width: 50px;">
+	           <dt><a href="login.html" class="">登录</a></dt>
+	       </dl>
+	       <dl class="xian"></dl>
+		   <dl style="width: 50px;"> 
+	           <dt class="zn"><a href="register.html">注册</a></dt>
+	       </dl>
+	       <dl class="xian"></dl>
+	       <dl class="">
+		        <dt><a href="Personal.html">我的寻摄</a><i></i></dt>
+		        <dd>
+		          <ul>
+		            <li><a href="#">待付款订单</a></li>
+		            <li><a href="#">待确认收货</a></li>
+		            <li><a href="#">待评价交易</a></li>
+		          </ul>
+		        </dd>
+	       </dl>
+	       <dl class="xian"></dl>
+	      <dl>
+	        <dt><a href="people.html">个人中心</a><i></i></dt>
+	        <dd>
+	          <ul>
+	            <li><a href="#">商品收藏</a></li>
+	            <li><a href="#">店铺收藏</a></li>
+	          </ul>
+	        </dd>
+	      </dl>
+	      <dl class="xian"></dl>
+	      <dl>
+	        <dt><a href="#">商家中心</a><i></i></dt>
+	        <dd>
+	          <ul>
+
+	          </ul>
+	        </dd>
+	      </dl>          
+	      <dl class="xian"></dl>
+	      <dl>
+	        <dt><a href="#">客户服务</a><i></i></dt>
+	        <dd>
+	          <ul>
+	            <li><a href="#">帮助中心</a></li>
+	            <li><a href="#">售后服务</a></li>
+	            <li><a href="#">客服中心</a></li>
+	          </ul>
+	        </dd>
+	      </dl>
+	      <dl class="xian"></dl>
+	      <dl>
+	        <dt><a href="#">网站导航</a><i></i></dt>
+	        <dd>
+	          <ul>
+	            <li><a href="#">网站地图</a></li>
+	          </ul>
+	        </dd>
+	      </dl>
+	    </div>
+	</div>
+</div>
+
+<script type="text/javascript">
+//动画显示边条内容区域
+$(function() {
+	$(".quick-menu dl").hover(function() {
+		$(this).addClass("hover");
+	},
+	function() {
+		$(this).removeClass("hover");
+	});
+
+    });
+</script>
+<!--top-E-->
+<!--logo-S-->
+<div class="header-wrap">
+    <div class="public-head-layout wrapper">
+    <h1 class="site-logo"><a href="#"><img src="img/logo.png" class="pngFix"></a></h1>
+        <div id="search" class="head-search-bar">
+	<!--搜索-->
+      <form class="search-form" method="get" action="search.html">
+         <select class="input-select">
+         	<option value="option1">选项一...</option>
+         	<option value="option2">选项二.....</option>
+         	<option value="option3">选项三........</option>
+         </select>
+         <input placeholder="输入风格或场景进行搜索" name="keyword" id="keyword" type="text" class="input-text" value="" maxlength="60" x-webkit-speech="" lang="zh-CN" onwebkitspeechchange="foo()" x-webkit-grammar="builtin:search">
+         <input type="submit" value="搜 索" class="input-submit"/>
+      </form>
+    </div>
+     <!--购物车-->  
+    <div class="head-user-menu">
+      <dl class="my-mall">
+        <dt><img src="temp/pic1.png" />Top photography team gathered</dt>
+      </dl>
+      <dl class="my-cart">
+          <dt><span class="ico"></span>购物车结算<i class="arrow"></i></dt>
+	      <dd>
+	          <div class="sub-title">
+	             <h4>最近加入的宝贝：</h4>
+	          </div>
+	          <div class="incart-goods-box">
+         		<span><a href="#"><img src="temp/sear_pic2.jpg"/></a></span>
+         		<span><a href="#">Rose Garden 玫瑰花园</a></span>
+         		<span class="shangchu">
+         			¥<b>2999</b><br />
+         			<a href="#">删除</a>
+         		</span>
+	          </div>
+	          <div class="checkout"> 
+	          	<div class="total-price">购物车里还有2件宝贝</div>
+	          	<a href="#" class="btn-cart">查看我的购物车</a> 
+	          </div>
+	      </dd>
+      </dl>
+    </div>
+  
+  </div>
+</div>
+<!--logo-E-->
+<script type="text/javascript">
+$(function(){
+    //购物车
+	$(".head-user-menu dl").hover(function() {
+		$(this).addClass("hover");
+	},
+	function() {
+		$(this).removeClass("hover");
+	});
+	$('.head-user-menu .my-cart').mouseover(function(){// 运行加载购物车
+		$(this).unbind('mouseover');
+	});
+    });
+</script>
+<!--nav-->
+<div class="navBox">
+	<div class="navWrap clearfix">
+		<div class="nav wrapper">
+			<ul>
+				<li class="nav-item"><a href="index.html">首页</a></li>
+				<li class="nav-item cur"><a href="people.html">个人中心</a></li>
+				<li class="nav-item"><a href="sure.html">商家中心</a></li>
+				<li class="nav-item"><a href="#">账户管理</a></li>
+				<li class="nav-item"><a href="#">消息</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<div class="middle">
+	<!--竖直导航-->
+<div class="sidebar">
+	<div class="sideleft cleafix">
+	<ul class="expmenu">
+			<li>
+				<div class="header">
+					<span class="label">交易管理</span>
+					<span class="arrow up"></span>
+				</div>
+				<ul class="menu" style="display:block;">
+					<li><a href="merchants.html">全部交易</a></li>
+					<li><a href="#">已完成交易</a></li>
+					<li><a href="#">已结束交易</a></li>
+					<li><a href="#">评价管理</a></li>
+				</ul>
+			</li>
+            <li>
+				<div class="header">
+					<span class="label">我的收藏</span>
+					<span class="arrow down"></span>
+				</div>
+				<ul class="menu">
+					<li><a href="#">我的收藏</a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="header">
+					<span class="label">投诉管理</span>
+					<span class="arrow down"></span>
+				</div>
+				<ul class="menu">
+					<li><a href="#">投诉管理</a></li>
+				</ul>
+			</li>
+	</ul>
+</div>
+</div>
+<!--商家中心-认证-->
+<div class="sureWrap collection clearfix order_detail" style="height: auto;">
+	<div class="order_detail_l">
+        <div class="odeatail_s">当前订单状态： 交易成功 <span> 交易成功，请给商家评价。</span></div>
+        <a href="">评价</a>
+    </div>
+    <div class="useR collection_h collect_m">
+             <div class="orderBox">
+                <div id="tab20" class="collection_h">
+                    <ul class="tab_menu20 collection_h ">
+                        <li  class="selected20" style="margin-left:30px;">订单信息</li>
+                    </ul>
+                    <div class="tab_box20 collection_h clearfix order_detail_m">
+                        <div class="collect_l order_detail_r ">
+							<dl>
+                            	<dt>商家信息</dt>
+                                <dd>昵称： 懒人摄影合肥旗舰店</dd>
+                                <dd>真实姓名： 快谢谢</dd>
+                                <dd>真实姓名： 快谢谢</dd>
+                                <dd>联系电话：15250145151	</dd>
+                                <dd>邮件：h*** </dd>
+                            </dl>
+                        </div>	
+                        <div class="collect_l order_detail_r ">
+							<dl class="clearfix">
+                            	<dt>订单信息</dt>
+                                <div class="ddo">订单编号：1172921813966987</div>
+                                <dd>真实姓名： 快谢谢</dd>
+                                <dd>真实姓名： 快谢谢</dd>
+                                <dd>联系电话：15250145151	</dd>
+                            </dl>
+                            <table width="100%" border="" cellspacing="0" cellpadding="0" class="table1">
+                              <tbody>
+                                <tr>
+                                  <th scope="col">宝贝</th>
+                                  <th scope="col">状态</th>
+                                  <th scope="col">单价（元）</th>
+                                  <th scope="col">数量</th>
+                                  <th scope="col">商家优惠</th>
+                                  <th scope="col">优惠券</th>
+                                  <th scope="col">商品总价（元）</th>
+                                </tr>
+                                <tr>
+                                  <td><img src="img/detail_img.jpg"><p>懒人摄影合肥旗舰店</br> 唯美个性意境沙漠个人</br>写真场景自选 两人</p></td>
+                                  <td>已确认收货</td>
+                                  <td>40000.00</td>
+                                  <td>1</td>
+                                  <td>100.00</td>
+                                  <td>50.00</td>
+                                  <td>3589.00</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div class="order_detail_q">实付款：<span>49.68元</span></div>
+
+                        </div>	
+                        <div class="collect_l order_detail_r order_detail_t">
+							<dl>
+                            	<dt>物流信息</dt>
+                                <dd>收货地址：安徽省合肥市蜀山区</dd>
+                                <dd>某某：坎坎坷坷</dd>
+                                <dd>运输方式： 快谢谢</dd>
+                                <dd>自动充值</dd>
+                                <dd>客户留言：h*** </dd>
+                            </dl>
+                        </div>		    	
+                    </div>
+                    
+                 </div>
+             </div>
+        </div>	
+</div>
+
+</div>
+
+
+<!--footer-->
+<div class="footer cleafix">
+	<div class="foot w1200 cleafix">
+		<div class="foot_ul">
+			<ul>
+				<li>
+					<div class="foot_t">
+						<div class="foot_tfl fl">
+							<img src="img/ico4.png" />
+						</div>
+						<div class="foot_tfr fl">
+							<h2>消费保障</h2>
+							<h3>消费护航，拍摄无忧</h3>
+						</div>
+					</div>
+					<div class="foot_b">
+						<p>保障范围    退货退款流程    服务中心    <br />
+							更多特色服务</p>
+					</div>
+				</li>
+				<li>
+					<div class="foot_t">
+						<div class="foot_tfl fl">
+							<img src="img/ico5.png" />
+						</div>
+						<div class="foot_tfr fl">
+							<h2>付款方式</h2>
+							<h3>轻松快捷，安全稳定</h3>
+						</div>
+					</div>
+					<div class="foot_b">
+						<p>支付宝快捷支付    支付宝卡（现金）付款    <br />
+							支付宝余额付款    货到付款 </p>
+					</div>
+				</li>
+				<li>
+					<div class="foot_t">
+						<div class="foot_tfl fl">
+							<img src="img/ico6.png" />
+						</div>
+						<div class="foot_tfr fl">
+							<h2>新手上路</h2>
+							<h3>您的快捷购物指南</h3>
+						</div>
+					</div>
+					<div class="foot_b">
+						<p>新手专区    消费警示    交易安全    免费开店<br />
+							24小时在线帮助</p>
+					</div>
+				</li>
+				<li style="border-right: none ;">
+					<div class="foot_t">
+						<div class="foot_tfl fl">
+							<img src="img/ico7.png" />
+						</div>
+						<div class="foot_tfr fl">
+							<h2>特色服务</h2>
+							<h3>为您呈现不一样的服务</h3>
+						</div>
+					</div>
+					<div class="foot_b">
+						<p>团购预约    限时特惠    寻摄劵</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="foot_about">  
+			<a href="#">关于天猫</a><b>|</b>
+			<a href="#">帮助中心</a><b>|</b>
+			<a href="#">诚聘英才</a><b>|</b>
+			<a href="#">联系我们</a><b>|</b>
+			<a href="#">网站合作</a><b>|</b>
+			<a href="#">法律声明</a>
+		</div>
+		<div class="foot_add">
+			<div class="foot_top">
+				<p>Copyright © 2005-2020 xunshe.com.cn，All Rights Reserved 浙ICP备11111111号 许可证：浙A1-20150510  使用本网站即表示接受 寻摄网用户协议。<br /> 
+					版权所有 浙江寻摄信息科技有限公司</p>
+			</div>
+			
+		</div>
+	</div>
+</div>
+

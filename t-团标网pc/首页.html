@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>首页</title>
+		<link rel="stylesheet" href="css/default.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link href="css/flickerplate.css"  type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="css/validationEngine.jquery.css"><!--表单验证css-->
+		<script type="text/javascript" src="js/jquery-1.8.0.min.js" ></script>
+		<script type="text/javascript" src="js/app.js" ></script>
+
+        <script src="js/jquery.validationEngine.js"></script><!--表单验证-->
+        <script src="js/jquery.validationEngine-zh-CN.js"></script><!--表单验证cn-->
+        <script type="text/javascript" src="js/lrtk.js"></script><!--主题js-->
+		<script src="js/jquery-finger-v0.1.0.min.js" type="text/javascript"></script>
+		<script>
+			$(function(){
+				$('.flicker-example').flicker();
+			})
+		</script>
+        <script type="text/javascript" src="js/jquery.reveal.js"></script><!--弹出层-->        
+	</head>
+	<body>	
+		<header>
+			<div class="top">
+				<div class="w1200 overflow">
+					<div class="top_left"><span>Hi,欢迎来到团标网</span><a href="登录.html">请登录</a><a href="注册-个人用户.html">免费注册</a></div>
+					<div class="top_right"><a href="个人中心首页.html">我的团标网</a><b>|</b><a href="商品详情页-购物车.html">购物车</a><b>|</b><a href="帮助中心-服务中心.html">帮助中心</a></div>
+				</div>
+			</div>
+			<div class="w1200 overflow top_s">
+				<div class="logo"><img src="img/logo.png"></div>
+				<div class="search">
+					<form action="首页-搜索.html">
+						<input type="search" placeholder="请输入产品/公司进行搜索"/><button type="button">搜索</button>
+					</form>
+				</div>
+				<div class="recomend"><a href="javascript:void(0);" data-reveal-id="myModal">发布需求</a></div>
+				<!--弹出层start-->
+				<div id="myModal" class="reveal-modal xuqg-modal">
+					<h1>发布需求</h1>
+				    <form id="formID2" action="" method="post">
+					    <div class="input-group">
+	      					<label class="control-label">公司名称：</label>
+					        <input type="text" class="form-control  validate[required]">
+					    </div>
+					    <div class="input-group">
+	      					<label class="control-label">联系电话：</label>
+					        <input type="text" id="uphone" class="form-control validate[required,custom[phone]]">
+					    </div>
+					    <div class="input-group">
+	      					<label class="control-label">联系人：</label>
+					        <input type="text" class="form-control validate[required]">
+					    </div>
+					    <div class="input-group">
+	      					<label class="control-label">需求选项：</label>
+				        	<select class="form-control validate[required]" style="width: 62%;">
+								<option>原材料</option>
+							</select>
+					        	
+					    </div>
+					   <div class="input-group">
+	      					<label class="control-label">需求数量：</label>
+					        <input type="text" class="form-control validate[required]">
+					    </div>
+					    <div class="input-group">
+	      					<label class="control-label">需求内容：</label>
+					        <textarea class="form-control validate[required]" style="height: 78px;"></textarea>
+					    </div>
+					    <div class="input-group">
+					    	<label class="control-label">&nbsp;</label>
+					        <button type="submit" class="bnt-input">保存</button>
+					    </div>
+	      			</form>
+					<a class="close-reveal-modal">&#215;</a>
+				</div>
+				<!--弹出层end-->
+			</div>
+			<div class="nav clearfix">
+				<div class="nav_b w1200">
+					<div class="btnmenu" >
+						<h2><a href="javascript:;">所有商品分类</a></h2>
+						<div class="sidemenu">
+							<ul id="sidemenu">
+								<li id="mainCate-1" class="mainCate">
+									<h3><a href="javascript:;"><span>原材料<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>								
+										</ul>
+									</div>
+								</li>
+								<li id="mainCate-2" class="mainCate">
+									<h3><a href="javascript:;"><span>印刷设备<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>						
+			                             </ul>
+			                        </div>
+								</li>
+								<li id="mainCate-3" class="mainCate">
+									<h3><a href="javascript:;"><span>印刷耗材<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>						
+			                              </ul>
+			                          </div>
+								  </li>
+								  <li id="mainCate-3" class="mainCate">
+									<h3><a href="javascript:;"><span>辅助器材<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>						
+			                              </ul>
+			                          </div>
+								  </li>
+								  <li id="mainCate-3" class="mainCate">
+									<h3><a href="javascript:;"><span>其他<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>						
+			                              </ul>
+			                          </div>
+								  </li>
+							</ul>
+			            </div>
+					</div>
+					<ul class="nav_u">
+						<li><a href="首页.html">首页</a></li>
+						<li><a href="商城.html">商城</a></li>
+						<li><a href="帮助中心-服务中心.html">服务中心</a></li>
+						<li><a href="新闻资讯.html">新闻资讯</a></li>
+						<li><a href="知识库.html">知识库</a></li>
+						<li><a href="需求公告.html">需求公告</a></li>
+						<li><a href="白条支付.html">白条支付</a></li>
+					</ul>
+					<div class="login_f clearfix">
+						<div class="login_n">
+							<div class="login_m clearfix"><img src="img/login_head.png"><div class="login_h">Hi,<br>欢迎来到团标网</div></div>
+							<div class="login_a clearfix"><a href="登录.html" class="login_a1">登录</a><a href="注册-个人用户.html" class="login_a2">注册</a></div>
+							<!--<ul class="login_paxt">
+								<li><a href="#"><font>0</font>消息</a></li>
+								<li><a href="#"><font>0</font>待收货</a></li>
+								<li><a href="#"><font>0</font>待评</a></li>
+							</ul>-->
+						</div>
+						<div class="login_g">
+							<h2>网站公告</h2>
+							<div class="login_o">
+								<a href="需求公告.html">材料交易中心正交易中心式交易中心正交易中心正交易中心</a>
+								<a href="需求公告.html">全国首个绿色印交易中心刷材料交易中心正式上线</a>
+								<a href="需求公告.html">全国首个绿色印刷材料交易中心正式上线</a>
+								<a href="">全国首个绿色印刷材料交易中心正式上线</a>
+								<a href="">全国首个绿色印刷材料交易中心正式上线</a>
+								<a href="">全国首个绿色印刷材料交易中心正式上线</a>
+							</div>
+							<div class="login_u"><a href="">更多></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flicker-example" data-block-text="false">
+			  	<ul>
+			      	<li data-background="img/banner.jpg"></li>
+			      	<li data-background="img/banner.jpg"></li>
+			      	<li data-background="img/banner.jpg"></li>
+			    </ul>
+			</div>
+		</header>
+		<section>
+			<div class="content w1200">
+				<div class="content_top"><i></i>原材料</div>
+				<div class="content_middle">
+					<div class="content_con clearfix">
+						<div class="con_left">
+							<h2>热门商品</h2>
+							<ul>
+								<li>
+									<div class="co_l"><a href=""><img src="img/class_01.jpg"></a></div>
+									<div class="co_r">
+										<a href="商品详情页.html">可移性铜版纸(双层)</a>
+										<span>商家：<a href="#">德国古帕</a></span>
+									</div>
+								</li>
+								<li>
+									<div class="co_l"><a href=""><img src="img/class_02.jpg"></a></div>
+									<div class="co_r">
+										<a href="商品详情页.html">移性铜移性铜移性铜(双层)</a>
+										<span>商家：德国古帕</span>
+									</div>
+								</li>
+								<li>
+									<div class="co_l"><a href=""><img src="img/class_03.jpg"></a></div>
+									<div class="co_r">
+										<a href="商品详情页.html">可移性铜版纸(双层)</a>
+										<span>商家：德国古帕</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="con_mid">
+							<div class="con_xin">最新原材料</div>
+							<table cellpadding="0" width="100%" border="0">
+								<thead>
+									<tr>
+										<th>型号</th>
+										<th>名称</th>
+										<th>商家</th>
+										<th>应用</th>
+										<th>价格（平米）</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td><a href="#">德国造纸</a></td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td>￥10.00</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="con_right">
+							<h2>订单动态</h2>
+							<div class="con_co">
+								<div class="con_c"><span>李***</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b class="b1">交易成功</b><i>11:00</i></div>
+								<div class="con_c"><span>李***</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b>正在洽谈</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b class="b1">交易成功</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b>正在洽谈</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b class="b1">交易成功</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b>正在洽谈</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b class="b1">交易成功</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b>正在洽谈</b><i>11:00</i></div>
+							</div>
+						</div>
+					</div>
+				    <div class="content_pin clearfix">
+				    	<div class="pin_l"><img src="img/pin.jpg"></div>
+				    	<div class="pin_r">
+				    		<ul>
+				    			<li><a href=""><img src="img/pin_04.jpg"></a></li>
+				    			<li><a href=""><img src="img/pin_02.jpg"></a></li>
+				    			<li><a href=""><img src="img/pin_03.jpg"></a></li>
+				    			<li><a href=""><img src="img/pin_04.jpg"></a></li>
+				    			<li><a href=""><img src="img/pin_04.jpg"></a></li>
+				    		</ul>
+				    	</div>
+				    </div>
+				</div>
+				<div class="content_img"><img src="img/guang.jpg"></div>
+			</div>
+			<div class="content w1200">
+				<div class="content_top content_top1"><i></i>印刷设备</div>
+				<div class="content_middle">
+					<div class="content_con clearfix">
+						<div class="con_left">
+							<h2>热门商品</h2>
+							<ul>
+								<li>
+									<div class="co_l"><a href=""><img src="img/class_01.jpg"></a></div>
+									<div class="co_r">
+										<a href="商品详情页.html">可移性铜版纸(双层)</a>
+										<span>商家：德国古帕</span>
+									</div>
+								</li>
+								<li>
+									<div class="co_l"><a href=""><img src="img/class_02.jpg"></a></div>
+									<div class="co_r">
+										<a href="商品详情页.html">移性铜移性铜移性铜(双层)</a>
+										<span>商家：德国古帕</span>
+									</div>
+								</li>
+								<li>
+									<div class="co_l"><a href=""><img src="img/class_03.jpg"></a></div>
+									<div class="co_r">
+										<a href="商品详情页.html">可移性铜版纸(双层)</a>
+										<span>商家：德国古帕</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="con_mid">
+							<div class="con_xin">最新原材料</div>
+							<table cellpadding="0" width="100%" border="0">
+								<thead>
+									<tr>
+										<th>型号</th>
+										<th>名称</th>
+										<th>商家</th>
+										<th>应用</th>
+										<th>价格（平米）</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td>￥10.00</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="con_right">
+							<h2>订单动态</h2>
+							<div class="con_co">
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b class="b1">交易成功</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b>正在洽谈</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b class="b1">交易成功</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b>正在洽谈</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b class="b1">交易成功</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b>正在洽谈</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b class="b1">交易成功</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b>正在洽谈</b><i>11:00</i></div>
+							</div>
+						</div>
+					</div>
+				    <div class="content_pin clearfix">
+				    	<div class="pin_l"><img src="img/pin.jpg"></div>
+				    	<div class="pin_r">
+				    		<ul>
+				    			<li><a href=""><img src="img/pin_04.jpg"></a></li>
+				    			<li><a href=""><img src="img/pin_02.jpg"></a></li>
+				    			<li><a href=""><img src="img/pin_03.jpg"></a></li>
+				    			<li><a href=""><img src="img/pin_04.jpg"></a></li>
+				    			<li><a href=""><img src="img/pin_04.jpg"></a></li>
+				    		</ul>
+				    	</div>
+				    </div>
+				</div>
+				<div class="content_img"><img src="img/guang.jpg"></div>
+			</div>
+			<div class="content w1200">
+				<div class="content_top content_top2"><i></i>印刷耗材</div>
+				<div class="content_middle">
+					<div class="content_con clearfix">
+						<div class="con_left">
+							<h2>热门商品</h2>
+							<ul>
+								<li>
+									<div class="co_l"><a href=""><img src="img/class_01.jpg"></a></div>
+									<div class="co_r">
+										<a href="">可移性铜版纸(双层)</a>
+										<span>商家：德国古帕</span>
+									</div>
+								</li>
+								<li>
+									<div class="co_l"><a href=""><img src="img/class_02.jpg"></a></div>
+									<div class="co_r">
+										<a href="">移性铜移性铜移性铜(双层)</a>
+										<span>商家：德国古帕</span>
+									</div>
+								</li>
+								<li>
+									<div class="co_l"><a href=""><img src="img/class_03.jpg"></a></div>
+									<div class="co_r">
+										<a href="">可移性铜版纸(双层)</a>
+										<span>商家：德国古帕</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="con_mid">
+							<div class="con_xin">最新原材料</div>
+							<table cellpadding="0" width="100%" border="0">
+								<thead>
+									<tr>
+										<th>型号</th>
+										<th>名称</th>
+										<th>商家</th>
+										<th>应用</th>
+										<th>价格（平米）</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td><b>￥10.00</b></td>
+									</tr>
+									<tr>
+										<td>AL-A(016)(FZ)</td>
+										<td><a href="">铜版纸A(016)(FZ)</a></td>
+										<td>德国造纸</td>
+										<td>标签</td>
+										<td>￥10.00</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="con_right">
+							<h2>订单动态</h2>
+							<div class="con_co">
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b class="b1">交易成功</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b>正在洽谈</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b class="b1">交易成功</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b>正在洽谈</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b class="b1">交易成功</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b>正在洽谈</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b class="b1">交易成功</b><i>11:00</i></div>
+								<div class="con_c"><span>李李某某某某</span><a href="">铜版纸300g铜版纸300gdddddddddd</a><b>正在洽谈</b><i>11:00</i></div>
+							</div>
+						</div>
+					</div>
+				    <div class="content_pin clearfix">
+				    	<div class="pin_l"><img src="img/pin.jpg"></div>
+				    	<div class="pin_r">
+				    		<ul>
+				    			<li><a href=""><img src="img/pin_04.jpg"></a></li>
+				    			<li><a href=""><img src="img/pin_02.jpg"></a></li>
+				    			<li><a href=""><img src="img/pin_03.jpg"></a></li>
+				    			<li><a href=""><img src="img/pin_04.jpg"></a></li>
+				    			<li><a href=""><img src="img/pin_04.jpg"></a></li>
+				    		</ul>
+				    	</div>
+				    </div>
+				</div>
+				<div class="content_img"><img src="img/guang.jpg"></div>
+			</div>
+			<div class="con_cop w1200">
+				<h2>合作单位</h2>
+				<div class="cop_b">
+					<ul>
+						<li><a href=""><img src="img/icon_01.png"></a></li>
+						<li><a href=""><img src="img/icon_02.png"></a></li>
+						<li><a href=""><img src="img/icon_03.png"></a></li>
+						<li><a href=""><img src="img/icon_04.png"></a></li>
+						<li><a href=""><img src="img/icon_05.png"></a></li>
+						<li><a href=""><img src="img/icon_06.png"></a></li>
+						<li><a href=""><img src="img/icon_07.png"></a></li>
+						<li><a href=""><img src="img/icon_08.png"></a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class=" footer clearfix">
+				<div class="w1200">
+					<div class="footer_top">
+						<ul>
+							<li class="li_f1"><img src="img/logo.png"><h2>团标网公司介绍，在这里显示。团标团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，</h2></li>
+							<li class="li_f2">
+								<dl>
+									<dt>帮助中心</dt>
+									<dd><a href="">功能说明</a></dd>
+									<dd><a href="">疑问解答</a></dd>
+									<dd><a href="">在线咨询</a></dd>
+								</dl>
+							</li>
+							<li class="li_f3">
+								<div class="cheng"><i></i>诚信保障</div>
+								<div class="qi"><i></i>企业认证</div>
+								<div class="an"><i></i>安全交易</div>
+							</li>
+							<li class="li_f4">
+								<img src="img/wei.png">
+								<h2>微信公众号</h2>
+							</li>
+							<li class="li_f5">
+								<img src="img/phone.png">
+								<h2>4008-200-100</h2>
+								<span>周一至周日 8:00-23:00</span>
+							</li>
+						</ul>
+					</div>
+					<div class="footer_copy"> Copyright © 2004-2015  团标网 tuanlabel.com 版权所有</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

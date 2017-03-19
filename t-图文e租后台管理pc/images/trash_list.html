@@ -1,0 +1,182 @@
+﻿
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding:0;
+	border:0;
+}
+-->
+</style>
+<script type="text/javascript" src="<{$res.css}>js/jquery-1.7.js"></script>
+<script language=JavaScript src="<{$res.css}>js/Function.js"></script>
+<link href="<{$res.css}>images/skin.css" rel="stylesheet" type="text/css" />
+<link href="<{$res.css}>style/kei.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="<{$res.css}>fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="<{$res.css}>fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="<{$res.css}>fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+
+
+<body><div class="page-body">
+  
+  <{include file='top.html'}>
+  
+<div class="page-container">
+  
+  <{include file='left.html'}>
+  
+<div class="main-content">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="7" height="71" valign="middle"></td>
+    <td valign="top">
+      
+      
+      <table width="100%" height="138" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="13" valign="top">&nbsp;</td>
+          </tr>
+        <tr>
+          <td valign="top">        
+            
+            <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td style="font-size:14px; color:#999">当前位置：<{$here}></td>
+                </tr>
+              <tr>
+                <td height="20"><table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+                  <tr>
+                    <td></td>
+                    </tr>
+                  </table></td>
+                </tr>
+              <tr>
+                <td><table width="100%" height="40" border="0" cellpadding="0" cellspacing="0" class="nowtable">
+                  <tr>
+                    <td class="left_bt2" ><span><form action=""  method="get">
+                    <input type="hidden" name="app" value="goods"/>
+                    <input type="hidden" name="act" value="trash">
+                      <select name="PID"><option value="">所有分类</option>
+                      <{foreach from=$cat_list item=c}>
+                      <option value="<{$c.cat_id}>"><{$c.cat_name}></option>
+                      <{/foreach}> 
+                      </select>
+                      <select name="TypeID"><option   value="">所有类型</option>
+                       <option value="1">整机</option>
+                       <option value="2">选配件</option>
+                       <option value="3">零件</option>
+                       <option value="4">耗材</option>
+                       <option value="5">纸张</option>
+                       <option value="6">其他</option>
+                      </select>
+                      <select name="BrandID"><option  value="">所有品牌</option>
+                      <{if $brands}>
+                       <{foreach from=$brands item=b}>
+                      
+                      <option value="<{$b.brand_id}>"><{$b.brand_name}></option>
+                      <{/foreach}> 
+                      <{/if}>
+                      </select>
+                      <select name="CanSaleID"><option value="">所有商品</option>
+                    <option value="1">立刻上架</option>
+                       <option value="2">定时上架</option>
+                       <option value="3">不上架</option>
+                      </select>
+                      <select name="is_promote"><option  value="">所有商品</option>
+                      <option value="1">促销商品</option>
+                       <option value="0">普通商品</option>
+                      
+
+                      </select>
+                      <select name="IfComb"><option  value="">全部商品</option>
+                      
+                       <option value="1">组合商品</option>
+                      </select>
+                      关键字<input name="goods_name" type="text" value=""><input  value="搜索" type="submit">
+
+
+                    </form></span></td>
+                    </tr>
+                  </table></td>
+                </tr>
+              <tr></tr>
+                <tr></tr>
+              <tr>
+                <td><table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#E1E5EE" style="font-size:14px; font-weight:bold">
+                  <tr align="center" bgcolor="#21A3DD">
+                    <td width="" height="40" bgcolor="#EFF1F5"> ID编号</td>
+                    <td width="" bgcolor="#EFF1F5">商品名称</td>
+                    <td width="" bgcolor="#EFF1F5">商品编号</td>
+                    <td width="" bgcolor="#EFF1F5">厂家编号</td>
+                    <td width="" bgcolor="#EFF1F5">上架</td>
+                    
+                    <td width="" bgcolor="#EFF1F5">类型</td>
+                    <td width="" bgcolor="#EFF1F5">促销类型</td>
+                    <td width="" bgcolor="#EFF1F5">上架时间</td>
+                    <td width="" bgcolor="#EFF1F5">排序
+                    </td>
+                    <td width="" bgcolor="#EFF1F5">管理</td>
+                  </tr>
+                  <tfoot id="admin_system_table" style="font-weight:normal; color:#666">
+                  <form action="?app=goods&act=del_trash_goods" id="myform" name="myform" method="post">
+                  <{foreach from=$pagedata->res_array item=pd}>
+                  <tr align="center" bgcolor="#FFFFFF">
+                    <td height="40"><input value="<{$pd.ID}>" type="checkbox" id='id' name="id[]"><{$pd.ID}></td>
+                    <td><{$pd.Name}></td>
+                    <td><{$pd.No}></td>
+                    <td><{$pd.FactoryNo}></td>
+           
+                    <td><{if $pd.CanSaleID==1}>立刻上架<{elseif $pd.CanSaleID==2}>定时上架
+                    <{elseif $pd.CanSaleID==3}>不上架<{/if}></td>
+                 
+                   <td><{if $pd.TypeID==1}>整机<{elseif $pd.TypeID==2}>选配件<{elseif $pd.TypeID==3}>零件<{elseif $pd.TypeID==4}>耗材<{elseif $pd.TypeID==5}> 纸张<{elseif $pd.TypeID==6}>其他<{/if}></td>
+                    <td><{if $pd.is_promote==0}>未参加促销<{elseif $pd.is_promote==1}>促销商品<{/if}></td>
+                    
+                    
+                    <td><{$pd.SaleStartTime|date_format:"%Y-%m-%d %H:%M:%S"}></td>
+                     <td><{$pd.Sort}></td>
+
+                    
+                    <td><a href="javascript:;" onclick="del_data('?app=goods&act=goback_goods',<{$pd.ID}>)" >还原</a></span>  </td>
+                  </tr>
+                  <{/foreach}>
+                  <form>
+                  <tr height="40" align="left" bgcolor="#EFF1F5" >
+                         <td  colspan="11" class="td_l"><input type="button"  id="allChecked" onClick="selectAllDels('allChecked','id[]')" value="全选">
+
+                    <input type="button" name="selectedInverse" onClick="Reverse(this,'id');" id="un_select_all" value="反选">   <input type="button" value="删除" onclick="submitform('myform','删除')"> </td>
+                   
+                    
+
+                    
+                   
+
+                     </tr>
+                  </tfoot>
+                </table></td>
+              </tr>
+              </table></td>
+          </tr>
+        </table>
+      
+      </td>
+    <td width="16">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="middle">&nbsp;</td>
+      <td height="17" valign="top">&nbsp;</td>
+    <td></td>
+  </tr>
+</table>
+<{include file='page.html'}>
+</div>
+
+</div>
+</div>
+</body>

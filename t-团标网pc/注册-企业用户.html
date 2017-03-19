@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>注册-企业用户</title>
+		<link rel="stylesheet" href="css/default.css" />
+		<link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/validationEngine.jquery.css"><!--表单验证css-->
+        <script src="js/jquery-1.8.0.min.js"></script>
+        <script src="js/jquery.validationEngine.js"></script><!--表单验证-->
+        <script src="js/jquery.validationEngine-zh-CN.js"></script><!--表单验证cn-->
+        <script type="text/javascript" src="js/lrtk.js"></script>
+	</head>
+	<body style="background: #f5f5f5;">	
+		<header>
+			<div class="w1200 overflow top_s">
+				<div class="logo"><img src="img/logo.png"></div>
+				<div class="king-hader-txt">欢迎注册</div>
+			</div>
+		</header>
+		<section>
+			<div class="w1200">
+				<div class="zhucnei">
+					<ul style="padding-left: 19%;">
+						<li><a href="注册-个人用户.html">个人用户</a></li>
+						<li class="hover"><a href="注册-企业用户.html">企业用户</a></li>
+						<span>已有账号，现在 <a href="登录.html">登录</a></span>
+					</ul>
+					<div class="zhuc-quenr">
+						<form id="formID" action="登录.html" method="post">
+			      			<div class="individual-Safety">
+							    <div class="input-group">
+			      					<label class="control-label"><font>*</font> 公司名称：</label>
+							        <input type="text" placeholder="公司名称需跟营业执照一致" class="form-control validate[required,minSize[2],ajax[ajaxUserCallPhp]]" >
+							    </div>
+                                <div class="input-group">
+			      					<label class="control-label"><font>*</font> 手机号：</label>
+							        <input type="text" id="uphone" placeholder="请输入手机号码" class="form-control validate[required,custom[phone]]"/>
+							    </div>
+							    <div class="input-group">
+			      					<label class="control-label"><font>*</font> 短信验证码：</label>
+							        <input type="text" class="form-control validate[required,minSize[4]]" style="width: 17%;">
+							        <input name="phonecodesub" type="button" class="form-control" id="phonecodesub" value="获取短信验证码">
+							    </div>
+							    <div class="input-group">
+			      					<label class="control-label"><font>*</font> 设置密码：</label>
+							        <input type="password" name="" id="Pwd" class="form-control validate[required,minSize[6]]">
+							    </div>
+							    <div class="input-group"style="margin-bottom: 18px;">
+			      					<label class="control-label"><font>*</font> 确认密码：</label>
+							        <input type="password" name="" class="form-control validate[required,minSize[6],equals[Pwd]]">
+							    </div>
+							    <div class="input-group"style="margin-bottom: 18px;">
+							    	<label class="control-label">&nbsp;</label>
+							    	<label class="radio-label"><input type="checkbox" name="usex">我已阅读并同意<a href="#">《团标网用户注册协议》</a></label>
+							  	</div>
+							    <div class="input-group"style="margin-bottom: 18px;">
+							    	<label class="control-label">&nbsp;</label>
+							        <button type="submit" class="bnt-input">保存</button>
+							    </div>
+						    	<p style="text-align: center; color: #999;">
+						    		注册：上传了企业营业执照，才可成为“标准”会员，标准会员可以下单交易
+						    	</p>
+							</div>   
+			      			</form>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class=" footer clearfix">
+				<div class="w1200">
+					<div class="footer_top">
+						<ul>
+							<li class="li_f1"><img src="img/logo.png"><h2>团标网公司介绍，在这里显示。团标团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，</h2></li>
+							<li class="li_f2">
+								<dl>
+									<dt>帮助中心</dt>
+									<dd><a href="">功能说明</a></dd>
+									<dd><a href="">疑问解答</a></dd>
+									<dd><a href="">在线咨询</a></dd>
+								</dl>
+							</li>
+							<li class="li_f3">
+								<div class="cheng"><i></i>诚信保障</div>
+								<div class="qi"><i></i>企业认证</div>
+								<div class="an"><i></i>安全交易</div>
+							</li>
+							<li class="li_f4">
+								<img src="img/wei.png">
+								<h2>微信公众号</h2>
+							</li>
+							<li class="li_f5">
+								<img src="img/phone.png">
+								<h2>4008-200-100</h2>
+								<span>周一至周日 8:00-23:00</span>
+							</li>
+						</ul>
+					</div>
+					<div class="footer_copy"> Copyright © 2004-2015  团标网 tuanlabel.com 版权所有</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

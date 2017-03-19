@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>注册</title>
+		<link rel="stylesheet" href="css/amazeui.min.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/function1.js" type="text/javascript"></script>
+        <script src="js/amazeui.min.js" type="text/javascript"></script>
+	</head>
+	<body style="background: #f3f3f3;">
+		<header data-am-widget="header" class="am-header ">
+			<div class="am-header-left am-header-nav">
+			    <a href="#left-link">
+			        <img class="am-header-icon-custom" src="img/left.png" alt=""/>
+			  	返回
+			    </a>
+			</div>
+			<h1 class="am-header-title ">注册</h1>
+        </header>
+        <div class="am-g " style="width:70%; margin-top:25%;">
+		  <div class="am-u-sm-centered">
+		    <form class="am-form">
+		      <fieldset class="am-form-set ">
+		        <input type="text" placeholder="请输入昵称" class="background-none text-align-center input-border-bottom color-black">
+                <div class="background-none text-align-center margin-top30 cursor ">
+                	<input type="text" class="kn-oselect background-none text-align-center input-border-bottom color-black cursor" placeholder="性别" onfocus="b.blur()"/>
+	                <ul class="kn-component padding-left0 display-none margin0">
+	                   <li title="#666" class=" text-align-center border-bottom display-block line-height22">男</li>
+	                   <li title="#eee" class=" text-align-center border-bottom display-block line-height22 " style="margin-top:-1px;">女</li>
+	                </ul>
+                </div>		       
+		      </fieldset>
+		      <div class="text-align-center margin-top30 color-grey">*昵称、性别注册后不可修改 </div>
+		      <button type="button" id="doc-confirm-toggle" class="am-btn  am-btn-block margin-top50 background-none input-border-black2 input-border-radius line-height22">登录</button>
+		    </form>
+		</div>	
+        <div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
+			  <div class="am-modal-dialog">
+			    <div class="am-modal-hd" align="left">您的昵称为：admin，性别：女，注册后将不能修改。</div>
+			    <div class="am-modal-bd"></div>
+			    <div class="am-modal-footer">
+			      <span class="am-modal-btn color-black" data-am-modal-cancel>取消</span>
+			      <span class="am-modal-btn color-blue" data-am-modal-confirm>确定</span>
+			    </div>
+			  </div>
+			</div>
+        </div>
+        <script type="text/javascript">
+        	$(function() {
+			  $('#doc-modal-list').find('.am-icon-close').add('#doc-confirm-toggle').
+			    on('click', function() {
+			      $('#my-confirm').modal({
+			        relatedTarget: this,
+			      });
+			    });
+			});
+        </script>
+	</body>
+</html>

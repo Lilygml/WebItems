@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>服务平台</title>
+		<link type="text/css" rel="stylesheet" href="css/css.css" />	
+		<link type="text/css" rel="stylesheet" href="css/default.css" />
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>		
+		<script type="text/javascript">
+		$(document).ready(function() { 
+		$('.atla a').hover(function(){
+				SwitchCard(".atla a", ".atla_form .atla_b", "cxhover", $(this))
+		});
+		$('.atla a').eq(0).trigger("mouseenter");
+				function SwitchCard(tab,con,addClass,obj){
+				var $_self = obj;
+				var $_nav = $(tab);
+				$_nav.removeClass(addClass),
+				$_self.addClass(addClass);
+				var $_index = $_nav.index($_self);
+				var $_con = $(con);
+				$_con.hide(),
+				$_con.eq($_index).show();
+			}
+		}); 
+		</script>
+		<link id="ctl00_ControlPickerStyle" href="css/WebResource(2).axd" type="text/css" rel="stylesheet">
+		<script src="js/WebResource(4).js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/function1.js"></script>
+	</head>
+	<body style="background: #f7f8fb;">
+        <header>
+			<div class="header_top cata">
+				<div class="header_box ">
+					<div class="cata_header"><a href="index.html" class="search_logo"><img src="img/login.png" ></a>服务平台<a href="catalogue.html" class="search_menu"><img src="img/menu.png"></a></div>
+				</div>
+			</div>
+		</header>
+		<div style="height:0.2em;background: #335EB1;margin-top: -5px;"></div>
+		<section>
+			<div class="step">
+				<div class="step_box">
+					<a href="service_color_atla.html" class="service_l current_l ">在线调色</a>
+					<a href="service_accredit.html">软件授权码</a>
+					<a href="service_report.html" class="service_r">报告</a>
+				</div>
+            </div>
+            <div class="atla_box">
+				<div class="atla">
+                	<a href="javascript:;">世名色卡</a><a href="javascript:;">手动选择RGB</a>
+                </div>
+                <div class="atla_form">
+                
+                    <div class="atla_b">
+                        <div class="atla_left">
+                            <form action="service_color_query.html" >
+                            	<div class="atla_l">
+	                                <div class="atla_select"><label>色卡名称：</label><select id="atlaset"><option value="#245">色卡名称23</option><option value="#ccc">色称色调23</option><option>调23</option><option value="#666">卡色</option></select></div>
+	                                <div class="atla_select"><label>颜色编号：</label>
+                                             <select id="atlaset">
+                                               <option value="#666">SM1-0025</option>
+                                               <option value="#eee">SM1-0025</option>
+                                               <option value="#342">SM1-0035</option>
+                                               <option value="#ddd">SM1-0068</option>
+                                               <option value="#420">SM1-0045</option>
+                                               <option value="#200">SM1-0035</option>
+                                               <option value="#010">SM1-0095</option>
+                                               <option value="#120">SM1-0015</option>
+                                             </select>
+		                            </div>
+	                                <div class="atla_select"><label><font color="#f8f9fa">色卡名称：</font></label><div id="atla_color" style="width:65%;height:5em; background:#666; display:inline-block;"></div><span>色卡颜色</span></div>
+	                                <div class="atla_select"><label>色卡名称：</label><select><option>色卡名称色调23</option></select></div>
+	                                <div class="atla_select"><label>色卡名称：</label><select><option>色卡名称色调23</option></select></div>                            		
+                            	</div>
+                                <div class="atla_button"><label><font color="#f8f9fa">色卡名称：</font></label><input type="submit" name="" value="查询配方" class="re_sb"/></div>
+                            </form>
+                        </div>
+                    </div> 
+                    <div class="atla_b">
+                        <div class="atla_left">
+                            <div class="exampleContainer">
+                                    <div class="exampleLive">
+                                        <div class="div_left">
+	                                        <form action="service_color_query.html">
+	                                        	<div class="atla_l">
+		                                            <div ><label style="float: left; vertical-align:1em;float:left;margin-left: 2%;">RGB颜色：</label>
+		                                            <table cellspacing="0" cellpadding="0" border="0" style="float: left;" width="65%" >
+		                                            <tbody>
+		                                                <tr>
+		                                                    <td colspan="2" scope="col" width="100%"><input maxlength="15" size="15" value="#F0F0F0" id="ctl00_ContentPlaceHolder1_ColorPicker1" name="ctl00$ContentPlaceHolder1$ColorPicker1" style="height:1.8em;width:100%;border:1px solid #e5e5e5; text-indent:0.8em; font-size: 1.1em; padding: 0;"/></td>
+		                                                </tr>
+		                                                <tr>
+		                                                    <td style="padding:10px 0;"><div style="position:static;display:block; margin-top:4px;"><input src="img/color.jpg" name type="image" onclick="colorPicker_ctl00_ContentPlaceHolder1_ColorPicker1.ShowColorPicker(this,document.getElementById('ctl00_ContentPlaceHolder1_ColorPicker1'));return false;" style="z-index:1; width:28px;height:21px;" /></div>
+		                                                    </td>
+		                                                    <td style="padding:5px 0;padding-left:5px;"><div style="height:1.5em;width:10em;background-color:#70e9ed; " id="colorblak"></div>
+		
+		                                                    </td>
+		                                                </tr>
+		                                                </tbody>
+		                                            </table>
+		                                            </div> 
+		                                            <div class="clearfix"></div>
+		                                            <div class="atla_select"><label style="display:inline-block;">颜色类型：</label><select ><option>外墙</option></select></div>
+		                                            <div class="atla_select"><label style="display:inline-block;">配方类型：</label><select ><option>经济型</option></select></div>	                                        		
+	                                        	</div>
+
+	                                            <div class="atla_button"><label style="display:inline-block;"><font color="#f8f9fa">色卡名称：</font></label><input type="submit" name="" value="查询配方" class="re_sb"/></div>                                        
+	                                        </form>
+
+                                        </div>
+                                     </div>
+                                </div>	
+                        </div>
+						<script type="text/javascript">
+                        //<![CDATA[
+                        
+                        var colorPicker_ctl00_ContentPlaceHolder1_ColorPicker1 = new ColorPicker({
+                        FormWidgetAmountSliderHandleImage : 'img/3.png',
+                        TabRightActiveImage : 'img/2.png',
+                        TabRightInactiveImage : 'img/5.png',
+                        TabLeftActiveImage : 'img/1.png',
+                        TabLeftInactiveImage : 'img/4.png',
+                        AutoPostBack : false,
+                        AutoPostBackReference : "__doPostBack('ctl00$ContentPlaceHolder1$ColorPicker1','')",
+                        PopupPosition : 0
+                        });            
+                                    
+                        var Page_ValidationActive = false;
+                        if (typeof(ValidatorOnLoad) == "function") {
+                            ValidatorOnLoad();
+                        }
+                        
+                        function ValidatorOnSubmit() {
+                            if (Page_ValidationActive) {
+                                return ValidatorCommonOnSubmit();
+                            }
+                            else {
+                                return true;
+                            }
+                        }
+                                Sys.Application.add_init(function() {
+                            $create(Sys.Extended.UI.ComboBox, {"autoCompleteMode":3,"autoPostBack":true,"buttonControl":$get("ctl00_ContentPlaceHolder1_list_colors_list_colors_Button"),"comboTableControl":$get("ctl00_ContentPlaceHolder1_list_colors_list_colors_Table"),"dropDownStyle":0,"hiddenFieldControl":$get("ctl00_ContentPlaceHolder1_list_colors_list_colors_HiddenField"),"optionListControl":$get("ctl00_ContentPlaceHolder1_list_colors_list_colors_OptionList"),"selectedIndex":-1,"textBoxControl":$get("ctl00_ContentPlaceHolder1_list_colors_list_colors_TextBox")}, null, null, $get("ctl00_ContentPlaceHolder1_list_colors"));
+                        });
+                        
+                        document.getElementById('ctl00_ContentPlaceHolder1_valColorPicker1').dispose = function() {
+                            Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_valColorPicker1'));
+                        }
+                        //]]>
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </section>
+        <footer>
+        	<div class="footer" >
+        		<div class="footer_box">
+	        		<div class="footer_top">服务热线：0512-57665888</div>
+	        		<div class="footer_top">版权所有©2015-2025  世名科技有限公司</div> 
+		        	<div class="footer_top">苏A1-20160817号</div> 
+        		</div>
+            </div>
+        </footer>
+    </body>
+</html>
+

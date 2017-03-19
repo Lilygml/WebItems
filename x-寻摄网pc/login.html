@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>登陆页</title>
+	<link rel="stylesheet" href="css/default.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery-1.8.0.min.js" ></script>
+	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="js/nei_index.js"></script>	
+	<script type="text/javascript" src="js/superslide.2.1.js"></script>
+	<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <script src="js/jquery.raty.min.js" type="text/javascript"></script>
+	
+</head>
+<body>
+<!--top-S-->
+<div class="public-top-layout">
+	<div class="topbar wrapper">
+		<div class="user-entry">北京<a href="changeCity.html">[ 切换城市 ]</a></div>
+		<div class="quick-menu">
+           <dl class="dli">
+	           <dt>您好，欢迎来到寻摄网</dt>
+	       </dl>
+		   <dl style="width: 50px;">
+	           <dt><a href="login.html" class="">登录</a></dt>
+	       </dl>
+	       <dl class="xian"></dl>
+		   <dl style="width: 50px;"> 
+	           <dt class="zn"><a href="register.html">注册</a></dt>
+	       </dl>
+	       <dl class="xian"></dl>
+	       <dl class="">
+		        <dt><a href="Personal.html">我的寻摄</a><i></i></dt>
+		        <dd>
+		          <ul>
+		            <li><a href="#">待付款订单</a></li>
+		            <li><a href="#">待确认收货</a></li>
+		            <li><a href="#">待评价交易</a></li>
+		          </ul>
+		        </dd>
+	       </dl>
+	       <dl class="xian"></dl>
+	      <dl>
+	        <dt><a href="people.html">个人中心</a><i></i></dt>
+	        <dd>
+	          <ul>
+	            <li><a href="#">商品收藏</a></li>
+	            <li><a href="#">店铺收藏</a></li>
+	          </ul>
+	        </dd>
+	      </dl>
+	      <dl class="xian"></dl>
+	      <dl>
+	        <dt><a href="#">商家中心</a><i></i></dt>
+	        <dd>
+	          <ul>
+	          </ul>
+	        </dd>
+	      </dl>          
+	      <dl class="xian"></dl>
+	      <dl>
+	        <dt><a href="#">客户服务</a><i></i></dt>
+	        <dd>
+	          <ul>
+	            <li><a href="help.html">帮助中心</a></li>
+	            <li><a href="#">售后服务</a></li>
+	            <li><a href="custom_servicel.html">客服中心</a></li>
+	          </ul>
+	        </dd>
+	      </dl>
+	      <dl class="xian"></dl>
+	      <dl>
+	        <dt><a href="#">网站导航</a><i></i></dt>
+	        <dd>
+	          <ul>
+	            <li><a href="website.html">网站地图</a></li>
+	          </ul>
+	        </dd>
+	      </dl>
+	    </div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+//动画显示边条内容区域
+$(function() {
+	$(".quick-menu dl").hover(function() {
+		$(this).addClass("hover");
+	},
+	function() {
+		$(this).removeClass("hover");
+	});
+
+    });
+</script>
+<!--top-E-->
+<!--logo-S-->
+<div class="header-wrap">
+    <div class="public-head-layout wrapper">
+    <h1 class="site-logo"><a href="#"><img src="img/logo.png" class="pngFix"></a></h1>
+        <div id="search" class="head-search-bar">
+	<!--搜索-->
+      <form class="search-form" method="get" action="search.html">
+         <select class="input-select">
+         	<option value="option1">选项一...</option>
+         	<option value="option2">选项二.....</option>
+         	<option value="option3">选项三........</option>
+         </select>
+         <input placeholder="输入风格或场景进行搜索" name="keyword" id="keyword" type="text" class="input-text" value="" maxlength="60" x-webkit-speech="" lang="zh-CN" onwebkitspeechchange="foo()" x-webkit-grammar="builtin:search">
+         <input type="submit" value="搜 索" class="input-submit"/>
+      </form>
+    </div>
+     <!--购物车-->  
+    <div class="head-user-menu">
+      <dl class="my-mall">
+        <dt><img src="temp/pic1.png" />Top photography team gathered</dt>
+      </dl>
+      <dl class="my-cart">
+          <dt><span class="ico"></span>购物车结算<i class="arrow"></i></dt>
+	      <dd>
+	          <div class="sub-title">
+	             <h4>最近加入的宝贝：</h4>
+	          </div>
+	          <div class="incart-goods-box">
+         		<span><a href="#"><img src="temp/sear_pic2.jpg"/></a></span>
+         		<span><a href="#">Rose Garden 玫瑰花园</a></span>
+         		<span class="shangchu">
+         			¥<b>2999</b><br />
+         			<a href="#">删除</a>
+         		</span>
+	          </div>
+	          <div class="checkout"> 
+	          	<div class="total-price">购物车里还有2件宝贝</div>
+	          	<a href="#" class="btn-cart">查看我的购物车</a> 
+	          </div>
+	      </dd>
+      </dl>
+    </div>
+  
+  </div>
+</div>
+<!--logo-E-->
+<script type="text/javascript">
+$(function(){
+    //购物车
+	$(".head-user-menu dl").hover(function() {
+		$(this).addClass("hover");
+	},
+	function() {
+		$(this).removeClass("hover");
+	});
+	$('.head-user-menu .my-cart').mouseover(function(){// 运行加载购物车
+		$(this).unbind('mouseover');
+	});
+    });
+</script>
+
+<!--nav-->
+<div id="navWrap">
+	<div class="navBox clearfix">
+		<div class="btnmenu fl">
+			<h2><a href="javascript:;" class="sortmenu">全部商品分类</a></h2>
+			<div class="sidemenu fl">
+				<ul id="sidemenu">
+					<li id="mainCate-1" class="mainCate">
+						<h3><a href="#"><span>人像、人体、肖像<i>&gt;</i></span></a></h3>
+						<div class="subCate">
+							<ul id="sub-ul-1">
+								<li class="mingxi">
+									<div class="mingxi_l">											
+										 <div class="mingxi_l_t">
+											<a href="detail.html">内衣<i>></i></a>
+											<a href="detail.html">裙子<i>></i></a>
+											<a href="detail.html">国际品牌<i>></i></a>													
+										</div>
+										<div class="mingxi_l_b">
+											<dl class="fole1">
+												<dt><a href="detail.html">内衣<i>></i></a></dt>
+												<dd>
+													<a href="detail.html">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">裙子<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">国际品牌<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+										</div>	
+									</div>
+							        <div class="mingxi_r">
+							        	<div class="mingxi_r_t">
+							        		<ol>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        		</ol>
+							        	</div>
+							        	<div class="mingxi_r_m"><a href="#"><img src="temp/pic18.jpg"></a></div>
+							        </div>	
+								</li>					
+
+							</ul>
+						</div>
+					</li>
+					<li id="mainCate-2" class="mainCate">
+						<h3><a href="#"><span>静物<i>&gt;</i></span></a></h3>
+						<div class="subCate">
+							<ul id="sub-ul-2">
+								<li class="mingxi">
+									<div class="mingxi_l">											
+										 <div class="mingxi_l_t">
+										 	<a href="#">女装<i>></i></a>
+											<a href="#">内衣<i>></i></a>
+											<a href="#">裙子<i>></i></a>
+											<a href="#">国际品牌<i>></i></a>													
+										</div>
+										<div class="mingxi_l_b">
+											<dl class="fole1">
+												<dt><a href="#">女装<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">内衣<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">裙子<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">国际品牌<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+										</div>	
+									</div>
+							        <div class="mingxi_r">
+							        	<div class="mingxi_r_t">
+							        		<ol>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        		</ol>
+							        	</div>
+							        	<div class="mingxi_r_m"><a href="#"><img src="temp/pic18.jpg"></a></div>
+							        </div>	
+								</li>					
+
+							</ul></div>
+					</li>
+					<li id="mainCate-3" class="mainCate">
+						<h3><a href="#"><span>商业<i>&gt;</i></span></a></h3>
+						<div class="subCate">
+							<ul id="sub-ul-3">
+								<li class="mingxi">
+									<div class="mingxi_l">											
+										 <div class="mingxi_l_t">
+										 	<a href="#">女装<i>></i></a>
+											<a href="#">裙子<i>></i></a>
+											<a href="#">国际品牌<i>></i></a>													
+										</div>
+										<div class="mingxi_l_b">
+											<dl class="fole1">
+												<dt><a href="#">女装<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">裙子<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">国际品牌<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+										</div>	
+									</div>
+							        <div class="mingxi_r">
+							        	<div class="mingxi_r_t">
+							        		<ol>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        		</ol>
+							        	</div>
+							        	<div class="mingxi_r_m"><a href="#"><img src="temp/pic18.jpg"></a></div>
+							        </div>	
+								</li>					
+
+							</ul></div>
+					</li>
+					<li id="mainCate-4" class="mainCate">
+						<h3><a href="#"><span>时装<i>&gt;</i></span></a></h3>
+						<div class="subCate">
+							<ul id="sub-ul-4">
+								<li class="mingxi">
+									<div class="mingxi_l">											
+										 <div class="mingxi_l_t">
+										 	<a href="#">女装<i>></i></a>
+											<a href="#">内衣<i>></i></a>
+											<a href="#">国际品牌<i>></i></a>													
+										</div>
+										<div class="mingxi_l_b">
+											<dl class="fole1">
+												<dt><a href="#">女装<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">内衣<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">国际品牌<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+										</div>	
+									</div>
+							        <div class="mingxi_r">
+							        	<div class="mingxi_r_t">
+							        		<ol>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        		</ol>
+							        	</div>
+							        	<div class="mingxi_r_m"><a href="#"><img src="temp/pic18.jpg"></a></div>
+							        </div>	
+								</li>					
+
+							</ul></div>
+					</li>
+					<li id="mainCate-5" class="mainCate">
+						<h3><a href="#"><span>会议、庆典、婚礼、舞台<i>&gt;</i></span></a></h3>
+						<div class="subCate">
+							<ul id="sub-ul-5">
+								<li class="mingxi">
+									<div class="mingxi_l">											
+										 <div class="mingxi_l_t">
+										 	<a href="#">女装<i>></i></a>
+											<a href="#">内衣<i>></i></a>
+											<a href="#">裙子<i>></i></a>												
+										</div>
+										<div class="mingxi_l_b">
+											<dl class="fole1">
+												<dt><a href="#">女装<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">内衣<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">裙子<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+										</div>	
+									</div>
+							        <div class="mingxi_r">
+							        	<div class="mingxi_r_t">
+							        		<ol>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        		</ol>
+							        	</div>
+							        	<div class="mingxi_r_m"><a href="#"><img src="temp/pic18.jpg"></a></div>
+							        </div>	
+								</li>					
+
+							</ul></div>
+					</li>
+					<li id="mainCate-6" class="mainCate">
+						<h3><a href="#"><span>新闻、体育<i>&gt;</i></span></a></h3>
+						<div class="subCate">
+							<ul id="sub-ul-6">
+								<li class="mingxi">
+									<div class="mingxi_l">											
+										 <div class="mingxi_l_t">
+										 	<a href="#">女装<i>></i></a>
+											<a href="#">内衣<i>></i></a>
+											<a href="#">裙子<i>></i></a>
+											<a href="#">国际品牌<i>></i></a>													
+										</div>
+										<div class="mingxi_l_b">
+											<dl class="fole1">
+												<dt><a href="#">女装<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">内衣<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">裙子<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">国际品牌<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+										</div>	
+									</div>
+							        <div class="mingxi_r">
+							        	<div class="mingxi_r_t">
+							        		<ol>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        		</ol>
+							        	</div>
+							        	<div class="mingxi_r_m"><a href="#"><img src="temp/pic18.jpg"></a></div>
+							        </div>	
+								</li>					
+
+							</ul></div>
+					</li>
+					<li id="mainCate-7" class="mainCate">
+						<h3><a href="#"><span>室内<i>&gt;</i></span></a></h3>
+						<div class="subCate">
+							<ul id="sub-ul-7">
+								<li class="mingxi">
+									<div class="mingxi_l">											
+										 <div class="mingxi_l_t">
+											<a href="#">内衣<i>></i></a>
+											<a href="#">裙子<i>></i></a>
+											<a href="#">国际品牌<i>></i></a>													
+										</div>
+										<div class="mingxi_l_b">
+											<dl class="fole1">
+												<dt><a href="#">内衣<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">裙子<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">国际品牌<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+										</div>	
+									</div>
+							        <div class="mingxi_r">
+							        	<div class="mingxi_r_t">
+							        		<ol>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        		</ol>
+							        	</div>
+							        	<div class="mingxi_r_m"><a href="#"><img src="temp/pic18.jpg"></a></div>
+							        </div>	
+								</li>					
+
+							</ul></div>
+					</li>
+					<li id="mainCate-8" class="mainCate">
+						<h3><a href="#"><span>花卉、微距、菜肴<i>&gt;</i></span></a></h3>
+						<div class="subCate">
+							<ul id="sub-ul-8">
+								<li class="mingxi">
+									<div class="mingxi_l">											
+										 <div class="mingxi_l_t">
+										 	<a href="#">女装<i>></i></a>
+											<a href="#">内衣<i>></i></a>
+											<a href="#">裙子<i>></i></a>
+											<a href="#">国际品牌<i>></i></a>													
+										</div>
+										<div class="mingxi_l_b">
+											<dl class="fole1">
+												<dt><a href="#">女装<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">内衣<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">裙子<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">国际品牌<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+										</div>	
+									</div>
+							        <div class="mingxi_r">
+							        	<div class="mingxi_r_t">
+							        		<ol>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        		</ol>
+							        	</div>
+							        	<div class="mingxi_r_m"><a href="#"><img src="temp/pic18.jpg"></a></div>
+							        </div>	
+								</li>					
+
+							</ul></div>
+					</li>
+					<li id="mainCate-9" class="mainCate">
+						<h3><a href="#"><span>人文、纪实、生活、宠物<i>&gt;</i></span></a></h3>
+						<div class="subCate">
+							<ul id="sub-ul-9">
+								<li class="mingxi">
+									<div class="mingxi_l">											
+										 <div class="mingxi_l_t">
+										 	<a href="#">女装<i>></i></a>
+											<a href="#">内衣<i>></i></a>
+											<a href="#">裙子<i>></i></a>												
+										</div>
+										<div class="mingxi_l_b">
+											<dl class="fole1">
+												<dt><a href="#">女装<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">内衣<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">裙子<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+										</div>	
+									</div>
+							        <div class="mingxi_r">
+							        	<div class="mingxi_r_t">
+							        		<ol>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        		</ol>
+							        	</div>
+							        	<div class="mingxi_r_m"><a href="#"><img src="temp/pic18.jpg"></a></div>
+							        </div>	
+								</li>					
+
+							</ul></div>
+					</li>
+					<li id="mainCate-10" class="mainCate">
+						<h3><a href="#"><span>建筑、工业<i>&gt;</i></span></a></h3>
+						<div class="subCate">
+							<ul id="sub-ul-10">
+								<li class="mingxi">
+									<div class="mingxi_l">											
+										 <div class="mingxi_l_t">
+										 	<a href="#">女装<i>></i></a>
+											<a href="#">内衣<i>></i></a>
+											<a href="#">裙子<i>></i></a>
+											<a href="#">国际品牌<i>></i></a>													
+										</div>
+										<div class="mingxi_l_b">
+											<dl class="fole1">
+												<dt><a href="#">女装<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">内衣<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">裙子<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">国际品牌<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+										</div>	
+									</div>
+							        <div class="mingxi_r">
+							        	<div class="mingxi_r_t">
+							        		<ol>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        		</ol>
+							        	</div>
+							        	<div class="mingxi_r_m"><a href="#"><img src="temp/pic18.jpg"></a></div>
+							        </div>	
+								</li>					
+
+							</ul></div>
+					</li>
+					<li id="mainCate-11" class="mainCate">
+						<h3><a href="#"><span>风光、旅游<i>&gt;</i></span></a></h3>
+						<div class="subCate">
+							<ul id="sub-ul-11">
+								<li class="mingxi">
+									<div class="mingxi_l">											
+										 <div class="mingxi_l_t">
+											<a href="#">内衣<i>></i></a>
+											<a href="#">裙子<i>></i></a>
+											<a href="#">国际品牌<i>></i></a>													
+										</div>
+										<div class="mingxi_l_b">
+											<dl class="fole1">
+												<dt><a href="#">内衣<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">裙子<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">国际品牌<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+										</div>	
+									</div>
+							        <div class="mingxi_r">
+							        	<div class="mingxi_r_t">
+							        		<ol>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        		</ol>
+							        	</div>
+							        	<div class="mingxi_r_m"><a href="#"><img src="temp/pic18.jpg"></a></div>
+							        </div>	
+								</li>					
+
+							</ul></div>
+					</li>
+					<li id="mainCate-12" class="mainCate">
+						<h3><a href="#"><span>军事、航空<i>&gt;</i></span></a></h3>
+						<div class="subCate">
+							<ul id="sub-ul-12">
+								<li class="mingxi">
+									<div class="mingxi_l">											
+										 <div class="mingxi_l_t">
+										 	<a href="#">女装<i>></i></a>
+											<a href="#">内衣<i>></i></a>
+											<a href="#">裙子<i>></i></a>
+											<a href="#">国际品牌<i>></i></a>													
+										</div>
+										<div class="mingxi_l_b">
+											<dl class="fole1">
+												<dt><a href="#">女装<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">内衣<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">裙子<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">国际品牌<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+										</div>	
+									</div>
+							        <div class="mingxi_r">
+							        	<div class="mingxi_r_t">
+							        		<ol>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        		</ol>
+							        	</div>
+							        	<div class="mingxi_r_m"><a href="#"><img src="temp/pic18.jpg"></a></div>
+							        </div>	
+								</li>					
+
+							</ul></div>
+					</li>
+					<li id="mainCate-13" class="mainCate">
+						<h3><a href="#"><span>创意、DIY<i>&gt;</i></span></a></h3>
+						<div class="subCate">
+							<ul id="sub-ul-13">
+								<li class="mingxi">
+									<div class="mingxi_l">											
+										 <div class="mingxi_l_t">
+										 	<a href="#">女装<i>></i></a>
+											<a href="#">裙子<i>></i></a>
+											<a href="#">国际品牌<i>></i></a>													
+										</div>
+										<div class="mingxi_l_b">
+											<dl class="fole1">
+												<dt><a href="#">女装<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">裙子<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">国际品牌<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+										</div>	
+									</div>
+							        <div class="mingxi_r">
+							        	<div class="mingxi_r_t">
+							        		<ol>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        		</ol>
+							        	</div>
+							        	<div class="mingxi_r_m"><a href="#"><img src="temp/pic18.jpg"></a></div>
+							        </div>	
+								</li>					
+
+							</ul></div>
+					</li>
+					<li id="mainCate-14" class="mainCate">
+						<h3><a href="#"><span>微电影、摄像<i>&gt;</i></span></a></h3>
+						<div class="subCate">
+							<ul id="sub-ul-14">
+								<li class="mingxi">
+									<div class="mingxi_l">											
+										 <div class="mingxi_l_t">
+										 	<a href="#">女装<i>></i></a>
+											<a href="#">内衣<i>></i></a>
+											<a href="#">裙子<i>></i></a>
+											<a href="#">国际品牌<i>></i></a>													
+										</div>
+										<div class="mingxi_l_b">
+											<dl class="fole1">
+												<dt><a href="#">女装<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">内衣<i>></i></a></dt>
+												<dd>
+													<a href="#">连衣裙</a>
+													 <a href="#">连衣裙</a>
+                                                     <a href="#">衬衫</a>
+													 <a href="#">雪纺衫</a>
+													 <a href="#">T恤</a>
+													 <a href="#">牛仔裤</a>
+													 <a href="#">针织衫</a>
+													 <a href="#">休闲裤</a>
+													 <a href="#">小西装</a>
+													 <a href="#">卫衣</a>
+													 <a href="#">风衣</a>
+													 <a href="#"> 短外套</a>
+													 <a href="#">毛呢大衣</a>
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">裙子<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+											<dl class="fole1">
+												<dt><a href="#">国际品牌<i>></i></a></dt>
+												<dd>														
+													 <a href="#">半身裙</a>
+												    <a href="#">短裤</a>
+												    <a href="#">打底衫</a>
+												    <a href="#">打底裤</a>
+												    <a href="#">吊带/背心</a>
+												    <a href="#">马甲</a>
+												    <a href="#">正装裤</a>
+												    <a href="#">中老年女装</a>
+												    <a href="#">大码女装</a>
+												    <a href="#">真皮皮衣</a>
+												    <a href="#">棉服</a>
+												    <a href="#">羊毛衫</a>
+												    <a href="#">羊绒衫</a>
+												    <a href="#">羽绒服</a>
+												</dd>
+											</dl>
+										</div>	
+									</div>
+							        <div class="mingxi_r">
+							        	<div class="mingxi_r_t">
+							        		<ol>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic27.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        			<li><a href="#"><img src="img/pic28.png"></a></li>
+							        		</ol>
+							        	</div>
+							        	<div class="mingxi_r_m"><a href="#"><img src="temp/pic18.jpg"></a></div>
+							        </div>	
+								</li>					
+
+							</ul></div>
+					</li>
+				
+				</ul>
+			</div><!--menu-->
+		</div>
+		<ul class="navBar clearfix">
+			 <li><a class="current" href="#">摄影服务</a></li>
+         
+		</ul>
+	</div>
+</div>
+<div class="clearfix"></div>
+
+
+
+
+<div class="landBox cleafix" style="margin-bottom:40px;">
+	<div class="land">
+		
+		<div class="land_con">
+			<div class="land_cfl fl">
+				<img src="temp/land_pic.png" />
+			</div>
+			<div class="land_cfr fr">
+				<h2>登陆寻摄网</h2>
+				<form>
+					<div class="name">
+				     	<div class="name_img"><img src="img/land_ico3.jpg"></div>
+				     	<input type="text" name="name" class="Name" placeholder="用户/手机/邮箱">
+				     </div>
+			         <div class="name">
+			         	<div class="name_img"><img src="img/land_ico4.jpg"></div>
+			         	<input type="password" name="name" class="Name" placeholder="">
+			         </div>
+			         <div class="forget">
+			         	<a href="#" class="forgetfl fl">忘记登录密码？</a>
+			         	<a href="#" class="forgetfr fr">免费注册</a>
+			         </div>
+			         
+			         <div class="button">
+			         	<input type="button" class="but" value="登录"/>
+			         </div>
+				</form>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+
+<!--footer-->
+<div class="footer" style="*margin-top: -465px;">
+	<div class="foot w1200 cleafix">
+		<div class="foot_ul">
+			<ul>
+				<li>
+					<div class="foot_t">
+						<div class="foot_tfl fl">
+							<img src="img/ico4.png" />
+						</div>
+						<div class="foot_tfr fl">
+							<h2>消费保障</h2>
+							<h3>消费护航，拍摄无忧</h3>
+						</div>
+					</div>
+					<div class="foot_b">
+						<p>保障范围    退货退款流程    服务中心    <br />
+							更多特色服务</p>
+					</div>
+				</li>
+				<li>
+					<div class="foot_t">
+						<div class="foot_tfl fl">
+							<img src="img/ico5.png" />
+						</div>
+						<div class="foot_tfr fl">
+							<h2>付款方式</h2>
+							<h3>轻松快捷，安全稳定</h3>
+						</div>
+					</div>
+					<div class="foot_b">
+						<p>支付宝快捷支付    支付宝卡（现金）付款    <br />
+							支付宝余额付款    货到付款 </p>
+					</div>
+				</li>
+				<li>
+					<div class="foot_t">
+						<div class="foot_tfl fl">
+							<img src="img/ico6.png" />
+						</div>
+						<div class="foot_tfr fl">
+							<h2>新手上路</h2>
+							<h3>您的快捷购物指南</h3>
+						</div>
+					</div>
+					<div class="foot_b">
+						<p>新手专区    消费警示    交易安全    免费开店<br />
+							24小时在线帮助</p>
+					</div>
+				</li>
+				<li style="border-right: none ;">
+					<div class="foot_t">
+						<div class="foot_tfl fl">
+							<img src="img/ico7.png" />
+						</div>
+						<div class="foot_tfr fl">
+							<h2>特色服务</h2>
+							<h3>为您呈现不一样的服务</h3>
+						</div>
+					</div>
+					<div class="foot_b">
+						<p>团购预约    限时特惠    寻摄劵</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="foot_about">  
+			<a href="#">关于天猫</a><b>|</b>
+			<a href="#">帮助中心</a><b>|</b>
+			<a href="#">诚聘英才</a><b>|</b>
+			<a href="#">联系我们</a><b>|</b>
+			<a href="#">网站合作</a><b>|</b>
+			<a href="#">法律声明</a>
+		</div>
+		<div class="foot_add">
+			<div class="foot_top">
+				<p>Copyright © 2005-2020 xunshe.com.cn，All Rights Reserved 浙ICP备11111111号 许可证：浙A1-20150510  使用本网站即表示接受 寻摄网用户协议。<br /> 
+					版权所有 浙江寻摄信息科技有限公司</p>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

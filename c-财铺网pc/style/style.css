@@ -1,0 +1,81 @@
+
+.register .register-01 .reg2 .user-login{float:left;width:60%;}
+
+.register .register-01 .reg2 .user-login p{
+	display:block;
+	width:100%;
+	float:left;
+	position:relative;
+	margin-bottom:20px;
+}
+
+
+.register .register-01 .reg2 .user-login p input{
+	width:40%;
+	height:35px;
+	line-height:35px;
+	font-family: "微软雅黑";
+	text-indent:1em !important;
+	border:#d5d5d5 1px solid;
+}
+ .register .register-01 .reg2 .user-login p input#teinx{
+	width:40%;
+	
+}
+
+
+#phonecodesub{
+	width:150px;
+	height:37px;
+	cursor:pointer;
+	padding-left:0;
+	background:#f5f5f5;
+}
+#phonecodesub:hover{
+	background:#F00;
+	color:#fff;
+	border:1px solid #F00;
+}
+.register .register-01 .reg2 .user-login p .btn_sub{
+	width: 266px;
+	height: 40px;
+	line-height: 38px;
+	color: #FFF;
+	font-size: 20px;
+	background-color: #c4211c;
+	margin-left:110px;
+	display: block;
+	border:0;
+	cursor:pointer;
+	font-family: "微软雅黑"; 
+	padding-left:0;
+	text-indent:inherit !important;
+}
+.register .register-01 .reg2 .user-login p label{min-width:100px;font-size:12px;color:#666;line-height:30px;text-align:right;padding-right:10px;float:left;vertical-align:sub;}
+.register .register-01 .reg2 .user-login p img{vertical-align:middle;padding-left:8px !important;}
+.register .register-01 .reg2 .user-login p i{font-size:12px;color:#666;line-height:30px;}
+.register .register-01 .reg2 .user-login p .check-01{width:auto !important;height:auto !important;vertical-align:middle;}
+.register .register-01 .reg2 .user-login p .check-02{width:103px !important;}
+.register .register-01 .reg2 .user-login .checkt{margin-left:110px;margin-bottom:10px;}
+.register .register-01 .reg2 .user-login .checkt span{font-size:12px;color:#666;}
+.register .register-01 .reg2 .user-login .checkt span i{color:#1868F5;}
+
+
+.register .register-01 .reg-d{margin-top:60px;margin-left:70px;}
+
+.register .register-01 .reg2 .user-login p a{font-size:12px;color:#666;vertical-align:15px;margin-right:10px;}
+.register .register-01 .reg2 .user-login p select{width:130px;height:25px;color:#666;}
+
+.register .register-01 .reg2 .user-login p .btn_sub_01{width: 150px;text-indent:inherit !important;}
+.register .register-01 .reg2 .user-login .p1{margin-bottom:30px;}
+.register .register-01 .reg2 .user-login p font{color:#CB0003;}
+
+
+
+
+
+
+
+
+
+

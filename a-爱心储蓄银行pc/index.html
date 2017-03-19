@@ -1,0 +1,373 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页</title>
+</head>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+<script src="js/jquery.SuperSlide.js" type="text/javascript"></script>
+<script>
+	$(document).ready(function() {
+		//轮播器初始化
+        $('#banner img').css('display','none');
+		$('#banner img').eq(0).css('display','block');
+		$('#banner ul li').eq(0).css('color','#f76402');
+		$('#banner strong').html($('#banner img').eq(0).attr('alt'));
+		
+		//轮播器计数器
+		var banner_index=1;
+		
+		//自动轮播器
+		var banner_timer = setInterval(banner_fn,3000);
+		
+		//手动轮播器
+		$('#banner ul li').hover(function(){
+			clearInterval(banner_timer);
+			banner(this);
+		},function(){
+			banner_index=$(this).index()+1;	
+		    banner_timer = setInterval(banner_fn,3000);
+		});
+		
+		function banner(obj){
+			$('#banner img').css('display','none');	
+			$('#banner img').eq($(obj).index()).css('display','block');
+			$('#banner ul li').css('color','#fff');
+			$(obj).css('color','#f76402');
+			$('#banner strong').html($('#banner img').eq($(obj).index()).attr('alt'));
+			}
+		
+		function banner_fn(){
+				if(banner_index>=$('#banner ul li').length){
+					banner_index=0;
+				}
+				banner($('#banner ul li').eq(banner_index).first());
+				banner_index++;
+			}
+    });
+</script>
+<body>
+	<header>
+    	<div class="head">
+        	<div class="w1000 clearfix">
+            	<span>Hi，欢迎来到 12349志愿者爱心储蓄银行</span>
+                <div class="head_right"><a href="index.html" class="head_a">网站首页</a><a href="登陆.html">登陆</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="注册成为志愿者页.html">注册</a></div>
+            </div>
+        </div>
+        <div class="w1000 clearfix">
+        	<div class="logo"><a href="index.html"><img src="img/logo.jpg"></a></div>
+            <ul class="nav clearfix">
+            	<li><a href="index.html" class="hover nav_al">首页</a></li>
+                <li><a href="信息统计页.html" class="nav_al">信息统计</a></li>
+                <li><a href="志愿者团体.html" class="nav_al">志愿者团体</a></li>
+                <li>
+                    <a href="志愿者服务项目-活动公告.html" class="nav_al">志愿者服务项目</a>
+                	<div class="nav_down">
+                    	<a href="志愿者服务项目-活动公告.html" class="hover">活动公告</a>
+                        <a href="志愿者服务项目-活动展示.html">活动展示</a>
+                    </div>
+                </li>
+                <li><a href="" class="nav_al">公益动态</a></li>
+                <li><a href="政府相关.html" class="nav_al">政府相关</a></li>
+                <li><a href="我的志愿.html" class="nav_al">我的志愿</a></li>
+                <div class="zhi"><a href="注册成为志愿者页.html">注册成为志愿者</a></div>
+            </ul>
+            <div class="search">
+            	<span><label>找志愿团体</label><input type="text"/><button type="button">搜索</button></span>
+                <span><label>找文章</label><input type="text"/><button type="button">搜索</button></span>
+            </div>
+            <div class="banner">
+            	<div class="banner_left">
+                	<div id="banner">
+                    	<img src="img/banner.jpg" alt="1月天使志愿团体举行了环保公益活动">
+                        <img src="img/banner1.jpg" alt="2月天使志动">
+                        <img src="img/banner2.jpg" alt="3月天使志愿团公益活动">
+                        <ul>
+                            <li>●</li>
+                            <li>●</li>
+                            <li>●</li>
+                        </ul>
+                        <span></span>
+                        <strong></strong>
+                    </div>
+                </div>
+                <div class="banner_right">
+                	<div class="leiji"><span>志愿者累计</span><em>人</em></div>
+                    <div class="leiji"><input type="text" value="255455"/></div>
+                    <div class="leiji"><span>志愿服务累计</span><em>小时</em></div>
+                    <div class="leiji"><input type="text" value="255455"/></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+    	<div class="w1000">
+        	<div class="tongji clearfix">
+            	<div class="tongji_left">
+                	<div class="tong_title"><span>信息统计</span><a href="">更多</a></div>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="teble_tong">
+                      <tbody>
+                        <tr>
+                          <th scope="col">志愿者名称</th>
+                          <th scope="col">黄手环编号</th>
+                          <th scope="col">服务时常</th>
+                          <th scope="col">参加活动</th>
+                        </tr>
+                        <tr>
+                          <td>王先生</td>
+                          <td>D25462</td>
+                          <td><em>200</em>h</td>
+                          <td><em>2</em>次</td>
+                        </tr>
+                        <tr>
+                          <td>王先生</td>
+                          <td>D25462</td>
+                          <td><em>200</em>h</td>
+                          <td><em>2</em>次</td>
+                        </tr>
+                        <tr>
+                          <td>王先生</td>
+                          <td>D25462</td>
+                          <td><em>200</em>h</td>
+                          <td><em>2</em>次</td>
+                        </tr>
+                        <tr>
+                          <td>王先生</td>
+                          <td>D25462</td>
+                          <td><em>200</em>h</td>
+                          <td><em>2</em>次</td>
+                        </tr>
+                        <tr>
+                          <td>王先生</td>
+                          <td>D25462</td>
+                          <td><em>200</em>h</td>
+                          <td><em>2</em>次</td>
+                        </tr>
+                        <tr>
+                          <td>王先生</td>
+                          <td>D25462</td>
+                          <td><em>200</em>h</td>
+                          <td><em>2</em>次</td>
+                        </tr>
+                        <tr>
+                          <td>王先生</td>
+                          <td>D25462</td>
+                          <td><em>200</em>h</td>
+                          <td><em>2</em>次</td>
+                        </tr>
+                        <tr>
+                          <td>王先生</td>
+                          <td>D25462</td>
+                          <td><em>200</em>h</td>
+                          <td><em>2</em>次</td>
+                        </tr>
+                        <tr>
+                          <td>王先生</td>
+                          <td>D25462</td>
+                          <td><em>200</em>h</td>
+                          <td><em>2</em>次</td>
+                        </tr>
+                        <tr>
+                          <td>王先生</td>
+                          <td>D25462</td>
+                          <td><em>200</em>h</td>
+                          <td><em>2</em>次</td>
+                        </tr>
+                        <tr>
+                          <td>王先生</td>
+                          <td>D25462</td>
+                          <td><em>200</em>h</td>
+                          <td><em>2</em>次</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <div class="tongji_right">
+                	<div class="tong_title tong_title1"><span>活动公告</span><a href="">更多</a></div>
+                    <div class="tong_img">
+                    	<ul class="clearfix">
+                            <li><a href="志愿者服务项目-活动公告详情页.html"><img src="img/img_01.jpg"></a></li>
+                            <li><a href="志愿者服务项目-活动公告详情页.html"><img src="img/img_01.jpg"></a></li>
+                            <li><a href=""><img src="img/img_01.jpg"></a></li>
+                        </ul>
+                        <div class="tong_content">
+                            <div class="tong_con"><a href="志愿者服务项目-活动公告详情页.html">学雷锋志愿服务示范站金牌项目学雷锋志学雷锋志愿服务示范站金牌项目学雷锋志愿服务愿服务（岗）金牌项目</a><span>2016-01-16</span></div>
+                            <div class="tong_con"><a href="志愿者服务项目-活动公告详情页.html">学雷锋志愿服务示范站金牌项目学雷锋志愿服务（岗）金牌项目</a><span>2016-01-16</span></div>
+                            <div class="tong_con"><a href="">学雷锋志愿服务示范站金牌项目学雷锋志愿服务（岗）金牌项目</a><span>2016-01-16</span></div>
+                            <div class="tong_con"><a href="">学雷锋志愿服务示范站金牌项目学雷锋志愿服务（岗）金牌项目</a><span>2016-01-16</span></div>
+                            <div class="tong_con"><a href="">学雷锋志愿服务示范站金牌项目学雷锋志愿服务（岗）金牌项目</a><span>2016-01-16</span></div>
+                            <div class="tong_con"><a href="">学雷锋志愿服务示范站金牌项目学雷锋志愿服务（岗）金牌项目</a><span>2016-01-16</span></div>
+                            <div class="tong_con"><a href="">学雷锋志愿服务示范站金牌项目学雷锋志愿服务（岗）金牌项目</a><span>2016-01-16</span></div>
+                            <div class="tong_con"><a href="">学雷锋志愿服务示范站金牌项目学雷锋志愿服务（岗）金牌项目</a><span>2016-01-16</span></div>
+                            <div class="tong_con"><a href="">学雷锋志愿服务示范站金牌项目学雷锋志愿服务（岗）金牌项目</a><span>2016-01-16</span></div>
+                            <div class="tong_con"><a href="">学雷锋志愿服务示范站金牌项目学雷锋志愿服务（岗）金牌项目</a><span>2016-01-16</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="zhiyuan">
+                <div class="tong_title tong_title2"><span>志愿者团体</span><a href="">更多</a></div>
+                <div class="zhiyuan_img">
+                    <ul>
+                        <li>
+                            <a href="" class="zhi_a"><img src="img/img_02.jpg"></a>
+                            <a href="" class="zhi_a1" title="阜石路第三社区劝导队">阜石路第三社区劝导队</a>
+                            <span>阜石路第三社区劝导队是由广西老年基金会支持搭建并在政局登记成立的民办非企业阜石路第三社区劝导队是由广西老年基金会支持搭建并在政局登记成立的民办非企业阜石路第三社区劝导队是由广西老年基金会支持搭建并在政局登记成立的民办非企业...</span>
+                        </li>
+                        <li>
+                            <a href="" class="zhi_a"><img src="img/img_02.jpg"></a>
+                            <a href="" class="zhi_a1" title="阜石路第三社区劝导队">阜石路第三社区劝导队</a>
+                            <span>阜石路第三社区劝导队是由广西老年基金会支持搭建并在政局登记成立的民办非企业...</span>
+                        </li>
+                        <li>
+                            <a href="" class="zhi_a"><img src="img/img_02.jpg"></a>
+                            <a href="" class="zhi_a1" title="阜石路第三社区劝导队">阜石路第三社区劝导队</a>
+                            <span>阜石路第三社区劝导队是由广西老年基金会支持搭建并在政局登记成立的民办非企业...</span>
+                        </li>
+                        <li>
+                            <a href="" class="zhi_a"><img src="img/img_02.jpg"></a>
+                            <a href="" class="zhi_a1" title="阜石路第三社区劝导队" >阜石路第三社区劝导队</a>
+                            <span>阜石路第三阜石路第三社区劝导队是由广西老年基金会支持搭建并在政局登记成立的民办非企业...社区劝导队是由广西老年基金会支持搭建并在政局登记成立的民办非企业...</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tong_top">
+                <div class="tong_title tong_title3"><span>公益动态</span><a href="">更多</a></div>
+				<div class="dongtai">
+                	<ul>
+                        <li class="dong_li"><a href=""><img src="img/img_03.jpg"></a></li>
+                        <li class="dong_li1">
+                            <a href="">“5年·志愿服务守望社区”——第30个国际正式启动了，欢迎大家前来咨询...</a>
+                            <a href="">“5年·志愿服务守望社区”——第30个国际正式启动了，欢迎大家前来咨询...</a>
+                            <a href="">“5年·志愿服务守望社区”——第30个国际正式启动了，欢迎大家前来咨询...</a>
+                            <a href="">“5年·志愿服务守望社区”——第30个国际正式启动了，欢迎大家前来咨询...</a>
+                            <a href="">“5年·志愿服务守望社区”——第30个国际正式启动了，欢迎大家前来咨询...</a>
+                            <a href="">“5年·志愿服务守望社区”——第30个国际正式启动了，欢迎大家前来咨询...</a>
+                            <a href="">“5年·志愿服务守望社区”——第30个国际正式启动了，欢迎大家前来咨询...</a>
+                            <a href="">“5年·志愿服务守望社区”——第30个国际正式启动了，欢迎大家前来咨询...</a>
+                            <a href="">“5年·志愿服务守望社区”——第30个国际正式启动了，欢迎大家前来咨询...</a>
+                            <a href="">“5年·志愿服务守望社区”——第30个国际正式启动了，欢迎大家前来咨询...</a>
+                            <a href="">“5年·志愿服务守望社区”——第30个国际正式启动了，欢迎大家前来咨询...</a>
+                            <a href="">“5年·志愿服务守望社区”——第30个国际正式启动了，欢迎大家前来咨询...</a>
+                            <a href="">“5年·志愿服务守望社区”——第30个国际正式启动了，欢迎大家前来咨询...</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tong_top clearfix">
+                <div class="tong_title tong_title4"><span>政府相关</span><a href="">更多</a></div>
+				<div class="zhengfu">
+                	<div class="zhengfu_left">
+                    	<a href=""><img src="img/img_04.jpg"></a>
+                        <a href=""><img src="img/img_04.jpg"></a>
+                    </div>
+                    <div class="zhengfu_right">
+                    	<ul>
+                        	<li>
+                                <a href="javascript:;">项目公告</a>
+                                <a href="javascript:;">项目展示</a>
+                                <a href="javascript:;">法律法规</a>
+                            </li>
+                        </ul>
+                        <div class="zhengfu_con">
+                        	<div class="zhegnfu_a">
+                            	<div class="zhengfu_al"><a href="">“5年·志愿服务守望社区”——第30个国际正式启动了</a><span>2016-01-03</span></div>
+                                <div class="zhengfu_al"><a href="">“5年·志愿服务守望社区”——第30个国际正式启动了</a><span>2016-01-03</span></div>
+                                <div class="zhengfu_al"><a href="">“5年·志愿服务守望社区”——第30个国际正式启动了</a><span>2016-01-03</span></div>
+                                <div class="zhengfu_al"><a href="">“5年·志愿服务守望社区”——第30个国际正式启动了</a><span>2016-01-03</span></div>
+                                <div class="zhengfu_al"><a href="">“5年·志愿服务守望社区”——第30个国际正式启动了</a><span>2016-01-03</span></div>
+                                <div class="zhengfu_al"><a href="">“5年·志愿服务守望社区”——第30个国际正式启动了</a><span>2016-01-03</span></div>
+                                <div class="zhengfu_al"><a href="">“5年·志愿服务守望社区”——第30个国际正式启动了</a><span>2016-01-03</span></div>
+                                <div class="zhengfu_al"><a href="">“5年·志愿服务守望社区”——第30个国际正式启动了</a><span>2016-01-03</span></div>
+                            </div>
+                            <div class="zhegnfu_a">
+                            	<div class="zhengfu_al"><a href="">“·志愿服务守望社区”——第30个国际正式启动了</a><span>2016-01-03</span></div>
+                                <div class="zhengfu_al"><a href="">“5年·志愿服务守望社区”——第30个国际正式启动了</a><span>2016-01-03</span></div>
+                                <div class="zhengfu_al"><a href="">“5年·志愿服务守望社区”——第30个国际正式启动了</a><span>2016-01-03</span></div>
+                                <div class="zhengfu_al"><a href="">“5年·志愿服务守望社区”——第30个国际正式启动了</a><span>2016-01-03</span></div>
+                                <div class="zhengfu_al"><a href="">“5年·志愿服务守望社区”——第30个国际正式启动了</a><span>2016-01-03</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tong_top clearfix">
+                <div class="tong_title tong_title5"><span>活动展示</span><a href="">更多</a></div>
+				<div class="d_contentp">
+                    <div class="d_con leftLoop">
+                           <div class="d_hd"><img src="img/left.png" class="d_prev"/><img src="img/right.png" class="d_next" /></div>
+                           <div class="d_bd">
+                               <div class="d_con1">
+                                    <div class="con2">
+                                        <div class="c1"><a href=""><img src="img/img_05.jpg"></a></div>
+                                        <a href="" class="al">市志愿服务联合会组...</a>
+                                    </div>
+                                    <div class="con2">
+                                        <div class="c1"><a href=""><img src="img/img_05.jpg"></a></div>
+                                        <a href="" class="al">市志愿服务联合会组...</a>
+                                    </div>
+                                    <div class="con2">
+                                        <div class="c1"><a href=""><img src="img/img_05.jpg"></a></div>
+                                        <a href="" class="al">市志愿服务联合会组...</a>
+                                    </div>
+                                    <div class="con2">
+                                        <div class="c1"><a href=""><img src="img/img_05.jpg"></a></div>
+                                        <a href="" class="al">市志愿服务联合会组...</a>
+                                    </div>
+                                    <div class="con2">
+                                        <div class="c1"><a href=""><img src="img/img_05.jpg"></a></div>
+                                        <a href="" class="al">市志愿服务联合会组...</a>
+                                    </div>
+                                    <div class="con2">
+                                        <div class="c1"><a href=""><img src="img/img_05.jpg"></a></div>
+                                        <a href="" class="al">市志愿服务联合会组...</a>
+                                    </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+    	<div class="footer clearfix">
+        	<div class="footer_con">广西一通居家养老服务中心 版权所有　Copyright © 2013 12349.cc All Rights Reserved　网站备案号：桂ICP备12002432号　热线电话：12349<br>
+主办单位：广西老年基金会 | 广西老龄产业协会 | 广西一通集团 主管单位：广西壮族自治区民政厅   广西壮族自治区老龄委员会办公室<br>
+南宁：南宁市新民路59号太阳广场A2305 　柳州：柳州市东环大道280号14栋附楼二楼 　桂林：桂林市桂磨大道创意产业园5栋404</div>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+	$(document).ready(function() {
+			var num=$('.zhiyuan_img ul li span').html();
+			if(num.length >34){
+				$('.zhiyuan_img ul li span').html(num.substr(0,33)+"...");
+				}	
+		})
+		
+	$('.zhengfu_right ul li a').click(function(){
+		SwitchCard(".zhengfu_right ul li a", ".zhengfu_con .zhegnfu_a", "cxhover", $(this))
+	});
+	$('.zhengfu_right ul li a').eq(0).trigger("click");
+			function SwitchCard(tab,con,addClass,obj){
+			var $_self = obj;
+			var $_nav = $(tab);
+			$_nav.removeClass(addClass),
+			$_self.addClass(addClass);
+			var $_index = $_nav.index($_self);
+			var $_con = $(con);
+			$_con.hide(),
+			$_con.eq($_index).show();
+		}
+	$(".leftLoop").slide({
+		  mainCell:".d_bd .d_con1",
+		  effect:"leftLoop",
+		  vis:"visible",
+		  scroll:1,
+		  autoPlay:false
+	  });
+</script>

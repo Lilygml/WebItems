@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="utf-8" /> 
+  <title>无标题文档</title> 
+  <link href="style/css.css" rel="stylesheet" type="text/css" /> 
+  <link href="style/style.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script> 
+  <script type="text/javascript" src="js/function.js"></script> 
+  <script type="text/javascript" src="js/jquery.glide.min.js"></script> 
+  <script type="text/javascript" src="js/script.js"></script> 
+  <script src="http://lib.sinaapp.com/js/jquery/1.4.2/jquery.min.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+$(document).ready(function(){
+    jQuery.jq51menu = function(menuboxid,submenu){
+        
+        var menuboxli = $(menuboxid+" li");
+		menuboxli.find(submenu).hide();
+		menuboxli.eq(0).find(submenu).show();
+        menuboxli.click( function () {
+            $(this).addClass("thismenu").find(submenu).show().end().siblings("li").removeClass("thismenu").find(submenu).hide();
+             
+        });
+        
+    };
+    
+    $.jq51menu("#menubox","div.submenu");
+
+});
+</script> 
+  <link rel="stylesheet" href="Validform/images/style.css" type="text/css" media="all" /> 
+  <script type="text/javascript" src="Validform/images/jquery-1.9.1.min.js"></script> 
+  <script type="text/javascript" src="Validform/images/Validform_v5.3.2.js"></script> 
+  <script type="text/javascript" src="Validform/plugin/passwordStrength/passwordStrength-min.js"></script> 
+  <script type="text/javascript">
+$(function(){
+	/*省份证验证*/
+	$.extend($.Datatype,{
+		"card1-18" : /^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$/
+	});
+	$(".registerform").Validform({
+		tiptype:2,
+		datatype:{
+			/*请至少选择2项！*/
+			"min2":function(gets,obj,curform,regxp){
+				var need=2,
+					numselected=curform.find("input[name='"+obj.attr("name")+"']:checked").length;
+				return  numselected >= need ? true : "请至少选择"+need+"项！";
+			},
+			/*最多只能选择2项*/
+			"max2":function(gets,obj,curform,regxp){
+				var atmax=2,
+					numselected=curform.find("input[name='"+obj.attr("name")+"']:checked").length;
+					
+				if(numselected==0){
+					return false;
+				}else if(numselected>atmax){
+					return "最多只能选择"+atmax+"项！";
+				}
+				return  true;
+			},
+			/*手机与固话至少填写一项！*/
+			"phone":function(gets,obj,curform,regxp){
+				var reg1=regxp["m"],
+					reg2=/[\d]{7}/,
+					mobile=curform.find("#uphone");
+				if(reg1.test(mobile.val())){return true;}
+				if(reg2.test(gets)){return true;}
+				return false;
+			}
+		},
+		/*表单验证*/
+		tiptype:function(msg,o,cssctl){
+			if(!o.obj.is("form")){
+				var objtip=o.obj.parent().find(".Validform_checktip");
+				cssctl(objtip,o.type);
+				objtip.text(msg);
+				
+				var infoObj=o.obj.parent().find(".info");
+				if(o.type==2){
+					infoObj.fadeOut(200);
+				}else{
+					if(infoObj.is(":visible")){return;}
+					infoObj.css({
+						left:0,
+						top:-30
+					}).show().animate({
+						top:-27
+					},200);
+				}
+				
+			}	
+		},
+		/*密码验证*/
+		usePlugin:{
+			passwordstrength:{
+				minLen:6,
+				maxLen:18,
+				trigger:function(obj,error){
+					if(error){
+						obj.parent().find(".passwordStrength").hide();
+					}else{
+						obj.parent().find(".info").hide();
+						obj.parent().find(".passwordStrength").show();	
+					}
+				}
+			}
+		}	
+	});
+	/*短信验证接口*/
+	$("#phonecodesub").click(function(){
+		var CheckMyreg= /^(((13[0-9]{1})|159|(15[0-9]{1}))+\d{8})$/;	
+		var uphone=$("#uphone").val();
+	 	if(!CheckMyreg.test(uphone)){
+			$("#uphone").focus();
+	    	return false;
+	    }
+	$.post("codesub.html",{},function(result2){
+	   $.post("短信接口地址",{mobile:uphone,content:result2},function(result){});
+	});
+	datetime(this,1000);
+  	});
+   })
+/*短信验证倒计时*/
+var wait=5;
+function datetime(o,time) {
+	if (wait == 0) {
+		o.removeAttribute("disabled");
+		o.style.backgroundColor="#f5f5f5"
+		o.style.border="#d5d5d5 1px solid"
+		o.style.color="#333"
+		o.value="发送验证码到手机";
+		wait = 60;
+	} else {
+		o.setAttribute("disabled", true);
+		o.style.backgroundColor="#F00"
+		o.style.border="1px solid #F00"
+		o.style.color="#FFF"
+		o.value="重新发送(" + wait + ")";
+		wait--;
+		setTimeout(function() {
+			datetime(o,time)
+		},
+		time)
+	}
+}
+</script> 
+  <script type="text/javascript">
+$(document).ready(function() { 
+$('.content-ico-05 .m5 .m3 .ms2').click(function(){
+		SwitchCard(".content-ico-05 .m5 .m3 .ms2", ".content-ico-05 .m5 .ml1 .ms3", "cxhover", $(this))
+});
+$('.content-ico-05 .m5 .m3 .ms2').eq(0).trigger("click");
+$('.help .help-02 .ulb .lib').click(function(){
+		SwitchCard(".help .help-02 .ulb .lib", ".help .help-02 .br-re .form-horizontal", "cxhover", $(this))
+});
+$('.help .help-02 .ulb .lib').eq(0).trigger("click");
+		function SwitchCard(tab,con,addClass,obj){
+		var $_self = obj;
+		var $_nav = $(tab);
+		$_nav.removeClass(addClass),
+		$_self.addClass(addClass);
+		var $_index = $_nav.index($_self);
+		var $_con = $(con);
+		$_con.hide(),
+		$_con.eq($_index).show();
+	}
+}); 
+
+</script> 
+ </head> 
+ <body> 
+  <!--top--> 
+  <header> 
+   <div class="top"> 
+    <div class="pagewrap"> 
+     <div class="top-03 top-04"> 
+      <div class="top-nav">
+       <a href="搜索-商铺转让.html">商铺转让</a>
+       <a href="搜索-商铺出租.html">商铺租售</a>
+       <a href="搜索-写字楼.html">写字楼</a>
+       <a href="搜索-仓房厂房.html">厂房仓库</a>
+       <a href="搜索-求租求购.html">求租求购</a>
+      </div> 
+      <ul>
+       <li><img src="images/logo.png" /></li>
+       <li class="li1"><a href=""><span>苏州</span> &nbsp;[切换]</a></li>
+       <li class="li2">
+        <form>
+         <input type="text" name="" placeholder="" />
+         <button type="submit" name="" value="">搜索</button>
+        </form></li>
+       <li class="li3"> <p><a href=""><img src="images/icon-1.jpg" /></a></p><h2><a href="会员注册.html" class="ac">去会员中心</a><a href="" class="a3 ac">我的收藏</a></h2></li> 
+      </ul> 
+     </div> 
+     <div class="clear"></div> 
+     <div class="nav nav-01"> 
+      <div class="nav-left">
+       <a href="" class="nav-left-01">全部分类</a> 
+      </div> 
+      <div class="nav-right"> 
+       <div class="nav-right-top">
+        <a href="首页.html" class="current">首页</a> 
+        <a href="商铺出租.html">商铺出租</a> 
+        <a href="商铺转让.html">商铺转让</a> 
+        <a href="商铺出售.html">商铺出售</a> 
+        <a href="写字楼.html">写字楼</a> 
+        <a href="仓房厂房.html">厂房仓库</a> 
+        <a href="求租求购.html">求租求售</a> 
+        <a href="财富中国3.html">财富中国</a> 
+        <a href="问答中心.html">问答中心</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </header> 
+  <div class="clear"></div> 
+  <div class="content"> 
+   <div class="pagewrap"> 
+    <div class="quiz">
+     <a href="">财铺网&gt;</a>
+     <a href="经纪人中心.html">经纪人中心&gt;</a>
+     <a href="">发布新房源</a>
+    </div> 
+    <div class="help"> 
+     <div class="help-01"> 
+      <div id="menubox"> 
+       <ul> 
+        <li><a href="javascript:;" class="subm"><span>会员中心</span></a> 
+         <div class="submenu"> 
+          <a href="经纪人中心-发布新房源.html" class="ad current-02">发布新房源</a> 
+          <a href="经纪人中心-房源管理.html" class="ad">房源管理</a> 
+         </div> </li> 
+        <li><a href="javascript:;" class="subm"><span>房源统计分析</span></a> 
+         <div class="submenu"> 
+          <a href="经纪人中心-房源点击量统计.html" class="ad">房源点击量统计</a> 
+          <a href="经纪人中心-房源点击量分析.html" class="ad">房源点击量分析</a> 
+          <a href="经纪人中心-分时段刷新分析.html" class="ad">分时段刷新分析</a> 
+         </div> </li> 
+        <li><a href="javascript:;" class="subm"><span>问答中心</span></a> 
+         <div class="submenu"> 
+          <a href="经纪人中心-问答中心-提问.html" class="ad">我的提问</a> 
+          <a href="经纪人中心-问答中心-我的回答.html" class="ad">我的回答</a> 
+         </div> </li> 
+        <li><a href="javascript:;" class="subm"><span>我的评论</span></a> 
+         <div class="submenu"> 
+          <a href="#" class="ad">我的评论</a> 
+         </div> </li> 
+        <li><a href="javascript:;" class="subm"><span>站内信息</span></a> 
+         <div class="submenu"> 
+          <a href="经纪人中心-站内信息-收件箱.html" class="ad">收件箱</a> 
+          <a href="经纪人中心-站内信息-发件箱.html" class="ad">发件箱</a> 
+         </div> </li> 
+        <li><a href="javascript:;" class="subm"><span>账户信息</span></a> 
+         <div class="submenu"> 
+          <a href="经纪人中心-账户信息-我的资料.html" class="ad">我的资料</a> 
+          <a href="经纪人中心-安全中心.html" class="ad">安全中心</a> 
+          <a href="#" class="ad">账户余额</a> 
+          <a href="#" class="ad">推广中心</a> 
+         </div> </li> 
+        <div class="help-c"> 
+         <ul class="ulh"> 
+          <li class="lih"><a href="经纪人中心-举报投诉.html">举报投诉</a><a href="经纪人中心-帮助中心.html">帮助中心</a><a href="">推出</a></li> 
+         </ul> 
+        </div> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="help-02 broker-co-01"> 
+      <ul class="ulb"> 
+       <li class="lib"><a href="javascript:;" class="are">商铺</a></li> 
+       <li class="lib lib1"><a href="javascript:;" class="are1">写字楼</a></li> 
+       <li class="lib lib1"><a href="javascript:;" class="are2">厂房仓库</a></li> 
+      </ul> 
+      <div class="br-re"> 
+       <div class="form-horizontal user-login"> 
+        <form action="?" method="post" name="form1" class="registerform"> 
+         <p class="p1"><label><font>* </font>分&nbsp;&nbsp;类：</label> <input name="shoppingsite2" type="radio" datatype="max2" nullmsg="请选择常去的购物网站！" style="width:14px;" class="inpu"/><a>商铺租售</a> <input name="shoppingsite2" type="radio" style="width:14px;" class="inpu" /><a> 商铺转让</a> <font class="info"><span class="Validform_checktip">最多只能选择1项</span><span class="dec">
+            <s class="dec1">
+             ◆
+            </s>
+            <s class="dec2">
+             ◆
+            </s></span></font> </p> 
+         <p class="p1"><label><font>* </font>供&nbsp;&nbsp;求：</label> <input name="shoppingsite3" type="radio" datatype="max2" nullmsg="请选择常去的购物网站！" style="width:14px;"  class="inpu"/><a>出租</a> <input name="shoppingsite3" type="radio" style="width:14px;" class="inpu"/><a> 出售</a> <input name="shoppingsite3" type="radio" style="width:14px;" class="inpu"/><a> 求租</a> <input name="shoppingsite3" type="radio" style="width:14px;" class="inpu"/><a> 求购</a> <font class="info"><span class="Validform_checktip">最多只能选择1项</span><span class="dec">
+            <s class="dec1">
+             ◆
+            </s>
+            <s class="dec2">
+             ◆
+            </s></span></font> </p> 
+         <p class="p1"><label><font>* </font>标&nbsp;&nbsp;题：</label><input name="uname" type="text" id="teinx" value="" placeholder="*  标题" datatype="*2-6" nullmsg="请输入标题！" /> <font class="defi defi-01"><span class="Validform_checktip"></span></font> </p> 
+         <p> <label>地&nbsp;&nbsp;段：</label> <select class="se"><option>区域</option></select> <select class="se"><option>区域</option></select> <input type="" id="in1" /> </p> 
+         <p><label>临&nbsp;&nbsp;近：</label> <input type="" id="in1" /> </p> 
+         <p class="p1"><label><font>* </font>类&nbsp;&nbsp;型：</label><select name="province" datatype="*" nullmsg="商业街卖场！" errormsg="请选择商业街卖场！" class="select-01"> <option value="0">请选择城市</option> <option value="1">瑞金市</option> </select> <font class="info"><span class="Validform_checktip">请选择您所在的城市</span><span class="dec">
+            <s class="dec1">
+             ◆
+            </s>
+            <s class="dec2">
+             ◆
+            </s></span></font> </p> 
+         <p><label>历史经营：</label> <input type="" /> </p> 
+         <p><label><font>*</font>租&nbsp;&nbsp;金：</label> <input class="se" name="uname" type="text" id="teinx" value="*  面议" placeholder="" datatype="*2-6" nullmsg="请输入标题！" /> <font class="info"><span class="Validform_checktip">请选择您所在的城市</span><span class="dec">
+            <s class="dec1">
+             ◆
+            </s>
+            <s class="dec2">
+             ◆
+            </s></span></font> <select class="se" name="province" datatype="*" nullmsg="元/月" errormsg="请选择价格！"><option>元/月</option></select> </p> 
+         <p class="p1"><label><font>* </font>面&nbsp;&nbsp;积：</label><input name="uname" type="text" id="teinx" value="" placeholder="*  标题" datatype="*2-6" nullmsg="请输入标题！" />&nbsp;平米 <font class="defi defi-01"><span class="Validform_checktip"></span></font> </p> 
+         <p><label class="im"><font>*</font>补充说明：</label> <img src="images/te1.png" /> </p> 
+         <p> <button type="submit" name="" class="ps"><a href="">上传图片</a></button> </p> 
+         <p><label for="in1" class="im">地图标注：</label> <button type="submit" name="" class="ps1"><a href="">在地图上标注位置</a></button> </p> 
+         <p class="p1"><label><font>* </font>联系人：</label><input name="uname" type="text" id="teinx" value="" placeholder="*  联系人" datatype="*2-6" nullmsg="请输入联系人！" /> <font class="defi defi-01"><span class="Validform_checktip"></span></font> </p> 
+         <p class="p1"><label><font>* </font>手机电话：</label><input name="uname" type="text" id="teinx" value="" placeholder="*  手机号" datatype="*2-6" nullmsg="请输入手机号！" /> <font class="defi defi-01"><span class="Validform_checktip"></span></font> </p> 
+         <div class="clear"></div> 
+         <p> <label class="fo1">适合经营：</label> <span class="fo"> <font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font> <font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font> </span> </p> 
+         <p> <label>店铺类型：</label> <select><option>--请选择--</option></select> </p> 
+         <p> <label>是否营业中：</label> <input type="radio" id="in1" name="r" class="re " />&nbsp;营业中<input type="radio" name="r" id="in1" class="re re2" />&nbsp;空置中<input type="radio" name="r" id="in1" class="re re2" />&nbsp;新铺 </p> 
+         <p><input type="submit" class="btn_sub btn_sub_01 btn_sub_02" value="马上发布" /></p> 
+        </form> 
+       </div> 
+       <div class="form-horizontal user-login"> 
+        <form action="?" method="post" name="form1" class="registerform"> 
+         <p class="p1"><label><font>* </font>分&nbsp;&nbsp;类11：</label> <input name="shoppingsite2" type="radio" datatype="max2" nullmsg="请选择常去的购物网站！" style="width:14px;" class="inpu"/><a>商铺租售</a> <input name="shoppingsite2" type="radio" style="width:14px;" class="inpu" /><a> 商铺转让</a> <font class="info"><span class="Validform_checktip">最多只能选择1项</span><span class="dec">
+            <s class="dec1">
+             ◆
+            </s>
+            <s class="dec2">
+             ◆
+            </s></span></font> </p> 
+         <p class="p1"><label><font>* </font>供&nbsp;&nbsp;求：</label> <input name="shoppingsite3" type="radio" datatype="max2" nullmsg="请选择常去的购物网站！" style="width:14px;"  class="inpu"/><a>出租</a> <input name="shoppingsite3" type="radio" style="width:14px;" class="inpu"/><a> 出售</a> <input name="shoppingsite3" type="radio" style="width:14px;" class="inpu"/><a> 求租</a> <input name="shoppingsite3" type="radio" style="width:14px;" class="inpu"/><a> 求购</a> <font class="info"><span class="Validform_checktip">最多只能选择1项</span><span class="dec">
+            <s class="dec1">
+             ◆
+            </s>
+            <s class="dec2">
+             ◆
+            </s></span></font> </p> 
+         <p class="p1"><label><font>* </font>标&nbsp;&nbsp;题：</label><input name="uname" type="text" id="teinx" value="" placeholder="*  标题" datatype="*2-6" nullmsg="请输入标题！" /> <font class="defi defi-01"><span class="Validform_checktip"></span></font> </p> 
+         <p> <label>地&nbsp;&nbsp;段：</label> <select class="se"><option>区域</option></select> <select class="se"><option>区域</option></select> <input type="" id="in1" /> </p> 
+         <p><label>临&nbsp;&nbsp;近：</label> <input type="" id="in1" /> </p> 
+         <p class="p1"><label><font>* </font>类&nbsp;&nbsp;型：</label><select name="province" datatype="*" nullmsg="商业街卖场！" errormsg="请选择商业街卖场！" class="select-01"> <option value="0">请选择城市</option> <option value="1">瑞金市</option> </select> <font class="info"><span class="Validform_checktip">请选择您所在的城市</span><span class="dec">
+            <s class="dec1">
+             ◆
+            </s>
+            <s class="dec2">
+             ◆
+            </s></span></font> </p> 
+         <p><label>历史经营：</label> <input type="" /> </p> 
+         <p><label><font>*</font>租&nbsp;&nbsp;金：</label> <input class="se" name="uname" type="text" id="teinx" value="*  面议" placeholder="" datatype="*2-6" nullmsg="请输入标题！" /> <font class="info"><span class="Validform_checktip">请选择您所在的城市</span><span class="dec">
+            <s class="dec1">
+             ◆
+            </s>
+            <s class="dec2">
+             ◆
+            </s></span></font> <select class="se" name="province" datatype="*" nullmsg="元/月" errormsg="请选择价格！"><option>元/月</option></select> </p> 
+         <p class="p1"><label><font>* </font>面&nbsp;&nbsp;积：</label><input name="uname" type="text" id="teinx" value="" placeholder="*  标题" datatype="*2-6" nullmsg="请输入标题！" />&nbsp;平米 <font class="defi defi-01"><span class="Validform_checktip"></span></font> </p> 
+         <p><label class="im"><font>*</font>补充说明：</label> <img src="images/te1.png" /> </p> 
+         <p> <button type="submit" name="" class="ps"><a href="">上传图片</a></button> </p> 
+         <p><label for="in1" class="im">地图标注：</label> <button type="submit" name="" class="ps1"><a href="">在地图上标注位置</a></button> </p> 
+         <p class="p1"><label><font>* </font>联系人：</label><input name="uname" type="text" id="teinx" value="" placeholder="*  联系人" datatype="*2-6" nullmsg="请输入联系人！" /> <font class="defi defi-01"><span class="Validform_checktip"></span></font> </p> 
+         <p class="p1"><label><font>* </font>手机电话：</label><input name="uname" type="text" id="teinx" value="" placeholder="*  手机号" datatype="*2-6" nullmsg="请输入手机号！" /> <font class="defi defi-01"><span class="Validform_checktip"></span></font> </p> 
+         <div class="clear"></div> 
+         <p> <label class="fo1">适合经营：</label> <span class="fo"> <font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font> <font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font> </span> </p> 
+         <p> <label>店铺类型：</label> <select><option>--请选择--</option></select> </p> 
+         <p> <label>是否营业中：</label> <input type="radio" id="in1" name="r" class="re " />&nbsp;营业中<input type="radio" name="r" id="in1" class="re re2" />&nbsp;空置中<input type="radio" name="r" id="in1" class="re re2" />&nbsp;新铺 </p> 
+         <p><input type="submit" class="btn_sub btn_sub_01 btn_sub_02" value="马上发布" /></p> 
+        </form> 
+       </div> 
+       <div class="form-horizontal user-login"> 
+        <form action="?" method="post" name="form1" class="registerform"> 
+         <p class="p1"><label><font>* </font>分&nbsp;&nbsp;类22：</label> <input name="shoppingsite2" type="radio" datatype="max2" nullmsg="请选择常去的购物网站！" style="width:14px;" class="inpu"/><a>商铺租售</a> <input name="shoppingsite2" type="radio" style="width:14px;" class="inpu" /><a> 商铺转让</a> <font class="info"><span class="Validform_checktip">最多只能选择1项</span><span class="dec">
+            <s class="dec1">
+             ◆
+            </s>
+            <s class="dec2">
+             ◆
+            </s></span></font> </p> 
+         <p class="p1"><label><font>* </font>供&nbsp;&nbsp;求：</label> <input name="shoppingsite3" type="radio" datatype="max2" nullmsg="请选择常去的购物网站！" style="width:14px;"  class="inpu"/><a>出租</a> <input name="shoppingsite3" type="radio" style="width:14px;" class="inpu"/><a> 出售</a> <input name="shoppingsite3" type="radio" style="width:14px;" class="inpu"/><a> 求租</a> <input name="shoppingsite3" type="radio" style="width:14px;" class="inpu"/><a> 求购</a> <font class="info"><span class="Validform_checktip">最多只能选择1项</span><span class="dec">
+            <s class="dec1">
+             ◆
+            </s>
+            <s class="dec2">
+             ◆
+            </s></span></font> </p> 
+         <p class="p1"><label><font>* </font>标&nbsp;&nbsp;题：</label><input name="uname" type="text" id="teinx" value="" placeholder="*  标题" datatype="*2-6" nullmsg="请输入标题！" /> <font class="defi defi-01"><span class="Validform_checktip"></span></font> </p> 
+         <p> <label>地&nbsp;&nbsp;段：</label> <select class="se"><option>区域</option></select> <select class="se"><option>区域</option></select> <input type="" id="in1" /> </p> 
+         <p><label>临&nbsp;&nbsp;近：</label> <input type="" id="in1" /> </p> 
+         <p class="p1"><label><font>* </font>类&nbsp;&nbsp;型：</label><select name="province" datatype="*" nullmsg="商业街卖场！" errormsg="请选择商业街卖场！" class="select-01"> <option value="0">请选择城市</option> <option value="1">瑞金市</option> </select> <font class="info"><span class="Validform_checktip">请选择您所在的城市</span><span class="dec">
+            <s class="dec1">
+             ◆
+            </s>
+            <s class="dec2">
+             ◆
+            </s></span></font> </p> 
+         <p><label>历史经营：</label> <input type="" /> </p> 
+         <p><label><font>*</font>租&nbsp;&nbsp;金：</label> <input class="se" name="uname" type="text" id="teinx" value="*  面议" placeholder="" datatype="*2-6" nullmsg="请输入标题！" /> <font class="info"><span class="Validform_checktip">请选择您所在的城市</span><span class="dec">
+            <s class="dec1">
+             ◆
+            </s>
+            <s class="dec2">
+             ◆
+            </s></span></font> <select class="se" name="province" datatype="*" nullmsg="元/月" errormsg="请选择价格！"><option>元/月</option></select> </p> 
+         <p class="p1"><label><font>* </font>面&nbsp;&nbsp;积：</label><input name="uname" type="text" id="teinx" value="" placeholder="*  标题" datatype="*2-6" nullmsg="请输入标题！" />&nbsp;平米 <font class="defi defi-01"><span class="Validform_checktip"></span></font> </p> 
+         <p><label class="im"><font>*</font>补充说明：</label> <img src="images/te1.png" /> </p> 
+         <p> <button type="submit" name="" class="ps"><a href="">上传图片</a></button> </p> 
+         <p><label for="in1" class="im">地图标注：</label> <button type="submit" name="" class="ps1"><a href="">在地图上标注位置</a></button> </p> 
+         <p class="p1"><label><font>* </font>联系人：</label><input name="uname" type="text" id="teinx" value="" placeholder="*  联系人" datatype="*2-6" nullmsg="请输入联系人！" /> <font class="defi defi-01"><span class="Validform_checktip"></span></font> </p> 
+         <p class="p1"><label><font>* </font>手机电话：</label><input name="uname" type="text" id="teinx" value="" placeholder="*  手机号" datatype="*2-6" nullmsg="请输入手机号！" /> <font class="defi defi-01"><span class="Validform_checktip"></span></font> </p> 
+         <div class="clear"></div> 
+         <p> <label class="fo1">适合经营：</label> <span class="fo"> <font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font> <font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font><font class="fo-01"><input type="checkbox" id="in1" class="re " /> 酒楼餐饮</font> </span> </p> 
+         <p> <label>店铺类型：</label> <select><option>--请选择--</option></select> </p> 
+         <p> <label>是否营业中：</label> <input type="radio" id="in1" name="r" class="re " />&nbsp;营业中<input type="radio" name="r" id="in1" class="re re2" />&nbsp;空置中<input type="radio" name="r" id="in1" class="re re2" />&nbsp;新铺 </p> 
+         <p><input type="submit" class="btn_sub btn_sub_01 btn_sub_02" value="马上发布" /></p> 
+        </form> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!--footer--> 
+  <div class="footer"> 
+   <div class="pagewrap"> 
+    <dl> 
+     <dd> 
+      <h1>关于我们</h1> 
+      <a href="">公司简介</a> 
+      <a href="">发展历程</a> 
+      <a href="">平台公告</a> 
+      <a href="">联系方式</a> 
+     </dd> 
+     <dd> 
+      <h1>服务项目</h1> 
+      <a href="">生意转让</a> 
+      <a href="">租赁招商</a> 
+      <a href="">找店选址</a> 
+      <a href="">服务协议</a> 
+     </dd> 
+     <dd> 
+      <h1>官方微博</h1> 
+      <a href=""><img src="images/erwei.jpg" /></a> 
+     </dd> 
+     <dd> 
+      <h1>官方微信</h1> 
+      <a href=""><img src="images/erwei.jpg" /></a> 
+     </dd> 
+     <dd> 
+      <h1>关注我们</h1> 
+      <a href="">新浪官方微博</a> 
+      <a href="">腾讯官方微博</a> 
+      <a href="">一句话点评</a> 
+      <a href="">分享给好友</a> 
+     </dd> 
+     <dd> 
+      <h1>关于我们</h1> 
+      <a href=""><span>400-8888-888</span>&nbsp;&nbsp;&nbsp;免长途费</a> 
+      <a href="">您还可以拨打：0512-88888888</a> 
+      <a href=""><img src="images/icon-13.png" /></a> 
+      <a href="">地址：苏州市昆山市前进东路1008号</a> 
+     </dd> 
+    </dl> 
+    <div class="clear"></div> 
+    <div class="footerl">
+     <a href="">首页</a>
+     <a href="">关于我们</a>
+     <a href="">新闻中心</a>
+     <a href="">支付方式</a>
+     <a href="">联系方式</a>
+     <a href="">客服中心</a>
+     <a href="">网站地图</a>
+     <a href="" class="as">公司资质</a>
+    </div> 
+    <div class="copyright">
+     CopyRight &copy; 2015-2025 www.kingexpand.com 财铺网有限公司版权所有 备案：苏ICP备12000000号&nbsp; 站长统计
+    </div> 
+   </div> 
+  </div>   
+ </body>
+</html>

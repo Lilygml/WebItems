@@ -1,0 +1,176 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/jquery-1.7.js"></script>
+<script language=JavaScript src="js/Function.js"></script>
+<link href="images/skin.css" rel="stylesheet" type="text/css" />
+<link href="style/kei.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/listtable.js"></script>
+<body>
+ 
+<script src="js/colResizable-1.3.min.js"></script>
+   <script type="text/javascript">
+	$(function(){	
+		var onSampleResized = function(e){
+			
+			var columns = $(e.currentTarget).find("th");
+
+			var msg = "columns widths: ";
+
+			columns.each(function(){ msg += $(this).width() + "px; "; })
+			
+		};	
+		$("#sample2").colResizable({
+
+			liveDrag:true, 
+
+			gripInnerHtml:"<div class='grip'></div>", 
+
+			draggingClass:"dragging", 
+
+			onResize:onSampleResized
+			
+		});
+
+	});	
+
+  </script>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="7" height="71" valign="middle"></td>
+    <td valign="top">
+      <table width="100%" height="138" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="13" valign="top">&nbsp;</td>
+          </tr>
+        <tr>
+          <td valign="top">        
+            
+            <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td style="font-size:14px; color:#999 ; position:relative;">当前位置：<a href="">服务商订货管理 </a>><a href=""> 进货单 </a>><a href=""> 进货单新增</a><div class="amend_r"><a href="">快速下单</a><a href="cart.html"><i></i>购物车（<b>7</b>）</a><a href="">主控制面板</a><a href="">网站首页</a></div></td>
+                
+                </tr>
+              <tr>
+                <td height="20">
+                    <table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+                      <tr>
+                        <td>
+                        	
+                        </td>
+                      </tr>
+                    </table>
+                 </td>
+             </tr>
+             <tr>
+                <td height="20">
+                    <div class="amend_con">进货单（新增）</div>
+                    <div class="amend_u">
+                    	<ul>
+                        	<li><label><font color="#D70003">*</font>单据编号：</label><input type="text" value="SL25545525"/></li>
+                            <li><label><font color="#D70003">*</font>日期：</label><input type="text"/></li>
+                            <li><label><font color="#D70003">&nbsp;</font></label><span>&nbsp;&nbsp;</span></li>
+                            <li><label>服务商简称：</label><span>昆山旌展信息科技</span></li>
+                            <li><label>服务商全称：</label><span>昆山旌展信息科技有限公司</span></li>
+                            <li><label>服务商金额：</label><span>10000.00元</span></li>
+                            <li class="am_ip"><label>备注：</label><input type="text"/></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="amend_con">订单明细</div>
+                    <div class="amend_form">
+                        <form method="post" action="" name="listForm" onsubmit="return confirmSubmit(this)">
+                            <table id="sample2" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#E1E5EE" style="font-size:14px; font-weight:bold">
+                              <thead>
+                                  <tr>
+                                    <td height="30" bgcolor="#f0f0f0">商品编号</td>
+                                    <td bgcolor="#f0f0f0">商品分类</td>
+                                    <td bgcolor="#f0f0f0">品牌/型号</td>
+                                    <td bgcolor="#f0f0f0" class="right_align">数量</td>
+                                    <td bgcolor="#f0f0f0">单价（元）</td>
+                                    <td bgcolor="#f0f0f0" class="right_align">金额（元）</td>
+                                    <td bgcolor="#f0f0f0">已退数</td>
+                                    <td bgcolor="#f0f0f0">相关单据编号</td>
+                                    <td bgcolor="#f0f0f0">备注</td>
+                                    <td bgcolor="#f0f0f0">删除</td>
+                                  </tr>
+                              </thead>
+                              <tbody class="tbody_td">
+                                  <tr bgcolor="#FFFFFF">
+                                    <td></td>
+                                    <td></td>
+                                    <td>惠普/惠普M477fdw</td>
+                                    <td class="right_align">99</td>
+                                    <td><input type="text" value="99" class="in_p"/></td>
+                                    <td class="right_align">2000.00</td>
+                                    <td>10</td>
+                                    <td>OR2555414</td>
+                                    <td><input type="text" class="in_p1" /></td>
+                                    <td><span>删除</span></td>
+                                  </tr>
+                              </tbody>
+                              <tbody class="tbody_td">
+                                  <tr bgcolor="#e2efff">
+                                    <td></td>
+                                    <td></td>
+                                    <td>惠普/惠普M477fdw</td>
+                                    <td class="right_align">99</td>
+                                    <td><input type="text" value="99" class="in_p"/></td>
+                                    <td class="right_align">2000.00</td>
+                                    <td>10</td>
+                                    <td>OR2555414</td>
+                                    <td><input type="text" class="in_p1" /></td>
+                                    <td><span>删除</span></td>
+                                  </tr>
+                              </tbody>
+                              <tbody class="tbody_td">
+                                  <tr bgcolor="#FFFFFF">
+                                    <td></td>
+                                    <td></td>
+                                    <td>惠普/惠普M477fdw</td>
+                                    <td class="right_align">99</td>
+                                    <td><input type="text" value="99" class="in_p"/></td>
+                                    <td class="right_align">2000.00</td>
+                                    <td>10</td>
+                                    <td>OR2555414</td>
+                                    <td><input type="text" class="in_p1" /></td>
+                                    <td><span>删除</span></td>
+                                  </tr>
+                              </tbody>
+                              <tfoot class="tfoot_td">
+                              	<tr bgcolor="#ffffcd">
+                                    <td>合计：</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="right_align">2000.00</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                              </tfoot>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="amend_last">
+                    	<input type="submit" value="确认添加"/><a href="stock_cur_order.html">返回上一步</a>
+                    </div>
+                </td>
+             </tr>
+            </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    <td width="16">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="middle">&nbsp;</td>
+      <td height="17" valign="top">&nbsp;</td>
+    <td></td>
+  </tr>
+</table>
+
+
+</body>
+</html>

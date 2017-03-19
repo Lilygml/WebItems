@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>登录</title>
+		<link rel="stylesheet" href="css/default.css" />
+		<link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/validationEngine.jquery.css"><!--表单验证css-->
+        <script src="js/jquery-1.8.0.min.js"></script>
+        <script src="js/jquery.validationEngine.js"></script><!--表单验证-->
+        <script src="js/jquery.validationEngine-zh-CN.js"></script><!--表单验证cn-->
+        <script type="text/javascript" src="js/lrtk.js"></script>
+	</head>
+	<body>	
+		<header>
+			<div class="w1200 overflow top_s">
+				<div class="logo"><img src="img/logo.png"></div>
+				<div class="king-hader-txt">欢迎登录</div>
+			</div>
+		</header>
+		<section>
+			<div class="w1200">
+				<div class="zhuc-img"><img src="img/zhuc-img.png"/></div>
+				<div class="zhuc-from">
+					<form action="首页.html" method="post" id="formID">
+						<h2>团标网</h2>
+						<div class="input-from">
+							<label class="inpu-text user-ico"></label>
+							<input type="text" placeholder="手机" class="validate[groupRequired[payments]]" />
+						</div>
+						<div class="input-from">
+							<label class="inpu-text pwd-ico"></label>
+							<input type="text" placeholder="密码"class="validate[required,minSize[6]]"/>
+						</div>
+						<div class="input-from"style="padding-bottom: 10px;">
+							<input type="checkbox" /> 自动登录
+							<a href="找回密码.html" class="input-wsx">忘记密码？</a>
+						</div>
+						<div class="input-from"style="padding-bottom: 10px;">
+							<button type="submit" class="inpu-checkbox" >登录</button>
+						</div>
+						<div class="input-from" style="padding-bottom: 10px;">
+							<a href="注册-个人用户.html" class="input-wsx">免费注册</a>
+						</div>
+						<div class="input-from">
+							<p>你也可以用以下方式登录：</p>
+							<a href="#" class="input-qq">QQ</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class=" footer clearfix">
+				<div class="w1200">
+					<div class="footer_top">
+						<ul>
+							<li class="li_f1"><img src="img/logo.png"><h2>团标网公司介绍，在这里显示。团标团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，</h2></li>
+							<li class="li_f2">
+								<dl>
+									<dt>帮助中心</dt>
+									<dd><a href="">功能说明</a></dd>
+									<dd><a href="">疑问解答</a></dd>
+									<dd><a href="">在线咨询</a></dd>
+								</dl>
+							</li>
+							<li class="li_f3">
+								<div class="cheng"><i></i>诚信保障</div>
+								<div class="qi"><i></i>企业认证</div>
+								<div class="an"><i></i>安全交易</div>
+							</li>
+							<li class="li_f4">
+								<img src="img/wei.png">
+								<h2>微信公众号</h2>
+							</li>
+							<li class="li_f5">
+								<img src="img/phone.png">
+								<h2>4008-200-100</h2>
+								<span>周一至周日 8:00-23:00</span>
+							</li>
+						</ul>
+					</div>
+					<div class="footer_copy"> Copyright © 2004-2015  团标网 tuanlabel.com 版权所有</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul,
+dd, dt,  tbody, td, tfoot, th, thead, tr, button, del, ins, map, object,
+a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span,
+strong, sub, sup, tt, var, legend, fieldset {
+	margin: 0;
+	padding: 0;
+}
+pre { 
+white-space: pre-wrap; /* css-3 */ 
+white-space: -moz-pre-wrap; /* Mozilla, since 1999 */ 
+white-space: -pre-wrap; /* Opera 4-6 */ 
+white-space: -o-pre-wrap; /* Opera 7 */ 
+word-wrap: break-word; /* Internet Explorer 5.5+ */ 
+}
+img, fieldset{
+	border:0;
+}
+/* set image max width to 100% */
+img {
+	max-width: 100%;
+	width: auto\0; /* ie8 */
+	-ms-interpolation-mode: bicubic;
+}
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+ul,li {list-style-type: none; }
+a{text-decoration:none;color:#333;cursor:pointer;outline: none;}
+h1, h2{font-weight:inherit;}
+.clearfix{clear:both;}
+select{background: #fff;font-family: "微软雅黑";}
+html{max-width: 640px; margin: 0 auto; height: 100%;}
+*{font-family: "微软雅黑"; font-weight:inherit;}
+input{outline:medium;}
+body {color:#333;font-size:1em;-webkit-text-size-adjust:none; font-family: "微软雅黑"; min-height: 100%; position: relative;padding-bottom: 216px; }
+@media screen and (min-width: 300px) {body{font-size:14px!important;}
+	.login_content span{min-width:25%;margin-left:1%;}
+}
+@media screen and (min-width: 360px) {body{font-size:16px!important;}}
+@media screen and (min-width: 480px) {body{font-size:20px!important;}}
+@media screen and (min-width: 640px) {body{font-size:22px!important;}}
+
+
+
+
+
+
+

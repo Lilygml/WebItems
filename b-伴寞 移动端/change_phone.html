@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<title>更换手机</title>
+		<link rel="stylesheet" href="css/amazeui.min.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/amazeui.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+			$(function(){
+			/*短信验证接口*/
+				$("#phonecodesub").click(function(){
+					var CheckMyreg= /^(((13[0-9]{1})|159|(15[0-9]{1}))+\d{8})$/;	
+					var uphone=$("#uphone").val();
+				 	if(!CheckMyreg.test(uphone)){
+						$("#uphone").focus();
+				    	return false;
+				    }
+				$.post("codesub.html",{},function(result2){
+				   $.post("短信接口地址",{mobile:uphone,content:result2},function(result){});
+				});
+				datetime(this,1000);
+			  	});
+			   })
+			/*短信验证倒计时*/
+			var wait=5;
+			function datetime(o,time) {
+				if (wait == 0) {
+					o.removeAttribute("disabled");
+					o.style.backgroundColor="#f5f5f5"
+					o.style.border="#d5d5d5 1px solid"
+					o.style.color="#333"
+					o.value="发送验证码到手机";
+					wait = 60;
+				} else {
+					o.setAttribute("disabled", true);
+					o.style.backgroundColor="#F00"
+					o.style.border="1px solid #F00"
+					o.style.color="#FFF"
+					o.value="重新发送(" + wait + ")";
+					wait--;
+					setTimeout(function() {
+						datetime(o,time)
+					},
+					time)
+				}
+			}
+	    </script> 
+	</head>
+	<body style="background: #f3f3f3 !important;">
+		<header data-am-widget="header" class="am-header background-black">
+			<div class="am-header-left am-header-nav">
+			    <a href="#left-link" class="white-color">
+			        <img class="am-header-icon-custom" src="img/left_01.png" alt=""/>
+			  	  返回
+			    </a>
+			</div>
+			<h1 class="am-header-title white-color">更换手机</h1>
+        </header> 
+		<div class="am-g margin-top70 background-white border-top-bottom">
+		  <div class=" am-u-sm-centered margin-top20 margin-bottom40">
+		    <form class="am-form" action="" method="post" name="form1">
+		      <fieldset class="am-form-set">
+		        <div class="am-form-group"><input name="uphone" type="text" id="uphone" value="" placeholder="新手机号" maxlength="11"  datatype="m" errormsg="请输入正	确的手机号码！" class="input-border-bottom color-black  "></div>
+		        <div class="am-form-group position-relative"><input name="uyzm" type="text" id="teinx" placeholder="验证码" value="" maxlength="6" datatype="n4-11" nullmsg="请输入验证码！" class="input-border-bottom color-black "><input name="phonecodesub" type="button" id="phonecodesub" class="background-none color-black" value="发送验证码" style="position: absolute;right:0;top:20%;"></div> 
+		      </fieldset>
+		      <button type="submit" class="am-btn  am-btn-block margin-top30 background-blue  input-border-radius line-height22 white-color class="btn_sub"">确认</button>
+		    </form>
+		  </div>	
+		</div>
+    </body>
+</html>

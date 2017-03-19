@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>商品详情页-购物车</title>
+		<link rel="stylesheet" href="css/default.css" />
+		<link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/tbao.css" />
+        <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript">
+			$(document).ready(function () {
+			
+				//jquery特效制作复选框全选反选取消(无插件)
+				// 全选        
+				$(".allselect").click(function () {
+					$(".gwc_tb2 input[name=newslist]").each(function () {
+						if ($(this).attr("checked")) {
+							$(this).attr("checked", false);
+							//$(this).next().css({ "background-color": "#ffffff", "color": "#000000" });
+						} else {
+							$(this).attr("checked", true);
+							//$(this).next().css({ "background-color": "#3366cc", "color": "#000000" });
+						} 
+					});
+					GetCount();
+				});
+			
+				// 所有复选(:checkbox)框点击事件
+				$(".gwc_tb2 input[name=newslist]").click(function () {
+					if ($(this).attr("checked")) {
+						//$(this).next().css({ "background-color": "#3366cc", "color": "#ffffff" });
+					} else {
+						// $(this).next().css({ "background-color": "#ffffff", "color": "#000000" });
+					}
+				});
+			
+				// 输出
+				$(".gwc_tb2 input[name=newslist]").click(function () {
+					// $("#total2").html() = GetCount($(this));
+					GetCount();
+					//alert(conts);
+				});
+			});
+			//******************
+			function GetCount() {
+				var conts = 0;
+				var aa = 0;
+				$(".gwc_tb2 input[name=newslist]").each(function () {
+					if ($(this).attr("checked")) {
+						for (var i = 0; i < $(this).length; i++) {
+							conts += parseInt($(this).val());
+							aa += 1;
+						}
+					}
+				});
+				$("#shuliang").text(aa);
+				$("#zong1").html((conts).toFixed(2));
+				$("#jz1").css("display", "none");
+				$("#jz2").css("display", "block");
+			}
+			</script>
+	</head>
+	<body>	
+		<header>
+			<div class="top">
+				<div class="w1200 overflow">
+					<div class="top_left"><span>Hi,欢迎来到团标网</span><a href="登录.html">请登录</a><a href="注册-个人用户.html">免费注册</a></div>
+					<div class="top_right"><a href="个人中心首页.html">我的团标网</a><b>|</b><a href="商品详情页-购物车.html">购物车</a><b>|</b><a href="帮助中心-服务中心.html">帮助中心</a></div>
+				</div>
+			</div>
+			<div class="w1200 overflow top_s">
+				<div class="logo"><img src="img/logo.png"></div>
+                <div class="bar_nav order">
+                    <a href="商品详情页-购物车.html" class="bar_a1 bar_a4">1.我的购物车</a><a href="商品详情页-订单详情.html" class="bar_a2 bar_a5">2.填写订单信息</a><a href="商品详情页-订单支付界面.html" class="bar_a3">3.结算付款</a>
+                </div>
+			</div>
+		</header>
+		<section>
+			<div class="w1200 clearfix">
+
+                <div class="gwc" style=" margin:auto;">
+                    <table cellpadding="0" cellspacing="0" class="gwc_tb1">
+                        <tbody><tr>
+                            <td class="tb1_td1" width="10%"><input id="Checkbox1" type="checkbox" class="allselect">全选</td>
+                            <td class="tb1_td2" width="25%">商品</td>
+                            <td class="tb1_td3" width="15%">数量</td>
+                            <td class="tb1_td4" width="15%">单价</td>                        
+                            <td class="tb1_td5" width="15%">金额</td>
+                            <td class="tb1_td6" width="10%">操作</td>
+                        </tr>
+                    </tbody></table>
+                           
+                    <!---商品加减算总数---->
+                    <script type="text/javascript">
+                    $(function () {
+                        var t = $("#text_box1");
+                        $("#add1").click(function () {
+                            t.val(parseInt(t.val()) + 1)
+                            setTotal(); GetCount();
+                        })
+                        $("#min1").click(function () {
+                            t.val(parseInt(t.val()) - 1)
+                            setTotal(); GetCount();
+                        })
+                        function setTotal() {
+                
+                            $("#total1").html((parseInt(t.val()) * 9).toFixed(2));
+                            $("#newslist-1").val(parseInt(t.val()) * 9);
+                        }
+                        setTotal();
+                    })
+                    </script>
+                    
+                    <table cellpadding="0" cellspacing="0" class="gwc_tb2">
+                        <tbody><tr>
+                            <td class="tb2_td1" width="10%"><input type="checkbox" value="9" name="newslist" id="newslist-1"></td>
+                            <td class="tb2_td2" width="25%"><a href=""><img src="img/dt.jpg"></a><span>新世纪UV SUN-C系列 </span></td>
+                            <td class="tb1_td3" width="15%">
+                                <input id="min1" name="" class="in_minus" type="button" value="-">
+                                <input id="text_box1" class="in_input" name="" type="text" value="1" >
+                                <input id="add1" name="" class="in_add" type="button" value="+">
+                            </td>
+                            <td class="tb1_td4" width="15%">￥9.00</td>
+                            <td class="tb1_td5" width="15%"><font>￥</font><label id="total1" class="tot" style="color:#df363d;font-size:14px; font-weight:bold;">9.00</label></td>
+                            <td class="tb1_td6" width="10%"><a href="">删除</a></td>
+                        </tr>
+                    </tbody></table>
+                    
+                    <!---商品加减算总数---->
+                    <script type="text/javascript">
+                    $(function () {
+                        var t = $("#text_box2");
+                        $("#add2").click(function () {
+                            t.val(parseInt(t.val()) + 1)
+                            setTotal(); GetCount();
+                        })
+                        $("#min2").click(function () {
+                            t.val(parseInt(t.val()) - 1)
+                            setTotal(); GetCount();
+                        })
+                        function setTotal() {
+                
+                            $("#total2").html((parseInt(t.val()) * 8).toFixed(2));
+                            $("#newslist-2").val(parseInt(t.val()) * 8);
+                        }
+                        setTotal();
+                    })
+                    </script>
+                    <table cellpadding="0" cellspacing="0" class="gwc_tb2">
+                        <tbody><tr>
+                            <td class="tb2_td1" width="10%"><input type="checkbox" value="8" name="newslist" id="newslist-2"></td>
+                            <td class="tb2_td2" width="25%"><a href=""><img src="img/dt.jpg"></a><span>新世纪UV SUN-C系列 </span></td>
+                            <td class="tb1_td3" width="15%">
+                                <input id="min2" name="" class="in_minus" type="button" value="-">
+                                <input id="text_box2" name="" class="in_input" type="text" value="1">
+                                <input id="add2" name="" class="in_add"  type="button" value="+">
+                            </td>
+                            <td class="tb1_td4" width="15%">￥8.00</td>
+                            <td class="tb1_td5" width="15%"><font >￥</font><label id="total2" class="tot" style="color:#df363d;font-size:14px; font-weight:bold;">8.00</label></td>
+                            <td class="tb1_td6" width="10%"><a href="">删除</a></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <script type="text/javascript">
+                    $(function () {
+                        var t = $("#text_box3");
+                        $("#add3").click(function () {
+                            t.val(parseInt(t.val()) + 1)
+                            setTotal(); GetCount();
+                        })
+                        $("#min3").click(function () {
+                            t.val(parseInt(t.val()) - 1)
+                            setTotal(); GetCount();
+                        })
+                        function setTotal() {
+                
+                            $("#total3").html((parseInt(t.val()) * 8).toFixed(2));
+                            $("#newslist-3").val(parseInt(t.val()) * 8);
+                        }
+                        setTotal();
+                    })
+                    </script>
+                    <table cellpadding="0" cellspacing="0" class="gwc_tb2">
+                        <tbody><tr>
+                            <td class="tb2_td1" width="10%"><input type="checkbox" value="8" name="newslist" id="newslist-3"></td>
+                            <td class="tb2_td2" width="25%"><a href=""><img src="img/dt.jpg"></a><span>新世纪UV SUN-C系列 </span></td>
+                            <td class="tb1_td3" width="15%">
+                                <input id="min3" name="" class="in_minus" type="button" value="-">
+                                <input id="text_box3" name="" class="in_input" type="text" value="1">
+                                <input id="add3" name="" class="in_add"  type="button" value="+">
+                            </td>
+                            <td class="tb1_td4" width="15%">￥8.00</td>
+                            <td class="tb1_td5" width="15%"><font>￥</font><label id="total3" class="tot" style="color:#df363d;font-size:14px; font-weight:bold;">8.00</label></td>
+                            <td class="tb1_td6" width="10%"><a href="">删除</a></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    
+                    <!---总数---->
+                    <script type="text/javascript">
+                    $(function () {
+                        $(".quanxun").click(function () {
+                            setTotal();
+                            //alert($(lens[0]).text());
+                        });
+                        function setTotal() {
+                            var len = $(".tot");
+                            var num = 0;
+                            for (var i = 0; i < len.length; i++) {
+                                num = parseInt(num) + parseInt($(len[i]).text());
+                
+                            }
+                            //alert(len.length);
+                            $("#zong1").text(parseInt(num).toFixed(2));
+                            $("#shuliang").text(len.length);
+                        }
+                        //setTotal();
+                    })
+                    </script>
+                    <table cellpadding="0" cellspacing="0" class="gwc_tb3">
+                        <tbody><tr>
+                            <td class="tb3_td1" width="50%"><span>清除所选商品</span><a href="">继续购买</a></td>
+                            <td class="tb3_td3"  width="30%">共 <label id="shuliang" style="color:#ff5500;font-size:20px; font-weight:bold;">0</label> 件商品&nbsp;&nbsp;&nbsp;&nbsp;合计(不含运费):<label id="zong1" style="color:#ff5500;font-size:20px; font-weight:bold;">￥</label>元</td>
+                            <td class="tb3_td4"  width="20%"><a href="商品详情页-订单支付界面.html" id="jz1">提交</a><a style=" display:none;" class="jz2" id="jz2">提交</a></td>
+                        </tr>
+                    </tbody></table>
+                
+                </div>                
+
+            </div>
+        </section>
+		<footer>
+			<div class=" footer clearfix ">
+				<div class="w1200">
+					<div class="footer_top">
+						<ul>
+							<li class="li_f1"><img src="img/logo.png"><h2>团标网公司介绍，在这里显示。团标团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，</h2></li>
+							<li class="li_f2">
+								<dl>
+									<dt>帮助中心</dt>
+									<dd><a href="">功能说明</a></dd>
+									<dd><a href="">疑问解答</a></dd>
+									<dd><a href="">在线咨询</a></dd>
+								</dl>
+							</li>
+							<li class="li_f3">
+								<div class="cheng"><i></i>诚信保障</div>
+								<div class="qi"><i></i>企业认证</div>
+								<div class="an"><i></i>安全交易</div>
+							</li>
+							<li class="li_f4">
+								<img src="img/wei.png">
+								<h2>微信公众号</h2>
+							</li>
+							<li class="li_f5">
+								<img src="img/phone.png">
+								<h2>4008-200-100</h2>
+								<span>周一至周日 8:00-23:00</span>
+							</li>
+						</ul>
+					</div>
+					<div class="footer_copy"> Copyright © 2004-2015  团标网 tuanlabel.com 版权所有</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

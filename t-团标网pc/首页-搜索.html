@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>首页-搜索</title>
+		<link rel="stylesheet" href="css/default.css" />
+		<link rel="stylesheet" href="css/style.css" />
+        <script type="text/javascript" src="js/jquery-1.8.0.min.js" ></script>
+        <script type="text/javascript" src="js/app.js" ></script>
+        <script type="text/javascript" src="js/jquery.reveal.js"></script><!--弹出层-->
+	</head>
+	<body>	
+		<header>
+			<div class="top">
+				<div class="w1200 overflow">
+					<div class="top_left"><span>Hi,欢迎来到团标网</span><a href="登录.html">请登录</a><a href="注册-个人用户.html">免费注册</a></div>
+					<div class="top_right"><a href="个人中心首页.html">我的团标网</a><b>|</b><a href="商品详情页-购物车.html">购物车</a><b>|</b><a href="帮助中心-服务中心.html">帮助中心</a></div>
+				</div>
+			</div>
+			<div class="w1200 overflow top_s">
+				<div class="logo"><img src="img/logo.png"></div>
+				<div class="search">
+					<form action="首页-搜索.html">
+						<input type="search" placeholder="请输入产品/公司进行搜索"/><button type="button">搜索</button>
+					</form>
+				</div>
+				<div class="recomend"><a href="javascript:void(0);" data-reveal-id="myModal">发布需求</a></div>
+				<!--弹出层start-->
+				<div id="myModal" class="reveal-modal xuqg-modal">
+					<h1>发布需求</h1>
+				    <form id="formID2" action="" method="post">
+					    <div class="input-group">
+	      					<label class="control-label">公司名称：</label>
+					        <input type="text" class="form-control">
+					    </div>
+					    <div class="input-group">
+	      					<label class="control-label">联系电话：</label>
+					        <input type="text" class="form-control">
+					    </div>
+					    <div class="input-group">
+	      					<label class="control-label">联系人：</label>
+					        <input type="text" class="form-control">
+					    </div>
+					    <div class="input-group">
+	      					<label class="control-label">需求选项：</label>
+				        	<select class="form-control" style="width: 62%;">
+								<option>原材料</option>
+							</select>
+					        	
+					    </div>
+					   <div class="input-group">
+	      					<label class="control-label">需求数量：</label>
+					        <input type="text" class="form-control">
+					    </div>
+					    <div class="input-group">
+	      					<label class="control-label">需求内容：</label>
+					        <textarea class="form-control" style="height: 78px;"></textarea>
+					    </div>
+					    <div class="input-group">
+					    	<label class="control-label">&nbsp;</label>
+					        <button type="submit" class="bnt-input">保存</button>
+					    </div>
+	      			</form>
+					<a class="close-reveal-modal">&#215;</a>
+				</div>
+				<!--弹出层end-->
+			</div>
+			<div class="nav clearfix">
+				<div class="nav_b w1200">
+					<div class="btnmenu" >
+						<h2><a href="javascript:;">所有商品分类</a></h2>
+						<div class="sidemenu">
+							<ul id="sidemenu">
+								<li id="mainCate-1" class="mainCate">
+									<h3><a href="javascript:;"><span>原材料<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>								
+										</ul>
+									</div>
+								</li>
+								<li id="mainCate-2" class="mainCate">
+									<h3><a href="javascript:;"><span>印刷设备<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>						
+			                             </ul>
+			                        </div>
+								</li>
+								<li id="mainCate-3" class="mainCate">
+									<h3><a href="javascript:;"><span>印刷耗材<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>						
+			                              </ul>
+			                          </div>
+								  </li>
+								  <li id="mainCate-3" class="mainCate">
+									<h3><a href="javascript:;"><span>辅助器材<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>						
+			                              </ul>
+			                          </div>
+								  </li>
+								  <li id="mainCate-3" class="mainCate">
+									<h3><a href="javascript:;"><span>其他<i></i></span></a></h3>
+									<div class="subCate">
+										<ul>
+											<li>
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>	
+												<a href="商品详情页.html">胶印机 </a>
+												<a href="商品详情页.html">斜背机</a>
+												<a href="">间歇式轮转机 </a>		
+											</li>						
+			                              </ul>
+			                          </div>
+								  </li>
+							</ul>
+			            </div>
+					</div>
+					<ul class="nav_u">
+						<li><a href="首页.html">首页</a></li>
+						<li><a href="商城.html">商城</a></li>
+						<li><a href="帮助中心-服务中心.html">服务中心</a></li>
+						<li><a href="新闻资讯.html">新闻资讯</a></li>
+						<li><a href="知识库.html">知识库</a></li>
+						<li><a href="需求公告.html">需求公告</a></li>
+						<li><a href="白条支付.html">白条支付</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="w1200">
+				<div class="search_in">
+					<dl>
+						<dt>一级分类：</dt>
+						<dd>
+							<a href="javascript:;">原材料</a>
+							<a href="javascript:;" class="hover">印刷设备</a>
+							<a href="javascript:;">印刷耗材</a>
+							<a href="javascript:;">辅助器材</a>
+							<a href="javascript:;">其他</a>
+							<a href="javascript:;">其他</a>
+							<a href="javascript:;">其他</a>
+							<a href="javascript:;">其他</a>
+							<a href="javascript:;">其他</a>
+							<a href="javascript:;">其他</a>
+							<a href="javascript:;">其他</a>
+							<a href="javascript:;">其他</a>
+							<a href="javascript:;">其他</a>
+							<a href="javascript:;">其他</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>二级分类：</dt>
+						<dd>
+							<a href="javascript:;" class="hover">胶印机</a>
+							<a href="javascript:;">斜背机</a>
+							<a href="javascript:;">间歇式轮转机</a>
+							<a href="javascript:;">卫星式轮转机</a>
+							<a href="javascript:;">PS版间歇轮转胶印机</a>
+							<a href="javascript:;">柔版印刷机</a>
+							<a href="javascript:;">数码印刷机</a>
+							<a href="javascript:;">多功能组合印刷机</a>
+							<a href="javascript:;">丝网印刷机</a>
+							<a href="javascript:;">凹印刷机</a>
+							<a href="javascript:;">数码印刷机</a>
+							<a href="javascript:;">多功能组合印刷机</a>
+							<a href="javascript:;">丝网印刷机</a>
+							<a href="javascript:;">凹印刷机</a>
+						</dd>
+					</dl>
+					<ul class="search_innput">
+						<li>地区：<input type="text"/></li>
+						<li>品名：<input type="text"/></li>
+						<li>规格：<input type="text"/></li>
+						<li>材质：<input type="text"/></li>
+						<input type="button" value="筛选" class="search_ibtn" />
+					</ul>
+				</div>
+				<div class="cp-content">
+					<div class="cp-content-left">
+						<div class="cp-title">热门商品</div>
+						<ul class="cp-left-nr">
+							<li>
+								<a href="商品详情页.html" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+								<a href="商品详情页.html" class="sp-text">VARN CTP无酒精润版液</a>
+								<font color="#df363d">￥850.00</font>
+							</li>
+							<li>
+								<a href="商品详情页.html" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+								<a href="商品详情页.html" class="sp-text">VARN CTP无酒精润版液</a>
+								<font color="#df363d">￥850.00</font>
+							</li>
+							<li>
+								<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+								<a href="#" class="sp-text">VARN CTP无酒精润版液</a>
+								<font color="#df363d">￥850.00</font>
+							</li>
+							<li>
+								<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+								<a href="#" class="sp-text">VARN CTP无酒精润版液</a>
+								<font color="#df363d">￥850.00</font>
+							</li>
+							<li>
+								<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+								<a href="#" class="sp-text">VARN CTP无酒精润版液</a>
+								<font color="#df363d">￥850.00</font>
+							</li>
+						</ul>
+					</div>
+					<div class="cp-content-right">
+						<ul class="cp-stitle">
+							<li>默认排序</li>
+							<li class="hover">价格<i></i></li>
+							<li>销量</li>
+						</ul>
+						<div class="zhuy-cp">
+							<ul>
+								<li>
+									<a href="商品详情页.html" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="商品详情页.html" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="商品详情页.html" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="商品详情页.html" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="商品详情页.html" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="商品详情页.html" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+								<li>
+									<a href="#" class="sp-img"><img src="img/templatemo_body.jpg" /></a>
+									<div class="jsun"><em>￥850.00</em><i>已售998件</i></div>
+									<a href="#" class="sp-text">VARN CTP无酒精润版液CTP无酒精润版液</a>
+									<a href="#" class="sp-text c999">德国OGN公司</a>
+								</li>
+							</ul>
+							<div class="page">
+								<a href="">上一页</a>
+								<a href="">1</a>
+								<a href="javacript:;" class="page_curr">2</a>
+								<a href="">3</a>
+								<a href="">4</a>
+								<a href="">5</a>
+								<a href="">6</a>
+								<a href="">7</a>
+								<a href="">8</a>
+								<a href="">下一页</a>
+								<span>共100页</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </section>
+		<footer>
+			<div class=" footer clearfix">
+				<div class="w1200">
+					<div class="footer_top">
+						<ul>
+							<li class="li_f1"><img src="img/logo.png"><h2>团标网公司介绍，在这里显示。团标团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，在这里显示。团标网公司介绍，</h2></li>
+							<li class="li_f2">
+								<dl>
+									<dt>帮助中心</dt>
+									<dd><a href="">功能说明</a></dd>
+									<dd><a href="">疑问解答</a></dd>
+									<dd><a href="">在线咨询</a></dd>
+								</dl>
+							</li>
+							<li class="li_f3">
+								<div class="cheng"><i></i>诚信保障</div>
+								<div class="qi"><i></i>企业认证</div>
+								<div class="an"><i></i>安全交易</div>
+							</li>
+							<li class="li_f4">
+								<img src="img/wei.png">
+								<h2>微信公众号</h2>
+							</li>
+							<li class="li_f5">
+								<img src="img/phone.png">
+								<h2>4008-200-100</h2>
+								<span>周一至周日 8:00-23:00</span>
+							</li>
+						</ul>
+					</div>
+					<div class="footer_copy"> Copyright © 2004-2015  团标网 tuanlabel.com 版权所有</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

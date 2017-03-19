@@ -1,0 +1,75 @@
+#kei_tabs {
+	text-decoration: none;
+	width: 100%;
+	float: left;
+	position: relative;
+	padding: 0px;
+	margin-top: 4px;
+	overflow: visible;
+	height: auto;
+	z-index: 2;
+}
+#kei_tabs ul {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+#kei_tabs ul li {
+	float: left;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+#kei_tabs ul li .tabs_body  {
+	color: #036;
+	display: none;
+	overflow: visible;
+	left: 0px;
+	background-color: #EFF1F5;
+	float: left;
+	top: 25px;
+	padding: 5px;
+	z-index: -1;
+	position: absolute;
+	border: 1px solid #A0B4C8;
+}
+.tabstitle      {
+	display: block;
+	float: left;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-size: 14px;
+	line-height: 25px;
+	height: 25px;
+	background-color: #DEE2EB;
+	color: #5C7D9E;
+	cursor: pointer;
+	margin-top: 0px;
+	margin-right: 1px;
+}
+.tabstitledown {
+	color: #47627C;
+	background-color: #EFF1F5;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #A0B4C8;
+	border-right-color: #A0B4C8;
+	border-left-color: #A0B4C8;
+}
+.block {
+	display: block;
+}
+.none {
+	display: none;
+}
+#lab_contents {
+	display: none;
+}
